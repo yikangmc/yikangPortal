@@ -249,5 +249,21 @@ public class ShareUserController {
 		return rtnData;
 
 	}
+	
+	
+	
+	
+	@RequestMapping
+	public String ServeProject(){
+		return "Serve/ServeProject";
+	}
+	
+	
+	
+	@RequestMapping
+	public String ServiceIntroduce(){
+		return "Serve/ServiceIntroduce";
+	}
+	
 
 }
