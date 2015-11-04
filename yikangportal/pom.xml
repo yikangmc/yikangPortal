@@ -227,7 +227,7 @@
 					<password>tomcat</password>
 					<update>true</update>
 					<path>/</path>
-					<port>8088</port>
+					<port>8089</port>
 				</configuration>
 			</plugin>
 		</plugins>
@@ -253,4 +253,7 @@
 	</repositories>
 
 
+	<modules>
+		<module>?</module>
+	</modules>
 </project>
