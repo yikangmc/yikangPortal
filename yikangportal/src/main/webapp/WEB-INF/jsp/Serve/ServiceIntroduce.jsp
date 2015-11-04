@@ -39,6 +39,7 @@
 				<img style="width: 100%;" src="<%=basePath%>/img/ServeImg/border.png"></div>
 	</a>
    	<!-- 2 -->
+   	
    	<a href="ServeProject">
 	<div class="dv_body">
     	<div class="dv_info">
