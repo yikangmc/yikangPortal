@@ -3,10 +3,10 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.yikangyiliao</groupId>
 	<artifactId>yikangportal</artifactId>
-	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>yikangprotal</name>
 	<url>http://maven.apache.org</url>
+	<packaging>war</packaging>
 
 
 	<properties>
@@ -23,6 +23,13 @@
 			<scope>test</scope>
 		</dependency>
 
+
+		
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.5</version>
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -252,8 +259,4 @@
 		</repository>
 	</repositories>
 
-
-	<modules>
-		<module>?</module>
-	</modules>
 </project>

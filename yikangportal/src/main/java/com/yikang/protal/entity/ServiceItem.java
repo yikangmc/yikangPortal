@@ -26,11 +26,15 @@ public class ServiceItem {
 
     private Integer serviceTime;
     
+    private Float 	price;
+    
     private List<Map<String,Object>> serviceNotes;
     
     private List<Map<String,Object>> medicinalApparatus;
     
     private List<Map<String,Object>> serviceIntroduces;
+    
+    private List<Map<String,Object>> pictures;
     
     
 
@@ -144,5 +148,21 @@ public class ServiceItem {
 
 	public void setServiceIntroduces(List<Map<String, Object>> serviceIntroduces) {
 		this.serviceIntroduces = serviceIntroduces;
+	}
+
+	public Float getPrice() {
+		return price;
+	}
+
+	public void setPrice(Float price) {
+		this.price = price;
+	}
+
+	public List<Map<String, Object>> getPictures() {
+		return pictures;
+	}
+
+	public void setPictures(List<Map<String, Object>> pictures) {
+		this.pictures = pictures;
 	}
 }

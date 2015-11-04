@@ -33,7 +33,7 @@ public class ServiceItemService {
 		Map<String,Object> paramData=new HashMap<String,Object>();
 		paramData.put("serviceItemId",serviceItemId);
 		
-		List<ServiceItem> rtnDataType=new ArrayList<ServiceItem>();
+		ServiceItem rtnDataType=new  ServiceItem();
 		
 		try {
 			return SendRequest.sendPostRetureMap("01-01-02", paramData, rtnDataType.getClass());
