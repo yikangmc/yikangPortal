@@ -5,11 +5,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="text/javascript" src="<%=basePath%>js/jquery-1.8.3.min.js"></script>
-<title>预约服务</title>
+<title>无标题文档</title>
 </head>
-	<body>  
+	<body> 
 		<div class="dv_body">
-			<div class="dv_topimg">   
+			<div class="dv_topimg">
 			</div>
 			<form action="<%=basePath%>appointmentOrder/" method="post">
 				
@@ -25,7 +25,7 @@
 					<li class="font-bottom">${data.serviceContent }</li>
 				</ul>
 			</div>
-			<img style=" width: 100%;" src="<%=basePath%>img/protal/ServeImg/border.png" />
+			<img style=" width: 100%;" src="<%=basePath%>/img/ServeImg/border.png" />
 			<div class="dv_service_title">
 				<ul>
 					<a onclick="cd_dv1()"><li class="fontstyle" style="width: 26%;">服务介绍</li></a>
@@ -34,7 +34,7 @@
 				</ul>
 			</div>
 			
-			<img style=" width: 100%;" src="<%=basePath%>img/protal/ServeImg/border.png" />
+			<img style=" width: 100%;" src="<%=basePath%>/img/ServeImg/border.png" />
 			
 			<div id="dv_1" class="dv_home">
 				<c:forEach items="${data.serviceIntroduces}" var="serviceIntroduce">
@@ -45,8 +45,6 @@
 				</c:forEach>
 				<button style="width: 280px; height: 70px; border-radius: 10px; border: 0px; background: #2d86ff; color: #fff; font-size: 28px; font-weight:600;">预约该项目</button>
 			</div>
-
-
 			<div id="dv_2" class="dv_home">
 				<c:forEach items="${data.serviceNotes }" var="serviceNote">
 					<h1>${serviceNote.title}</h1><br />
@@ -58,7 +56,6 @@
 						<button class="btn_select">预约该项目</button>
 				</div>
 			</div>
-			
 			
 			<div id="dv_3" class="dv_home">
 				<h1>【所需药品和器材】</h1><br/>
@@ -102,6 +99,7 @@
 		var colorTag = 1;
 		var colorTagtwo = 1;
 		var colors = ["#999", "#2d86ff"];
+		var colorstwo = ["#999", "#2d86ff"];
 		function myFunction()
 		{
 			colorTag = 1 - colorTag;
@@ -113,9 +111,9 @@
 		function myFunction2()
 		{
 			colorTagtwo = 1 - colorTagtwo;
-			document.getElementById("font_selete1").style.background = colors[ colorTag];
-			document.getElementById("btn_fonts3").style.background = colors[ colorTag];
-			document.getElementById("font_titleone2").style.color = colors[ colorTag];
+			document.getElementById("font_selete1").style.background = colorstwo[ colorTag];
+			document.getElementById("btn_fonts1").style.background = colorstwo[ colorTag];
+			document.getElementById("font_titleone1").style.color = colorstwo[ colorTag];
 
 		}
 		function cd_dv1() {
@@ -133,10 +131,18 @@
 			document.getElementById("dv_2").style.display = "none"
 			document.getElementById("dv_3").style.display = "block"
 		}
+		function onNew(){
+			alert("提示信息：预约成功");
+		}
 	</script>
 	<style type="text/css">
 		html,body {
 			font-family:"Microsoft YaHei";
+		}
+		.block {
+			display: block;
+			float: left;
+			text-align: center;
 		}
 		.btn_one {
 			width: 280px; 
@@ -149,41 +155,47 @@
 			font-weight:600;
 		}
 		#font_selete {
-			margin-top: 60px;
 			border-radius: 36px; 
 			width:36px; height: 36px; 
-			background: #2d86ff; 
-			text-aling: center;
+			background: #2d86ff;
+			display: block;
+			margin-top: 40px;
 			margin-right: 50px;
 		}
 		#font_selete1 {
-			margin-top: 60px;
 			border-radius: 36px; 
 			width:36px; height: 36px; 
-			background: #2d86ff; 
-			text-aling: center;
+			background: #2d86ff;
+			display: block;
+			margin-top: 50px;
 			margin-right: 50px;
 		}
 		#btn_fonts {
-			width: 170px;
+			width: 150px;
 			height: 60px;
 			border-radius: 7px;
-			font-size: 28px;
+			font-size: 32px;
 			background:  #2d86ff;
 			border: 0px;
+			margin-top: 30px;
 		}
-		#btn_fonts3 {
-			width: 170px;
+		#btn_fonts1 {
+			width: 150px;
 			height: 60px;
 			border-radius: 7px;
-			font-size: 28px;
+			font-size: 32px;
 			background:  #2d86ff;
 			border: 0px;
+			margin-top: 30px;
 		}
 		#font_titleone {
+			width: 300px;
+			margin-top: 40px;
 			font-size: 26px;
 		}
-		#font_titleone2 {
+		#font_titleone1 {
+			width: 300px;
+			margin-top: 40px;
 			font-size: 26px;
 		}
 		#dv_2 {display: none;}
@@ -194,21 +206,21 @@
 			list-style-type: none; 
 			float: left;
 		}
-		#shangping ul li {
-			height: 120px;
-			background: #fff;
-			width: 100%;
+		#shangping {
+			height: 180px;
+			width: 560px;
+			background: #666;
 		}
 		*{ margin: 0px; padding: 0px;}
 		.dv_body {
-			width: 600px;
+			width: 90%;
 			margin: 0 auto;
 			text-align: center;
 		}
 		.dv_topimg {
 			width: 100%;
 			height: 300px;
-			background: url(<%=basePath%>img/protal/ServeImg/ServiceIntroduce/1.jpg) no-repeat;
+			background: url(<%=basePath%>/img/ServeImg/ServiceIntroduce/1.jpg) no-repeat;
 			background-position: center;
 		}
 		.dv_title {
@@ -237,13 +249,13 @@
 			margin-top: -17px;
 		}
 		.font-mony {
-			color: red;
+			color: #F22D7B;
 			font-size: 46px;
-			font-weight: 500px;
-			margin-left: 195px;
+			font-weight: 500;
+			margin-left: 170px;
 		}
 		.dv_service_title {
-			
+			margin-top: -15px;
 		}
 		.dv_service_title ul li {
 			font-size: 28px;
@@ -262,7 +274,10 @@
 		.v1 {
 			margin-top: -20px;
 			font-size: 18px;
-			font-weight: 500x;
+			font-weight: 500;
+			width: 700px;
+			margin: 0 auto;
+			background: #666;
 		}
 		.selectService {
 			text-align: center;
@@ -271,7 +286,7 @@
 			margin-top: 100px;
 		}
 		.fontstyle {
-			background: url(img/protal/ServeImg/border-height.png) no-repeat;
+			background: url(<%=basePath%>/img/ServeImg/border-height.png) no-repeat;
 			background-position: right;
 		}
 		a{

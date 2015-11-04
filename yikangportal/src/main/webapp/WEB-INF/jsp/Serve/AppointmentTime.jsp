@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>æ æ é¢ææ¡£</title>
+<title>护龄家</title>
 <!--
 <link rel="stylesheet" type="text/css" href="css/protal/mainCss.css" /-->
 <!-- Bootstrap -->
@@ -23,30 +23,30 @@ var _hmt = _hmt || [];
 </head>
 
 <body>
-	<div class="dv_toptitle">æ¤é¾å®¶</div>
+	<div class="dv_toptitle">护龄家</div>
 	<div class="dv_body">
     	<div class="dv_body_title">
-        	<span style="color:#4E84E9; font-size:22px; display:block; width:450px; margin:0 auto;">è¯·éæ©é¢çº¦è¯ä¼°æ¶é´,æµè²ä»£è¡¨å·²è¢«ä»äººé¢çº¦æå¥½å¨å®¶äººçéªåä¸è¿è¡å·¥ä½ã</span>
+        	<span style="color:#4E84E9; font-size:22px; display:block; width:450px; margin:0 auto;">请选择预约评估时间,浅色代表已被他人预约最好在家人的陪同下进行工作。</span>
             <div style=" width:450px; height:145px; margin:0 auto; border:solid rgb(15,15,15) 0px;">
                 <ul>
                     <li>
                     	<a onclick="HiddenDivoneOne()">
                             <div class="dv_times">
-                                <font color="#66bffb">å¨ä¸</font>
+                          		<font color="#66bffb">周一</font>
                             </div>
                         </a>
                     </li>
                     <li>
                     	<a onclick="HiddenDivoneTwo()">
                             <div class="dv_times">
-                                <font color="#66bffb">å¨äº</font>
+                                <font color="#66bffb">周二</font>
                             </div>
                         </a>
                     </li>
                     <li>
                     	<a onclick="HiddenDivoneThree()">
                             <div class="dv_times">
-                                <font color="#66bffb">å¨ä¸</font>
+                                <font color="#66bffb">周三</font>
                             </div>
                         </a>
                     </li>

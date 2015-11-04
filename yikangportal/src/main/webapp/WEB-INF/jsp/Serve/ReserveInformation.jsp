@@ -4,149 +4,345 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>æ æ é¢ææ¡£</title>
-<!--
-<link rel="stylesheet" type="text/css" href="css/protal/mainCss.css" /-->
-<!-- Bootstrap -->
-<link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
-<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
-<script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="<%=basePath%>/js/jquery-1.8.3.min.js"></script>
+<title>服务项目</title>
 </head>
 
 <body>
-	<div class="dv_toptitle">æ¤é¾å®¶</div>
+  	<div class="dv_title">
+    	护龄家
+   	</div>
+   	<!-- 1 -->
+   	<a href="ServeProject">
 	<div class="dv_body">
-    	<div class="dv_body_title">
-        	ä¸ºè°åï¼
-            <div class="btn-group btn_txt">
-               <select class="selectpicker">
-					<option>ç¶äº²</option>
-					<option>æ¯äº²</option>
-					<option>å¤å©</option>
-					<option>å¤å¬</option>
-					<option>ç·ç·</option>
-					<option>å¥¶å¥¶</option>
-					<option>èªå·±</option>
-				</select>
-            </div> 
-			&nbsp; 
-            ä»/å¥¹çå¹´é¾ï¼
-            <div class="btn-group btn_txt">
-               <select class="selectpicker" style="width: 102px;">
-					<option>50-60</option>
-					<option>61-70</option>
-					<option>71-80</option>
-					<option>81-90</option>
-					<option>91-100</option>
-				</select>
-            </div>
-     	</div>
-        <div style="margin:0 auto;" class="dv_body_text">
-        <p style="height:10px;"></p>
-        	ä»/å¥¹çä½åï¼
-            <input name="mobileNumber" style="font-size:27px; height:70px;" type="text"
-                            class="col-md-12 col-sm-12 col-xs-12 input" />
-           	<p style="height:10px;"></p>
-        	ä»/å¥¹çèç³»æ¹å¼ï¼
-            <input name="mobileNumber" style="font-size:27px; height:50px;" type="text"
-                            class="col-md-12 col-sm-12 col-xs-12 input" />
-       		<p style="height:10px;"></p>
-        	èç³»äººå§åï¼
-            <input name="mobileNumber" style="font-size:27px; height:50px;" type="text"
-                            class="col-md-12 col-sm-12 col-xs-12 input" />
-          	<p style="height:10px;"></p>
-        	é¢çº¦ä¸é¨è¯ä¼°æ¶é´ï¼
-            <input name="mobileNumber" style="font-size:27px; height:50px;" type="text"
-                            class="col-md-12 col-sm-12 col-xs-12 input" />
-          	<button id="input_heightfour" style="background: #F2A71C; font-size:27px; height:90px; color: #FFF;"
-					type="button" class="btn btn-lg col-md-12 col-sm-12 col-xs-12">é©¬ä¸é¢çº¦</button>
-        </div>
-    </div>
-<script>
-	$(document).ready(function(){
-		var width = $(window).width();
-		var heigth = $(window).height();
-		//alert("å½åçå®½"+parseInt(width)+"ï¼å½åçé«"+parseInt(heigth));
-		var infoanimateLeft = parseInt(screen.height); // è·å¾å½ååè¾¨ç
-		var bigimg = document.getElementById("#midtopimg");
-		if(heigth >= width){
-			//alert("æ§è¡ææºæ¹æ¡");
+    	<div class="dv_info">
+    		&nbsp;
+			<div style="width: 820px; margin: 0 auto;">
+			<div class="info_left">
+				<img style=" width: 220px; height: 220px;" src="<%=basePath%>/img/ServeImg/1.png" />
+			</div>
+			<div class="info_right">
+				<ul>
+					<p class="font_title">
+						压疮换药与护理
+					</p>
+					<p class="font_body">
+						医学界压疮护理，减轻痛苦，防止感染，促进愈合
+					</p>
+					<p class="font_bottom">
+						<img src="<%=basePath%>/img/ServeImg/time.png" /> 90分钟 &nbsp; <font class="font_money"color="#F22D7B">￥300</font>
+					</p>
+				</ul>
+			</div>
+		</div>
+    	</div>
+				<img style="width: 100%;" src="<%=basePath%>/img/ServeImg/border.png"></div>
+	</a>
+   	<!-- 2 -->
+   	<a href="ServeProject">
+	<div class="dv_body">
+    	<div class="dv_info">
+    		&nbsp;
+			<div style="width: 820px; margin: 0 auto;">
+			<div class="info_left">
+				<img style=" width: 220px; height: 220px;" src="<%=basePath%>/img/ServeImg/2.png" />
+			</div>
+			<div class="info_right">
+				<ul>
+					<p class="font_title">
+						骨关节置换术后康复护理
+					</p>
+					<p class="font_body">
+						医学界压疮护理，减轻痛苦，防止感染，促进愈合
+					</p>
+					<p class="font_bottom">
+						<img src="<%=basePath%>/img/ServeImg/time.png" /> 90分钟 &nbsp; <font class="font_money" color="#F22D7B">￥300</font>
+					</p>
+				</ul>
+			</div>
+			</div>
+    	</div>
+				<img style="width: 100%;" src="<%=basePath%>/img/ServeImg/border.png"></div>
+	</a>
+   	<!-- 3 -->
+   	<a href="ServeProject">
+	<div class="dv_body">
+    	<div class="dv_info">
+    		&nbsp;
+			<div style="width: 820px; margin: 0 auto;">
+			<div class="info_left">
+				<img style=" width: 220px; height: 220px;" src="<%=basePath%>/img/ServeImg/3.png" />
+			</div>
+			<div class="info_right">
+				<ul>
+					<p class="font_title">
+						糖尿病中医护理
+					</p>
+					<p class="font_body">
+						医学界压疮护理，减轻痛苦，防止感染，促进愈合
+					</p>
+					<p class="font_bottom">
+						<img src="<%=basePath%>/img/ServeImg/time.png" /> 90分钟 &nbsp; <font class="font_money" color="#F22D7B">￥300</font>
+					</p>
+				</ul>
+			</div>
+			</div>
+    	</div>
+				<img style="width: 100%;" src="<%=basePath%>/img/ServeImg/border.png"></div>
+	</a>
+   	<!-- 4 -->
+   	<a href="ServeProject">
+	<div class="dv_body">
+    	<div class="dv_info">
+    		&nbsp;
+			<div style="width: 820px; margin: 0 auto;">
+			<div class="info_left">
+				<img style=" width: 220px; height: 220px;" src="<%=basePath%>/img/ServeImg/4.png" />
+			</div>
+			<div class="info_right">
+				<ul>
+					<p class="font_title">
+						高血压中医护理
+					</p>
+					<p class="font_body">
+						医学界压疮护理，减轻痛苦，防止感染，促进愈合
+					</p>
+					<p class="font_bottom">
+						<img src="<%=basePath%>/img/ServeImg/time.png" /> 90分钟 &nbsp; <font class="font_money" color="#F22D7B">￥300</font>
+					</p>
+				</ul>
+			</div>
+			</div>
+    	</div>
+				<img style="width: 100%;" src="<%=basePath%>/img/ServeImg/border.png"></div>
+	</a>
+   	<!-- 5 -->
+   	<a href="ServeProject">
+	<div class="dv_body">
+    	<div class="dv_info">
+    		&nbsp;
+			<div style="width: 820px; margin: 0 auto;">
+			<div class="info_left">
+				<img style=" width: 220px; height: 220px;" src="<%=basePath%>/img/ServeImg/5.png" />
+			</div>
+			<div class="info_right">
+				<ul>
+					<p class="font_title">
+						颈椎痛中医护理
+					</p>
+					<p class="font_body">
+						医学界压疮护理，减轻痛苦，防止感染，促进愈合
+					</p>
+					<p class="font_bottom">
+						<img src="<%=basePath%>/img/ServeImg/time.png" /> 90分钟 &nbsp; <font class="font_money" color="#F22D7B">￥300</font>
+					</p>
+				</ul>
+			</div>
+			</div>
+    	</div>
+				<img style="width: 100%;" src="<%=basePath%>/img/ServeImg/border.png"></div>
+	</a>
+   	<!-- 6 -->
+   	<a href="ServeProject">
+	<div class="dv_body">
+    	<div class="dv_info">
+    		&nbsp;
+			<div style="width: 820px; margin: 0 auto;">
+			<div class="info_left">
+				<img style=" width: 220px; height: 220px;" src="<%=basePath%>/img/ServeImg/6.png" />
+			</div>
+			<div class="info_right">
+				<ul>
+					<p class="font_title">
+						肥胖养生中医调理
+					</p>
+					<p class="font_body">
+						医学界压疮护理，减轻痛苦，防止感染，促进愈合
+					</p>
+					<p class="font_bottom">
+						<img src="<%=basePath%>/img/ServeImg/time.png" /> 90分钟 &nbsp; <font class="font_money" color="#F22D7B">￥300</font>
+					</p>
+				</ul>
+			</div>
+			</div>
+    	</div>
+				<img style="width: 100%;" src="<%=basePath%>/img/ServeImg/border.png"></div>
+	</a>
+   	<!-- 7 -->
+   	<a href="ServeProject">
+	<div class="dv_body">
+    	<div class="dv_info">
+    		&nbsp;
+			<div style="width: 820px; margin: 0 auto;">
+			<div class="info_left">
+				<img style=" width: 220px; height: 220px;" src="<%=basePath%>/img/ServeImg/7.png" />
+			</div>
+			<div class="info_right">
+				<ul>
+					<p class="font_title">
+						鼻饲管与尿液管更换与护理
+					</p>
+					<p class="font_body">
+						医学界压疮护理，减轻痛苦，防止感染，促进愈合
+					</p>
+					<p class="font_bottom">
+						<img src="<%=basePath%>/img/ServeImg/time.png" /> 90分钟 &nbsp; <font class="font_money" color="#F22D7B">￥300</font>
+					</p>
+				</ul>
+			</div>
+			</div>
+    	</div>
+				<img style="width: 100%;" src="<%=basePath%>/img/ServeImg/border.png"></div>
+	</a>
+   	<!-- 8 -->
+   	<a href="ServeProject">
+	<div class="dv_body">
+    	<div class="dv_info">
+    		&nbsp;
+			<div style="width: 820px; margin: 0 auto;">
+			<div class="info_left">
+				<img style=" width: 220px; height: 220px;" src="<%=basePath%>/img/ServeImg/8.png" />
+			</div>
+			<div class="info_right">
+				<ul>
+					<p class="font_title">
+						PICC管的换药维护与护理
+					</p>
+					<p class="font_body">
+						医学界压疮护理，减轻痛苦，防止感染，促进愈合
+					</p>
+					<p class="font_bottom">
+						<img src="<%=basePath%>/img/ServeImg/time.png" /> 90分钟 &nbsp; <font class="font_money" color="#F22D7B">￥300</font>
+					</p>
+				</ul>
+			</div>
+			</div>
+    	</div>
+				<img style="width: 100%;" src="<%=basePath%>/img/ServeImg/border.png"></div>
+	</a>
+   	<!-- 9 -->
+   	<a href="ServeProject">
+	<div class="dv_body">
+    	<div class="dv_info">
+    		&nbsp;
+			<div style="width: 820px; margin: 0 auto;">
+			<div class="info_left">
+				<img style=" width: 220px; height: 220px;" src="<%=basePath%>/img/ServeImg/9.png" />
+			</div>
+			<div class="info_right">
+				<ul>
+					<p class="font_title">
+						气切口的护理
+					</p>
+					<p class="font_body">
+						医学界压疮护理，减轻痛苦，防止感染，促进愈合
+					</p>
+					<p class="font_bottom">
+						<img src="<%=basePath%>/img/ServeImg/time.png" /> 90分钟 &nbsp; <font class="font_money" color="#F22D7B">￥300</font>
+					</p>
+				</ul>
+			</div>
+			</div>
+    	</div>
+				<img style="width: 100%;" src="<%=basePath%>/img/ServeImg/border.png"></div>
+	</a>
+   	<!-- 10 -->
+   	<a href=""ServeProject"">
+		<div class="dv_body">
+	    	<div class="dv_info">
+	    		&nbsp;
+				<div style="width: 820px; margin: 0 auto;">
+				<div class="info_left">
+					<img style=" width: 220px; height: 220px;" src="<%=basePath%>/img/ServeImg/10.png" />
+				</div>
+				<div class="info_right">
+					<ul>
+						<p class="font_title">
+							造瘘口的护理
+						</p>
+						<p class="font_body">
+							医学界压疮护理，减轻痛苦，防止感染，促进愈合
+						</p>
+						<p class="font_bottom">
+							<img src="<%=basePath%>/img/ServeImg/time.png" /> 90分钟 &nbsp; <font class="font_money" color="#F22D7B">￥300</font>
+						</p>
+					</ul>
+				</div>
+			</div>
+	    	</div>
+					<img style="width: 100%;" src="<%=basePath%>/img/ServeImg/border.png"></div>
+	</a>
+	<style>
+		*{ margin: 0px; padding: 0px;}
+		.dv_body {
+			width: 95%;
+			margin: 0 auto;
+			text-align: center;
+			font-family:"Microsoft YaHei";
 		}
-	});
-	var $$ = function (id) { 
-	return document.getElementById(id); 
-		} 
-		window.onload = function () { 
-		var btnSelect = $$("btn_select"); 
-		var curSelect = btnSelect.getElementsByTagName("span")[0]; 
-		var oSelect = btnSelect.getElementsByTagName("ul")[0]; 
-		var aOption = btnSelect.getElementsByTagName("li"); 
-		oSelect.onchange = function () { 
-		var text=oSelect.options[oSelect.selectedIndex].text; 
-		curSelect.innerHTML = text; 
-		} 
-	} 
-      window.onload=function(){
-      $('.selectpicker').selectpicker();
-      };
-</script>
-<style>
-	html,body{
-		height:100%; width:100%;
-		font: "Microsoft YaHei";
-	}
-	.dv_toptitle {
-		width: 100%;
-		height: 70px;
-		background: #000;
-		text-align: center;
-		line-height: 70px;
-		color: #FFF;
-		font-size: 28px;
-		font-family: Verdana, Geneva, sans-serif;
-		font-weight: 400;
-	}
-	.dv_body {
-		width:90%; 
-		height:100%; 
-		margin:0 auto; 
-		margin-top: 30px;
-		padding:10px;
-	}
-	.dv_body_title {
-		border-radius:8px 8px 8px 8px;
-		width:100%; 
-		height:70px;
-		background:#A2E2F2;
-		line-height:70px;
-		padding-left:30px;
-		font-size: 20px;
-	}
-	.btn_txt {
-		filter:alpha(opacity=50);  
-		-moz-opacity:0.5;  
-		-khtml-opacity: 0.5;  
-		opacity: 0.5; 
-	}
-	.input{
-		padding:10px; width:100%; height:70px;
-		margin-top:10px;
-		margin-bottom:20px;
-		border: 1px solid #3682E7;
-		-moz-border-radius: 8px; 
-		-webkit-border-radius: 8px; 
-		border-radius:8px;
-	}
-	.dv_body_text{
-		font-size: 28px;
-		font-family: Verdana, Geneva, sans-serif;
-	}
-	.selectpicker {
-		border-radius: 7px;
-		width: 80px;
-		height: 35px;
-		font-size: 24px;
-	}
-</style>
+		.dv_title {
+			background: black;
+			height: 70px;
+			line-height: 70px;
+			font-size: 40px;
+			font-weight: 600;
+			text-align: center;
+			color: #fff;
+		}
+		.dv_info {
+			margin: 0 auto;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			width: 900px;
+			text-align: center;
+		}
+		.info_left {
+			float: left;
+		}
+		.info_right {
+			float: right;
+			padding-bottom: 20px;
+		}
+		.info_right ul li {
+			list-style-type: none;
+		}
+		.font_title {
+			text-align: center;
+			margin-top: 25px;
+			font-size:40px;
+			font-weight: 500;
+			width: 485px;
+			display: block;
+		}
+		.font_body {
+			text-align: center;
+			margin-top: 10px;
+			width: 485px;
+			font-size:32px;
+			display: block;
+		}
+		.font_bottom {
+			display: block;
+			text-align: center;
+			margin-top: 10px;
+			width: 485px;
+			height: 50px;
+			line-height: 50px;
+			vertical-align: middle;
+			font-size:36px;
+			color: #999;
+		}
+		.font_money {
+			font-size: 28px;
+		}
+		a{
+			text-decoration:none;
+			color: black;
+		}
+		a:hover{
+			text-decoration:none;
+			color: black;
+		}
+	</style>
 </body>
 </html>
