@@ -258,11 +258,19 @@ public class ShareUserController {
 		return "Serve/ServeProject";
 	}
 	
-	
-	
 	@RequestMapping
 	public String ServiceIntroduce(){
 		return "Serve/ServiceIntroduce";
+	}
+	
+	@RequestMapping
+	public String AppointmentTime(){
+		return "Serve/AppointmentTime";
+	}
+	
+	@RequestMapping
+	public String ReserveInformation(){
+		return "Serve/ReserveInformation";
 	}
 	
 

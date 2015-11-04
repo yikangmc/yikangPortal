@@ -96,9 +96,8 @@ public class AppointmentUserController{
 								rtnData.put("status",ExceptionConstants.systemException.systemException.errorCode);
 								rtnData.put("message", "您已经预约过服务了！");
 							}
-
 						}
-	
+						
 					} else {
 						rtnData.put("status",ExceptionConstants.systemException.systemException.errorCode);
 						rtnData.put("message", "抱歉，你的验证码，输入错误!");
@@ -159,7 +158,6 @@ public class AppointmentUserController{
 			
 			
 			if(getDate==null || isTure){
-				
 				if(appointmentUserService.validateMobileIsAppointment(mobileNumber)){
 					if (SMSUtil.sendMessage(mobileNumber, captcha + "", 1 + "")) {
 						
