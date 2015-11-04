@@ -1,8 +1,10 @@
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ include file="/common/protalhead.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>无标题文档</title>
+<title>æ æ é¢ææ¡£</title>
 <!--
 <link rel="stylesheet" type="text/css" href="css/protal/mainCss.css" /-->
 <!-- Bootstrap -->
@@ -12,23 +14,23 @@
 </head>
 
 <body>
-	<div class="dv_toptitle">护龄家</div>
+	<div class="dv_toptitle">æ¤é¾å®¶</div>
 	<div class="dv_body">
     	<div class="dv_body_title">
-        	为谁做：
+        	ä¸ºè°åï¼
             <div class="btn-group btn_txt">
                <select class="selectpicker">
-					<option>父亲</option>
-					<option>母亲</option>
-					<option>外婆</option>
-					<option>外公</option>
-					<option>爷爷</option>
-					<option>奶奶</option>
-					<option>自己</option>
+					<option>ç¶äº²</option>
+					<option>æ¯äº²</option>
+					<option>å¤å©</option>
+					<option>å¤å¬</option>
+					<option>ç·ç·</option>
+					<option>å¥¶å¥¶</option>
+					<option>èªå·±</option>
 				</select>
             </div> 
 			&nbsp; 
-            他/她的年龄：
+            ä»/å¥¹çå¹´é¾ï¼
             <div class="btn-group btn_txt">
                <select class="selectpicker" style="width: 102px;">
 					<option>50-60</option>
@@ -41,34 +43,34 @@
      	</div>
         <div style="margin:0 auto;" class="dv_body_text">
         <p style="height:10px;"></p>
-        	他/她的住址：
+        	ä»/å¥¹çä½åï¼
             <input name="mobileNumber" style="font-size:27px; height:70px;" type="text"
                             class="col-md-12 col-sm-12 col-xs-12 input" />
            	<p style="height:10px;"></p>
-        	他/她的联系方式：
+        	ä»/å¥¹çèç³»æ¹å¼ï¼
             <input name="mobileNumber" style="font-size:27px; height:50px;" type="text"
                             class="col-md-12 col-sm-12 col-xs-12 input" />
        		<p style="height:10px;"></p>
-        	联系人姓名：
+        	èç³»äººå§åï¼
             <input name="mobileNumber" style="font-size:27px; height:50px;" type="text"
                             class="col-md-12 col-sm-12 col-xs-12 input" />
           	<p style="height:10px;"></p>
-        	预约上门评估时间：
+        	é¢çº¦ä¸é¨è¯ä¼°æ¶é´ï¼
             <input name="mobileNumber" style="font-size:27px; height:50px;" type="text"
                             class="col-md-12 col-sm-12 col-xs-12 input" />
           	<button id="input_heightfour" style="background: #F2A71C; font-size:27px; height:90px; color: #FFF;"
-					type="button" class="btn btn-lg col-md-12 col-sm-12 col-xs-12">马上预约</button>
+					type="button" class="btn btn-lg col-md-12 col-sm-12 col-xs-12">é©¬ä¸é¢çº¦</button>
         </div>
     </div>
 <script>
 	$(document).ready(function(){
 		var width = $(window).width();
 		var heigth = $(window).height();
-		//alert("当前的宽"+parseInt(width)+"，当前的高"+parseInt(heigth));
-		var infoanimateLeft = parseInt(screen.height); // 获得当前分辨率
+		//alert("å½åçå®½"+parseInt(width)+"ï¼å½åçé«"+parseInt(heigth));
+		var infoanimateLeft = parseInt(screen.height); // è·å¾å½ååè¾¨ç
 		var bigimg = document.getElementById("#midtopimg");
 		if(heigth >= width){
-			//alert("执行手机方案");
+			//alert("æ§è¡ææºæ¹æ¡");
 		}
 	});
 	var $$ = function (id) { 

@@ -100,6 +100,27 @@ public class AppointmentOrderController {
 		return "Serve/ServiceIntroduce";
 	}
 
+	/**
+	 * @author liushuaic
+	 * @date 2015/11/04 15:14
+	 * @desc 跳转到选择时间
+	 * **/
+	@RequestMapping
+	public String appointmentTime(){
+		return "Serve/AppointmentTime";
+	}
+	
+	
+	
+	/**
+	 * @author liushuaic
+	 * @date 2015/11/04 15:16
+	 * @desc 填写个人信息
+	 * **/
+	@RequestMapping
+	public String reserveInfomation(){
+		return "Serve/ReserveInformation";
+	}
 	
 	
 }
