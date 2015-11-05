@@ -53,7 +53,7 @@ var _hmt = _hmt || [];
             </div>
             <div id="dv_timeover">
             
-            	<c:forEach items="${data.custumerTimeQuantums }" var="custumeTime">
+            	<c:forEach items="${custumerTimeQuantums }" var="custumeTime">
             		<button class="btn_porject">${custumeTime.startTime }</button>
             	</c:forEach>
             	
