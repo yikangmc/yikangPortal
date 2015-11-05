@@ -1,7 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>易康美辰</title>
 <meta name="keywords" 			content="易康美辰,预约评估及服务" />
@@ -10,11 +9,10 @@
 <meta name="author" 			content="易康美辰技术部" />
 <link rel="stylesheet" type="text/css" href="css/protal/mainCss.css" />
 <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" />
-<link rel="stylesheet" href="css/slide.css"/>
+<link rel="stylesheet" href="css/slide.css">
 <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
 <script src="js/slide.js"></script>
 </head>
-
 
 <body>
 	<div>
@@ -41,8 +39,52 @@
            	<img id="images2" style="width:100%; height:100%;" src="img/protal/Indextwo/home.jpg" />
         </div>
 
-        <div class="dv_ty" id="dv_bak" style="height: 900px;">
-       		<iframe src="rolling.html" style="width:100%; height: 900px; margin-top:140px;" frameborder="0" scrolling="no"></iframe>
+        <div class="dv_ty" id="dv_bak" style="height: 900px; margin-top: 100px; z-index: -0;">
+        	<div class="ck-slide">
+		<ul class="ck-slide-wrapper">
+			<li style="display:none; width:25%;">
+				<a href="javascript:"><img style="width:100%; height:97%;" src="img/protal/Indextwo/img/1.png" alt=""></a>
+			</li>
+			<li style="display:none; width:25%;">
+				<a href="javascript:"><img style="width:100%; height:97%;" src="img/protal/Indextwo/img/2.png" alt=""></a>
+			</li>
+			<li style="display:none; width:25%;">
+				<a href="javascript:"><img style="width:100%; height:97%;" src="img/protal/Indextwo/img/3.png" alt=""></a>
+			</li>
+			<li style="display:none; width:25%;">
+				<a href="javascript:"><img style="width:100%; height:97%;" src="img/protal/Indextwo/img/4.png" alt=""></a>
+			</li>
+		</ul>
+		<a href="javascript:;" class="ctrl-slide ck-prev" onClick="moveDiv()">上一张</a> <a href="javascript:;" class="ctrl-slide ck-next" onClick="moveDiv()">下一张</a>
+        <div class="btn_info_title">
+        	<img src="img/protal/Indextwo/img/backtitle.png" />
+            <div style="margin-top: -52px; margin-left: 55px; font-size:34px; font-weight:500; color:#FFF;">
+          		护龄家项目案例
+           	</div>
+        </div>
+        <a href="javascript:void(0);" id="btn_ckOne">
+    		<div class="btn_info">
+              	<img src="img/protal/Indextwo/img/libinfo.png" />
+         		<div style="margin-top: -52px; margin-left: 70px; font-size:30px; font-weight:500;">
+                     	项目介绍 &nbsp; 〉
+            	</div>
+    		</div>
+        </a>
+        
+        <!-- 1 -->
+        <div style=" width:395px; font-size:20px; height:800px; padding-top: 30px;">
+            	高血压中医护理 
+		<br> &nbsp; &nbsp; 定期监测血压，实现降压达标，平稳有效地控制血压，减缓靶器官的损害，控制心脑血管并发症的发生，改善生存质量，降低疾病负担。
+		<br>
+		病理与服务介绍
+		<br> &nbsp; &nbsp; 高血压是最常见的慢性病，也是心脑血管病最主要的危险因素，脑卒中、心肌梗死、心力衰竭及慢性肾脏病是其主要并发症。实践证明，高血压是可以预防和控制的疾病，降低高血压患者的血压水平，可明显减少脑卒中的发生。
+		<br>护理措施包括
+		<br> &nbsp; &nbsp; 1.常规药物治疗：坚持长期终生用药，小剂量开始，优先选择长效制剂，联合应用及个体化。
+		<br> &nbsp; &nbsp; 2.非药物治疗：为您量身制定计划，减少钠盐摄入，控制体重，戒烟限酒，坚持运动，减轻精神压力，保持心情轻松愉快。
+		<br> &nbsp; &nbsp; 3.中医药物调理：为您提供中医养生调理汤药，有效控制血压，抑制并发症发生，让您可以放心轻松的生活。
+            </div>
+	</div>
+</div>
         </div>
         
         <div class="dv_ty">
@@ -77,7 +119,7 @@
                     	<div class="dv_imgs">
                         	<img style="width:200px; height:220px;" src="img/protal/Indextwo/kf.png"  /><br />
                         </div>
-                        	<img src="img/protal/Indextwo/kf1.png"  />
+                        	<img style=" width:110px; height: 53px;" src="img/protal/Indextwo/kf1.png"  />
                     </li>
                 </ul>
             </div>
@@ -90,37 +132,37 @@
                 	<li>
                         	<img src="img/protal/Indextwo/1.png"  /><br />
                     	<div class="dv_fonts_btomm">
-                        	<img src="img/protal/Indextwo/01.png"  /><br />
+                        	<img style="width: 220px;" src="img/protal/Indextwo/01.png"  /><br />
                         </div>
-                        	<img src="img/protal/Indextwo/001.png"  />
+                        	<img style=" width: 220px; " src="img/protal/Indextwo/001.png"  />
                     </li>
                 	<li>
                         	<img src="img/protal/Indextwo/2.png"  /><br />
                     	<div class="dv_fonts_btomm">
-                        	<img src="img/protal/Indextwo/02.png"  /><br />
+                        	<img style="width: 220px;" src="img/protal/Indextwo/02.png"  /><br />
                         </div>
-                        	<img src="img/protal/Indextwo/002.png"  />
+                        	<img style=" width: 220px; " src="img/protal/Indextwo/002.png"  />
                     </li>
                 	<li>
-                        	<img src="img/protal/Indextwo/3.png"  /><br />
+                        	<img style="width: 372px; height:336px;" src="img/protal/Indextwo/3.png"  /><br />
                     	<div class="dv_fonts_btomm">
                         	<img src="img/protal/Indextwo/03.png"  /><br />
                         </div>
-                        	<img src="img/protal/Indextwo/003.png"  />
+                        	<img style=" width: 220px;" src="img/protal/Indextwo/003.png"  />
                     </li>
                 	<li>
                         	<img src="img/protal/Indextwo/4.png"  /><br />
                     	<div class="dv_fonts_btomm">
-                        	<img src="img/protal/Indextwo/04.png"  /><br />
+                        	<img style="width: 220px;" src="img/protal/Indextwo/04.png"  /><br />
                         </div>
-                        	<img src="img/protal/Indextwo/004.png"  />
+                        	<img style=" width: 220px; " src="img/protal/Indextwo/004.png"  />
                     </li>
                 	<li>
                         	<img src="img/protal/Indextwo/5.png"  />
                     	<div class="dv_fonts_btomm">
                         	<img src="img/protal/Indextwo/05.png"  /><br />
                         </div>
-                        	<img src="img/protal/Indextwo/005.png"  />
+                        	<img style=" width: 220px; " src="img/protal/Indextwo/005.png"  />
                     </li>
                 </ul>
             </div>
@@ -166,11 +208,50 @@
      			$("#dv_bak").css({"height":"760px;"});
      		};
   		});
-		
 		$('.ck-slide').ckSlide({
-			autoPlay: false,
-			dir: 'x',			//淡出，x水平，y 垂直
-		});
+				autoPlay: false,
+				dir: 'x',			//淡出，x水平，y 垂直
+			});
+			$(function() {
+				$("#btn_ckOne").click(function() {
+					var div = $(".left_banner");
+					if(div.hasClass("dest")) {
+						div.removeClass("dest").animate({left: -563}, 700);
+					} else {
+						div.addClass("dest").animate({left: 0}, 700);
+					}
+				})
+			});
+			var i = 1;
+			function moveDiv(ico)
+			{
+				if (i <= 4) {
+					if (i <= 2) {
+						document.getElementById("moveDivone").style.display = "none"
+						document.getElementById("moveDivTwo").style.display = "block"
+						document.getElementById("moveDivThree").style.display = "none"
+						document.getElementById("moveDivFour").style.display = "none"
+					} else if (i <= 3) {
+						document.getElementById("moveDivone").style.display = "none"
+						document.getElementById("moveDivTwo").style.display = "none"
+						document.getElementById("moveDivThree").style.display = "block"
+						document.getElementById("moveDivFour").style.display = "none"
+					} else if (i <= 4) {	
+						document.getElementById("moveDivone").style.display = "none"
+						document.getElementById("moveDivTwo").style.display = "none"
+						document.getElementById("moveDivThree").style.display = "none"
+						document.getElementById("moveDivFour").style.display = "block"
+					} else if (i <= 5) {
+						document.getElementById("moveDivone").style.display = "block"
+						document.getElementById("moveDivTwo").style.display = "none"
+						document.getElementById("moveDivThree").style.display = "none"
+						document.getElementById("moveDivFour").style.display = "none"
+					}
+				} else {
+						i = i - 4;
+					alert("i 太大啦！！，当前数值是:" + i)	
+				}
+			}
 		
 		function now(){
 				var top = document.body.scrollTop;
@@ -205,161 +286,46 @@
 					}
 				}
 		}
-		function($){
-				$.fn.ckSlide = function(opts){
-					//.extend() 扩展jQuery类，添加ckSlide方法，参数是对象类型{}
-					opts = $.extend({}, $.fn.ckSlide.opts, opts);
-					this.each(function(){
-						var slidewrap = $(this).find('.ck-slide-wrapper');//轮播元素父对象
-						var slide = slidewrap.find('li');//获取<li>对象集
-						var count = slide.length;//计算对象集长度
-						var that = this;//存放父对象
-						var index = 0;//起始位置
-						var time = null;
-						$(this).data('opts', opts);//给轮播对象添加参数 数据
-						// next
-						$(this).find('.ck-next').on('click', function(){
-							if(opts['isAnimate'] == true){
-								return;
-							}
-							
-							var old = index;
-							if(index >= count - 1){
-								index = 0;
-							}else{
-								index++;
-							}
-							change.call(that, index, old);//调用图片切换方法，.call() 每个JS函数都包含的一个非继承而来的方法，主要用来指定函数的作用域 that ，通常不严谨写法是change()，有可能会函数冲突。
-						});
-						// prev
-						$(this).find('.ck-prev').on('click', function(){
-							if(opts['isAnimate'] == true){
-								return;
-							}
-							
-							var old = index;
-							if(index <= 0){
-								index = count - 1;
-							}else{                                      
-								index--;
-							}
-							change.call(that, index, old);
-						});
-						//点击切换相应序号的图片
-						$(this).find('.ck-slidebox li').each(function(cindex){
-							$(this).on('click.slidebox', function(){
-								change.call(that, cindex, index);
-								index = cindex;
-							});
-						});
-						//自己添加——鼠标移入小圆点切换轮播图片
-						$(this).find('.ck-slidebox li').each(function(cindex){
-							$(this).on('mouseover.slidebox', function(){
-								change.call(that, cindex, index);
-								index = cindex;
-							});
-						});
-						
-						// 鼠标悬停停止自动播放，显示左右切换按钮
-						$(this).on('mouseover', function(){
-							if(opts.autoPlay){
-								clearInterval(time);
-							}
-							$(this).find('.ctrl-slide').css({opacity:0.6});
-						});
-						//  鼠标离开轮播界面，开始自动播放，同时隐藏按钮
-						$(this).on('mouseleave', function(){
-							if(opts.autoPlay){
-								startAtuoPlay(opts.interval);
-							}
-							$(this).find('.ctrl-slide').css({opacity:0.1});
-						});
-						startAtuoPlay(opts.interval);
-						// 自动滚动播放
-						function startAtuoPlay(inum){
-							if(opts.autoPlay){
-								time  = setInterval(function(){
-									var old = index;
-									if(index >= count - 1){
-										index = 0;
-									}else{
-										index++;
-									}
-									change.call(that, index, old);
-								}, inum);//2秒
-							}
-						}
-						// 修正box  标记居中
-						var box = $(this).find('.ck-slidebox');
-						box.css({
-							'margin-left':-(box.width() / 2)
-						})
-						// dir  移动方向参数
-						switch(opts.dir){
-							case "x":
-								opts['width'] = $(this).width();
-								slidewrap.css({
-									'width':count * opts['width']
-								});
-								slide.css({
-									'float':'left',
-									'position':'relative',
-									'margin-left':'0px'
-								});
-								//.wrap()包裹页面已经定义的.ck-slide-wrapper以及子元素
-								slidewrap.wrap('<div class="ck-slide-dir"></div>');
-								slide.show();
-								break;
-							case "y":  //添加垂直移动参数
-								opts['height'] = $(this).height();
-								slidewrap.css({
-									'height':count * opts['height']
-								});
-								slide.css({
-									'float':'left',
-									'position':'relative',
-									'margin-top':'0px'
-								});
-								slidewrap.wrap('<div class="ck-slide-dir"></div>');
-								slide.show();
-							break;
-						}
-					});
-				};
-				function change(show, hide){
-					//获取之前设置在ckSlide对象上的参数 数据
-					var opts = $(this).data('opts');
-					//水平移动
-					if(opts.dir == 'x'){
-						var x = show * opts['width'];
-						//animate() 与css()执行结果相同，但是过程不同，前者有渐变动画效果
-						$(this).find('.ck-slide-wrapper').stop().animate({'margin-left':-x}, function(){opts['isAnimate'] = false;});
-						opts['isAnimate'] = true;//图片在移动过程中设置按钮点击不可用，确保每一次轮播视觉上执行完成，
-					}else if(opts.dir == 'y'){//垂直移动——自己添加
-						var y = show * opts['height'];
-						$(this).find('.ck-slide-wrapper').stop().animate({'margin-top':-y}, function(){opts['isAnimate'] = false;});
-						opts['isAnimate'] = true;
-					}
-					else{
-						//默认的淡隐淡出效果
-						$(this).find('.ck-slide-wrapper li').eq(hide).stop().animate({opacity:0});
-						$(this).find('.ck-slide-wrapper li').eq(show).show().css({opacity:0}).stop().animate({opacity:1});
-					}
-				   //切换对应标记的颜色
-					$(this).find('.ck-slidebox li').removeClass('current');
-					$(this).find('.ck-slidebox li').eq(show).addClass('current');
-				}
-				$.fn.ckSlide.opts = {
-					autoPlay: false,//默认不自动播放
-					dir: null,//默认淡隐淡出效果
-					isAnimate: false,//默认按钮可用
-					interval:2000//默认自动2秒切换 
-				};
-		}
-		(jQuery);
     </script>
 </div>
 <style>
+	.zhushi{width:900px;margin: 30px auto; }
+		.zhushi p{ line-height:24px; font-family:"微软雅黑";font-size:16px;text-align:left;}
+		.ck-slide { width: 100%; height: 100%; margin: 0 auto; float:left;}
+		.ck-slide ul.ck-slide-wrapper { height: 320px;}
+		.left_banner {
+			background:url(img/protal/Indextwo/img/%E6%A1%88%E5%88%97%E8%AF%A6%E6%83%85%E8%83%8C%E6%99%AF.png);
+			width:510px;
+			position: absolute;
+			top:0px;
+			left:-563px;
+			z-index:2;
+			padding-left:50px;
+		}
+		.btn_info {
+			z-index:1; 
+			width:324px;
+			height:60px;
+			position:relative;
+			top:450px;
+			left:530px;
+		}
+		.btn_info_title {
+			z-index:1; 
+			width:324px;
+			height:60px;
+			position:relative;
+			top:420px;
+			left:530px;
+		}
+		.ck-slide .ck-prev {
+			left: 5px;
+			background: url(img/protal/Indextwo/img/arrow-left.png) #000 50% no-repeat;
+		}
+		.ck-slide .ck-next {
+			right: 5px;
+			background: url(img/protal/Indextwo/img/arrow-right.png) #000 50% no-repeat;
+		}
 	.dv_fonts_btomm {
 		margin-top:-10px;
 		margin-bottom:10px;
