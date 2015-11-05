@@ -86,6 +86,7 @@ var _hmt = _hmt || [];
                     btn[index].style.backgroundColor = "#428bca";
                 }else{
                     btn[index].style.backgroundColor = "gray";
+		    window.location.href = 'ReserveInformation'
                 }
  
             }
