@@ -1,6 +1,7 @@
 package com.yikang.protal.controller;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -11,6 +12,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.yikang.common.utils.DateUtils;
+import com.yikang.protal.entity.CustumerTimeQuantum;
 import com.yikang.protal.service.AppointmentOrderService;
 import com.yikang.protal.service.ServiceItemService;
 import com.yikang.protal.service.TimeQuantumService;
@@ -106,7 +109,27 @@ public class AppointmentOrderController {
 	 * @desc 跳转到选择时间
 	 * **/
 	@RequestMapping
-	public String appointmentTime(){
+	public String appointmentTime(ModelMap modelMap,String serviceDate){
+		
+		//DateUtils;
+		if(null == serviceDate){
+			serviceDate=DateUtils.getCurrentDateStr();
+		}
+		
+		Map<String,Object> custumerTimeQuantums=timeQuantumService.getCustumerTimeQuantums(serviceDate);
+		List<CustumerTimeQuantum> serviceDateList=DateUtils.getCanSelectedDateTime();
+
+		for(int i=0;i<serviceDateList.size();i++){
+			if(serviceDateList.get(i).getDateStr().equals(serviceDate)){
+				serviceDateList.get(i).setIsSelected(true);
+			}
+		}
+		
+		
+		modelMap.put("serviceDateList", serviceDateList);
+		modelMap.put("custumerTimeQuantums", custumerTimeQuantums.get("data"));
+		
+		
 		return "Serve/AppointmentTime";
 	}
 	
