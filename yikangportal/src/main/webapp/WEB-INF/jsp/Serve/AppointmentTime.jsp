@@ -25,7 +25,7 @@ var _hmt = _hmt || [];
 <body>
 	<div class="dv_toptitle">护龄家</div>
 	<div class="dv_body">
-    	<div class="dv_body_title">
+    	<div class="dv_body_title"> 
         	<span style="color:#4E84E9; font-size:22px; display:block; width:450px; margin:0 auto;">请选择预约评估时间,浅色代表已被他人预约最好在家人的陪同下进行工作。</span>
             <div style=" width:450px; height:145px; margin:0 auto; border:solid rgb(15,15,15) 0px;">
                 <ul>
