@@ -4,370 +4,305 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<script type="text/javascript" src="<%=basePath%>/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="<%=basePath%>js/jquery-1.8.3.min.js"></script>
 <title>预约服务</title>
 </head>
-
-<body>  
-	<div class="dv_title">护龄家</div>   
-	
-	<c:forEach items="${data }" var="serviceItem">
-		<a href="<%=basePath%>/appointmentOrder/serviceItemDetail?serviceItemId=${serviceItem.serviceItemId}">
-			<div class="dv_body">
-				<div class="dv_info">
-					&nbsp;
-					<div style="margin: 0 auto; width: 600px;">
-						<div class="info_left">
-							<img src="<%=basePath%>/img/ServeImg/1.png" />
-						</div>
-						<div class="info_right">
-							<ul>
-								<p class="font_title">${serviceItem.serviceTitle}</p>
-								<p class="font_body">${serviceItem.serviceContent}</p>
-								<p class="font_bottom">
-									<img src="<%=basePath%>/img/ServeImg/time.png" />${serviceItem.serviceTime } &nbsp; <font
-										class="font_money" color="#F22D7B">${serviceItem.price} </font>
-								</p>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<img style="width: 100%;" src="<%=basePath%>/img/ServeImg/border.png"/>
-			</div>
-		</a>
-	</c:forEach>
-	
-	<!-- 1 -->
-   	<a href="ServeProject">
-	<div class="dv_body">
-    	<div class="dv_info">
-    		&nbsp;
-			<div style="width: 820px; margin: 0 auto;">
-			<div class="info_left">
-				<img style=" width: 220px; height: 220px;" src="<%=basePath%>/img/ServeImg/1.png" />
-			</div>
-			<div class="info_right">
-				<ul>
-					<p class="font_title">
-						压疮换药与护理
-					</p>
-					<p class="font_body">
-						医学界压疮护理，减轻痛苦，防止感染，促进愈合
-					</p>
-					<p class="font_bottom">
-						<img src="<%=basePath%>/img/ServeImg/time.png" /> 90分钟 &nbsp; <font class="font_money"color="#F22D7B">￥300</font>
-					</p>
-				</ul>
-			</div>
-		</div>
-    	</div>
-				<img style="width: 100%;" src="<%=basePath%>/img/ServeImg/border.png"></div>
-	</a>
-   	<!-- 2 -->
-   	<a href="ServeProject">
-	<div class="dv_body">
-    	<div class="dv_info">
-    		&nbsp;
-			<div style="width: 820px; margin: 0 auto;">
-			<div class="info_left">
-				<img style=" width: 220px; height: 220px;" src="<%=basePath%>/img/ServeImg/2.png" />
-			</div>
-			<div class="info_right">
-				<ul>
-					<p class="font_title">
-						骨关节置换术后康复护理
-					</p>
-					<p class="font_body">
-						医学界压疮护理，减轻痛苦，防止感染，促进愈合
-					</p>
-					<p class="font_bottom">
-						<img src="<%=basePath%>/img/ServeImg/time.png" /> 90分钟 &nbsp; <font class="font_money" color="#F22D7B">￥300</font>
-					</p>
-				</ul>
-			</div>
-			</div>
-    	</div>
-				<img style="width: 100%;" src="<%=basePath%>/img/ServeImg/border.png"></div>
-	</a>
-   	<!-- 3 -->
-   	<a href="ServeProject">
-	<div class="dv_body">
-    	<div class="dv_info">
-    		&nbsp;
-			<div style="width: 820px; margin: 0 auto;">
-			<div class="info_left">
-				<img style=" width: 220px; height: 220px;" src="<%=basePath%>/img/ServeImg/3.png" />
-			</div>
-			<div class="info_right">
-				<ul>
-					<p class="font_title">
-						糖尿病中医护理
-					</p>
-					<p class="font_body">
-						医学界压疮护理，减轻痛苦，防止感染，促进愈合
-					</p>
-					<p class="font_bottom">
-						<img src="<%=basePath%>/img/ServeImg/time.png" /> 90分钟 &nbsp; <font class="font_money" color="#F22D7B">￥300</font>
-					</p>
-				</ul>
-			</div>
-			</div>
-    	</div>
-				<img style="width: 100%;" src="<%=basePath%>/img/ServeImg/border.png"></div>
-	</a>
-   	<!-- 4 -->
-   	<a href="ServeProject">
-	<div class="dv_body">
-    	<div class="dv_info">
-    		&nbsp;
-			<div style="width: 820px; margin: 0 auto;">
-			<div class="info_left">
-				<img style=" width: 220px; height: 220px;" src="<%=basePath%>/img/ServeImg/4.png" />
-			</div>
-			<div class="info_right">
-				<ul>
-					<p class="font_title">
-						高血压中医护理
-					</p>
-					<p class="font_body">
-						医学界压疮护理，减轻痛苦，防止感染，促进愈合
-					</p>
-					<p class="font_bottom">
-						<img src="<%=basePath%>/img/ServeImg/time.png" /> 90分钟 &nbsp; <font class="font_money" color="#F22D7B">￥300</font>
-					</p>
-				</ul>
-			</div>
-			</div>
-    	</div>
-				<img style="width: 100%;" src="<%=basePath%>/img/ServeImg/border.png"></div>
-	</a>
-   	<!-- 5 -->
-   	<a href="ServeProject">
-	<div class="dv_body">
-    	<div class="dv_info">
-    		&nbsp;
-			<div style="width: 820px; margin: 0 auto;">
-			<div class="info_left">
-				<img style=" width: 220px; height: 220px;" src="<%=basePath%>/img/ServeImg/5.png" />
-			</div>
-			<div class="info_right">
-				<ul>
-					<p class="font_title">
-						颈椎痛中医护理
-					</p>
-					<p class="font_body">
-						医学界压疮护理，减轻痛苦，防止感染，促进愈合
-					</p>
-					<p class="font_bottom">
-						<img src="<%=basePath%>/img/ServeImg/time.png" /> 90分钟 &nbsp; <font class="font_money" color="#F22D7B">￥300</font>
-					</p>
-				</ul>
-			</div>
-			</div>
-    	</div>
-				<img style="width: 100%;" src="<%=basePath%>/img/ServeImg/border.png"></div>
-	</a>
-   	<!-- 6 -->
-   	<a href="ServeProject">
-	<div class="dv_body">
-    	<div class="dv_info">
-    		&nbsp;
-			<div style="width: 820px; margin: 0 auto;">
-			<div class="info_left">
-				<img style=" width: 220px; height: 220px;" src="<%=basePath%>/img/ServeImg/6.png" />
-			</div>
-			<div class="info_right">
-				<ul>
-					<p class="font_title">
-						肥胖养生中医调理
-					</p>
-					<p class="font_body">
-						医学界压疮护理，减轻痛苦，防止感染，促进愈合
-					</p>
-					<p class="font_bottom">
-						<img src="<%=basePath%>/img/ServeImg/time.png" /> 90分钟 &nbsp; <font class="font_money" color="#F22D7B">￥300</font>
-					</p>
-				</ul>
-			</div>
-			</div>
-    	</div>
-				<img style="width: 100%;" src="<%=basePath%>/img/ServeImg/border.png"></div>
-	</a>
-   	<!-- 7 -->
-   	<a href="ServeProject">
-	<div class="dv_body">
-    	<div class="dv_info">
-    		&nbsp;
-			<div style="width: 820px; margin: 0 auto;">
-			<div class="info_left">
-				<img style=" width: 220px; height: 220px;" src="<%=basePath%>/img/ServeImg/7.png" />
-			</div>
-			<div class="info_right">
-				<ul>
-					<p class="font_title">
-						鼻饲管与尿液管更换与护理
-					</p>
-					<p class="font_body">
-						医学界压疮护理，减轻痛苦，防止感染，促进愈合
-					</p>
-					<p class="font_bottom">
-						<img src="<%=basePath%>/img/ServeImg/time.png" /> 90分钟 &nbsp; <font class="font_money" color="#F22D7B">￥300</font>
-					</p>
-				</ul>
-			</div>
-			</div>
-    	</div>
-				<img style="width: 100%;" src="<%=basePath%>/img/ServeImg/border.png"></div>
-	</a>
-   	<!-- 8 -->
-   	<a href="ServeProject">
-	<div class="dv_body">
-    	<div class="dv_info">
-    		&nbsp;
-			<div style="width: 820px; margin: 0 auto;">
-			<div class="info_left">
-				<img style=" width: 220px; height: 220px;" src="<%=basePath%>/img/ServeImg/8.png" />
-			</div>
-			<div class="info_right">
-				<ul>
-					<p class="font_title">
-						PICC管的换药维护与护理
-					</p>
-					<p class="font_body">
-						医学界压疮护理，减轻痛苦，防止感染，促进愈合
-					</p>
-					<p class="font_bottom">
-						<img src="<%=basePath%>/img/ServeImg/time.png" /> 90分钟 &nbsp; <font class="font_money" color="#F22D7B">￥300</font>
-					</p>
-				</ul>
-			</div>
-			</div>
-    	</div>
-				<img style="width: 100%;" src="<%=basePath%>/img/ServeImg/border.png"></div>
-	</a>
-   	<!-- 9 -->
-   	<a href="ServeProject">
-	<div class="dv_body">
-    	<div class="dv_info">
-    		&nbsp;
-			<div style="width: 820px; margin: 0 auto;">
-			<div class="info_left">
-				<img style=" width: 220px; height: 220px;" src="<%=basePath%>/img/ServeImg/9.png" />
-			</div>
-			<div class="info_right">
-				<ul>
-					<p class="font_title">
-						气切口的护理
-					</p>
-					<p class="font_body">
-						医学界压疮护理，减轻痛苦，防止感染，促进愈合
-					</p>
-					<p class="font_bottom">
-						<img src="<%=basePath%>/img/ServeImg/time.png" /> 90分钟 &nbsp; <font class="font_money" color="#F22D7B">￥300</font>
-					</p>
-				</ul>
-			</div>
-			</div>
-    	</div>
-				<img style="width: 100%;" src="<%=basePath%>/img/ServeImg/border.png"></div>
-	</a>
-   	<!-- 10 -->
-   	<a href=""ServeProject"">
+	<body>  
 		<div class="dv_body">
-	    	<div class="dv_info">
-	    		&nbsp;
-				<div style="width: 820px; margin: 0 auto;">
-				<div class="info_left">
-					<img style=" width: 220px; height: 220px;" src="<%=basePath%>/img/ServeImg/10.png" />
+			<div class="dv_topimg">   
+			</div>
+			<form action="<%=basePath%>appointmentOrder/" method="post">
+				
+				<input type="hidden" name="serviceItemId" value="${data.serviceItemId }" />
+				
+				<input type="hidden" name="medicinalApparatusIds" value="${data.serviceItemId }" />
+				
+			</form>
+			<div class="dv_title">
+				<ul>
+					<li class="font-toptitle">${data.serviceTitle }</li><br/>
+					<li class="font-mony">${data.price }</li>
+					<li class="font-bottom">${data.serviceContent }</li>
+				</ul>
+			</div>
+			<img style=" width: 100%;" src="<%=basePath%>img/protal/ServeImg/border.png" />
+			<div class="dv_service_title">
+				<ul>
+					<a onclick="cd_dv1()"><li class="fontstyle" style="width: 26%;">服务介绍</li></a>
+					<a onclick="cd_dv2()"><li class="fontstyle" style="width: 26%;">注意事项</li></a>
+					<a onclick="cd_dv3()"><li style="width: 48%;">所需药品和器材</li></a>
+				</ul>
+			</div>
+			
+			<img style=" width: 100%;" src="<%=basePath%>img/protal/ServeImg/border.png" />
+			
+			<div id="dv_1" class="dv_home">
+				<c:forEach items="${data.serviceIntroduces}" var="serviceIntroduce">
+					<h1>【${serviceIntroduce.title}】</h1><br />
+					<div class="v1">&nbsp;&nbsp;
+						${serviceIntroduce.content}
+					</div>
+				</c:forEach>
+				<button style="width: 280px; height: 70px; border-radius: 10px; border: 0px; background: #2d86ff; color: #fff; font-size: 28px; font-weight:600;">预约该项目</button>
+			</div>
+
+
+			<div id="dv_2" class="dv_home">
+				<c:forEach items="${data.serviceNotes }" var="serviceNote">
+					<h1>${serviceNote.title}</h1><br />
+					<div class="v1">&nbsp;&nbsp;
+						${serviceNote.content }
+					</div>
+				</c:forEach>
+				<div class="selectService">
+						<button class="btn_select">预约该项目</button>
 				</div>
-				<div class="info_right">
+			</div>
+			
+			
+			<div id="dv_3" class="dv_home">
+				<h1>【所需药品和器材】</h1><br/>
+				<div class="v1">
 					<ul>
-						<p class="font_title">
-							造瘘口的护理
-						</p>
-						<p class="font_body">
-							医学界压疮护理，减轻痛苦，防止感染，促进愈合
-						</p>
-						<p class="font_bottom">
-							<img src="<%=basePath%>/img/ServeImg/time.png" /> 90分钟 &nbsp; <font class="font_money" color="#F22D7B">￥300</font>
-						</p>
+						<c:forEach items="${data.medicinalApparatus }" var="medicinalApparatus">
+							<li>
+								<!-- 1 -->
+								<div class="shangping" >
+									<ul>
+										<li>
+											<div id="font_selete">
+												&nbsp;
+											</div>
+										</li>
+										<li>
+											<div style="width:135px;">
+												<img style="width: 135px; height: 135px;" src="<%=basePath%>img/protal/ServeImg/fl.png">
+												<input type="hidden" name="medicinalApparatuId" value="${medicinalApparatus.medicinalApparatuId }"></input>
+											</div>
+										</li>
+										<li id="font_titleone" style="padding-left: 40px;">
+											${medicinalApparatus.maName }
+										</li>
+										<li style="padding-left: 40px;">
+											<button id="btn_fonts" onclick="myFunction()" value="">点击购买</button>
+										</li>
+									</ul>
+								</div>
+							</li>
+						</c:forEach>
 					</ul>
 				</div>
+				<div class="selectService">
+					<button id="btn_1" class="btn_one">预约该项目</button>
+				</div>
 			</div>
-	    	</div>
-					<img style="width: 100%;" src="<%=basePath%>/img/ServeImg/border.png"></div>
-	</a>
-	<style>
-		*{ margin: 0px; padding: 0px;}
-		.dv_body {
-			width: 95%;
-			margin: 0 auto;
-			text-align: center;
+		</div>
+	</body>
+	<script type="text/javascript">
+		var colorTag = 1;
+		var colorTagtwo = 1;
+		var colors = ["#999", "#2d86ff"];
+		function myFunction()
+		{
+			colorTag = 1 - colorTag;
+			document.getElementById("font_selete").style.background = colors[ colorTag];
+			document.getElementById("btn_fonts").style.background = colors[ colorTag];
+			document.getElementById("font_titleone").style.color = colors[ colorTag];
+
+		}
+		function myFunction2()
+		{
+			colorTagtwo = 1 - colorTagtwo;
+			document.getElementById("font_selete1").style.background = colors[ colorTag];
+			document.getElementById("btn_fonts3").style.background = colors[ colorTag];
+			document.getElementById("font_titleone2").style.color = colors[ colorTag];
+
+		}
+		function cd_dv1() {
+			document.getElementById("dv_1").style.display = "block"
+			document.getElementById("dv_2").style.display = "none"
+			document.getElementById("dv_3").style.display = "none"
+		}
+		function cd_dv2() {
+			document.getElementById("dv_1").style.display = "none"
+			document.getElementById("dv_2").style.display = "block"
+			document.getElementById("dv_3").style.display = "none"
+		}
+		function cd_dv3() {
+			document.getElementById("dv_1").style.display = "none"
+			document.getElementById("dv_2").style.display = "none"
+			document.getElementById("dv_3").style.display = "block"
+		}
+	</script>
+	<style type="text/css">
+		html,body {
 			font-family:"Microsoft YaHei";
 		}
-		.dv_title {
-			background: black;
-			height: 70px;
-			line-height: 70px;
-			font-size: 40px;
-			font-weight: 600;
-			text-align: center;
-			color: #fff;
+		.btn_one {
+			width: 280px; 
+			height: 70px; 
+			border-radius: 10px; 
+			border: 0px; 
+			background: #2d86ff; 
+			color: #fff; 
+			font-size: 28px; 
+			font-weight:600;
 		}
-		.dv_info {
-			margin: 0 auto;
-			margin-top: 20px;
-			margin-bottom: 20px;
-			width: 900px;
-			text-align: center;
+		#font_selete {
+			margin-top: 60px;
+			border-radius: 36px; 
+			width:36px; height: 36px; 
+			background: #2d86ff; 
+			text-aling: center;
+			margin-right: 50px;
 		}
-		.info_left {
+		#font_selete1 {
+			margin-top: 60px;
+			border-radius: 36px; 
+			width:36px; height: 36px; 
+			background: #2d86ff; 
+			text-aling: center;
+			margin-right: 50px;
+		}
+		#btn_fonts {
+			width: 170px;
+			height: 60px;
+			border-radius: 7px;
+			font-size: 28px;
+			background:  #2d86ff;
+			border: 0px;
+		}
+		#btn_fonts3 {
+			width: 170px;
+			height: 60px;
+			border-radius: 7px;
+			font-size: 28px;
+			background:  #2d86ff;
+			border: 0px;
+		}
+		#font_titleone {
+			font-size: 26px;
+		}
+		#font_titleone2 {
+			font-size: 26px;
+		}
+		#dv_2 {display: none;}
+		#dv_3 {display: none;}
+		#dv_3 ul li { 
+			height: 160px;
+			line-height: 160px;
+			list-style-type: none; 
 			float: left;
 		}
-		.info_right {
-			float: right;
-			padding-bottom: 20px;
+		#shangping ul li {
+			height: 120px;
+			background: #fff;
+			width: 100%;
 		}
-		.info_right ul li {
+		*{ margin: 0px; padding: 0px;}
+		.dv_body {
+			width: 600px;
+			margin: 0 auto;
+			text-align: center;
+		}
+		.dv_topimg {
+			width: 100%;
+			height: 300px;
+			background: url(<%=basePath%>img/protal/ServeImg/ServiceIntroduce/1.jpg) no-repeat;
+			background-position: center;
+		}
+		.dv_title {
+			width: 100%;
+			height: 110px;
+		}
+		#font_title {
+			font-size: 42px;
+			font-weight: 500;
+		}
+		.dv_title ul li {
+			float: left;
 			list-style-type: none;
 		}
-		.font_title {
-			text-align: center;
-			margin-top: 25px;
-			font-size:40px;
+		.font-toptitle {
+			font-size: 36px;
 			font-weight: 500;
-			width: 485px;
-			display: block;
+			padding-left:10px;
+			padding-top:10px;
 		}
-		.font_body {
-			text-align: center;
-			margin-top: 10px;
-			width: 485px;
-			font-size:32px;
-			display: block;
+		.font-bottom {
+			font-size: 22px;
+			font-weight: 500;
+			padding-top: 10px;
+			padding-left: 10px;
+			margin-top: -17px;
 		}
-		.font_bottom {
-			display: block;
-			text-align: center;
-			margin-top: 10px;
-			width: 485px;
-			height: 50px;
-			line-height: 50px;
-			vertical-align: middle;
-			font-size:36px;
-			color: #999;
+		.font-mony {
+			color: red;
+			font-size: 46px;
+			font-weight: 500px;
+			margin-left: 195px;
 		}
-		.font_money {
+		.dv_service_title {
+			
+		}
+		.dv_service_title ul li {
 			font-size: 28px;
+			float: left;
+			list-style-type: none;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+		.dv_home {
+			width: 93%;
+			height: 100%;
+			text-align: left;
+			padding: 23px;
+			line-height: 34px;
+		}
+		.v1 {
+			margin-top: -20px;
+			font-size: 18px;
+			font-weight: 500x;
+		}
+		.selectService {
+			text-align: center;
+			line-height: 100px;
+			padding-bottom: 60px;
+			margin-top: 100px;
+		}
+		.fontstyle {
+			background: url(img/protal/ServeImg/border-height.png) no-repeat;
+			background-position: right;
 		}
 		a{
 			text-decoration:none;
-			color: black;
+			color: #2d86ff;
+			font-weight: 500;
 		}
 		a:hover{
 			text-decoration:none;
-			color: black;
+			color: #2d86ff;
+			font-weight: 500;
+		}
+		.btn_mony {
+			width: 170px; 
+			height: 57px; 
+			border-radius: 10px; 
+			border: 0px; 
+			background: #2d86ff; 
+			color: #fff; 
+			font-size: 28px; 
+			font-weight:600;
+		}
+		.btn_select {
+			width: 280px; 
+			height: 70px; 
+			border-radius: 10px; 
+			border: 0px; 
+			background: #2d86ff; 
+			color: #fff; 
+			font-size: 28px; 
+			font-weight:600;
 		}
 	</style>
-</body>
 </html>

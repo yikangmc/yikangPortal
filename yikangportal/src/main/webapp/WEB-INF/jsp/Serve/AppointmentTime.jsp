@@ -8,10 +8,10 @@
 <!--
 <link rel="stylesheet" type="text/css" href="css/protal/mainCss.css" /-->
 <!-- Bootstrap -->
-<link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+<link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet"/>
 <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-<script>
+<script type="text/javascript">
 var _hmt = _hmt || [];
 (function() {
 	  var hm = document.createElement("script");
@@ -25,31 +25,19 @@ var _hmt = _hmt || [];
 <body>
 	<div class="dv_toptitle">护龄家</div>
 	<div class="dv_body">
-    	<div class="dv_body_title">
+    	<div class="dv_body_title"> 
         	<span style="color:#4E84E9; font-size:22px; display:block; width:450px; margin:0 auto;">请选择预约评估时间,浅色代表已被他人预约最好在家人的陪同下进行工作。</span>
             <div style=" width:450px; height:145px; margin:0 auto; border:solid rgb(15,15,15) 0px;">
                 <ul>
-                    <li>
-                    	<a onclick="HiddenDivoneOne()">
-                            <div class="dv_times">
-                          		<font color="#66bffb">周一</font>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                    	<a onclick="HiddenDivoneTwo()">
-                            <div class="dv_times">
-                                <font color="#66bffb">周二</font>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                    	<a onclick="HiddenDivoneThree()">
-                            <div class="dv_times">
-                                <font color="#66bffb">周三</font>
-                            </div>
-                        </a>
-                    </li>
+                	<c:forEach items="${serviceDateList }" var="serviceDate">
+                	     <li>
+	                    	<a onclick="HiddenDivoneOne()">
+	                            <div class="dv_times">
+	                          		<font color="#66bffb">${serviceDate.weekStr }</font>
+	                            </div>
+	                        </a>
+	                    </li>
+                	</c:forEach>
                 </ul>
             </div>
             <div style=" width:450px; height:40px; margin:0 auto;">
@@ -64,16 +52,11 @@ var _hmt = _hmt || [];
                 </div>
             </div>
             <div id="dv_timeover">
-            	<button class="btn_porject">8:00</button>
-            	<button class="btn_porject">9:00</button>
-            	<button class="btn_porject">10:00</button>
-            	<button class="btn_porject">11:00</button>
-            	<button class="btn_porject">12:00</button>
-            	<button class="btn_porject">14:00</button>
-            	<button class="btn_porject">15:00</button>
-            	<button class="btn_porject">16:00</button>
-            	<button class="btn_porject">17:00</button>
-            	<button class="btn_porject">18:00</button>
+            
+            	<c:forEach items="${custumerTimeQuantums }" var="custumeTime">
+            		<button class="btn_porject">${custumeTime.startTime }</button>
+            	</c:forEach>
+            	
             </div>
         </div>
     </div>
