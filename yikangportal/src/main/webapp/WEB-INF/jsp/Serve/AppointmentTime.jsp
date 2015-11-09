@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>护龄家</title>
+<title>护龄家--选择时间</title>
 <!--
 <link rel="stylesheet" type="text/css" href="css/protal/mainCss.css" /-->
 <!-- Bootstrap -->
@@ -20,46 +20,6 @@ var _hmt = _hmt || [];
 	  s.parentNode.insertBefore(hm, s);
 })();
 </script>
-</head>
-
-<body>
-	<div class="dv_toptitle">护龄家</div>
-	<div class="dv_body">
-    	<div class="dv_body_title"> 
-        	<span style="color:#4E84E9; font-size:22px; display:block; width:450px; margin:0 auto;">请选择预约评估时间,浅色代表已被他人预约最好在家人的陪同下进行工作。</span>
-            <div style=" width:450px; height:145px; margin:0 auto; border:solid rgb(15,15,15) 0px;">
-                <ul>
-                	<c:forEach items="${serviceDateList }" var="serviceDate">
-                	     <li>
-	                    	<a onclick="HiddenDivoneOne()">
-	                            <div class="dv_times">
-	                          		<font color="#66bffb">${serviceDate.weekStr }</font>
-	                            </div>
-	                        </a>
-	                    </li>
-                	</c:forEach>
-                </ul>
-            </div>
-            <div style=" width:450px; height:40px; margin:0 auto;">
-            	<div class="triangle-up" id="up_one" style=" margin-left:25px;">
-                	&nbsp;
-                </div>
-                <div class="triangle-up" id="up_two" style=" border-bottom-color: #FFF;">
-                	&nbsp;
-                </div>
-                <div class="triangle-up" id="up_three" style=" border-bottom-color: #FFF;">
-                	&nbsp;
-                </div>
-            </div>
-            <div id="dv_timeover">
-            
-            	<c:forEach items="${custumerTimeQuantums }" var="custumeTime">
-            		<button class="btn_porject">${custumeTime.startTime }</button>
-            	</c:forEach>
-            	
-            </div>
-        </div>
-    </div>
 <script>
     var btn  = document.getElementsByTagName("button");
     for(var i=0;i<btn.length;i++){
@@ -98,7 +58,6 @@ var _hmt = _hmt || [];
 		document.getElementById("up_three").style.borderBottomColor = "#c9f0fe"
    	}
 </script>
-
 <style>
 	html,body{
 		height:100%; width:100%;
@@ -196,5 +155,59 @@ var _hmt = _hmt || [];
 		font-weight:500;
 		}
 </style>
+</head>
+
+<body>
+	<div class="dv_toptitle">护龄家</div>
+	<div class="dv_body">
+    	<div class="dv_body_title"> 
+        	<span style="color:#4E84E9; font-size:22px; display:block; width:450px; margin:0 auto;">请选择预约评估时间,浅色代表已被他人预约最好在家人的陪同下进行工作。</span>
+            <div style=" width:450px; height:145px; margin:0 auto; border:solid rgb(15,15,15) 0px;">
+                <ul>
+                	<c:forEach items="${serviceDateList }" var="serviceDate">
+                	     <li>
+	                    	<a href="<%=basePath %>appointmentOrder/appointmentTime?serviceDate=${serviceDate.dateStr}">
+	                            <div class="dv_times">
+	                          		<font color="#66bffb">${serviceDate.weekStr }</font>
+	                            </div>
+	                        </a>
+	                    </li>
+                	</c:forEach>
+                </ul>
+            </div>
+            <div style="width:450px; height:40px; margin:0 auto;">
+            	<div class="triangle-up" id="up_one" style="margin-left:25px;">
+                	&nbsp;
+                </div>
+                <div class="triangle-up" id="up_two" style="border-bottom-color:#FFF;">
+                	&nbsp;
+                </div>
+                <div class="triangle-up" id="up_three" style="border-bottom-color:#FFF;">
+                	&nbsp;
+                </div>
+            </div>
+            <div id="dv_timeover">
+            	<c:forEach items="${custumerTimeQuantums }" var="custumeTime">
+            		<button class="btn_porject">${custumeTime.startTime }</button>
+            	</c:forEach>
+            </div>
+        </div>
+    </div>
+    
+	<!-- 预约时间表单 -->
+	<form id="appointmentTimeForm" action="<%=basePath %>/appointmentOrder/saveAppointmentOrder">
+		<input type="hidden" id="serviceItemId" name="serviceItemId" value="${serviceItemId }"/>
+		<input type="hidden" id="timeQuantumId" name="timeQuantumId" value="${timeQuantumId }"/>
+		<input type="hidden" id="linkUserName"  name="linkUserName" value="${linkUserName }"/>
+		<input type="hidden" id="mapPositionAddress"  name="mapPositionAddress" value="${mapPositionAddress }"/>
+		<input type="hidden" id="districtCode"  name="districtCode" value="${districtCode }"/>
+		<input type="hidden" id="appointmentDateTime"  name="appointmentDateTime" value="${appointmentDateTime }"/>
+		<input type="hidden" id="detailAddress"  name="detailAddress" value="${detailAddress }"/>
+		<c:forEach items="${medicinalApparatusIds }" var="ma">
+			<input type="hidden" value="${ma}" />
+		</c:forEach>
+	</form>
+
+
 </body>
 </html>

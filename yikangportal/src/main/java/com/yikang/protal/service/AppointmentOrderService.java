@@ -38,7 +38,8 @@ public class AppointmentOrderService {
 	 * **/
 	public Map<String,Object> saveAppointmentOrder(Long serviceItemId,Long[] medicinalApparatusId,String mapPositionAddress,
 			String districtCode,String detailAddress,
-			String dataSource,String dataGroup,String linkUserName,Long serviceUserId){
+			String dataSource,String dataGroup,String linkUserName,Long serviceUserId,Long timeQuantumId,
+			String appointmentDateTime){
 		
 		Map<String,Object>  paramData=new HashMap<String,Object>();
 		paramData.put("serviceItemId", serviceItemId);
@@ -49,7 +50,8 @@ public class AppointmentOrderService {
 		paramData.put("dataSource", dataSource);
 		paramData.put("dataGroup", dataGroup);
 		paramData.put("linkUserName", linkUserName);
-		paramData.put("linkUserName", linkUserName);
+		paramData.put("timeQuantumId", timeQuantumId);
+		paramData.put("appointmentDateTime", appointmentDateTime);
 		
 		
 		try {

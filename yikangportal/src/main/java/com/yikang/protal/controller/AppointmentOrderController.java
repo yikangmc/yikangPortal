@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.yikang.common.utils.DateUtils;
 import com.yikang.protal.entity.CustumerTimeQuantum;
+import com.yikang.protal.entity.Dictionary;
+import com.yikang.protal.manager.DictionaryManager;
 import com.yikang.protal.service.AppointmentOrderService;
 import com.yikang.protal.service.ServiceItemService;
 import com.yikang.protal.service.TimeQuantumService;
@@ -32,7 +34,8 @@ public class AppointmentOrderController {
 	@Autowired
 	private ServiceItemService serviceItemServicer;
 	
-	
+	@Autowired
+	private DictionaryManager dictionaryManager;
 	
 	
 	
@@ -55,7 +58,8 @@ public class AppointmentOrderController {
 	 * **/
 	@RequestMapping
 	public Map<String,Object> saveAppointmentOrder(HttpServletRequest rquest,Long serviceItemId,Long[] medicinalApparatusId,
-			String mapPositionAddress,String detailAddress,String dataSource,String dataGroup,String linkUserName,String districtCode){
+			String mapPositionAddress,String detailAddress,String dataSource,String dataGroup,
+			String linkUserName,String districtCode,Long timeQuantumId,String appointmentDateTime){
 		
 		Map<String,Object> rtnMap=new HashMap<String, Object>();
 		
@@ -64,7 +68,7 @@ public class AppointmentOrderController {
 		Long userId=(Long)session.getAttribute("userId");
 		
 		appointmentOrderService.saveAppointmentOrder(serviceItemId, medicinalApparatusId, mapPositionAddress, 
-				districtCode, detailAddress, dataSource, dataGroup, linkUserName,userId);
+				districtCode, detailAddress, dataSource, dataGroup, linkUserName,userId, timeQuantumId,appointmentDateTime);
 		
 		return rtnMap;
 		
@@ -136,12 +140,21 @@ public class AppointmentOrderController {
 	
 	
 	/**
+	 * 
 	 * @author liushuaic
 	 * @date 2015/11/04 15:16
 	 * @desc 填写个人信息
+	 * 
 	 * **/
 	@RequestMapping
-	public String reserveInfomation(){
+	public String reserveInfomation(ModelMap modelMap){
+		
+		List<Dictionary> ageBrackets=dictionaryManager.getAgeBracket();
+		List<Dictionary> appellations=dictionaryManager.getAppellation();
+		
+		modelMap.put("ageBrackets", ageBrackets);
+		modelMap.put("appellations", appellations);
+		
 		return "Serve/ReserveInformation";
 	}
 	

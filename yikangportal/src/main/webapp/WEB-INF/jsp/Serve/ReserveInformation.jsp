@@ -1,8 +1,10 @@
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ include file="/common/protalhead.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>预约项目</title>
+<title>预约项目--填写个人信息</title>
 <!--<link rel="stylesheet" type="text/css" href="css/protal/mainCss.css" /-->
 <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet"/>
 <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
@@ -18,22 +20,19 @@
                <select class="selectpicker">
 					<option>父亲</option>
 					<option>母亲</option>
-					<option>外婆</option>
-					<option>外公</option>
-					<option>爷爷</option>
-					<option>奶奶</option>
-					<option>自己</option>
+					<c:forEach items="${appellations }" var="appellation">
+						<option value="${ appellation.dicCode}">${appellation.dicName}</option>
+					</c:forEach>
 				</select>
             </div> 
 			&nbsp; 
             他/她的年龄：
             <div class="btn-group btn_txt">
-               <select class="selectpicker" style="width: 102px;">
-					<option>50-60</option>
-					<option>61-70</option>
-					<option>71-80</option>
-					<option>81-90</option>
-					<option>91-100</option>
+               <select name="timeBucket" class="selectpicker" style="width: 102px;">
+					<option value="1">50-60</option>
+					<c:forEach items="${ageBrackets}" var="ageBracket">
+						<option value="${ageBracket.dicCode }">${ageBracket.dicName }</option>
+					</c:forEach>
 				</select>
             </div>
      	</div>
