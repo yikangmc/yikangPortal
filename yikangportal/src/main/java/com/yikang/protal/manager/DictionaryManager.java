@@ -31,7 +31,7 @@ public class DictionaryManager {
 	 * @desc 获取称谓
 	 ***/
 	public List<Dictionary> getAppellation(){
-		return null;
+		return dictionaryDao.getAppellation();
 	}
 	
 

@@ -1,6 +1,8 @@
 package com.yikang.protal.controller;
 
+import java.io.IOException;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -13,6 +15,8 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.yikang.common.utils.DateUtils;
+import com.yikang.protal.common.utils.map.MapUtils;
+import com.yikang.protal.common.utils.map.model.assistant.MapResponseAssistant;
 import com.yikang.protal.entity.CustumerTimeQuantum;
 import com.yikang.protal.entity.Dictionary;
 import com.yikang.protal.manager.DictionaryManager;
@@ -30,12 +34,14 @@ public class AppointmentOrderController {
 	@Autowired
 	private TimeQuantumService timeQuantumService;
 	
-	
 	@Autowired
 	private ServiceItemService serviceItemServicer;
 	
 	@Autowired
 	private DictionaryManager dictionaryManager;
+	
+	
+	
 	
 	
 	
@@ -156,7 +162,68 @@ public class AppointmentOrderController {
 		modelMap.put("appellations", appellations);
 		
 		return "Serve/ReserveInformation";
+		
 	}
+	
+	
+	@RequestMapping
+	public String reserveInfomation2(ModelMap modelMap){
+		
+		List<Dictionary> ageBrackets=dictionaryManager.getAgeBracket();
+		List<Dictionary> appellations=dictionaryManager.getAppellation();
+		
+		modelMap.put("ageBrackets", ageBrackets);
+		modelMap.put("appellations", appellations);
+		
+		return "Serve/ReserveInformation2";
+		
+	}
+	
+	
+	
+	/**
+	 * @author liushuaic
+	 * @date 2015/11/09 14:52
+	 * @desc 填写个人信息
+	 * 返回服务人员信息
+	 * 
+	 * **/
+	
+	public String getServicerInfo(ModelMap modelMap,String serviceDate,Long custumerTimeQuantumId,
+			String mapPositionAddress,String districtCode,String detailAddress ){
+		
+		Map<String,Object> rtnData=appointmentOrderService.getServicerInfo(
+				serviceDate, custumerTimeQuantumId,
+				mapPositionAddress, districtCode, detailAddress);
+		
+		modelMap.put("data", rtnData.get("data"));
+		
+		return "Serve/servicerList";
+	}
+	
+	
+	/**
+	 * 
+	 * @author liushuaic
+	 * @date 2015/11/10 16:00
+	 * @desc 获取搜索地址
+	 * 
+	 * **/
+	public Map<String,Object> getMapPositionAddress(String mapPositionAddress,String city){
+		Map<String,Object> rtnMap=new HashMap<String,Object>();
+		try {
+			MapResponseAssistant res=MapUtils.getAssistantInputtips(mapPositionAddress, null, "北京");
+			List<LinkedHashMap<String, Object>>  data=res.getTips();
+			rtnMap.put("mapPositionList", data);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return rtnMap;
+		
+	}
+	
+	
+	
 	
 	
 }

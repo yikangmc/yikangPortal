@@ -47,16 +47,14 @@ SalesOrderNew.prototype={
 				
 		},
 		searchProductByProductCode:function(){
-			
 
 			var paramData={
 					productCode:productCodeStr=$("#productCode").val()
-			}
+			};
 			
 			$.post("/salesOrder/seachProduct.html",paramData,function(data){
 				salesOrderNew.addProduct(data);
 			});
-			
 			
 		}
 		

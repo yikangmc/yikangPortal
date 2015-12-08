@@ -25,4 +25,14 @@ public interface DictionaryDao {
      * **/
     List<Dictionary> getAgeBracket();
     
+    
+    /**
+     * @author liushuaic
+     * @date 2015/11/09 17:06
+     * @desc 查询称谓
+     * **/
+    List<Dictionary> getAppellation();
+    
+    
+    
 }

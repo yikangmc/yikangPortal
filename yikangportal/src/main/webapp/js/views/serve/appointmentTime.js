@@ -1,7 +1,6 @@
 AppointmentTime=function(){}
 AppointmentTime.prototype={
 		init:function(){
-			alert(null);
 			$("btn_porject").bind("onclick",appointmentTime.setTimeQuantumId());
 		},
 		setTimeQuantumId:function(src){

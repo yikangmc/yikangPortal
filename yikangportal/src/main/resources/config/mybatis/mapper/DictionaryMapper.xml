@@ -151,6 +151,7 @@
     where dictionary_id = #{dictionaryId,jdbcType=BIGINT}
   </update>
   
+  
   <!-- 获取年龄段 -->
   <select id="getAgeBracket" resultMap="BaseResultMap">
   	select 
@@ -158,7 +159,22 @@
 	from dictionarys
 	where dic_group='ageBracket'
 		and is_deleted=0
+		and parent_id=4
 	order by dic_order asc
+  </select>
+  
+  
+  <!-- 获取称谓 -->
+  <select id="getAppellation" resultMap="BaseResultMap">
+  	select 
+  	<include refid="Base_Column_List"></include> 
+  	from 
+  		dictionarys 
+  	where 
+  		dic_group='cw' 
+  	and parent_id=1 
+  	and is_deleted=0
+  	order by dic_order asc
   </select>
   
 </mapper>

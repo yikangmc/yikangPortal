@@ -66,4 +66,39 @@ public class AppointmentOrderService {
 		
 	}
 
+	
+	/**
+	 * 
+	 * @author liushuaic
+	 * @date 2015/11/09 15:18
+	 * @desc 查询服务人员
+	 * 
+	 * */
+	public Map<String,Object> getServicerInfo(
+			String serviceDate,Long custumerTimeQuantumId,
+			String mapPositionAddress,String districtCode,
+			String detailAddress){
+		
+		Map<String,Object>  paramData=new HashMap<String,Object>();
+		paramData.put("serviceDate",serviceDate);
+		paramData.put("custumerTimeQuantumId", custumerTimeQuantumId);
+		paramData.put("mapPositionAddress", mapPositionAddress);
+		paramData.put("districtCode", districtCode);
+		paramData.put("detailAddress", detailAddress);
+		
+		try{
+			
+			ServiceItem serviceItem=new ServiceItem();
+			return SendRequest.sendPostRetureMap("00-22-01", paramData,serviceItem.getClass());
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		
+		return null;
+	}
+	
+	
+	
 }
