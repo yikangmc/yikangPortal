@@ -1,4 +1,4 @@
-﻿<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%@ include file="/common/protalhead.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -10,7 +10,7 @@
 	<body> 
 		<div class="dv_body">
 			<div class="dv_topimg">
-				<img style=" width: 100%; height: 100%;" src="<%=basePath%>/img/ServeImg/ServiceIntroduce/1.jpg" />
+				<img style=" width: 100%; height: 100%;" src="<%=basePath%>/img/ServeImg/ServiceIntroduce/8.jpg" />
 			</div>
 			<form action="<%=basePath%>appointmentOrder/" method="post">
 				
@@ -21,9 +21,9 @@
 			</form>
 			<div class="dv_title">
 				<ul>
-					<li class="font-toptitle">PICC管的换药维护与护理</li><br />
+					<li class="font-toptitle">高血压中医护理</li><br />
 					<li class="font-mony">￥300</li>
-					<li class="font-bottom">专业高素质的PICC置管维护团队，具备风险应急处理能力，综合素质能力强的的专业人员和高品质服务质量。</li>
+					<li class="font-bottom">定期监测血压，实现降压达标，平稳有效地控制血压，减缓靶器官的损害，控制心脑血管并发症的发生，改善生存质量，降低疾病负担。</li>
 				</ul>
 			</div>
 			<img style=" width: 100%;" src="<%=basePath%>/img/ServeImg/border.png" />
@@ -38,12 +38,16 @@
 			<img style=" width: 100%;" src="<%=basePath%>/img/ServeImg/border.png" />
 			
 			<div id="dv_1" class="dv_home">
-				<h1>【病理与服务介绍】</h1><br /><div class="v1">&nbsp;&nbsp;PICC：经外周穿刺中心静脉导管，置管是由外周静脉穿刺置管，导管沿血管走行达上腔静脉或锁骨下静脉的一种穿刺技术。PICC管由取得相应资格证书的护士长或护理骨干进行操作，维护更是需要强化注意，其中细节更是不容忽视，易康美辰为您提供专业服务，维护指导，提高管道维护质量。</div>
-				<h1>【护理措施包括】</h1><br /><div class="v1">&nbsp;&nbsp;1.敷料更换：准备好所需物品，严格清洁双手，严格按无菌操作规范进行，取下旧的敷贴，对穿刺部位评估确定有无触痛和感染现象，更换新的敷料。<br />
-															&nbsp;&nbsp;2.导管冲洗与封管：定期冲洗，适当的冲管与封管技术和常规能保证导管内的正压和完整性，每12小时冲管一次为最佳，封管按SASH原则，封管液量控制。</div>
+				<h1>【病理与服务介绍】</h1><br /><div class="v1">
+					 &nbsp; &nbsp; 高血压是最常见的慢性病，也是心脑血管病最主要的危险因素，脑卒中、心肌梗死、心力衰竭及慢性肾脏病是其主要并发症。实践证明，高血压是可以预防和控制的疾病，降低高血压患者的血压水平，可明显减少脑卒中的发生。</div>
+				<h1>【护理措施包括】</h1><br /><div class="v1">
+					 &nbsp; &nbsp; 1.常规药物治疗：坚持长期终生用药，小剂量开始，优先选择长效制剂，联合应用及个体化。<br /> &nbsp; &nbsp; 2.非药物治疗：为您量身制定计划，减少钠盐摄入，控制体重，戒烟限酒，坚持运动，减轻精神压力，保持心情轻松愉快。<br /> &nbsp; &nbsp; 3.中医药物调理：为您提供中医养生调理汤药，有效控制血压，抑制并发症发生，让您可以放心轻松的生活。</div>
 			</div>
 			<div id="dv_2" class="dv_home">
-				<h1>【护理措施介绍】</h1><br /><div class="v1">&nbsp;&nbsp;1.敷料更换，一定要按无菌操作规范操作，预防并发症。<br />&nbsp;&nbsp;2.并发症会有静脉炎，穿刺点感染，导管断裂、移位，阻塞等并发症的防治很重要。<br />&nbsp;&nbsp;3.导管拔除，一定要有专业人员操作，切勿私自拔除。</div>
+				<h1>【护理措施介绍】</h1><br /><div class="v1">
+					 &nbsp; &nbsp; 1.很多患者觉得是药三分毒，没有任何高血压症状表现不在意，便不用药，这是错误的观念，不仅容易延误病情治疗，反事与愿违只是病情恶化。<br />
+					 &nbsp; &nbsp; 2.饮食控制很重要，合理膳食，营养均衡，平时控制钠盐的摄入，低脂，低热量，适当增加粗粮，蛋白质，每餐七分饱，坚持运动，控制体重。<br />
+					 &nbsp; &nbsp; 3.一定要定期监测血压，半年血液检测一次，遵医嘱调整用药。</div>
 			</div>
 			
 			<div id="dv_3" class="dv_home">

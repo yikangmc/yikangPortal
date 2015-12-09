@@ -1,4 +1,4 @@
-﻿<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%@ include file="/common/protalhead.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -10,7 +10,7 @@
 	<body> 
 		<div class="dv_body">
 			<div class="dv_topimg">
-				<img style=" width: 100%; height: 100%;" src="<%=basePath%>/img/ServeImg/ServiceIntroduce/1.jpg" />
+				<img style=" width: 100%; height: 100%;" src="<%=basePath%>/img/ServeImg/ServiceIntroduce/3.jpg" />
 			</div>
 			<form action="<%=basePath%>appointmentOrder/" method="post">
 				
@@ -21,9 +21,9 @@
 			</form>
 			<div class="dv_title">
 				<ul>
-					<li class="font-toptitle">PICC管的换药维护与护理</li><br />
+					<li class="font-toptitle">脑卒中的康复护理</li><br />
 					<li class="font-mony">￥300</li>
-					<li class="font-bottom">专业高素质的PICC置管维护团队，具备风险应急处理能力，综合素质能力强的的专业人员和高品质服务质量。</li>
+					<li class="font-bottom">专业康复师上门为您指导锻炼，制定针对性的康复计划，一对一上门的指导锻炼，为您身心康健带去福音。</li>
 				</ul>
 			</div>
 			<img style=" width: 100%;" src="<%=basePath%>/img/ServeImg/border.png" />
@@ -38,12 +38,18 @@
 			<img style=" width: 100%;" src="<%=basePath%>/img/ServeImg/border.png" />
 			
 			<div id="dv_1" class="dv_home">
-				<h1>【病理与服务介绍】</h1><br /><div class="v1">&nbsp;&nbsp;PICC：经外周穿刺中心静脉导管，置管是由外周静脉穿刺置管，导管沿血管走行达上腔静脉或锁骨下静脉的一种穿刺技术。PICC管由取得相应资格证书的护士长或护理骨干进行操作，维护更是需要强化注意，其中细节更是不容忽视，易康美辰为您提供专业服务，维护指导，提高管道维护质量。</div>
-				<h1>【护理措施包括】</h1><br /><div class="v1">&nbsp;&nbsp;1.敷料更换：准备好所需物品，严格清洁双手，严格按无菌操作规范进行，取下旧的敷贴，对穿刺部位评估确定有无触痛和感染现象，更换新的敷料。<br />
-															&nbsp;&nbsp;2.导管冲洗与封管：定期冲洗，适当的冲管与封管技术和常规能保证导管内的正压和完整性，每12小时冲管一次为最佳，封管按SASH原则，封管液量控制。</div>
+				<h1>【病理与服务介绍】</h1><br /><div class="v1">
+					 &nbsp; &nbsp; 脑卒中分为出血性和缺血性两种，出血性脑卒中低于缺血性脑卒中，但出血性预后差，其死亡率和和病残率均高于缺血性，缺血性脑卒中是神经病学中的常见病，多发病，致残率高，脑卒中是威胁人类健康的三大疾病之一。其康复也有“时间窗”黄金时期是发病到半年内，基本生命体征平稳48h后就可以开始康复，康复锻炼开展的越早，功能恢复的越好。</div>
+				<h1>【护理措施包括】</h1><br /><div class="v1">
+					 &nbsp; &nbsp; 1.根据偏瘫的分期不同给予不同的针对性的康复锻炼。<br />
+					 &nbsp; &nbsp; 2.基本为记忆、逻辑思维、计算、理解、执行、语言、吞咽、面部表情、二便失禁、肢体功能障碍、抑郁心理疾病等。<br />
+					 &nbsp; &nbsp; 3.复训练方法包括多种，主要以运动疗法为主。运动疗法是通过主动运动、被动运动来改善运动障碍的治疗方法的总称。主要内容包括关节活动度训练、增强肌力训练、姿势矫正训练和神经生理学疗法等。<br /></div>
 			</div>
 			<div id="dv_2" class="dv_home">
-				<h1>【护理措施介绍】</h1><br /><div class="v1">&nbsp;&nbsp;1.敷料更换，一定要按无菌操作规范操作，预防并发症。<br />&nbsp;&nbsp;2.并发症会有静脉炎，穿刺点感染，导管断裂、移位，阻塞等并发症的防治很重要。<br />&nbsp;&nbsp;3.导管拔除，一定要有专业人员操作，切勿私自拔除。</div>
+				<h1>【护理措施介绍】</h1><br /><div class="v1">
+					 &nbsp; &nbsp; 1.家属理解并给予大力支持，取得患者配合，激发患者主动能性。<br />
+					 &nbsp; &nbsp; 2.在康复过程中注意保护，必要时给予辅助器具帮助锻炼。<br />
+					 &nbsp; &nbsp; 3.饮食调整很重要，低盐、糖、脂，高蛋白质、粗纤维饮食，注意检查血脂，控制血脂，血压，坚持终身服药。</div>
 			</div>
 			
 			<div id="dv_3" class="dv_home">

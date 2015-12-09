@@ -47,4 +47,15 @@ public class UserService {
 		return userManager.updateUserLinkStatus(userId);
 	}
 
+	
+	/**
+	 * 
+	 * @param userInvite
+	 * @return User
+	 * @date 2015/12/8 19:50
+	 * @desc 获取用户信息
+	 */
+	public User getUserByInvitationCode(String userInvite) {
+		return userManager.getUserByInvitationCode(userInvite);
+	}
 }

@@ -17,6 +17,10 @@ public class UserFrom {
 
     private Long activeTime;
 
+    private String invitationCode;
+
+    private Byte userStatus;
+
     public Long getUserFromId() {
         return userFromId;
     }
@@ -79,5 +83,21 @@ public class UserFrom {
 
     public void setActiveTime(Long activeTime) {
         this.activeTime = activeTime;
+    }
+
+    public String getInvitationCode() {
+        return invitationCode;
+    }
+
+    public void setInvitationCode(String invitationCode) {
+        this.invitationCode = invitationCode == null ? null : invitationCode.trim();
+    }
+
+    public Byte getUserStatus() {
+        return userStatus;
+    }
+
+    public void setUserStatus(Byte userStatus) {
+        this.userStatus = userStatus;
     }
 }

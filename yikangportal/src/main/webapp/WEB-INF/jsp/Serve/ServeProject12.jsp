@@ -1,4 +1,4 @@
-﻿<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%@ include file="/common/protalhead.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -10,7 +10,7 @@
 	<body> 
 		<div class="dv_body">
 			<div class="dv_topimg">
-				<img style=" width: 100%; height: 100%;" src="<%=basePath%>/img/ServeImg/ServiceIntroduce/1.jpg" />
+				<img style=" width: 100%; height: 100%;" src="<%=basePath%>/img/ServeImg/ServiceIntroduce/12.jpg" />
 			</div>
 			<form action="<%=basePath%>appointmentOrder/" method="post">
 				
@@ -21,9 +21,9 @@
 			</form>
 			<div class="dv_title">
 				<ul>
-					<li class="font-toptitle">PICC管的换药维护与护理</li><br />
+					<li class="font-toptitle">自闭症的护理</li><br />
 					<li class="font-mony">￥300</li>
-					<li class="font-bottom">专业高素质的PICC置管维护团队，具备风险应急处理能力，综合素质能力强的的专业人员和高品质服务质量。</li>
+					<li class="font-bottom">临床经验丰富的资深康复师，为您上门提供自闭症患儿的康复治疗和教育，制定针对性的个体化康复方案，帮助孩子提高专注力、学习能力及参与活动的兴趣。</li>
 				</ul>
 			</div>
 			<img style=" width: 100%;" src="<%=basePath%>/img/ServeImg/border.png" />
@@ -38,12 +38,29 @@
 			<img style=" width: 100%;" src="<%=basePath%>/img/ServeImg/border.png" />
 			
 			<div id="dv_1" class="dv_home">
-				<h1>【病理与服务介绍】</h1><br /><div class="v1">&nbsp;&nbsp;PICC：经外周穿刺中心静脉导管，置管是由外周静脉穿刺置管，导管沿血管走行达上腔静脉或锁骨下静脉的一种穿刺技术。PICC管由取得相应资格证书的护士长或护理骨干进行操作，维护更是需要强化注意，其中细节更是不容忽视，易康美辰为您提供专业服务，维护指导，提高管道维护质量。</div>
-				<h1>【护理措施包括】</h1><br /><div class="v1">&nbsp;&nbsp;1.敷料更换：准备好所需物品，严格清洁双手，严格按无菌操作规范进行，取下旧的敷贴，对穿刺部位评估确定有无触痛和感染现象，更换新的敷料。<br />
-															&nbsp;&nbsp;2.导管冲洗与封管：定期冲洗，适当的冲管与封管技术和常规能保证导管内的正压和完整性，每12小时冲管一次为最佳，封管按SASH原则，封管液量控制。</div>
+				<h1>【病理与服务介绍】</h1><br /><div class="v1">
+					 &nbsp; &nbsp; 自闭症，又称孤独症，是广泛性发育障碍的代表性疾病，男女比例约为3～4：1，女孩症状一般较男孩严重。引起孤独症的危险因素可以归纳为：遗传、感染与免疫和孕期理化因子刺激。一般起病于36个月以内，主要表现为三大类核心症状，即：社会交往障碍、交流障碍、兴趣狭窄和刻板重复的行为方式。<br />
+					 &nbsp; &nbsp; 自闭症没有特效药物治疗，目前仍以教育和康复训练为主。以综合运动作为基础性训练，以沟通和认知作为主流性训练，以情绪和行为作为协调性训练。</div>
+				<h1>【护理措施包括】</h1><br /><div class="v1">
+					 &nbsp; &nbsp; 1.综合运动：注意力、一步指令、模仿、配对、玩耍、游戏、发声等训练；<br />
+					 &nbsp; &nbsp; 2.沟通和认知：注意力、两步指令、语言、辨别识物、语言行为模仿、理解、表达等训练。<br />
+					 &nbsp; &nbsp; 3.情绪和行为：注意力强化、实物强化、逃避强化、自我刺激等强化物介入训练。</div>
 			</div>
 			<div id="dv_2" class="dv_home">
-				<h1>【护理措施介绍】</h1><br /><div class="v1">&nbsp;&nbsp;1.敷料更换，一定要按无菌操作规范操作，预防并发症。<br />&nbsp;&nbsp;2.并发症会有静脉炎，穿刺点感染，导管断裂、移位，阻塞等并发症的防治很重要。<br />&nbsp;&nbsp;3.导管拔除，一定要有专业人员操作，切勿私自拔除。</div>
+				<h1>【护理措施介绍】</h1><br /><div class="v1">
+					  治疗原则<br />
+					 &nbsp; &nbsp; 1.早发现，早治疗。<br />
+					 &nbsp; &nbsp; 2.促进共同参与，形成综合治疗团队.<br />
+					 &nbsp; &nbsp; 3.坚持以非药物治疗为主。<br />
+					 &nbsp; &nbsp; 4.治疗方案应个体化、结构化和系统化。<br />
+					 &nbsp; &nbsp; 5.治疗、训练的同时要注意患儿的躯体健康，预防其他疾病。<br />
+					 &nbsp; &nbsp; 6.坚持治疗，持之以恒。<br />
+					 家庭锻炼：<br />
+					 &nbsp; &nbsp; 1.巩固和复习老师教授的内容。<br />
+					 &nbsp; &nbsp; 2.泛化和应用学到的知识。<br />
+					 &nbsp; &nbsp; 3.在生态环境中强化生活自理和社会交往能力的训练。<br />
+					 &nbsp; &nbsp; 4.要有合理的家庭训练时间安排。
+					 </div>
 			</div>
 			
 			<div id="dv_3" class="dv_home">

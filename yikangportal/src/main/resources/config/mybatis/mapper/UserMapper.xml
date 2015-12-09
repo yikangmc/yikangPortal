@@ -164,13 +164,23 @@
   	</where>
   </select>
   <select id="getUserByInvitationCode" parameterType="String" resultMap="BaseResultMap">
-  	
 	select
-	
-		user_id,user_name,login_name,login_password,salt,access_tiket,login_time,invitation_code,push_alias 
-		
+		user_id,
+		user_name,
+		login_name,
+		login_password,
+		salt,access_tiket,
+		login_time,
+		invitation_code,
+		push_alias 
 	from users where invitation_code=#{inviteCode}
-  
-  
   </select>
+  
+  
+   <!--修改用户的邀请码  -->
+  <update id="updateInvitationCodeByUserId" parameterType="map">
+  	update users set invitation_code = #{invitationCode,jdbcType=VARCHAR}
+  	where user_id=#{userId,jdbcType=BIGINT}
+  </update>
+  
 </mapper>

@@ -1,4 +1,4 @@
-﻿<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%@ include file="/common/protalhead.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -10,7 +10,7 @@
 	<body> 
 		<div class="dv_body">
 			<div class="dv_topimg">
-				<img style=" width: 100%; height: 100%;" src="<%=basePath%>/img/ServeImg/ServiceIntroduce/1.jpg" />
+				<img style=" width: 100%; height: 100%;" src="<%=basePath%>/img/ServeImg/ServiceIntroduce/7.jpg" />
 			</div>
 			<form action="<%=basePath%>appointmentOrder/" method="post">
 				
@@ -21,9 +21,9 @@
 			</form>
 			<div class="dv_title">
 				<ul>
-					<li class="font-toptitle">PICC管的换药维护与护理</li><br />
+					<li class="font-toptitle">颈椎痛中医护理</li><br />
 					<li class="font-mony">￥300</li>
-					<li class="font-bottom">专业高素质的PICC置管维护团队，具备风险应急处理能力，综合素质能力强的的专业人员和高品质服务质量。</li>
+					<li class="font-bottom">专业的功能锻炼指导，针、灸、理疗您减缓疼痛，提高舒适度，使患者很快摆脱颈椎并发症不适，舒适生活，提高生活质量。</li>
 				</ul>
 			</div>
 			<img style=" width: 100%;" src="<%=basePath%>/img/ServeImg/border.png" />
@@ -38,12 +38,14 @@
 			<img style=" width: 100%;" src="<%=basePath%>/img/ServeImg/border.png" />
 			
 			<div id="dv_1" class="dv_home">
-				<h1>【病理与服务介绍】</h1><br /><div class="v1">&nbsp;&nbsp;PICC：经外周穿刺中心静脉导管，置管是由外周静脉穿刺置管，导管沿血管走行达上腔静脉或锁骨下静脉的一种穿刺技术。PICC管由取得相应资格证书的护士长或护理骨干进行操作，维护更是需要强化注意，其中细节更是不容忽视，易康美辰为您提供专业服务，维护指导，提高管道维护质量。</div>
-				<h1>【护理措施包括】</h1><br /><div class="v1">&nbsp;&nbsp;1.敷料更换：准备好所需物品，严格清洁双手，严格按无菌操作规范进行，取下旧的敷贴，对穿刺部位评估确定有无触痛和感染现象，更换新的敷料。<br />
-															&nbsp;&nbsp;2.导管冲洗与封管：定期冲洗，适当的冲管与封管技术和常规能保证导管内的正压和完整性，每12小时冲管一次为最佳，封管按SASH原则，封管液量控制。</div>
+				<h1>【病理与服务介绍】</h1><br /><div class="v1"> &nbsp; &nbsp; 颈椎病又称为颈椎综合症，多因椎间盘退变本身及继发性改变刺激或压迫邻近组织，并引起各种症状和体征，称为颈椎病。颈椎病多发于中老年人，据统计在颈5--6发病者占70%，其次为颈6、4、5、7和胸1。治疗措施包括手术和非手术两种。治疗主要是以非手术疗法，西药在本病治疗中只是辅助对症治疗作用，中医治疗对症状缓有一定的效果。易康美辰专业中药医护人员期待为您服务。</div>
+				<h1>【护理措施包括】</h1><br /><div class="v1">
+					 &nbsp; &nbsp; 1.适当休息，辅助使用消炎止痛药贴，配合功能锻炼。<br />
+					 &nbsp; &nbsp; 2.针灸治疗，取颈部穴位，针刺采用中等刺激的平补平泻手法。<br/>
+					 &nbsp; &nbsp; 3.根据症状不同可配合电针、刺络拔罐、穴位注射、牵引法治疗。 </div>
 			</div>
 			<div id="dv_2" class="dv_home">
-				<h1>【护理措施介绍】</h1><br /><div class="v1">&nbsp;&nbsp;1.敷料更换，一定要按无菌操作规范操作，预防并发症。<br />&nbsp;&nbsp;2.并发症会有静脉炎，穿刺点感染，导管断裂、移位，阻塞等并发症的防治很重要。<br />&nbsp;&nbsp;3.导管拔除，一定要有专业人员操作，切勿私自拔除。</div>
+				<h1>【护理措施介绍】</h1><br /><div class="v1"> &nbsp; &nbsp; 1.观察患者不同的卧位观察骨突出和受压部分，皮肤营养状况（有弹性，颜色，温度，感觉），活动能力（有无肢体活动障碍，意识状态），全身状态（高热，消瘦或肥胖，昏迷或躁动，疼痛，年老体弱，大小便失禁，水肿等高危因素），压疮判断（淤血红润期，炎症浸润期，溃疡期）。<br /> &nbsp; &nbsp; 2.减少局部受压：对活动能力受限的患者，定时被动变换体位，每两小时一次；受压皮肤在解除压力30分钟后，压红不消退者，应该缩短翻身时间；长期卧床患者可以使用充气气垫床或者采取局部减压措施；骨突处皮肤使用透明贴或者减压贴予以局部保护。<br /> &nbsp; &nbsp; 3.皮肤保护：温水擦洗皮肤，使皮肤清洁无汗液；肛周涂保护膜，防止大便刺激；对大小便失禁者及时清洁，保持局部清洁干燥。</div>
 			</div>
 			
 			<div id="dv_3" class="dv_home">

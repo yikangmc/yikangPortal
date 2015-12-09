@@ -1,17 +1,16 @@
-<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+﻿<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%@ include file="/common/protalhead.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>护龄家--选择时间</title>
-<!--<link rel="stylesheet" type="text/css" href="css/protal/mainCss.css" /-->
+<!--
+<link rel="stylesheet" type="text/css" href="css/protal/mainCss.css" /-->
 <!-- Bootstrap -->
 <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet"/>
 <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="<%=path%>/js/views/serve/appointmentTime.js"></script>
-
 <script type="text/javascript">
 var _hmt = _hmt || [];
 (function() {
@@ -37,7 +36,9 @@ var _hmt = _hmt || [];
         }(i))
  
     }
-  
+  	window.onload=function(){
+      $('.selectpicker').selectpicker();
+	};
 	function HiddenDivoneOne()
    	{
 		document.getElementById("up_one").style.borderBottomColor = "#c9f0fe"
@@ -56,13 +57,7 @@ var _hmt = _hmt || [];
 		document.getElementById("up_two").style.borderBottomColor = "white"
 		document.getElementById("up_three").style.borderBottomColor = "#c9f0fe"
    	}
-	
-	$().ready(function(){
-		 // $('.selectpicker').selectpicker();
-	})
 </script>
-
-
 <style>
 	html,body{
 		height:100%; width:100%;
@@ -160,8 +155,6 @@ var _hmt = _hmt || [];
 		font-weight:500;
 		}
 </style>
-
-
 </head>
 
 <body>
@@ -214,7 +207,7 @@ var _hmt = _hmt || [];
 			<input type="hidden" value="${ma}" />
 		</c:forEach>
 	</form>
+
+
 </body>
-
-
 </html>

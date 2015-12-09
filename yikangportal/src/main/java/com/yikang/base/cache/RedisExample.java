@@ -9,13 +9,10 @@ import org.springframework.stereotype.Component;
 
 
 
-@Component
 public class RedisExample{
 	
-	@Autowired
 	private RedisTemplate<String, String> template;
 	
-	@Resource(name="redisTemplate")
 	private ListOperations<String, String> listOps;
 	
 	

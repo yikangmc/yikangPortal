@@ -1,4 +1,4 @@
-﻿<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%@ include file="/common/protalhead.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -10,7 +10,7 @@
 	<body> 
 		<div class="dv_body">
 			<div class="dv_topimg">
-				<img style=" width: 100%; height: 100%;" src="<%=basePath%>/img/ServeImg/ServiceIntroduce/1.jpg" />
+				<img style=" width: 100%; height: 100%;" src="<%=basePath%>/img/ServeImg/ServiceIntroduce/6.jpg" />
 			</div>
 			<form action="<%=basePath%>appointmentOrder/" method="post">
 				
@@ -21,9 +21,9 @@
 			</form>
 			<div class="dv_title">
 				<ul>
-					<li class="font-toptitle">PICC管的换药维护与护理</li><br />
+					<li class="font-toptitle">肥胖养生中医调理</li><br />
 					<li class="font-mony">￥300</li>
-					<li class="font-bottom">专业高素质的PICC置管维护团队，具备风险应急处理能力，综合素质能力强的的专业人员和高品质服务质量。</li>
+					<li class="font-bottom">为您私人定制针对您体质的减肥套餐、减肥中成药，针灸推拿调理，计划性的体育锻炼，及时给予您体重的干预，减缓控制肥胖并发症对您身体的损害。</li>
 				</ul>
 			</div>
 			<img style=" width: 100%;" src="<%=basePath%>/img/ServeImg/border.png" />
@@ -38,12 +38,14 @@
 			<img style=" width: 100%;" src="<%=basePath%>/img/ServeImg/border.png" />
 			
 			<div id="dv_1" class="dv_home">
-				<h1>【病理与服务介绍】</h1><br /><div class="v1">&nbsp;&nbsp;PICC：经外周穿刺中心静脉导管，置管是由外周静脉穿刺置管，导管沿血管走行达上腔静脉或锁骨下静脉的一种穿刺技术。PICC管由取得相应资格证书的护士长或护理骨干进行操作，维护更是需要强化注意，其中细节更是不容忽视，易康美辰为您提供专业服务，维护指导，提高管道维护质量。</div>
-				<h1>【护理措施包括】</h1><br /><div class="v1">&nbsp;&nbsp;1.敷料更换：准备好所需物品，严格清洁双手，严格按无菌操作规范进行，取下旧的敷贴，对穿刺部位评估确定有无触痛和感染现象，更换新的敷料。<br />
-															&nbsp;&nbsp;2.导管冲洗与封管：定期冲洗，适当的冲管与封管技术和常规能保证导管内的正压和完整性，每12小时冲管一次为最佳，封管按SASH原则，封管液量控制。</div>
+				<h1>【病理与服务介绍】</h1><br /><div class="v1">
+					 &nbsp; &nbsp; 肥胖为病症名。系指体重超过标准体重20%。随着生活水平的增高，我国肥胖症患者日趋增多，本病且常并发或加重高血压、冠心病、糖尿病、高脂血症、胆石症及一些感染性疾病，对人类的健康危害甚大。现代西医学所用药物及手术疗法，有一定的毒副作用及禁忌，故中医治疗本病已日益受到重视，且均达到了令人满意的效果。</div>
+				<h1>【护理措施包括】</h1><br /><div class="v1">
+					 &nbsp; &nbsp; 1.中医减肥大都以中医理论为指导，以辨证施治为原则，分别采用辨病论治，分型论治，捂固定处方，随症加减。其治疗包括针刺疗法、针药并施法、气功按摩、外用敷药等方法，配合减肥汤药，丸剂、片剂、减肥茶、糖浆等治疗法。</div>
 			</div>
 			<div id="dv_2" class="dv_home">
-				<h1>【护理措施介绍】</h1><br /><div class="v1">&nbsp;&nbsp;1.敷料更换，一定要按无菌操作规范操作，预防并发症。<br />&nbsp;&nbsp;2.并发症会有静脉炎，穿刺点感染，导管断裂、移位，阻塞等并发症的防治很重要。<br />&nbsp;&nbsp;3.导管拔除，一定要有专业人员操作，切勿私自拔除。</div>
+				<h1>【护理措施介绍】</h1><br /><div class="v1">
+					 &nbsp; &nbsp; 1.肥胖的病因分内因和外因，治疗的两个主要环节是减少热量摄取及增加热量消耗。所以在中医治疗的过程中患者要学会自律，在行为、饮食、体育活动锻炼、和药物上要遵守治疗者的嘱咐，家属要积极支持并予以监督，管理的职责，这样双向结合才能达到更快、好的结果。</div>
 			</div>
 			
 			<div id="dv_3" class="dv_home">

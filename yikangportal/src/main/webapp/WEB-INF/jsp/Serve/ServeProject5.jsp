@@ -1,4 +1,4 @@
-﻿<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%@ include file="/common/protalhead.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -10,7 +10,7 @@
 	<body> 
 		<div class="dv_body">
 			<div class="dv_topimg">
-				<img style=" width: 100%; height: 100%;" src="<%=basePath%>/img/ServeImg/ServiceIntroduce/1.jpg" />
+				<img style=" width: 100%; height: 100%;" src="<%=basePath%>/img/ServeImg/ServiceIntroduce/5.jpg" />
 			</div>
 			<form action="<%=basePath%>appointmentOrder/" method="post">
 				
@@ -21,9 +21,9 @@
 			</form>
 			<div class="dv_title">
 				<ul>
-					<li class="font-toptitle">PICC管的换药维护与护理</li><br />
+					<li class="font-toptitle">鼻饲管和尿管的更换和护理</li><br />
 					<li class="font-mony">￥300</li>
-					<li class="font-bottom">专业高素质的PICC置管维护团队，具备风险应急处理能力，综合素质能力强的的专业人员和高品质服务质量。</li>
+					<li class="font-bottom">三甲医院的护士上门为您更换导管，专业指导，规范操作，减少感染，助您早日康复。</li>
 				</ul>
 			</div>
 			<img style=" width: 100%;" src="<%=basePath%>/img/ServeImg/border.png" />
@@ -38,12 +38,19 @@
 			<img style=" width: 100%;" src="<%=basePath%>/img/ServeImg/border.png" />
 			
 			<div id="dv_1" class="dv_home">
-				<h1>【病理与服务介绍】</h1><br /><div class="v1">&nbsp;&nbsp;PICC：经外周穿刺中心静脉导管，置管是由外周静脉穿刺置管，导管沿血管走行达上腔静脉或锁骨下静脉的一种穿刺技术。PICC管由取得相应资格证书的护士长或护理骨干进行操作，维护更是需要强化注意，其中细节更是不容忽视，易康美辰为您提供专业服务，维护指导，提高管道维护质量。</div>
-				<h1>【护理措施包括】</h1><br /><div class="v1">&nbsp;&nbsp;1.敷料更换：准备好所需物品，严格清洁双手，严格按无菌操作规范进行，取下旧的敷贴，对穿刺部位评估确定有无触痛和感染现象，更换新的敷料。<br />
-															&nbsp;&nbsp;2.导管冲洗与封管：定期冲洗，适当的冲管与封管技术和常规能保证导管内的正压和完整性，每12小时冲管一次为最佳，封管按SASH原则，封管液量控制。</div>
+				<h1>【病理与服务介绍】</h1><br /><div class="v1">
+					 &nbsp; &nbsp; 鼻饲，即鼻饲法，就是把胃管通过鼻腔送到患者胃中，通过胃管往患者胃中打食物，通常用于昏迷或者不能自已进食的患者。<br /> &nbsp; &nbsp; 尿管，是经由尿道插入膀胱以便引流尿液出来，导尿管插入膀胱，引流管连接尿袋收集尿液。</div>
+				<h1>【护理措施包括】</h1><br /><div class="v1">
+					 &nbsp; &nbsp; 1.拔管：动作宜轻柔而迅速，以免引起呕吐或返流液被吸入气管，一定要将管口折叠夹紧。<br />
+					 &nbsp; &nbsp; 2.鼻饲插入过程中若出现插入不畅时应检查胃管是否盘在口中，插管过程中如有发现呛咳、呼吸困难、紫绀等情况，表示误入气管，应立即拔出，休息片刻后重插，昏迷病人插管至会厌部位注意调整角度，方便插入。<br />
+					 &nbsp; &nbsp; 3.导尿：注意一定要在插入前检查气囊，男性见尿后再插入1-2cm，避免气囊充盈损伤尿道壁。<br />
+					 &nbsp; &nbsp; 4.管道保留时间：一般7-10天更换，有进口3个月更换一次。<br />
+					 &nbsp; &nbsp; 5.鼻饲更换时要换另一侧鼻孔，每日应清洁鼻腔，加强口腔卫生，预防并发症；尿管会阴部，管道口有分泌物要注意清洁，预防感染。</div>
 			</div>
 			<div id="dv_2" class="dv_home">
-				<h1>【护理措施介绍】</h1><br /><div class="v1">&nbsp;&nbsp;1.敷料更换，一定要按无菌操作规范操作，预防并发症。<br />&nbsp;&nbsp;2.并发症会有静脉炎，穿刺点感染，导管断裂、移位，阻塞等并发症的防治很重要。<br />&nbsp;&nbsp;3.导管拔除，一定要有专业人员操作，切勿私自拔除。</div>
+				<h1>【护理措施介绍】</h1><br /><div class="v1">
+					 &nbsp; &nbsp; 鼻饲：1.准备用品，检查物品。2.拔出导管。3.取得患者合作，若昏迷的取去枕卧位。4.检查鼻腔口腔，清洁双手。5.测量取得插入长度，润滑插入。6.检验胃管是否在胃中。7.固定鼻饲管在鼻翼两侧。8.鼻饲饮食，护理宣教。<br />
+					 &nbsp; &nbsp; 导尿：1.准备导尿管。2.拔出导管。3.清洁双手和会阴部。4.润滑管头部位。5.手持导尿管插入尿道，直到尿液从导尿管排出。男性患者注意尿道口朝腹部方向。</div>
 			</div>
 			
 			<div id="dv_3" class="dv_home">

@@ -82,4 +82,23 @@ public class ExceptionConstants {
 	}
 	
 	
+	/**
+	 * @desc 邀请问题
+	 * **/
+	public enum invationException{
+		
+		mobileOrInvationCodeException("040001","您的手机号或随诊码不正确！"),
+		userRepeate("040002","用户重复！"),
+		havedService("040003","您已经领取过服务了！希望您持续关注我们！"),
+		invationSuccess("000000","您好！您已经预约成功了！稍后会有服务人员与您联系！");
+		
+		public String errorCode;
+		public String errorMessage;
+		private invationException(String errorCode,String errorMessage){
+			this.errorCode=errorCode;
+			this.errorMessage=errorMessage;
+		}
+	}
+	
+	
 }

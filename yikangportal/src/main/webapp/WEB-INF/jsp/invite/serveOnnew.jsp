@@ -5,8 +5,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>无标题文档</title>
-<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" />
-<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
 <style type="text/css">
 	html,body {
 		background: #f7f7f7;
@@ -58,17 +56,19 @@
 				</p>
 			</div>
 			<div class="bodys_two">
-				<p style="color: #fe9941; font-size: 38px;">${user.loginName }</p>
+				<p style="color: #fe9941; font-size: 38px;">${user.userName }</p>
 				<p style="color: #fe9941; font-size: 34px;">
-					<font color="000">医生随诊码:</font>
-					<font color="fe9941">${user.invitationCode }</span><br />
-					<font color="000">还差下一步</font><br>
-					<img src="<%=basePath %>img/ServeImg/ServePrecept/erweima.png">
+					<c:if test="${null ne user}">
+						<font color="000">医生随诊码:</font>
+						<font color="fe9941">${user.invitationCode }</font><br />
+					</c:if>
+					<font color="000">还差下一步</font><br/>
+					<img src="<%=basePath %>img/ServeImg/ServePrecept/erweima.png"/>
 				</p>
 			</div>
 			<div>
-				<button style=" background: #f46151;" class="ipt_styletwo">现在就要预约</button>
-				<button style=" background: #66c5f1;" class="ipt_styletwo">了解护理家</button>
+				<a href="<%=basePath %>invite/inviteRegister${user.invitationCode ne null ? "?invitationCode=" :"" }${user.invitationCode}"><button style=" background: #f46151;" type="button" class="ipt_styletwo">现在就要预约</button></a>
+				<a href="<%=basePath %>invite/knowhulingjia" style=" font-size: 26px; color: #019ffb;" href="#"><button style=" background: #66c5f1;" type="button" class="ipt_styletwo">了解护理家</button></a>
 			</div>
 		</div>
 	</body>

@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>护理家</title>
+<title>免费服务，轻松获取</title>
 <style type="text/css">
 	html,body {
 		background: #f7f7f7;
@@ -64,10 +64,11 @@
 		text-align: center;	
 	}
 </style>
+<script type="text/javascript" src="<%=path%>/js/views/invite/servePrecept.js"></script>
 </head>
 	<body>
 		<div>
-			<img style="width: 100%;" src="<%=basePath %>/img/ServeImg/ServePrecept/banner.png">
+			<img style="width: 100%;" src="<%=basePath %>/img/ServeImg/ServePrecept/banner.png"/>
 		</div>
 		<!-- 1111 -->
 		<div id="dv_one">
@@ -78,24 +79,33 @@
 				<p class="bd_title_info">
 					成为护理家的服务用户,您将获得免费的康护师居家健康评估方案
 				</p>
-				<a href="<%=basePath %>/invite/knowhulingjia" style=" font-size: 26px; color: #019ffb;" href="#">了解护理家</a>
+				<c:if test="${null ne user}">
+					<a href="<%=basePath %>invite/knowhulingjia?invitationCode=${user.invitationCode}" style=" font-size: 26px; color: #019ffb;" href="#">了解护理家</a>
+				</c:if>
+				<c:if test="${null eq user}">
+					<a href="<%=basePath %>invite/knowhulingjia" style=" font-size: 26px; color: #019ffb;" href="#">了解护理家</a>
+				</c:if>
 			</div>
-			<div class="bodys_info">
-				<input class="ipt_style" type="text" placeholder="输入您的手机号"/>
-				<a href="<%=basePath %>/invite/serveOnnew?inviteCode=${user.invitationCode }">
-				<button class="ipt_style btn_click">
-					获取免费的居家护理方案
-				</button>
-				</a>
-				<p class="fonts">
-					<font color="019ffb">${user.userName }</font>
-					的随诊码:
-					<font color="fe9941">${user.invitationCode }</font>
-				</p>
-			</div>
-			<div id="bd_bottom">
-					随诊码是您主治医生诊后随访的健康指导凭证,他会最大限度参与您的康复护理的实时进程
-			</div>
+			<form id="inviteForm" onsubmit="return false">
+				<input type="hidden" id="invitationCode" name="invitationCode" value="${user.invitationCode }" />
+				<div class="bodys_info">
+					<input class="ipt_style" type="text" name="mobileNumber" placeholder="输入您的手机号"/>
+					<button id="getService" type="button" onclick="servePrecept.appointmentService()" class="ipt_style btn_click">
+						获取免费的居家护理方案
+					</button>
+					<c:if test="${null ne user }">
+						<p class="fonts">
+							<font color="019ffb">${user.userName }</font>
+							的随诊码:
+							<font color="fe9941">${user.invitationCode }</font>
+						</p>
+					</c:if>
+
+				</div>
+				<div id="bd_bottom">
+						随诊码是您主治医生诊后随访的健康指导凭证,他会最大限度参与您的康复护理的实时进程
+				</div>
+			</form>
 		</div>
 	</body>
 </html>

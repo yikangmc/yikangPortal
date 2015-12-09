@@ -1,4 +1,4 @@
-﻿<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%@ include file="/common/protalhead.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -10,7 +10,7 @@
 	<body> 
 		<div class="dv_body">
 			<div class="dv_topimg">
-				<img style=" width: 100%; height: 100%;" src="<%=basePath%>/img/ServeImg/ServiceIntroduce/1.jpg" />
+				<img style=" width: 100%; height: 100%;" src="<%=basePath%>/img/ServeImg/ServiceIntroduce/9.jpg" />
 			</div>
 			<form action="<%=basePath%>appointmentOrder/" method="post">
 				
@@ -21,9 +21,9 @@
 			</form>
 			<div class="dv_title">
 				<ul>
-					<li class="font-toptitle">PICC管的换药维护与护理</li><br />
+					<li class="font-toptitle">糖尿病的护理</li><br />
 					<li class="font-mony">￥300</li>
-					<li class="font-bottom">专业高素质的PICC置管维护团队，具备风险应急处理能力，综合素质能力强的的专业人员和高品质服务质量。</li>
+					<li class="font-bottom">专业身心护理让您轻松、愉悦、安心的控制血糖，专业指导有效预防并发症，特别是糖尿病足的发生。护理家，护您家，易康美辰护理到您家。</li>
 				</ul>
 			</div>
 			<img style=" width: 100%;" src="<%=basePath%>/img/ServeImg/border.png" />
@@ -38,12 +38,22 @@
 			<img style=" width: 100%;" src="<%=basePath%>/img/ServeImg/border.png" />
 			
 			<div id="dv_1" class="dv_home">
-				<h1>【病理与服务介绍】</h1><br /><div class="v1">&nbsp;&nbsp;PICC：经外周穿刺中心静脉导管，置管是由外周静脉穿刺置管，导管沿血管走行达上腔静脉或锁骨下静脉的一种穿刺技术。PICC管由取得相应资格证书的护士长或护理骨干进行操作，维护更是需要强化注意，其中细节更是不容忽视，易康美辰为您提供专业服务，维护指导，提高管道维护质量。</div>
-				<h1>【护理措施包括】</h1><br /><div class="v1">&nbsp;&nbsp;1.敷料更换：准备好所需物品，严格清洁双手，严格按无菌操作规范进行，取下旧的敷贴，对穿刺部位评估确定有无触痛和感染现象，更换新的敷料。<br />
-															&nbsp;&nbsp;2.导管冲洗与封管：定期冲洗，适当的冲管与封管技术和常规能保证导管内的正压和完整性，每12小时冲管一次为最佳，封管按SASH原则，封管液量控制。</div>
+				<h1>【病理与服务介绍】</h1><br /><div class="v1">
+					 &nbsp; &nbsp; 糖尿病是一组以高血糖为特征的代谢性疾病。高血糖则是由于胰岛素分泌缺陷或其生物作用受损，或两者兼有引起。糖尿病时长期存在的高血糖，导致各种组织，特别是眼、肾、心脏、皮肤、血管、神经的慢性损害、糖尿病足、功能障碍等。给社会和家庭带来沉重负担，严重威胁人类健康。所以早期发现糖尿病，早期治疗显得尤为重要。</div>
+				<h1>【护理措施包括】</h1><br /><div class="v1">
+					 &nbsp; &nbsp; 1.糖尿病患者的健康教育。<br />
+					 &nbsp; &nbsp; 2.监测血糖，定时定期为您监测血糖，并记录；观察血糖动态变化，及时发现问题，给予干预，有效达到降糖达标，预防并发症。<br />
+					 &nbsp; &nbsp; 3.饮食治疗，为您制定合理的饮食，解决您饮食营养方面的烦恼。<br />
+					 &nbsp; &nbsp; 4.运动治疗，带领您一起合理健身，增强体质，有效的消耗热量，控制血糖。<br />
+					 &nbsp; &nbsp; 5.药物治疗，针对性的药物指导，合理用药，控制血糖。<br />
+					 &nbsp; &nbsp; 6.糖尿病足预防与护理，对您糖足护理的指导，及时发现问题，干预，若您有糖足，给您换药，清创。</div>
 			</div>
 			<div id="dv_2" class="dv_home">
-				<h1>【护理措施介绍】</h1><br /><div class="v1">&nbsp;&nbsp;1.敷料更换，一定要按无菌操作规范操作，预防并发症。<br />&nbsp;&nbsp;2.并发症会有静脉炎，穿刺点感染，导管断裂、移位，阻塞等并发症的防治很重要。<br />&nbsp;&nbsp;3.导管拔除，一定要有专业人员操作，切勿私自拔除。</div>
+				<h1>【护理措施介绍】</h1><br /><div class="v1">
+					 &nbsp; &nbsp; 1.糖尿病的药物治疗的原则，首要的是要控制血糖达标，以减少慢性并发症的出现。<br />
+					 &nbsp; &nbsp; 2.然后才是药物的精细选择，减轻胰岛的负担，从而延缓胰岛功能的衰退。<br />
+					 &nbsp; &nbsp; 3.要强调个体化治疗方案，由于每个患者的胰岛素敏感性和胰岛功能衰退程度和速度不同，所以患者不能根据其它患者的用药经验来自行调整自己的用药方案，而应该遵医嘱用药。<br />
+					 &nbsp; &nbsp; 4.家属一定要了解血糖疾病，充分支持、鼓励、督促患者用药，锻炼控制血糖，预防并发症。</div>
 			</div>
 			
 			<div id="dv_3" class="dv_home">

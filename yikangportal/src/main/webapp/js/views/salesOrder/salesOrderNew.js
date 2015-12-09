@@ -48,25 +48,11 @@ SalesOrderNew.prototype={
 		},
 		searchProductByProductCode:function(){
 
-			var paramData={
-					productCode:productCodeStr=$("#productCode").val()
-			};
+			var paramData={productCode:$("#productCode").val()}
 			
 			$.post("/salesOrder/seachProduct.html",paramData,function(data){
 				salesOrderNew.addProduct(data);
 			});
-			
-		}
-		
-		
-}
-
-
-
-
-var salesOrderNew=new SalesOrderNew();
-
-			$("#productSum").val(price*nums);
 		},
 		addProductNumber:function(){
 			var num=eval($("#pid1").val());
@@ -79,10 +65,14 @@ var salesOrderNew=new SalesOrderNew();
 				$("#pid1").val(num-1);
 				$("#pid1").trigger("onchange");
 			}
-
+		
 		},
 		dropProduct:function(src){
 			$(src).parent().parent().detach();
 		}
 }
+		
+
+
+		
 var salesOrderNew=new SalesOrderNew();

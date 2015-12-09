@@ -1,4 +1,4 @@
-﻿<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%@ include file="/common/protalhead.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -10,7 +10,7 @@
 	<body> 
 		<div class="dv_body">
 			<div class="dv_topimg">
-				<img style=" width: 100%; height: 100%;" src="<%=basePath%>/img/ServeImg/ServiceIntroduce/1.jpg" />
+				<img style=" width: 100%; height: 100%;" src="<%=basePath%>/img/ServeImg/ServiceIntroduce/2.jpg" />
 			</div>
 			<form action="<%=basePath%>appointmentOrder/" method="post">
 				
@@ -21,9 +21,9 @@
 			</form>
 			<div class="dv_title">
 				<ul>
-					<li class="font-toptitle">PICC管的换药维护与护理</li><br />
+					<li class="font-toptitle">骨关节置换术后康复护理</li><br />
 					<li class="font-mony">￥300</li>
-					<li class="font-bottom">专业高素质的PICC置管维护团队，具备风险应急处理能力，综合素质能力强的的专业人员和高品质服务质量。</li>
+					<li class="font-bottom">三甲医院骨科护士解决生理疼痛和心理恐惧，专业康复师的指导锻炼，让您尽快回归生活。</li>
 				</ul>
 			</div>
 			<img style=" width: 100%;" src="<%=basePath%>/img/ServeImg/border.png" />
@@ -38,12 +38,21 @@
 			<img style=" width: 100%;" src="<%=basePath%>/img/ServeImg/border.png" />
 			
 			<div id="dv_1" class="dv_home">
-				<h1>【病理与服务介绍】</h1><br /><div class="v1">&nbsp;&nbsp;PICC：经外周穿刺中心静脉导管，置管是由外周静脉穿刺置管，导管沿血管走行达上腔静脉或锁骨下静脉的一种穿刺技术。PICC管由取得相应资格证书的护士长或护理骨干进行操作，维护更是需要强化注意，其中细节更是不容忽视，易康美辰为您提供专业服务，维护指导，提高管道维护质量。</div>
-				<h1>【护理措施包括】</h1><br /><div class="v1">&nbsp;&nbsp;1.敷料更换：准备好所需物品，严格清洁双手，严格按无菌操作规范进行，取下旧的敷贴，对穿刺部位评估确定有无触痛和感染现象，更换新的敷料。<br />
-															&nbsp;&nbsp;2.导管冲洗与封管：定期冲洗，适当的冲管与封管技术和常规能保证导管内的正压和完整性，每12小时冲管一次为最佳，封管按SASH原则，封管液量控制。</div>
+				<h1>【病理与服务介绍】</h1><br /><div class="v1">
+					 &nbsp; &nbsp; 关节置换常适用于骨头坏死，关节疼痛发生而不能用非手术治疗缓解，关节活动明显受限，X线示骨关节塌陷出现骨关节炎，病变范围大，不易做截骨术者采用关节置换。关节置换后若不及时康复普遍易出现关节粘连，活动度下降，肌肉萎缩严重，易康美辰专业康护人员为您解忧，入户上门为您康护。</div>
+				<h1>【护理措施包括】</h1><br /><div class="v1">
+					 &nbsp; &nbsp; 1.体位摆放，为您指导正确功能位的肢体摆放。<br />
+					 &nbsp; &nbsp; 2.肢体放松手法按摩，促进血液循环，减轻疼痛。<br />
+					 &nbsp; &nbsp; 3.关节被动活动，打开关节活动度，预防筋腱挛缩。<br />
+					 &nbsp; &nbsp; 4.专业指导肌力锻炼，预防肌力下降。<br />
+					 &nbsp; &nbsp; 5.功能锻炼，帮您安全，高效的康复。<br />
+					 &nbsp; &nbsp; 6.心理护理，重获自信，尽快回归生活。</div>
 			</div>
 			<div id="dv_2" class="dv_home">
-				<h1>【护理措施介绍】</h1><br /><div class="v1">&nbsp;&nbsp;1.敷料更换，一定要按无菌操作规范操作，预防并发症。<br />&nbsp;&nbsp;2.并发症会有静脉炎，穿刺点感染，导管断裂、移位，阻塞等并发症的防治很重要。<br />&nbsp;&nbsp;3.导管拔除，一定要有专业人员操作，切勿私自拔除。</div>
+				<h1>【护理措施介绍】</h1><br /><div class="v1">
+					 &nbsp; &nbsp; 1.饮食调养很重要，合理安排饮食，营养均衡。<br />
+					 &nbsp; &nbsp; 2.家庭改建很必要，比如床椅高度调整，安装扶手，防滑垫，家里宽敞明亮，移走多余杂物，避免磕碰摔倒，12个月以内避免过度负重。<br />
+					 &nbsp; &nbsp; 3.术后复查很必要，术后1、3、6、12个月都是要去全方位拍片复查。</div>
 			</div>
 			
 			<div id="dv_3" class="dv_home">
