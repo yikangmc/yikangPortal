@@ -16,4 +16,6 @@ public interface UserDao {
     int updateByPrimaryKey(User record);
     
     User getUserByLoginName(String userName);
+    
+    User getUserByInvitationCode(String userInvite);
 }

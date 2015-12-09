@@ -29,7 +29,16 @@ public class UserManager {
 	private UserLinkStatuDao userLinkStatuDao;
 	
 	
-	
+	/**
+	 * 
+	 * @param userInvite
+	 * @return User
+	 * @date 2015/12/8 19:50
+	 * @desc 获取用户信息
+	 */
+	public User getUserByInvitationCode(String userInvite) {
+		return userDao.getUserByInvitationCode(userInvite);
+	}
 	
 	
 	/**

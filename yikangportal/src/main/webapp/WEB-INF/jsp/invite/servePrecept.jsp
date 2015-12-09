@@ -1,0 +1,101 @@
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ include file="/common/protalhead.jsp"%>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>护理家</title>
+<style type="text/css">
+	html,body {
+		background: #f7f7f7;
+		font-family: "Microsoft YaHei";
+	}
+	#dv_one {
+		width: 80%;
+		margin: 0 auto;
+	}
+	.bodys {
+		margin-top: 40px;
+		width: 100%;
+		text-align: center;
+	}
+	.bodys_info {
+		width: 100%;
+		text-align: center;
+		margin-top: 30px;
+	}
+	.ipt_style {
+		width: 100%;
+		height: 90px;
+		border: 1px #dadada solid;
+		border-radius: 7px;
+		font-size: 38px;
+		text-align: center;
+	}
+	.btn_click {
+		color: #fff; 
+		background: #f45e4f; 
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+	#bd_title {
+		color: #019ffb;
+		font-size: 44px;
+	}
+	.bd_title_info{
+		font-size: 30px;
+		margin: 28px 60px 40px 60px;
+	}
+	.fonts {
+		font-size: 26px;
+		margin-bottom: 30px;
+	}
+	#bd_bottom {
+		padding-bottom: 70px;
+		font-size: 18px;
+		color: #999;
+		text-align: left;
+	}
+	.bodys_two {
+		font-size: 34px;
+		width: 42%;
+		margin: 0 auto;
+		text-align: center;	
+	}
+</style>
+</head>
+	<body>
+		<div>
+			<img style="width: 100%;" src="<%=basePath %>/img/ServeImg/ServePrecept/banner.png">
+		</div>
+		<!-- 1111 -->
+		<div id="dv_one">
+			<div class="bodys">
+				<p id="bd_title">
+					不出户，给予您更好的康复服务
+				</p>
+				<p class="bd_title_info">
+					成为护理家的服务用户,您将获得免费的康护师居家健康评估方案
+				</p>
+				<a href="<%=basePath %>/invite/knowhulingjia" style=" font-size: 26px; color: #019ffb;" href="#">了解护理家</a>
+			</div>
+			<div class="bodys_info">
+				<input class="ipt_style" type="text" placeholder="输入您的手机号"/>
+				<a href="<%=basePath %>/invite/serveOnnew?inviteCode=${user.invitationCode }">
+				<button class="ipt_style btn_click">
+					获取免费的居家护理方案
+				</button>
+				</a>
+				<p class="fonts">
+					<font color="019ffb">${user.userName }</font>
+					的随诊码:
+					<font color="fe9941">${user.invitationCode }</font>
+				</p>
+			</div>
+			<div id="bd_bottom">
+					随诊码是您主治医生诊后随访的健康指导凭证,他会最大限度参与您的康复护理的实时进程
+			</div>
+		</div>
+	</body>
+</html>
