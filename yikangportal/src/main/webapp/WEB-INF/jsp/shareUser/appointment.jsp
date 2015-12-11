@@ -145,9 +145,9 @@
 		</p>
 	</div>
     <div id="oneimgstop">
-		<img width="100%" height="100%" src="<%=path%>/img/protal/product/1.png" />
+		<img width="100%" src="<%=path%>/img/protal/product/1.png" />
 	</div>
-	<div class="margin_top"  style=" width:100%; height:55%; background:url(<%=path%>/img/protal/product/2.png); background-size:100% 100%; padding-top:50px;">
+	<div class="margin_top"  style=" width:100%; height:50%; background:url(<%=path%>/img/protal/product/2.png); background-size:100% 100%; padding-top:50px;">
         <div class="dv_body">
 			<form id="userForm" class="form-horizontal">
 				<p>
@@ -174,16 +174,16 @@
 		</div>
     </div>
 	<div class="margin_top">
-		<img width="100%" height="100%" src="<%=path%>/img/protal/product/3.png" />
+		<img width="100%" src="<%=path%>/img/protal/product/3.png" />
 	</div>
 	<div class="margin_top">
-		<img width="100%" height="100%" src="<%=path%>/img/protal/product/4.png" />
+		<img width="100%" src="<%=path%>/img/protal/product/4.png" />
 	</div>
 	<div class="margin_top">
-		<img width="100%" height="100%" src="<%=path%>/img/protal/product/5.png" />
+		<img width="100%" src="<%=path%>/img/protal/product/5.png" />
 	</div>
 	<div class="margin_top">
-		<img width="100%" height="100%" src="<%=path%>/img/protal/product/6.png" />
+		<img width="100%" src="<%=path%>/img/protal/product/6.png" />
 	</div>
 </body>
 </html>
