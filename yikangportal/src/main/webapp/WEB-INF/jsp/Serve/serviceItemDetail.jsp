@@ -4,8 +4,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<script type="text/javascript" src="<%=basePath%>js/jquery-1.8.3.min.js"></script>
-<title>预约服务</title>
+<title>查看单项服务详情</title>
+<meta name="keywords" 			content="易康美辰,预约评估及服务" />
+<meta name="description" 		content="易康美辰,预约评估及服务" />
+<meta name="generator" 			content="易康美辰" />
+<meta name="author" 			content="易康美辰技术部" />
 	<style type="text/css">
 		html,body {
 			font-family:"Microsoft YaHei";
@@ -190,7 +193,7 @@
 			font-weight:600;
 		}
 	</style>
-		<script type="text/javascript">
+	<script type="text/javascript">
 		var colorTag = 1;
 		var colorTagtwo = 1;
 		var colors = ["#999", "#2d86ff"];
@@ -230,65 +233,78 @@
 			alert("提示信息：预约成功");
 		}
 	</script>
+	<script type="text/javascript" src="<%=basePath%>/js/views/serve/serviceItemDetail.js"></script>
 </head>
 	<body> 
 		<div class="dv_body">
 			<div class="dv_topimg">
-				<img style=" width: 100%; height: 100%;" src="<%=basePath%>/img/ServeImg/ServiceIntroduce/1.jpg" />
+				<img style=" width: 100%; height: 100%;" src="<%=basePath%>/img/ServeImg/ServiceIntroduce/9.jpg" />
 			</div>
-			<form action="<%=basePath%>appointmentOrder/" method="post">
+			<form id="serviceItemForm" action="" method="post">
 				
-				<input type="hidden" name="serviceItemId" value="${data.serviceItemId }" />
+				<input type="hidden" name="serviceItemId" 		  value="${data.serviceItemId }" />
 				
-				<input type="hidden" name="medicinalApparatusIds" value="${data.serviceItemId }" />
+				<div id="medicinalApparatusIdsDiv" style="display:none">
+				</div>
+				
+				
 				
 			</form>
 			<div class="dv_title">
 				<ul>
-					<li class="font-toptitle">PICC管的换药维护与护理</li><br/>
-					<li class="font-mony">￥300</li>
-					<li class="font-bottom">专业高素质的PICC置管维护团队，具备风险应急处理能力，综合素质能力强的的专业人员和高品质服务质量。</li>
+					<li class="font-toptitle">${data.serviceTitle }</li>
+					<li class="font-mony">${data.price }</li>
+					<li class="font-bottom">${data.serviceContent }</li>
 				</ul>
 			</div>
 			<img style=" width: 100%;" src="<%=basePath%>/img/ServeImg/border.png" />
 			<div class="dv_service_title">
 				<ul>
-					<a onclick="cd_dv1()"><li class="fontstyle" style="width: 26%;">服务介绍</li></a>
-					<a onclick="cd_dv2()"><li class="fontstyle" style="width: 26%;">注意事项</li></a>
-					<a onclick="cd_dv3()"><li style="width: 48%;">所需药品和器材</li></a>
+					<li class="fontstyle" style="width: 26%;"><a onclick="cd_dv1()">服务介绍</a></li>
+					<li class="fontstyle" style="width: 26%;"><a onclick="cd_dv2()">注意事项</a></li>
+					<li style="width: 48%;"><a onclick="cd_dv3()">所需药品和器材</a></li>
 				</ul>
 			</div>
 			
 			<img style=" width: 100%;" src="<%=basePath%>/img/ServeImg/border.png" />
 			
 			<div id="dv_1" class="dv_home">
-				<h1>【病理与服务介绍】</h1><br /><div class="v1">&nbsp;&nbsp;PICC：经外周穿刺中心静脉导管，置管是由外周静脉穿刺置管，导管沿血管走行达上腔静脉或锁骨下静脉的一种穿刺技术。PICC管由取得相应资格证书的护士长或护理骨干进行操作，维护更是需要强化注意，其中细节更是不容忽视，易康美辰为您提供专业服务，维护指导，提高管道维护质量。</div>
-				<h1>【护理措施包括】</h1><br /><div class="v1">&nbsp;&nbsp;1.敷料更换：准备好所需物品，严格清洁双手，严格按无菌操作规范进行，取下旧的敷贴，对穿刺部位评估确定有无触痛和感染现象，更换新的敷料。<br />
-															&nbsp;&nbsp;2.导管冲洗与封管：定期冲洗，适当的冲管与封管技术和常规能保证导管内的正压和完整性，每12小时冲管一次为最佳，封管按SASH原则，封管液量控制。</div>
+				<div class="v1">
+					<c:forEach items="${data.serviceIntroduces }" var="serviceIntroduce">
+						<h1>【 ${serviceIntroduce.title} 】</h1><br/>
+						 &nbsp; &nbsp; ${serviceIntroduce.content}
+					</c:forEach>
+				</div>
 			</div>
+			<!-- 注意事项 -->
 			<div id="dv_2" class="dv_home">
-				<h1>【护理措施介绍】</h1><br /><div class="v1">&nbsp;&nbsp;1.敷料更换，一定要按无菌操作规范操作，预防并发症。<br />&nbsp;&nbsp;2.并发症会有静脉炎，穿刺点感染，导管断裂、移位，阻塞等并发症的防治很重要。<br />&nbsp;&nbsp;3.导管拔除，一定要有专业人员操作，切勿私自拔除。</div>
+				<c:forEach items="${data.serviceNotes}" var="serviceNote">
+					<h1>${serviceNote.title}</h1><br/>
+					<div class="v1">
+						${serviceNote.content }
+					</div>
+				</c:forEach>
 			</div>
 			
 			<div id="dv_3" class="dv_home">
 				<h1>【所需药品和器材】</h1><br/>
 				<div class="v1">
-					<div style=" height: 150px;">
-						<div class="block"><img style="width: 125px; height: 125px;" src="<%=basePath%>/img/ServeImg/zt.png"></div>
-						<div class="block" id="font_titleone" style="margin-top: 55px; text-align: center; width: 240px;">${medicinalApparatus.maName }针头</div>
-					</div>
-					<div style=" height: 150px;">
-						<div class="block"><img style="width: 125px; height: 125px;" src="<%=basePath%>/img/ServeImg/fl.png"></div>
-						<div id="font_titleone1" class="block" style="margin-top: 55px; text-align: center; width: 240px;">${medicinalApparatus.maName }敷料</div>
-					</div>
+					<c:forEach items="${data.medicinalApparatus}" var="medicinalApparatus">
+						<div style=" height: 150px;" onclick="serviceItemDetail.selectMedicinalApparatuId(this,${medicinalApparatus.medicinalApparatuId })">
+							<div class="block">	
+								<img style="width: 125px; height: 125px;" src="${medicinalApparatus.picUrl }"/>
+								<input type="hidden" name="medicinalApparatuId" value="${medicinalApparatus.medicinalApparatuId }" />
+							</div>
+							<div class="block" id="font_titleone" style="margin-top: 55px; text-align: center; width: 240px;">${medicinalApparatus.maName }</div>
+						</div>
+					</c:forEach>
 				</div>
 			</div>
-			<a href="ReserveInformation">
-				<div class="selectService">
-					<button id="btn_1" class="btn_one" >预约该项目</button>
-				</div>
-			</a>
+			
+			<div class="selectService">
+				<button  type="button" onclick="serviceItemDetail.appointmentServiceItem()" class="btn_one" >预约该项目</button>
+			</div>
+			
 		</div>
 	</body>
-
 </html>

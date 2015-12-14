@@ -15,6 +15,8 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 import org.codehaus.jackson.map.ObjectMapper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.yikang.common.encryption.AES;
 
@@ -28,9 +30,11 @@ import com.yikang.common.encryption.AES;
 
 public class SendRequest {
 
-	private static String REQUEST_URL = "http://127.0.0.1:8088/youthFountain/service/";
+	private static String REQUEST_URL = "http://127.0.01:8088/youthFountain/service/";
 	
 	private static ObjectMapper objectMapper = new ObjectMapper();
+	
+	private static Logger sendRequestLogger=LoggerFactory.getLogger(SendRequest.class);
 
 	@SuppressWarnings("unchecked")
 	public static void sendPost(String serviceCode,Map<String,Object>  paramData) throws IOException {
@@ -93,8 +97,6 @@ public class SendRequest {
 		
 		CloseableHttpClient httpclient = HttpClients.createDefault();
 		
-		
-		
 		try {
 			
 			String paramDataJsonString=objectMapper.writeValueAsString(paramData);
@@ -116,7 +118,7 @@ public class SendRequest {
 					int status = response.getStatusLine().getStatusCode();
 					if (status >= 200 && status < 300) {
 						HttpEntity entity = response.getEntity();
-						System.out.println(entity.toString());
+						System.out.println(entity.toString() +" -----------");
 						return entity != null ? EntityUtils.toString(entity)
 								: null;
 						
@@ -128,16 +130,19 @@ public class SendRequest {
 				
 			};
 			String responseBody = httpclient.execute(httpget, responseHandler);
-			System.out.println("----------------------------------------");
-			System.out.println(responseBody);
 			Map<String,Object> data=new HashMap<String, Object>();
 			System.out.println("接收到请求时间"+sdf.format(new Date()));
 			data=objectMapper.readValue(responseBody, Map.class);
-			String dataStr=data.get("data").toString();
-			System.out.println("解析出请求时间"+sdf.format(new Date()));
-			String returnDataStr=AES.Decrypt(dataStr, "1234567890abcDEF");
-			Object returnData=objectMapper.readValue(returnDataStr, returnDataType);
-			data.put("data", returnData);
+			if(data.containsKey("data")){
+				String dataStr=data.get("data").toString();
+				System.out.println("解析出请求时间"+sdf.format(new Date()));
+				String returnDataStr=AES.Decrypt(dataStr, "1234567890abcDEF");
+				sendRequestLogger.debug(returnDataStr);
+				System.out.println(returnDataStr);
+				Object returnData=objectMapper.readValue(returnDataStr, returnDataType);
+				data.put("data", returnData);
+			}
+
 			return data;
 		} catch(Exception e){
 			e.printStackTrace();
@@ -147,34 +152,5 @@ public class SendRequest {
 		return null;
 	}
 	
-	
-	
-	
-	public static void main(String[] args) {
-		try {
-			Map<String,Object> paramData=new HashMap<String, Object>();
-			paramData.put("name","hello");
-			
-			SendRequest.sendPost("00-01-01",paramData);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
-	
-	public void TestRequest(){
-		try {
-			Map<String,Object> paramData=new HashMap<String, Object>();
-			paramData.put("name","hello");
-			
-			SendRequest.sendPost("00-01-01",paramData);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
-	
-	public void TestAesEncipty() throws Exception{
-		String str=	AES.Encrypt("{name:hello}", "1234567890abcDEF");
-		System.out.println(str);
-	}
 
 }

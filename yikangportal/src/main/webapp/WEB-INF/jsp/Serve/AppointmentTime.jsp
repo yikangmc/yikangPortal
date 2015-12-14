@@ -4,13 +4,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" 			content="易康美辰,预约评估及服务" />
+<meta name="description" 		content="易康美辰,预约评估及服务" />
+<meta name="generator" 			content="易康美辰" />
+<meta name="author" 			content="易康美辰技术部" />
 <title>护龄家--选择时间</title>
-<!--
-<link rel="stylesheet" type="text/css" href="css/protal/mainCss.css" /-->
-<!-- Bootstrap -->
-<link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet"/>
-<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
-<script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 <script type="text/javascript">
 var _hmt = _hmt || [];
 (function() {

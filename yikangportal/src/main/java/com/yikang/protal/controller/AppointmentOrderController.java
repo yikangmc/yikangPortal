@@ -13,7 +13,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.yikang.base.response.ResponseMessage;
+import com.yikang.common.error.ExceptionConstants;
 import com.yikang.common.utils.DateUtils;
 import com.yikang.protal.common.utils.map.MapUtils;
 import com.yikang.protal.common.utils.map.model.assistant.MapResponseAssistant;
@@ -81,6 +84,7 @@ public class AppointmentOrderController {
 	}
 	
 	
+	
 	/**
 	 * @author liushuaic
 	 * @date 2015k/11/02 14:45 
@@ -93,7 +97,7 @@ public class AppointmentOrderController {
 		
 		modelMap.put("data", data.get("data"));
 		
-		return "Serve/ServeProject";
+		return "Serve/serviceItemList";
 	}
 	
 	
@@ -110,7 +114,7 @@ public class AppointmentOrderController {
 		Map<String,Object>  rtnData=serviceItemServicer.serviceItemDesc(serviceItemId);
 		modelMap.put("data", rtnData.get("data"));
 		
-		return "Serve/ServiceIntroduce";
+		return "Serve/serviceItemDetail";
 	}
 
 	/**
@@ -222,7 +226,44 @@ public class AppointmentOrderController {
 		
 	}
 	
+	/**
+	 * @author liushuaic
+	 * @date 2015/12/14 17:12
+	 * @desc 到填写个人信息页面
+	 * */
+	@RequestMapping
+	@ResponseBody
+	public ResponseMessage storeMyOrder(HttpServletRequest rquest,Long serviceItemId,Long[] medicinalApparatusId){
+		ResponseMessage responseMessage=new ResponseMessage();
+		if(null != serviceItemId && null != medicinalApparatusId){
+			HttpSession session=rquest.getSession();
+			session.setAttribute("serviceItemId", serviceItemId);
+			session.setAttribute("medicinalApparatusId", medicinalApparatusId);
+			responseMessage.setStatus(ExceptionConstants.responseSuccess.responseSuccess.code);
+			responseMessage.setMessage(ExceptionConstants.responseSuccess.responseSuccess.message);
+		}else{
+			responseMessage.setStatus(ExceptionConstants.parameterException.parameterException.errorCode);
+			responseMessage.setMessage(ExceptionConstants.parameterException.parameterException.errorMessage);
+		}
+		return responseMessage;
+	}
 	
+	
+	/**
+	 * @author liushuaic
+	 * @date 2015/12/14 17:42
+	 * @desc 进入填写个人信息页面
+	 * 
+	 * **/
+	@RequestMapping
+	public String toReviceInfomation(ModelMap modelMap, HttpServletRequest rquest){
+		List<Dictionary> ageBrackets=dictionaryManager.getAgeBracket();
+		List<Dictionary> appellations=dictionaryManager.getAppellation();
+		
+		modelMap.put("ageBrackets", ageBrackets);
+		modelMap.put("appellations", appellations);
+		return "Serve/reserveInformation";
+	}
 	
 	
 	

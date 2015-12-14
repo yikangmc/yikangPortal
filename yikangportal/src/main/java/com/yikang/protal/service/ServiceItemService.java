@@ -19,8 +19,8 @@ public class ServiceItemService {
 		
 		Map<String,Object> paramData=new HashMap<String,Object>();
 		
-		try {
-			return SendRequest.sendPostRetureMap("01-01-01", paramData, Map.class);
+		try{
+			return SendRequest.sendPostRetureMap("01-01-01", paramData, List.class);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
