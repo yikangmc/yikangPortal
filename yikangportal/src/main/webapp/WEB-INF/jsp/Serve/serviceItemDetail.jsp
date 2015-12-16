@@ -240,7 +240,7 @@
 			<div class="dv_topimg">
 				<img style=" width: 100%; height: 100%;" src="<%=basePath%>/img/ServeImg/ServiceIntroduce/9.jpg" />
 			</div>
-			<form id="serviceItemForm" action="" method="post">
+			<form id="serviceItemForm" action="<%=basePath%>appointmentOrder/toReviceInfomation" method="post">
 				
 				<input type="hidden" name="serviceItemId" 		  value="${data.serviceItemId }" />
 				

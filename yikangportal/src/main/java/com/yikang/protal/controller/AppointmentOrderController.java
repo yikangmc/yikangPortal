@@ -66,20 +66,48 @@ public class AppointmentOrderController {
 	 * 
 	 * **/
 	@RequestMapping
-	public Map<String,Object> saveAppointmentOrder(HttpServletRequest rquest,Long serviceItemId,Long[] medicinalApparatusId,
+	@ResponseBody
+	public ResponseMessage saveAppointmentOrder(HttpServletRequest rquest,
+			Long serviceItemId,Long[] medicinalApparatusId,
 			String mapPositionAddress,String detailAddress,String dataSource,String dataGroup,
-			String linkUserName,String districtCode,Long timeQuantumId,String appointmentDateTime){
+			String linkUserName,String districtCode,Long custumerTimeQuantumId,String appointmentDateTime,String phoneNumber){
+
 		
-		Map<String,Object> rtnMap=new HashMap<String, Object>();
-		
+		ResponseMessage responseMessage=new ResponseMessage();
 		HttpSession session=rquest.getSession();
-		
 		Long userId=(Long)session.getAttribute("userId");
+		userId=1l;
+//		if(null != userId){
+			if(
+				   null != serviceItemId
+				&& null != mapPositionAddress
+				&& null != detailAddress
+				&& null != custumerTimeQuantumId
+				&& null != appointmentDateTime
+				&& null != linkUserName
+				&& null != phoneNumber
+			){
+				Map<String,Object> res=appointmentOrderService.saveAppointmentOrder(serviceItemId, medicinalApparatusId, mapPositionAddress, 
+						districtCode, detailAddress, dataSource, dataGroup, linkUserName,userId, custumerTimeQuantumId,appointmentDateTime,phoneNumber);
+				if(null != res && res.get("status").toString().equals("000000")){
+					responseMessage.setStatus(ExceptionConstants.responseSuccess.responseSuccess.code);
+					responseMessage.setMessage(ExceptionConstants.responseSuccess.responseSuccess.message);
+				}else{
+					responseMessage.setStatus(res.get("status").toString());
+					responseMessage.setMessage(res.get("message").toString());
+				}
+				
+			}else{
+				responseMessage.setStatus(ExceptionConstants.parameterException.parameterException.errorCode);
+				responseMessage.setMessage(ExceptionConstants.parameterException.parameterException.errorMessage);
+			}
+			
+//		}else{
+//			responseMessage.setStatus(ExceptionConstants.loginException.userNotLogin.errorCode);
+//			responseMessage.setMessage(ExceptionConstants.loginException.userNotLogin.errorMessage);
+//		}
 		
-		appointmentOrderService.saveAppointmentOrder(serviceItemId, medicinalApparatusId, mapPositionAddress, 
-				districtCode, detailAddress, dataSource, dataGroup, linkUserName,userId, timeQuantumId,appointmentDateTime);
-		
-		return rtnMap;
+		return responseMessage;
 		
 	}
 	
@@ -233,12 +261,13 @@ public class AppointmentOrderController {
 	 * */
 	@RequestMapping
 	@ResponseBody
-	public ResponseMessage storeMyOrder(HttpServletRequest rquest,Long serviceItemId,Long[] medicinalApparatusId){
+	public ResponseMessage storeMyOrder(ModelMap modelMap, HttpServletRequest rquest,Long serviceItemId,Long[] medicinalApparatusId){
 		ResponseMessage responseMessage=new ResponseMessage();
-		if(null != serviceItemId && null != medicinalApparatusId){
-			HttpSession session=rquest.getSession();
-			session.setAttribute("serviceItemId", serviceItemId);
-			session.setAttribute("medicinalApparatusId", medicinalApparatusId);
+		if(null != serviceItemId){
+			modelMap.put("serviceItemId", serviceItemId);
+			if(null != medicinalApparatusId){
+				modelMap.put("medicinalApparatusId", medicinalApparatusId);
+			}
 			responseMessage.setStatus(ExceptionConstants.responseSuccess.responseSuccess.code);
 			responseMessage.setMessage(ExceptionConstants.responseSuccess.responseSuccess.message);
 		}else{
@@ -256,15 +285,57 @@ public class AppointmentOrderController {
 	 * 
 	 * **/
 	@RequestMapping
-	public String toReviceInfomation(ModelMap modelMap, HttpServletRequest rquest){
+	public String toReviceInfomation(ModelMap modelMap, HttpServletRequest rquest,String serviceDate,Long serviceItemId,Long[] medicinalApparatusId ){
+		
+		
 		List<Dictionary> ageBrackets=dictionaryManager.getAgeBracket();
 		List<Dictionary> appellations=dictionaryManager.getAppellation();
 		
+		if(null != serviceItemId){
+			modelMap.put("serviceItemId", serviceItemId);
+			if(null != medicinalApparatusId){
+				modelMap.put("medicinalApparatusId", medicinalApparatusId);
+			}
+		}
+		
+		
 		modelMap.put("ageBrackets", ageBrackets);
 		modelMap.put("appellations", appellations);
+		
+		
+		if(null == serviceDate){
+			serviceDate=DateUtils.getCurrentDateStr();
+		}
+		
+		Map<String,Object> custumerTimeQuantums=timeQuantumService.getCustumerTimeQuantums(serviceDate);
+		List<CustumerTimeQuantum> serviceDateList=DateUtils.getCanSelectedDateTime();
+
+		for(int i=0;i<serviceDateList.size();i++){
+			if(serviceDateList.get(i).getDateStr().equals(serviceDate)){
+				serviceDateList.get(i).setIsSelected(true);
+			}
+		}
+		
+		
+		modelMap.put("serviceDateList", serviceDateList);
+		modelMap.put("custumerTimeQuantums", custumerTimeQuantums.get("data"));
+		modelMap.put("serviceDate",serviceDate);
+		
+		
 		return "Serve/reserveInformation";
 	}
 	
+	
+	
+	
+	/**
+	 * @author liushuaic
+	 * @date 2015/12/15 15:08
+	 * */
+	@RequestMapping
+	public String selectMapPosition(ModelMap modelMap){
+		return "Serve/selectMapPosition";
+	}
 	
 	
 }
