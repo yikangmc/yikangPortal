@@ -288,6 +288,8 @@
 			<input type="hidden" id="appointmentDateTime" 	name="appointmentDateTime" 	value="${serviceDate }" />
 			<input type="hidden" id="custumerTimeQuantumId" name="custumerTimeQuantumId" value="" />
 			<input type="hidden" id="serviceItemId" 		name="serviceItemId"	 	value="${serviceItemId }" />
+			<input type="hidden" id="districtCode" 			name="districtCode"	 		value="" />
+			
 			<c:forEach items="${medicinalApparatusIds}" var="ma">
 				<input type="hidden"  name="medicinalApparatusId" value="${ma}" />
 			</c:forEach>
@@ -330,6 +332,10 @@
 				<input id="appointmentTime" style="font-size: 27px; height: 50px;" type="text"
 					class="col-md-12 col-sm-12 col-xs-12 input" data-toggle="modal" data-target="#myModal" 	/>
 					
+					
+				<p style="height: 10px;"></p>
+				<input type="button" onclick="reserveInformation.getServicer()" value="获取服务人员"/>
+				
 				<div class="row" id="servicerDiv">
 					<div class="col-md-6">
 						无图片
@@ -351,7 +357,7 @@
 		<div class="container" style="background:white;">
 			<div class="modal-header span12">
 				<button class="close" type="button" data-dismiss="modal">×</button>
-				<h3 id="myModalLabel">时间选择</h3>
+				<h3>时间选择</h3>
 			</div>
 			<div class="modal-body span12">
 					<div class="dv_body col-md-12">
@@ -435,6 +441,7 @@
          
          //设置模糊搜索地址
          $("#mapPositionAddress").val(e.poi.name);
+         $("#districtCode").val(e.poi.adcode);
          
       });
     });

@@ -70,7 +70,9 @@ public class AppointmentOrderController {
 	public ResponseMessage saveAppointmentOrder(HttpServletRequest rquest,
 			Long serviceItemId,Long[] medicinalApparatusId,
 			String mapPositionAddress,String detailAddress,String dataSource,String dataGroup,
-			String linkUserName,String districtCode,Long custumerTimeQuantumId,String appointmentDateTime,String phoneNumber){
+			String linkUserName,String districtCode,Long custumerTimeQuantumId,
+			String appointmentDateTime,String phoneNumber,
+			Long serviceUserId){
 
 		
 		ResponseMessage responseMessage=new ResponseMessage();
@@ -86,9 +88,17 @@ public class AppointmentOrderController {
 				&& null != appointmentDateTime
 				&& null != linkUserName
 				&& null != phoneNumber
+				&& null != districtCode
+				&& null != serviceUserId
 			){
-				Map<String,Object> res=appointmentOrderService.saveAppointmentOrder(serviceItemId, medicinalApparatusId, mapPositionAddress, 
-						districtCode, detailAddress, dataSource, dataGroup, linkUserName,userId, custumerTimeQuantumId,appointmentDateTime,phoneNumber);
+				
+				 dataSource="1";
+				 dataGroup="1";
+				
+				Map<String,Object> res=appointmentOrderService.saveAppointmentOrder(
+						serviceItemId, medicinalApparatusId, mapPositionAddress, 
+						districtCode, detailAddress, dataSource, dataGroup, linkUserName,serviceUserId, 
+						custumerTimeQuantumId,appointmentDateTime,phoneNumber,userId);
 				if(null != res && res.get("status").toString().equals("000000")){
 					responseMessage.setStatus(ExceptionConstants.responseSuccess.responseSuccess.code);
 					responseMessage.setMessage(ExceptionConstants.responseSuccess.responseSuccess.message);
@@ -220,17 +230,19 @@ public class AppointmentOrderController {
 	 * 返回服务人员信息
 	 * 
 	 * **/
-	
-	public String getServicerInfo(ModelMap modelMap,String serviceDate,Long custumerTimeQuantumId,
-			String mapPositionAddress,String districtCode,String detailAddress ){
+	@RequestMapping
+	@ResponseBody
+	public Map<String,Object> getServicerInfo(ModelMap modelMap,
+			String appointmentDateTime,Long custumerTimeQuantumId,
+			String mapPositionAddress,String districtCode,String detailAddress){
 		
 		Map<String,Object> rtnData=appointmentOrderService.getServicerInfo(
-				serviceDate, custumerTimeQuantumId,
+				appointmentDateTime, custumerTimeQuantumId,
 				mapPositionAddress, districtCode, detailAddress);
 		
-		modelMap.put("data", rtnData.get("data"));
 		
-		return "Serve/servicerList";
+		return rtnData;
+		
 	}
 	
 	

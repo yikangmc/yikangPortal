@@ -36,16 +36,20 @@ public class AppointmentOrderService {
 	 * @date 2015/09/25 14:38
 	 * @desc 保存订单
 	 * **/
-	public Map<String,Object> saveAppointmentOrder(Long serviceItemId,Long[] medicinalApparatusId,String mapPositionAddress,
+	public Map<String,Object> saveAppointmentOrder(
+			Long serviceItemId,Long[] medicinalApparatusId,
+			String mapPositionAddress,
 			String districtCode,String detailAddress,
-			String dataSource,String dataGroup,String linkUserName,Long serviceUserId,Long timeQuantumId,
-			String appointmentDateTime,String phoneNumber){
+			String dataSource,String dataGroup,String linkUserName,
+			Long serviceUserId,Long timeQuantumId,
+			String appointmentDateTime,String phoneNumber,
+			Long userId){
 		
 		Map<String,Object>  paramData=new HashMap<String,Object>();
 		paramData.put("serviceItemId", serviceItemId);
 		paramData.put("medicinalApparatusId", medicinalApparatusId);
 		paramData.put("mapPositionAddress", mapPositionAddress);
-		//paramData.put("districtCode", districtCode);
+		paramData.put("districtCode", districtCode);
 		paramData.put("detailAddress", detailAddress);
 		paramData.put("dataSource", dataSource);
 		paramData.put("dataGroup", dataGroup);
@@ -53,12 +57,13 @@ public class AppointmentOrderService {
 		paramData.put("timeQuantumId", timeQuantumId);
 		paramData.put("appointmentDateTime", appointmentDateTime);
 		paramData.put("phoneNumber", phoneNumber);
+		paramData.put("serviceUserId", serviceUserId);
+		paramData.put("userId", userId);
 		
 		
 		try {
 			
-			ServiceItem serviceItem=new ServiceItem();
-			return SendRequest.sendPostRetureMap("00-21-03", paramData,serviceItem.getClass());
+			return SendRequest.sendPostRetureMap("00-21-03", paramData,Map.class);
 			
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -89,8 +94,7 @@ public class AppointmentOrderService {
 		
 		try{
 			
-			ServiceItem serviceItem=new ServiceItem();
-			return SendRequest.sendPostRetureMap("00-22-01", paramData,serviceItem.getClass());
+			return SendRequest.sendPostRetureMap("00-22-01", paramData,Map.class);
 			
 		} catch (IOException e) {
 			e.printStackTrace();
