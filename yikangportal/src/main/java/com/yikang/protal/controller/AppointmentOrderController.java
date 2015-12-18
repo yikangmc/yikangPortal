@@ -101,7 +101,7 @@ public class AppointmentOrderController {
 						custumerTimeQuantumId,appointmentDateTime,phoneNumber,userId);
 				if(null != res && res.get("status").toString().equals("000000")){
 					responseMessage.setStatus(ExceptionConstants.responseSuccess.responseSuccess.code);
-					responseMessage.setMessage(ExceptionConstants.responseSuccess.responseSuccess.message);
+					responseMessage.setMessage("您好，您的服务预订成功！稍后会有工作人员联系您！");
 				}else{
 					responseMessage.setStatus(res.get("status").toString());
 					responseMessage.setMessage(res.get("message").toString());
