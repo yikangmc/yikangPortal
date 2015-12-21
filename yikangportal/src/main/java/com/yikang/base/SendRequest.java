@@ -41,14 +41,13 @@ public class SendRequest {
 		SimpleDateFormat sdf=new  SimpleDateFormat("yyyy-MM-dd HH:mm:ss.S");
 		
 		CloseableHttpClient httpclient = HttpClients.createDefault();
-		
-		
+	
 		
 		try {
 			
 			String paramDataJsonString=objectMapper.writeValueAsString(paramData);
 			
-			try {
+		try {
 				paramDataJsonString=AES.Encrypt(paramDataJsonString, "1234567890abcDEF");
 			} catch (Exception e) {
 				e.printStackTrace();
@@ -92,7 +91,7 @@ public class SendRequest {
 		}
 	}
 	@SuppressWarnings("unchecked")
-	public static Map<String,Object> sendPostRetureMap(String serviceCode,Map<String,Object>  paramData ,Class returnDataType) throws IOException {
+	public static Map<String,Object> sendPostRetureMap(String serviceCode,Map<String,Object>  paramData ,Class<?> returnDataType) throws IOException {
 		SimpleDateFormat sdf=new  SimpleDateFormat("yyyy-MM-dd HH:mm:ss.S");
 		
 		CloseableHttpClient httpclient = HttpClients.createDefault();

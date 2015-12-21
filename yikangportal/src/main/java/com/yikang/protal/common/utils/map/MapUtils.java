@@ -42,6 +42,7 @@ public class MapUtils {
 	 * @return GeoCodeModel
 	 * 
 	 * */
+	@SuppressWarnings("deprecation")
 	public static GeoCodeModel getGeoCodeModelByAddress(String address,String city) throws IOException{
 		
 		String paramStr=KEYPARAM+"";
@@ -102,6 +103,7 @@ public class MapUtils {
 	 * @throws IOException 
 	 * 
 	 * ***/
+	@SuppressWarnings("unchecked")
 	public static MapResponse<LinkedHashMap<String,String>> getOriginsDestinationDistance(String[] origins,String destination) throws IOException{
 		
 		String  orginsStr="";

@@ -4,7 +4,6 @@ package com.yikang.protal.controller;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Required;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,15 +13,12 @@ import com.yikang.base.response.ResponseMessage;
 import com.yikang.common.error.ExceptionConstants;
 import com.yikang.common.utils.ParamValidateUtil;
 import com.yikang.protal.entity.User;
-import com.yikang.protal.manager.UserManager;
 import com.yikang.protal.service.ShareUserService;
 import com.yikang.protal.service.UserService;
 
 @Controller
 public class InviteController {
 
-	@Autowired
-	private UserManager userManage;
 	
 	@Autowired
 	private UserService userService;

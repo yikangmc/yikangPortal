@@ -10,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.yikang.protal.dao.UserDao;
-import com.yikang.protal.dao.UserInfoDao;
 import com.yikang.protal.dao.UserLinkStatuDao;
 import com.yikang.protal.entity.User;
 import com.yikang.protal.entity.UserLinkStatu;
@@ -21,10 +20,6 @@ public class UserManager {
 	
 	@Autowired
 	private UserDao userDao;
-	
-	
-	@Autowired
-	private UserInfoDao userInfoDao;
 	
 	@Autowired
 	private UserLinkStatuDao userLinkStatuDao;
