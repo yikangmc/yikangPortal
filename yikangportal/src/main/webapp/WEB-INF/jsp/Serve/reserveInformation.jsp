@@ -1,5 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%@ include file="/common/protalhead.jsp"%>
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -9,14 +10,12 @@
 	<meta name="generator" 	content="易康美辰" />
 	<meta name="author" 	content="易康美辰技术部" />
 	<title>预约项目--填写个人信息</title>
-
 	<style type="text/css">
 		html, body {
 			height: 100%;
 			width: 100%;
 			font: "Microsoft YaHei";
 		}
-		
 		.dv_toptitle {
 			width: 100%;
 			height: 70px;
@@ -195,7 +194,7 @@
 			border:solid rgb(140,140,140) 0px;
 			background: #c9f0fe;
 			line-height:110px;
-			margin-top:20px;
+			margin-top:30px;
 		}
 		ul li {
 			position:relative;
@@ -214,8 +213,7 @@
 		}
 		#dv_timeover{
 			width:450px; 
-			height:500px; 
-			background: #c9f0fe; 
+			height:500px;
 			margin:0 auto; 
 			padding:10px;
 			border-radius: 5px;
@@ -331,8 +329,7 @@
 				预约上门评估时间： 
 				<input id="appointmentTime" style="font-size: 27px; height: 50px;" type="text"
 					class="col-md-12 col-sm-12 col-xs-12 input" data-toggle="modal" data-target="#myModal" 	/>
-					
-					
+				
 				<p style="height: 10px;"></p>
 				<input type="button" onclick="reserveInformation.getServicer()" value="获取服务人员"/>
 				
@@ -362,9 +359,9 @@
 			<div class="modal-body span12">
 					<div class="dv_body col-md-12">
 				    	<div class="dv_body_title"> 
-				        	<span style="color:#4E84E9; font-size:22px; display:block;  margin:0 auto;">请选择预约评估时间,浅色代表已被他人预约最好在家人的陪同下进行工作。</span>
-				            <div style="  margin:0 auto; border:solid rgb(15,15,15) 0px;">
-				                <ul>
+				        	<span style="color:#4E84E9; font-size:22px; display:block;  margin:0 auto; width:100%;">请选择预约评估时间,浅色代表已被他人预约最好在家人的陪同下进行工作。</span>
+				            <div style=" text-align: center; margin:0 auto; border:solid rgb(15,15,15) 0px; width: 450px;">
+				                <ul style="height: 10%; ">
 				                	<c:forEach items="${serviceDateList }" var="serviceDate">
 				                	     <li>
 					                    	<a href="<%=basePath %>appointmentOrder/appointmentTime?serviceDate=${serviceDate.dateStr}">
@@ -376,8 +373,8 @@
 				                	</c:forEach>
 				                </ul>
 				            </div>
-				            <div class="col-md-12" style=" margin:0 auto;">
-				            	<div class="triangle-up" id="up_one" style="margin-left:25px;">
+				            <div style="padding-left: 25px; margin:0 auto; text-align: center; height:40px; width: 450px;">
+				            	<div class="triangle-up" id="up_one">
 				                	&nbsp;
 				                </div>
 				                <div class="triangle-up" id="up_two" style="border-bottom-color:#FFF;">
@@ -412,8 +409,6 @@
 			</div>
 		</div>
 	</div>
-	
-	
 </body>
 
 <script type="text/javascript">
