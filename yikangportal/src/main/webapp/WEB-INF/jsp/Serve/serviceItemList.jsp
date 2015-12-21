@@ -80,7 +80,7 @@
 </head>
 
 <body>
-	<div class="dv_title">护理家</div>   
+	<div class="dv_title">护理家</div>
 	<c:forEach items="${data }" var="serviceItem">
 		<a href="<%=basePath%>/appointmentOrder/serviceItemDetail?serviceItemId=${serviceItem.serviceItemId}">
 			<div class="dv_body">
