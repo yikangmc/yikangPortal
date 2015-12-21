@@ -5,7 +5,6 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>超市收银系统</title>
      <%@ include file="/common/head.jsp"%>
-<%--      <jsp:include page="/common/head.jsp" /> --%>
 </head>
 <body>
     <div class="container_12" style="width:180px">
@@ -15,11 +14,10 @@
                     <ul class="section menu">
                         <li><a class="menuitem">基本信息管理</a>
                             <ul class="submenu">
-                                <li><a href="/hello/hello.html"  target="right">商品信息管理</a> </li>
-                                <li><a href="/orderSheet/orderSheetList.html" target="right">定货单管理</a> </li>
-                                <li><a class="active" href="/inventory/inventoryList.html" target="right">库存管理</a> </li>
-                                <li><a href="/salesOrder/salesOrderNew.html" target="right">商品销售</a> </li>
-                                <li><a>Submenu 5</a> </li>
+                                <li><a href="/hello/hello.html"  							target="right">商品信息管理</a> </li>
+                                <li><a href="/orderSheet/orderSheetList.html" 				target="right">定货单管理</a> </li>
+                                <li><a class="active" href="/inventory/inventoryList.html"	target="right">库存管理</a> </li>
+                                <li><a href="/salesOrder/salesOrderNew.html" 				target="right">商品销售</a> </li>
                             </ul>
                         </li>
                         <li><a class="menuitem">商品销售</a>
