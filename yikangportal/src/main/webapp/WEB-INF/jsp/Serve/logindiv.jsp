@@ -106,22 +106,23 @@
 		$("#con_right").css({"display":"block"});
 	}
 </script>
+
 <body>
-<a href="javascript:void(0)" onclick="show('light')" style="font-size:40px;">æå¼</a>
+<a href="javascript:void(0)" onclick="show('light')" style="font-size:40px;">打开</a>
 <div id="light" class="white_content">
-	<div class="close"><a href="javascript:void(0)" onclick="hide('light')">Ã</a></div>
+	<div class="close"><a href="javascript:void(0)" onclick="hide('light')">×</a></div>
 	<div id="con_left" class="con">
-		<input class="ipt_type ipt_phone" type="text" placeholder="è¯·è¾å¥ææºå·ç "/><br />
-		<input class="ipt_type ipt_pwd" type="text" placeholder="è¯·è¾å¥å¯ç " /><br />
-		<input class="ipt_type btn_login" type="button" value="ç»å¥" />
-		<a href="javascript:void(0)" style="font-size:28px; color: #ffffff;" onclick="newlogin()">æ°ç¨æ·ç¹å»æ³¨å</a>
+		<input class="ipt_type ipt_phone" type="text" placeholder="请输入手机号码"/><br />
+		<input class="ipt_type ipt_pwd" type="text" placeholder="请输入密码" /><br />
+		<input class="ipt_type btn_login" type="button" value="登入" />
+		<a href="javascript:void(0)" style="font-size:28px; color: #ffffff;" onclick="newlogin()">新用户点击注册</a>
  	</div>
  	<div id="con_right" class="con">
-		<input class="ipt_type ipt_radius" type="text" placeholder="è¯·è¾å¥ææºå·ç "/><br />
-		<input style="width: 56%;" class="ipt_type ipt_radius" type="text" placeholder="è¯·è¾å¥ææºå·ç "/>
-		<input style="width: 43%;" class="ipt_type btn_login" type="button" value="è·åéªè¯ç " /><br />
-		<input class="ipt_type ipt_radius" type="text" placeholder="è¯·è¾å¥6-20ä½å­æ¯,æ°å­æç¬¦å·"/><br />
-		<input class="ipt_type btn_login" type="button" value="ç¡®è®¤" />
+		<input class="ipt_type ipt_radius" type="text" placeholder="请输入手机号码"/><br />
+		<input style="width: 56%;" class="ipt_type ipt_radius" type="text" placeholder="请输入手机号码"/>
+		<input style="width: 43%;" class="ipt_type btn_login" type="button" value="获取验证码" /><br />
+		<input class="ipt_type ipt_radius" type="text" placeholder="请输入6-20位字母,数字或符号"/><br />
+		<input class="ipt_type btn_login" type="button" value="确认" />
  	</div>
 </div>
 <div class="black_overlay"></div>
