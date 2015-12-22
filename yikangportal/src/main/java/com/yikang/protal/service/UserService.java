@@ -1,5 +1,6 @@
 package com.yikang.protal.service;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -55,4 +56,15 @@ public class UserService {
 	public User getUserByInvitationCode(String userInvite) {
 		return userManager.getUserByInvitationCode(userInvite);
 	}
+	
+	/**
+     * @author liushuaic
+     * @date 2015/12/22 10:17
+     * @desc 登陆
+     * @param loginName 登陆名
+     * @param loginPassword 密码
+     * **/
+    public User loginUserByLoginNameAndLoginPassword(String loginName,String loginPassword){
+    	return userManager.loginUserByLoginNameAndLoginPassword(loginName,loginPassword);
+    }
 }

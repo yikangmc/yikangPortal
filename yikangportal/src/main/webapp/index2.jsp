@@ -52,7 +52,7 @@ var _hmt = _hmt || [];
                 </div>
             	<div style="float:left; width:32px; height:32px; position:relative; top:22px;">
                     <a name="Boom" style="cursor:pointer;" onclick="Boom()">
-                        <img class="closes" styel="margin-top:12px;" src="img/protal/cancel.png"  />
+                        <img class="closes" style="margin-top:12px;" src="img/protal/cancel.png"  />
                     </a>
                 </div>
         	</div>

@@ -109,4 +109,18 @@ public class UserManager {
 		paramData.put("userId", userId);
 		return userDao.updateInvitationCodeByUserId(paramData);
 	}
+	
+	/**
+     * @author liushuaic
+     * @date 2015/12/22 10:17
+     * @desc 登陆
+     * @param loginName 登陆名
+     * @param loginPassword 密码
+     * **/
+    public User loginUserByLoginNameAndLoginPassword(String loginName,String loginPassword){
+    	Map<String,String> paramData=new HashMap<String, String>();
+    	paramData.put("loginName", loginName);
+    	paramData.put("loginPassword", loginPassword);
+    	return userDao.loginUserByLoginNameAndLoginPassword(paramData);
+    }
 }

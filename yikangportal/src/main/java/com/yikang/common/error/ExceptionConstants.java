@@ -74,6 +74,9 @@ public class ExceptionConstants {
 	public enum loginException{
 		userNameOrPasswordException("030001","用户名或密码错误！"),
 		userNotLogin("030002","用户未登陆！"),
+		
+		userNameOrPasswordFormatIsNotCorrect("030003","用户名与密码格式不正确！"),
+		
 		loginSuccess("000000","登陆成功！");
 		public String errorCode;
 		public String errorMessage;
