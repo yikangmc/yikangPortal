@@ -29,8 +29,7 @@ import com.yikang.common.encryption.AES;
  * **/
 
 public class SendRequest {
-
-	private static String REQUEST_URL = "http://127.0.0.1:8090/youthFountain/service/";
+	private static String REQUEST_URL = "http://localhost:8080/youthFountain/service/";
 	
 	private static ObjectMapper objectMapper = new ObjectMapper();
 	
@@ -41,14 +40,13 @@ public class SendRequest {
 		SimpleDateFormat sdf=new  SimpleDateFormat("yyyy-MM-dd HH:mm:ss.S");
 		
 		CloseableHttpClient httpclient = HttpClients.createDefault();
-		
-		
+	
 		
 		try {
 			
 			String paramDataJsonString=objectMapper.writeValueAsString(paramData);
 			
-			try {
+		try {
 				paramDataJsonString=AES.Encrypt(paramDataJsonString, "1234567890abcDEF");
 			} catch (Exception e) {
 				e.printStackTrace();
@@ -92,7 +90,7 @@ public class SendRequest {
 		}
 	}
 	@SuppressWarnings("unchecked")
-	public static Map<String,Object> sendPostRetureMap(String serviceCode,Map<String,Object>  paramData ,Class returnDataType) throws IOException {
+	public static Map<String,Object> sendPostRetureMap(String serviceCode,Map<String,Object>  paramData ,Class<?> returnDataType) throws IOException {
 		SimpleDateFormat sdf=new  SimpleDateFormat("yyyy-MM-dd HH:mm:ss.S");
 		
 		CloseableHttpClient httpclient = HttpClients.createDefault();
