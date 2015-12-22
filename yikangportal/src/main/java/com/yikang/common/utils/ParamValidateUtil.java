@@ -1,7 +1,4 @@
 package com.yikang.common.utils;
-
-import java.util.regex.Pattern;
-
 /**
  * 
  * @author liushuaic

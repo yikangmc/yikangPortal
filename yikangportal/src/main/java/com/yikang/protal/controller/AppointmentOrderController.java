@@ -79,7 +79,7 @@ public class AppointmentOrderController {
 		HttpSession session=rquest.getSession();
 		Long userId=(Long)session.getAttribute("userId");
 		userId=1l;
-//		if(null != userId){
+		if(null != userId){
 			if(
 				   null != serviceItemId
 				&& null != mapPositionAddress
@@ -112,10 +112,10 @@ public class AppointmentOrderController {
 				responseMessage.setMessage(ExceptionConstants.parameterException.parameterException.errorMessage);
 			}
 			
-//		}else{
-//			responseMessage.setStatus(ExceptionConstants.loginException.userNotLogin.errorCode);
-//			responseMessage.setMessage(ExceptionConstants.loginException.userNotLogin.errorMessage);
-//		}
+		}else{
+			responseMessage.setStatus(ExceptionConstants.loginException.userNotLogin.errorCode);
+			responseMessage.setMessage(ExceptionConstants.loginException.userNotLogin.errorMessage);
+		}
 		
 		return responseMessage;
 		

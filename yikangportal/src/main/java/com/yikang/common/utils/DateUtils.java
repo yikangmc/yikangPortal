@@ -4,10 +4,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import com.yikang.protal.entity.CustumerTimeQuantum;
 
@@ -97,8 +94,8 @@ public class DateUtils {
 	
 	
 	public static void main(String[] args) throws ParseException {
-		SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
-		SimpleDateFormat sdf2=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+//		SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
+//		SimpleDateFormat sdf2=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		SimpleDateFormat sdf3=new SimpleDateFormat("今天是E");
 //		
 //		Date d=sdf.parse("2015-07-15");

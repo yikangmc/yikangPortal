@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 
 import com.yikang.base.SendRequest;
 import com.yikang.protal.entity.AppointmentOrder;
-import com.yikang.protal.entity.ServiceItem;
 import com.yikang.protal.manager.AppointmentOrderManager;
 
 @Service
