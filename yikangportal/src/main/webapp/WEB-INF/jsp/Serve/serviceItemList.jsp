@@ -1,15 +1,17 @@
 ﻿<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%@ include file="/common/protalhead.jsp"%>
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>服务列表</title>
 	<style type="text/css">
 		*{ margin: 0px; padding: 0px;}
 		.dv_body {
 			padding: 40px;
-			width: 95%;
+			width: 100%;
 			margin: 0 auto;
 			text-align: center;
 			font-family:"Microsoft YaHei";
@@ -62,7 +64,7 @@
 			height: 50px;
 			line-height: 50px;
 			vertical-align: middle;
-			font-size:36px;
+			font-size:24px;
 			color: #999;
 		}
 		.font_money {
@@ -88,8 +90,8 @@
 					<img src="<%=basePath%>/img/ServeImg/1.png">
 				</div>
 				<div class="col-sm-6 col-xs-6" style＝“flost:left;”>
-					<h2>${serviceItem.serviceTitle}</h2>
-					<h4>${serviceItem.serviceContent}</h4>
+					<h4>${serviceItem.serviceTitle}</h2>
+					<h5>${serviceItem.serviceContent}</h4>
 					<p class="font_bottom">
 						<img src="<%=basePath%>/img/ServeImg/time.png" />${serviceItem.serviceTime } &nbsp; 
 						<font class="font_money" color="#F22D7B">${serviceItem.price} </font>
