@@ -348,5 +348,9 @@ public class AppointmentOrderController {
 		return "Serve/selectMapPosition";
 	}
 	
+	@RequestMapping
+	public String testUser(){
+		return "Serve/validateUser";
+	}
 	
 }

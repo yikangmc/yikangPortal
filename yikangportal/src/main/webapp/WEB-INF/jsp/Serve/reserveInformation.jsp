@@ -77,79 +77,9 @@
 			height: 35px;
 			font-size: 24px;
 		}
-	</style>
-
-
-	<script type="text/javascript">
-	
-		$(document).ready(function(){
-			var width = $(window).width();
-			var heigth = $(window).height();
-			var infoanimateLeft = parseInt(screen.height); // 获得当前分辨率
-			var bigimg = document.getElementById("#midtopimg");
-			if(heigth >= width){}
-		});
-		
-		var $$ = function (id) { 
-			return document.getElementById(id); 
-		} 
-		
-// 		window.onload = function () { 
-// 			var btnSelect = $$("btn_select"); 
-// 			var curSelect = btnSelect.getElementsByTagName("span")[0]; 
-// 			var oSelect = btnSelect.getElementsByTagName("ul")[0]; 
-// 			var aOption = btnSelect.getElementsByTagName("li"); 
-// 			oSelect.onchange = function () { 
-// 				var text=oSelect.options[oSelect.selectedIndex].text; 
-// 				curSelect.innerHTML = text; 
-// 			} 
-// 		}
-		
-	     
-	</script>
-	
-	<script type="text/javascript">
-	    var btn  = document.getElementsByTagName("button");
-	    for(var i=0;i<btn.length;i++){
-	        (function(index){
-	            btn[index].onclick = function(){
-	                if(btn[index].style.backgroundColor === "gray"){
-	                    btn[index].style.backgroundColor = "#428bca";
-	                }else{
-	                    btn[index].style.backgroundColor = "gray";
-			    window.location.href = 'ReserveInformation'
-	                }
 	 
-	            }
-	        }(i))
 	 
-	    }
-		function HiddenDivoneOne()
-	   	{
-			document.getElementById("up_one").style.borderBottomColor = "#c9f0fe"
-			document.getElementById("up_two").style.borderBottomColor = "white"
-			document.getElementById("up_three").style.borderBottomColor = "white"
-	   	}
-		function HiddenDivoneTwo()
-	   	{
-			document.getElementById("up_one").style.borderBottomColor = "white"
-			document.getElementById("up_two").style.borderBottomColor = "#c9f0fe"
-			document.getElementById("up_three").style.borderBottomColor = "white"
-	   	}
-		function HiddenDivoneThree()
-	   	{
-			document.getElementById("up_one").style.borderBottomColor = "white"
-			document.getElementById("up_two").style.borderBottomColor = "white"
-			document.getElementById("up_three").style.borderBottomColor = "#c9f0fe"
-	   	}
-	</script>
-	
-	
-	<style>
-		html,body{
-			height:100%; width:100%;
-				font-family:"Microsoft YaHei";
-			}
+	 
 		.btn_porject {
 			background-color: #428bca;
 			border: 0px;
@@ -212,14 +142,6 @@
 			border-bottom: 40px solid #c9f0fe;
 			float:left;
 		}
-		#dv_timeover{
-			width:450px; 
-			height:500px;
-			margin:0 auto; 
-			padding:10px;
-			border-radius: 5px;
-			position:relative;
-		}
 		.times {
 			margin:20px;
 			margin-top:-37px;
@@ -262,13 +184,6 @@
 			font-family: Verdana, Geneva, sans-serif;
 			font-weight: 400;
 		}
-		.dv_1 {
-			margin: 0 auto;
-			text-align: center;
-			width: 100%;
-			height: 100%;
-			background: #666;
-		}
 		.ipt_names {
 			width: 80%;
 			height: 70px;
@@ -279,10 +194,6 @@
 	</style>
 
 	<style type="text/css">
-	html, body {
-		 height: 100%;
-		 width: 100%;
-	}
 	.white_content {
 		display: none;
 		position: absolute;
@@ -293,19 +204,6 @@
 		z-index:1002;
 		background:  #00a1d8;
 	}
-	.black_overlay {
-		display: none;
-		position: absolute;
-		top: 0%;
-		left: 0%;
-		width: 100%;
-		height: 100%;
-		background-color:#f5f5f5;
-		z-index:1001;
-		-moz-opacity: 0.8;
-		opacity:.80;
-		filter: alpha(opacity=80);
-	}
 	.close {
 		float:right;
 		clear:both;
@@ -313,7 +211,7 @@
 		text-align:right;
 		margin:0 0 6px 0
 	}
-	.close a {
+	.close a{
 		color:#333;
 		text-decoration:none;
 		font-size:70px;
@@ -331,15 +229,6 @@
 		padding-right: 30px;
 		border: 0px;
 	}
-	.ipt_phone {
-		border-top-left-radius: 14px;
-		border-top-right-radius: 14px;
-		border-bottom: 1px solid #e3e3e3;
-	}
-	.ipt_pwd {
-		border-bottom-left-radius: 14px;
-		border-bottom-right-radius: 14px;
-	}
 	.ipt_radius {
 		border-radius: 14px;
 	}
@@ -351,30 +240,7 @@
 		color: #ffffff;
 		font-size: 42px;
 	}
-	#con_right {
-		display: none;
-	}
 	</style>
-	<script type="text/javascript">
-		function show(tag){
-			var light=document.getElementById(tag);
-			var fade=document.getElementById('fade');
-			light.style.display='block';
-			fade.style.display='block';
-		}
-		function hide(tag){
-			$("#con_left").css({"display":"block"});
-			$("#con_right").css({"display":"none"});
-			var light=document.getElementById(tag);
-			var fade=document.getElementById('fade');
-			light.style.display='none';
-			fade.style.display='none';
-		}
-		function newlogin(){
-			$("#con_left").css({"display":"none"});
-			$("#con_right").css({"display":"block"});
-		}
-	</script>
 
 </head>
 
@@ -511,24 +377,37 @@
 	</div>
 	
 	
-<!-- 	<a href="javascript:void(0)" onclick="show('light')" style="font-size:40px;">打开</a> -->
-	
 	<!-- 登陆modal -->
-	<div class="modal container fade" id="loginDialog" tabindex="-1" role="dialog">
-		<div class="container" style="background:white;">
-			<form id="loginForm">
-			<div class="close"><a href="javascript:void(0)" onclick="hide('light')">×</a></div>
-			<div id="con_left" class="con">
-				<input class="ipt_type ipt_phone" name="loginName" 		type="text" placeholder="请输入手机号码"/><br />
-				<input class="ipt_type ipt_pwd"   name="loginPassword" 	type="text" placeholder="请输入密码" /><br />
-				<input class="ipt_type btn_login" onclick="login.login()" type="button" value="登入" />
-				<a href="javascript:void(0)" style="font-size:28px; color: #ffffff;" onclick="newlogin()">新用户点击注册</a>
-		 	</div>
-	 	</form>
+	<div class="modal  fade" style="background:white;" id="loginDialog" tabindex="-1" role="dialog">
+		<div class="container " style="background:white;">
+		  <div class="modal-header span12">
+		    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		    <h3>登录</h3>
+		  </div>
+			<div class="container span12">
+				<form id="loginForm">
+					<div class="row">
+						<div class="col-md-6">
+							<input class="form-control"  id="loginName" 	 name="loginName" 	type="text" placeholder="请输入手机号码"/>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<input class="form-control"  id="loginPassword"  name="loginPassword" 	type="text" placeholder="请输入密码"/>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 text-center">
+							<input class="btn_login btn" onclick="login.login()" type="button" value="登入" />
+						</div>
+					</div>
+			 	</form>
+			</div>
 		</div>
 	</div>
 	
-	<div class="modal container fade" id="loginDialog" tabindex="-1" role="dialog">
+	
+	<div class="modal hide fade" id="loginDialog" tabindex="-1" role="dialog">
 		<div id="light" class="white_content">
 			<!--登陆  -->
 		 	<!-- 注册 -->
@@ -544,40 +423,6 @@
 		</div>
 	</div>
 	
-	
-	<div class="black_overlay"></div>
-	
-	
 </body>
 
-<script type="text/javascript">
-    var windowsArr = [];
-    var marker = [];
-    var mapObj = new AMap.Map("mapContainer", {
-            resizeEnable: true,
-            center: [116.397428, 39.90923],//地图中心点
-            zoom: 13,//地图显示的缩放级别
-            keyboardEnable: false
-    });
-    AMap.plugin(['AMap.Autocomplete','AMap.PlaceSearch'],function(){
-      var autoOptions = {
-        city: "北京", //城市，默认全国
-        input: "keyword"//使用联想输入的input的id
-      };
-      autocomplete= new AMap.Autocomplete(autoOptions);
-      var placeSearch = new AMap.PlaceSearch({
-            city:'北京',
-            map:mapObj
-      })
-      AMap.event.addListener(autocomplete, "select", function(e){
-         //TODO 针对选中的poi实现自己的功能
-         placeSearch.search(e.poi.name);
-         
-         //设置模糊搜索地址
-         $("#mapPositionAddress").val(e.poi.name);
-         $("#districtCode").val(e.poi.adcode);
-         
-      });
-    });
-</script>
 </html>

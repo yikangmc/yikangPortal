@@ -16,9 +16,13 @@ request.setAttribute("basePath",basePath);
 	
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" />
-	<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 	<script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 	
+	
+	<!-- Bootsrap validator -->
+	<link rel="stylesheet" href="<%=basePath%>js/plugin/bootstrapvalidator-0.4.5/css/bootstrapValidator.min.css" />
+	<script src="<%=basePath%>js/plugin/bootstrapvalidator-0.4.5/js/bootstrapValidator.min.js"></script>
 
 	
     <script type="text/javascript">
