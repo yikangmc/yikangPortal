@@ -22,7 +22,11 @@ ReserveInformation.prototype={
 			if(null != data && data.status == "000000"){
 				alert(data.message);
 			}else{
-				alert(data.message);
+				if(null != data && data.status == "030002"){
+					$('#loginDialog').modal('show');
+				}else{
+					alert(data.message);
+				}
 			}
 		});
 		

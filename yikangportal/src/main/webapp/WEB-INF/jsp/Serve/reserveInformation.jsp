@@ -1,10 +1,10 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%@ include file="/common/protalhead.jsp"%>
-<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="keywords" 	content="易康美辰,预约评估及服务" />
 	<meta name="description" content="易康美辰,预约评估及服务" />
@@ -244,7 +244,8 @@
 
 	<script type="text/javascript" src="<%=basePath%>/js/views/serve/serviceItemDetail.js"></script>
 	<script type="text/javascript" src="<%=basePath%>/js/views/serve/reserveInformation.js"></script>
-	<script type="text/javascript"  src="http://webapi.amap.com/maps?v=1.3&key=99891508524054beccc322c75a2de45c"></script>
+	<script type="text/javascript" src="<%=basePath%>/js/views/user/login.js"></script>
+	<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=99891508524054beccc322c75a2de45c"></script>
 	
 	<style type="text/css">
 	    body {
@@ -276,6 +277,104 @@
 		}
 	
 	</style>
+
+	<style type="text/css">
+	html, body {
+		 height: 100%;
+		 width: 100%;
+	}
+	.white_content {
+		display: none;
+		position: absolute;
+		top: 15%;
+		left: 15%;
+		width: 70%;
+		border: 12px solid #00a1d8;
+		z-index:1002;
+		background:  #00a1d8;
+	}
+	.black_overlay {
+		display: none;
+		position: absolute;
+		top: 0%;
+		left: 0%;
+		width: 100%;
+		height: 100%;
+		background-color:#f5f5f5;
+		z-index:1001;
+		-moz-opacity: 0.8;
+		opacity:.80;
+		filter: alpha(opacity=80);
+	}
+	.close {
+		float:right;
+		clear:both;
+		width:100%;
+		text-align:right;
+		margin:0 0 6px 0
+	}
+	.close a {
+		color:#333;
+		text-decoration:none;
+		font-size:70px;
+		font-weight:700
+	}
+	.con {
+		padding: 20px;
+		text-align: center;
+	}
+	.ipt_type {
+		height: 110px;
+		width: 100%;
+		font-size: 40px;
+		padding-left: 30px;
+		padding-right: 30px;
+		border: 0px;
+	}
+	.ipt_phone {
+		border-top-left-radius: 14px;
+		border-top-right-radius: 14px;
+		border-bottom: 1px solid #e3e3e3;
+	}
+	.ipt_pwd {
+		border-bottom-left-radius: 14px;
+		border-bottom-right-radius: 14px;
+	}
+	.ipt_radius {
+		border-radius: 14px;
+	}
+	.btn_login {
+		margin-top: 70px;
+		margin-bottom: 40px;
+		border-radius: 14px;
+		background: #47d9bf;
+		color: #ffffff;
+		font-size: 42px;
+	}
+	#con_right {
+		display: none;
+	}
+	</style>
+	<script type="text/javascript">
+		function show(tag){
+			var light=document.getElementById(tag);
+			var fade=document.getElementById('fade');
+			light.style.display='block';
+			fade.style.display='block';
+		}
+		function hide(tag){
+			$("#con_left").css({"display":"block"});
+			$("#con_right").css({"display":"none"});
+			var light=document.getElementById(tag);
+			var fade=document.getElementById('fade');
+			light.style.display='none';
+			fade.style.display='none';
+		}
+		function newlogin(){
+			$("#con_left").css({"display":"none"});
+			$("#con_right").css({"display":"block"});
+		}
+	</script>
 
 </head>
 
@@ -358,40 +457,40 @@
 				<h3>时间选择</h3>
 			</div>
 			<div class="modal-body span12">
-					<div class="dv_body col-md-12">
-				    	<div class="dv_body_title"> 
-				        	<span style="color:#4E84E9; font-size:22px; display:block;  margin:0 auto; width:100%;">请选择预约评估时间,浅色代表已被他人预约最好在家人的陪同下进行工作。</span>
-				            <div style=" text-align: center; margin:0 auto; border:solid rgb(15,15,15) 0px; width: 450px;">
-				                <ul style="height: 10%; ">
-				                	<c:forEach items="${serviceDateList }" var="serviceDate">
-				                	     <li>
-					                    	<a href="<%=basePath %>appointmentOrder/appointmentTime?serviceDate=${serviceDate.dateStr}">
-					                            <div class="dv_times">
-					                          		<font color="#66bffb">${serviceDate.weekStr }</font>
-					                            </div>
-					                        </a>
-					                    </li>
-				                	</c:forEach>
-				                </ul>
-				            </div>
-				            <div style="padding-left: 25px; margin:0 auto; text-align: center; height:40px; width: 450px;">
-				            	<div class="triangle-up" id="up_one">
-				                	&nbsp;
-				                </div>
-				                <div class="triangle-up" id="up_two" style="border-bottom-color:#FFF;">
-				                	&nbsp;
-				                </div>
-				                <div class="triangle-up" id="up_three" style="border-bottom-color:#FFF;">
-				                	&nbsp;
-				                </div>
-				            </div>
-				            <div id="dv_timeover">
-				            	<c:forEach items="${custumerTimeQuantums }" var="custumeTime">
-				            		<button class="btn_porject" onclick="serviceItemDetail.choseAppointmentTime('${custumeTime.timeQuantumId }','${custumeTime.startTime }')">${custumeTime.startTime }</button>
-				            	</c:forEach>
-				            </div>
-				        </div>
-				    </div>
+				<div class="dv_body col-md-12">
+			    	<div class="dv_body_title"> 
+			        	<span style="color:#4E84E9; font-size:22px; display:block;  margin:0 auto; width:100%;">请选择预约评估时间,浅色代表已被他人预约最好在家人的陪同下进行工作。</span>
+			            <div style=" text-align: center; margin:0 auto; border:solid rgb(15,15,15) 0px; width: 450px;">
+			                <ul style="height: 10%; ">
+			                	<c:forEach items="${serviceDateList }" var="serviceDate">
+			                	     <li>
+				                    	<a href="<%=basePath %>appointmentOrder/appointmentTime?serviceDate=${serviceDate.dateStr}">
+				                            <div class="dv_times">
+				                          		<font color="#66bffb">${serviceDate.weekStr }</font>
+				                            </div>
+				                        </a>
+				                    </li>
+			                	</c:forEach>
+			                </ul>
+			            </div>
+			            <div style="padding-left: 25px; margin:0 auto; text-align: center; height:40px; width: 450px;">
+			            	<div class="triangle-up" id="up_one">
+			                	&nbsp;
+			                </div>
+			                <div class="triangle-up" id="up_two" style="border-bottom-color:#FFF;">
+			                	&nbsp;
+			                </div>
+			                <div class="triangle-up" id="up_three" style="border-bottom-color:#FFF;">
+			                	&nbsp;
+			                </div>
+			            </div>
+			            <div id="dv_timeover">
+			            	<c:forEach items="${custumerTimeQuantums }" var="custumeTime">
+			            		<button class="btn_porject" onclick="serviceItemDetail.choseAppointmentTime('${custumeTime.timeQuantumId }','${custumeTime.startTime }')">${custumeTime.startTime }</button>
+			            	</c:forEach>
+			            </div>
+			        </div>
+			    </div>
 			</div>
 		</div>
 	</div>
@@ -410,6 +509,45 @@
 			</div>
 		</div>
 	</div>
+	
+	
+<!-- 	<a href="javascript:void(0)" onclick="show('light')" style="font-size:40px;">打开</a> -->
+	
+	<!-- 登陆modal -->
+	<div class="modal container fade" id="loginDialog" tabindex="-1" role="dialog">
+		<div class="container" style="background:white;">
+			<form id="loginForm">
+			<div class="close"><a href="javascript:void(0)" onclick="hide('light')">×</a></div>
+			<div id="con_left" class="con">
+				<input class="ipt_type ipt_phone" name="loginName" 		type="text" placeholder="请输入手机号码"/><br />
+				<input class="ipt_type ipt_pwd"   name="loginPassword" 	type="text" placeholder="请输入密码" /><br />
+				<input class="ipt_type btn_login" onclick="login.login()" type="button" value="登入" />
+				<a href="javascript:void(0)" style="font-size:28px; color: #ffffff;" onclick="newlogin()">新用户点击注册</a>
+		 	</div>
+	 	</form>
+		</div>
+	</div>
+	
+	<div class="modal container fade" id="loginDialog" tabindex="-1" role="dialog">
+		<div id="light" class="white_content">
+			<!--登陆  -->
+		 	<!-- 注册 -->
+		 	<form action="registerForm">
+			 	<div id="con_right" class="con">
+					<input class="ipt_type ipt_radius" type="text" placeholder="请输入手机号码"/><br />
+					<input style="width: 56%;" class="ipt_type ipt_radius" type="text" placeholder="请输入手机号码"/>
+					<input style="width: 43%;" class="ipt_type btn_login" type="button" value="获取验证码" /><br />
+					<input class="ipt_type ipt_radius" type="text" placeholder="请输入6-20位字母,数字或符号"/><br />
+					<input class="ipt_type btn_login" type="button" value="确认" />
+			 	</div>
+		 	</form>
+		</div>
+	</div>
+	
+	
+	<div class="black_overlay"></div>
+	
+	
 </body>
 
 <script type="text/javascript">

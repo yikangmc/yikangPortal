@@ -78,7 +78,6 @@ public class AppointmentOrderController {
 		ResponseMessage responseMessage=new ResponseMessage();
 		HttpSession session=rquest.getSession();
 		Long userId=(Long)session.getAttribute("userId");
-		userId=1l;
 		if(null != userId){
 			if(
 				   null != serviceItemId

@@ -5,9 +5,6 @@
 <head>
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>æ æ é¢ææ¡£</title>
-<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" />
-<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
 </head>
 <style>
 	html, body {
