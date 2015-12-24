@@ -163,13 +163,12 @@
 			background-position: right;
 		}
 		a{
+			color: #e3e3e3;
 			text-decoration:none;
-			color: #2d86ff;
 			font-weight: 500;
 		}
 		a:hover{
 			text-decoration:none;
-			color: #2d86ff;
 			font-weight: 500;
 		}
 		.btn_mony {
@@ -218,16 +217,25 @@
 			document.getElementById("dv_1").style.display = "block"
 			document.getElementById("dv_2").style.display = "none"
 			document.getElementById("dv_3").style.display = "none"
+			document.getElementById("ser1").style.color = "2d86ff"
+			document.getElementById("ser2").style.color = "e3e3e3"
+			document.getElementById("ser3").style.color = "e3e3e3"
 		}
 		function cd_dv2() {
 			document.getElementById("dv_1").style.display = "none"
 			document.getElementById("dv_2").style.display = "block"
 			document.getElementById("dv_3").style.display = "none"
+			document.getElementById("ser1").style.color = "e3e3e3"
+			document.getElementById("ser2").style.color = "2d86ff"
+			document.getElementById("ser3").style.color = "e3e3e3"
 		}
 		function cd_dv3() {
 			document.getElementById("dv_1").style.display = "none"
 			document.getElementById("dv_2").style.display = "none"
 			document.getElementById("dv_3").style.display = "block"
+			document.getElementById("ser1").style.color = "e3e3e3"
+			document.getElementById("ser2").style.color = "e3e3e3"
+			document.getElementById("ser3").style.color = "2d86ff"
 		}
 		function onNew(){
 			alert("提示信息：预约成功");
@@ -260,12 +268,11 @@
 			<img style=" width: 100%;" src="<%=basePath%>/img/ServeImg/border.png" />
 			<div class="dv_service_title">
 				<ul>
-					<li class="fontstyle" style="width: 26%;"><a onclick="cd_dv1()">服务介绍</a></li>
-					<li class="fontstyle" style="width: 26%;"><a onclick="cd_dv2()">注意事项</a></li>
-					<li style="width: 48%;"><a onclick="cd_dv3()">所需药品和器材</a></li>
+					<li class="fontstyle" style="width: 26%;"><a onclick="cd_dv1()" id="ser1">服务介绍</a></li>
+					<li class="fontstyle" style="width: 26%;"><a onclick="cd_dv2()" id="ser2">注意事项</a></li>
+					<li class="fontstyle" style="width: 48%;"><a onclick="cd_dv3()" id="ser3">所需药品和器材</a></li>
 				</ul>
 			</div>
-			
 			<img style=" width: 100%;" src="<%=basePath%>/img/ServeImg/border.png" />
 			
 			<div id="dv_1" class="dv_home">
@@ -300,11 +307,9 @@
 					</c:forEach>
 				</div>
 			</div>
-			
 			<div class="selectService">
 				<button  type="button" onclick="serviceItemDetail.appointmentServiceItem()" class="btn_one" >预约该项目</button>
 			</div>
-			
 		</div>
 	</body>
 </html>
