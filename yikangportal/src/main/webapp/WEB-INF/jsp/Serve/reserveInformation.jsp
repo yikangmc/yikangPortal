@@ -326,11 +326,11 @@
 				<div class="dv_body col-md-12">
 			    	<div class="dv_body_title"> 
 			        	<span style="color:#4E84E9; font-size:22px; display:block;  margin:0 auto; width:100%;">请选择预约评估时间,浅色代表已被他人预约最好在家人的陪同下进行工作。</span>
-			            <div style=" text-align: center; margin:0 auto; border:solid rgb(15,15,15) 0px; width: 450px;">
+			            <div class="col-md-12" style=" text-align: center; margin:0 auto; border:solid rgb(15,15,15) 0px; width: 450px;">
 			                <ul style="height: 10%; ">
 			                	<c:forEach items="${serviceDateList }" var="serviceDate">
 			                	     <li>
-				                    	<a href="<%=basePath %>appointmentOrder/appointmentTime?serviceDate=${serviceDate.dateStr}">
+				                    	<a href="<%=basePath %>appointmentOrder/toReviceInfomation?serviceDate=${serviceDate.dateStr}">
 				                            <div class="dv_times">
 				                          		<font color="#66bffb">${serviceDate.weekStr }</font>
 				                            </div>
@@ -339,7 +339,7 @@
 			                	</c:forEach>
 			                </ul>
 			            </div>
-			            <div style="padding-left: 25px; margin:0 auto; text-align: center; height:40px; width: 450px;">
+			            <div class="col-md-12" style="padding-left: 25px; margin:0 auto; text-align: center; height:40px;">
 			            	<div class="triangle-up" id="up_one">
 			                	&nbsp;
 			                </div>
@@ -350,7 +350,7 @@
 			                	&nbsp;
 			                </div>
 			            </div>
-			            <div id="dv_timeover">
+			            <div  class="col-md-12" id="dv_timeover">
 			            	<c:forEach items="${custumerTimeQuantums }" var="custumeTime">
 			            		<button class="btn_porject" onclick="serviceItemDetail.choseAppointmentTime('${custumeTime.timeQuantumId }','${custumeTime.startTime }')">${custumeTime.startTime }</button>
 			            	</c:forEach>
