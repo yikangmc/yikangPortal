@@ -43,7 +43,6 @@
 			height: 70px;
 			background: #A2E2F2;
 			line-height: 70px;
-			padding-left: 30px;
 			font-size: 20px;
 		}
 		
@@ -137,10 +136,9 @@
 		.triangle-up {
 			width: 0;
 			height: 0;
-			border-left: 66px solid transparent;
-			border-right: 66px solid transparent;
+			border-left: 57px solid transparent;
+			border-right: 57px solid transparent;
 			border-bottom: 40px solid #c9f0fe;
-			float:left;
 		}
 		.times {
 			margin:20px;
@@ -281,7 +279,7 @@
 				<p style="height: 10px;"></p>
 				他/她的住址： 
 				<input  class="col-md-12 col-sm-12 col-xs-12 input"	 id="mapPositionAddress" name="mapPositionAddress" placeholder="地址热点地址"  data-toggle="modal" data-target="#selectMapPostion" style="font-size: 27px; height: 70px;" type="text"  />
-				<input  class="col-md-12 col-sm-12 col-xs-12 input"  id="detailAddress" 	 name="detailAddress" 	   placeholder="详细地址" />
+				<input  class="col-md-12 col-sm-12 col-xs-12 input"  id="detailAddress" 	 name="detailAddress"  placeholder="详细地址" />
 
 				<p style="height: 10px;"></p>
 				他/她的联系方式： 
@@ -322,33 +320,25 @@
 				<button class="close" type="button" data-dismiss="modal">×</button>
 				<h3>时间选择</h3>
 			</div>
-			<div class="modal-body span12">
 				<div class="dv_body col-md-12">
 			    	<div class="dv_body_title"> 
 			        	<span style="color:#4E84E9; font-size:22px; display:block;  margin:0 auto; width:100%;">请选择预约评估时间,浅色代表已被他人预约最好在家人的陪同下进行工作。</span>
-			            <div class="col-md-12" style=" text-align: center; margin:0 auto; border:solid rgb(15,15,15) 0px; width: 450px;">
-			                <ul style="height: 10%; ">
+			            <div class="col-md-12" style="margin:0 auto; border:solid rgb(15,15,15) 0px;">
+			                <ul style="height: 100%;">
 			                	<c:forEach items="${serviceDateList }" var="serviceDate">
-			                	     <li>
+			                	     <li style="height: 60px; width: 33%; display: block; margin: 0 auto;">
 				                    	<a href="<%=basePath %>appointmentOrder/toReviceInfomation?serviceDate=${serviceDate.dateStr}">
 				                            <div class="dv_times">
 				                          		<font color="#66bffb">${serviceDate.weekStr }</font>
 				                            </div>
+					                            
+							            	<div class="triangle-up" id="up_one">
+							                	&nbsp;
+							                </div>
 				                        </a>
 				                    </li>
 			                	</c:forEach>
 			                </ul>
-			            </div>
-			            <div class="col-md-12" style="padding-left: 25px; margin:0 auto; text-align: center; height:40px;">
-			            	<div class="triangle-up" id="up_one">
-			                	&nbsp;
-			                </div>
-			                <div class="triangle-up" id="up_two" style="border-bottom-color:#FFF;">
-			                	&nbsp;
-			                </div>
-			                <div class="triangle-up" id="up_three" style="border-bottom-color:#FFF;">
-			                	&nbsp;
-			                </div>
 			            </div>
 			            <div  class="col-md-12" id="dv_timeover">
 			            	<c:forEach items="${custumerTimeQuantums }" var="custumeTime">
@@ -359,7 +349,6 @@
 			    </div>
 			</div>
 		</div>
-	</div>
 	
 	<!-- 选择服务地址 -->
 	<div class="modal container fade" id="selectMapPostion" tabindex="-1" role="dialog">
@@ -408,8 +397,7 @@
 	
 	
 	<div class="modal hide fade" id="loginDialog" tabindex="-1" role="dialog">
-		<div id="light" class="white_content">
-			<!--登陆  -->
+		<div id="light" class="white_content"> 
 		 	<!-- 注册 -->
 		 	<form action="registerForm">
 			 	<div id="con_right" class="con">
