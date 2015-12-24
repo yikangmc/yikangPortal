@@ -378,26 +378,26 @@
 	
 	
 	<!-- 登陆modal -->
-	<div class="modal  fade" style="background:white;" id="loginDialog" tabindex="-1" role="dialog">
+	<div class="modal  fade" id="loginDialog" tabindex="-1" role="dialog">
 		<div class="container " style="background:white;">
 		  <div class="modal-header span12">
 		    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 		    <h3>登录</h3>
 		  </div>
-			<div class="container span12">
+			<div class="container span12  text-center">
 				<form id="loginForm">
 					<div class="row">
-						<div class="col-md-6">
+						<div class="col-md-6   text-center">
 							<input class="form-control"  id="loginName" 	 name="loginName" 	type="text" placeholder="请输入手机号码"/>
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-md-6">
+						<div class="col-md-6   text-center">
 							<input class="form-control"  id="loginPassword"  name="loginPassword" 	type="text" placeholder="请输入密码"/>
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-md-6 col-md-offset-3 text-center">
+						<div class="col-md-6 col-md-offset-3">
 							<input class="btn_login btn" onclick="login.login()" type="button" value="登入" />
 						</div>
 					</div>
