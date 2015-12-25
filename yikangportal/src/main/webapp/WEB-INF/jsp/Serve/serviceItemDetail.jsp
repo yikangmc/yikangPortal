@@ -268,7 +268,7 @@
 			<img style=" width: 100%;" src="<%=basePath%>/img/ServeImg/border.png" />
 			<div class="dv_service_title">
 				<ul>
-					<li class="fontstyle" style="width: 26%;"><a onclick="cd_dv1()" id="ser1">服务介绍</a></li>
+					<li class="fontstyle" style="width: 26%;"><a onclick="cd_dv1()" style="color: #2d86ff" id="ser1">服务介绍</a></li>
 					<li class="fontstyle" style="width: 26%;"><a onclick="cd_dv2()" id="ser2">注意事项</a></li>
 					<li class="fontstyle" style="width: 48%;"><a onclick="cd_dv3()" id="ser3">所需药品和器材</a></li>
 				</ul>
