@@ -259,22 +259,22 @@
 				
 				<p style="height: 10px;"></p>
 				他/她的住址： 
-				<input class="ipt_names input col-md-12 col-sm-12 col-xs-12" style="height: 80px; font-size: 27px; width: 100%; border: 1px solid #3682E7; -moz-border-radius: 8px; -webkit-border-radius: 8px; border-radius: 8px;" type="text" id="keyword" name="keyword" value="" placeholder="输入附近关键字" onfocus='this.value=""'/>
-				<input  class="col-md-12 col-sm-12 col-xs-12 input" style="height: 80px; "  id="detailAddress" 	 name="detailAddress"  placeholder="详细地址" />
+				<input class="ipt_names input col-md-12 col-sm-12 col-xs-12" style="height: 90px; font-size: 27px; width: 100%; border: 1px solid #3682E7; -moz-border-radius: 8px; -webkit-border-radius: 8px; border-radius: 8px;" type="text" id="keyword" name="keyword" value="" placeholder="输入附近关键字" onfocus='this.value=""'/>
+				<input  class="col-md-12 col-sm-12 col-xs-12 input" style="height: 90px; "  id="detailAddress" 	 name="detailAddress"  placeholder="详细地址" />
 				<!-- hidden状态 -->
 				<input  class="col-md-12 col-sm-12 col-xs-12 input"	 id="mapPositionAddress" name="mapPositionAddress" placeholder="地址热点地址"  data-toggle="modal" data-target="#selectMapPostion" style="font-size: 27px; height: 70px;" type="hidden"  />
 
 				<p style="height: 10px;"></p>
 				他/她的联系方式： 
-				<input name="phoneNumber" style="font-size: 27px;height: 80px; " type="text" class="col-md-12 col-sm-12 col-xs-12 input" />
+				<input name="phoneNumber" style="font-size: 27px;height: 90px; " type="text" class="col-md-12 col-sm-12 col-xs-12 input" />
 				
 				<p style="height: 10px;"></p>
 				联系人姓名： 
-				<input name="linkUserName" style="font-size: 27px;height: 80px; " type="text" class="col-md-12 col-sm-12 col-xs-12 input" />
+				<input name="linkUserName" style="font-size: 27px;height: 90px; " type="text" class="col-md-12 col-sm-12 col-xs-12 input" />
 				
 				<p style="height: 10px;"></p>
 				预约上门评估时间： 
-				<input id="appointmentTime" style="font-size: 27px;height: 80px; " type="text"
+				<input id="appointmentTime" style="font-size: 27px;height: 90px; " type="text"
 					class="col-md-12 col-sm-12 col-xs-12 input" data-toggle="modal" data-target="#myModal" 	/>
 			</div>
 				<p style="height: 10px;"></p>
