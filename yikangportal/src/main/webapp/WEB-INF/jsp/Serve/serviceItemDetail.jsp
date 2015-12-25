@@ -91,11 +91,6 @@
 			margin: 0 auto;
 			text-align: center;
 		}
-		.dv_topimg {
-			width: 100%;
-			height: 380px;
-			background-position: center;
-		}
 		.dv_title {
 			width: 100%;
 			height: 110px;
@@ -244,19 +239,14 @@
 	<script type="text/javascript" src="<%=basePath%>/js/views/serve/serviceItemDetail.js"></script>
 </head>
 	<body> 
+		<img style=" width: 100%;" src="<%=basePath%>/img/ServeImg/ServiceIntroduce/9.jpg" />
 		<div class="dv_body">
-			<div class="dv_topimg">
-				<img style=" width: 100%; height: 100%;" src="<%=basePath%>/img/ServeImg/ServiceIntroduce/9.jpg" />
-			</div>
 			<form id="serviceItemForm" action="<%=basePath%>appointmentOrder/toReviceInfomation" method="post">
 				
 				<input type="hidden" name="serviceItemId" 		  value="${data.serviceItemId }" />
 				
 				<div id="medicinalApparatusIdsDiv" style="display:none">
 				</div>
-				
-				
-				
 			</form>
 			<div class="dv_title">
 				<ul>
