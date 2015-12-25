@@ -328,12 +328,13 @@
 			                	     <li style="height: 60px; width: 33%; display: block; margin: 0 auto;">
 				                    	<a href="<%=basePath %>appointmentOrder/toReviceInfomation?serviceDate=${serviceDate.dateStr}">
 				                            <div class="dv_times">
-				                          		<font color="#66bffb">${serviceDate.weekStr }</font>
+				                          		<font color="#66bffb">${serviceDate.weekStr }</font>
 				                            </div>
-					                            
-							            	<div class="triangle-up" id="up_one">
-							                	&nbsp;
-							                </div>
+					                        <c:if test="${null != serviceDate.isSelected and  serviceDate.isSelected }">
+						                        <div class="triangle-up" id="up_one">
+								                	&nbsp;
+								                </div>
+					                        </c:if>
 				                        </a>
 				                    </li>
 			                	</c:forEach>
@@ -350,7 +351,7 @@
 		</div>
 	
 	<!-- 选择服务地址 -->
-	<div class="modal container fade" id="selectMapPostion" tabindex="-1" role="dialog">
+	<div class="modal container fade" id="selectMapPostion" tabindex="-1" role="modal">
 		<div class="container" style="background:white;">
 			<div class="modal-header span12">
 				<button class="close" type="button" data-dismiss="modal">×</button>
