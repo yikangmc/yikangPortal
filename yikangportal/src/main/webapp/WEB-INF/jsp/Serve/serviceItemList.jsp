@@ -94,7 +94,7 @@
 						<span style="font-size: 4px;">${serviceItem.serviceContent}</span>
 						<p class="font_bottom">
 							<img src="<%=basePath%>/img/ServeImg/time.png" />${serviceItem.serviceTime } &nbsp; 
-							<font class="font_money" color="#F22D7B">${serviceItem.price} </font>
+							<font class="font_money" color="#F22D7B">${serviceItem.servicePrice} </font>
 						</p>
 					</div>
 				</div>

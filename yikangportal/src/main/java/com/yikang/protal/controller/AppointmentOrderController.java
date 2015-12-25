@@ -1,6 +1,7 @@
 package com.yikang.protal.controller;
 
 import java.io.IOException;
+import java.text.ParseException;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -168,17 +169,24 @@ public class AppointmentOrderController {
 		}
 		
 		Map<String,Object> custumerTimeQuantums=timeQuantumService.getCustumerTimeQuantums(serviceDate);
-		List<CustumerTimeQuantum> serviceDateList=DateUtils.getCanSelectedDateTime();
-
-		for(int i=0;i<serviceDateList.size();i++){
-			if(serviceDateList.get(i).getDateStr().equals(serviceDate)){
-				serviceDateList.get(i).setIsSelected(true);
+		List<CustumerTimeQuantum> serviceDateList;
+		try {
+			serviceDateList = DateUtils.getCanSelectedDateTime(serviceDate);
+			for(int i=0;i<serviceDateList.size();i++){
+				if(serviceDateList.get(i).getDateStr().equals(serviceDate)){
+					serviceDateList.get(i).setIsSelected(true);
+				}
 			}
+			
+			
+			modelMap.put("serviceDateList", serviceDateList);
+			modelMap.put("custumerTimeQuantums", custumerTimeQuantums.get("data"));
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
+
 		
-		
-		modelMap.put("serviceDateList", serviceDateList);
-		modelMap.put("custumerTimeQuantums", custumerTimeQuantums.get("data"));
 		
 		
 		return "Serve/AppointmentTime";
@@ -309,7 +317,6 @@ public class AppointmentOrderController {
 			}
 		}
 		
-		
 		modelMap.put("ageBrackets", ageBrackets);
 		modelMap.put("appellations", appellations);
 		
@@ -319,18 +326,23 @@ public class AppointmentOrderController {
 		}
 		
 		Map<String,Object> custumerTimeQuantums=timeQuantumService.getCustumerTimeQuantums(serviceDate);
-		List<CustumerTimeQuantum> serviceDateList=DateUtils.getCanSelectedDateTime();
+		
+		List<CustumerTimeQuantum> serviceDateList;
+		try {
+			serviceDateList = DateUtils.getCanSelectedDateTime(serviceDate);
 
-		for(int i=0;i<serviceDateList.size();i++){
-			if(serviceDateList.get(i).getDateStr().equals(serviceDate)){
-				serviceDateList.get(i).setIsSelected(true);
+			for(int i=0;i<serviceDateList.size();i++){
+				if(serviceDateList.get(i).getDateStr().equals(serviceDate)){
+					serviceDateList.get(i).setIsSelected(true);
+				}
 			}
+			
+			modelMap.put("serviceDateList", serviceDateList);
+			modelMap.put("custumerTimeQuantums", custumerTimeQuantums.get("data"));
+			modelMap.put("serviceDate",serviceDate);
+		} catch (ParseException e) {
+			e.printStackTrace();
 		}
-		
-		
-		modelMap.put("serviceDateList", serviceDateList);
-		modelMap.put("custumerTimeQuantums", custumerTimeQuantums.get("data"));
-		modelMap.put("serviceDate",serviceDate);
 		
 		
 		return "Serve/reserveInformation";
@@ -351,6 +363,34 @@ public class AppointmentOrderController {
 	@RequestMapping
 	public String testUser(){
 		return "Serve/validateUser";
+	}
+	
+	
+	/**
+	 * @author liushuaic
+	 * @date 2015/11/04 15:14
+	 * @desc 查询某一天的，选择的时间
+	 * **/
+	@RequestMapping
+	@ResponseBody
+	public ResponseMessage getCustumerTimeQuantums(ModelMap modelMap,String serviceDate){
+		
+		ResponseMessage responseMessage=new ResponseMessage();
+		
+		if(null == serviceDate){
+			serviceDate=DateUtils.getCurrentDateStr();
+		}
+		
+		
+		Map<String,Object> custumerTimeQuantums=timeQuantumService.getCustumerTimeQuantums(serviceDate);
+		
+		 
+		
+		responseMessage.setData(custumerTimeQuantums.get("data"));
+		responseMessage.setStatus(ExceptionConstants.responseSuccess.responseSuccess.code);
+		responseMessage.setMessage(ExceptionConstants.responseSuccess.responseSuccess.message);
+		
+		return responseMessage;
 	}
 	
 }

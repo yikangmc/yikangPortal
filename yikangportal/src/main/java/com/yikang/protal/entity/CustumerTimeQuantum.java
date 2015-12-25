@@ -99,7 +99,7 @@ public class CustumerTimeQuantum {
 		this.dateStr = dateStr;
 	}
 
-	public boolean GetIsSelected() {
+	public boolean getIsSelected() {
 		return isSelected;
 	}
 
