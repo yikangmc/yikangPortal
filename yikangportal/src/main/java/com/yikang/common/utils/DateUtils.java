@@ -4,6 +4,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import com.yikang.protal.entity.CustumerTimeQuantum;
@@ -47,18 +48,21 @@ public class DateUtils {
 	/**
 	 * 
 	 * @author liushuaic
+	 * @throws ParseException 
 	 * @date 2015/11/05 10:57
 	 * @desc 获取当前可选的时间
 	 * 
 	 * */
-	public static List<CustumerTimeQuantum> getCanSelectedDateTime(){
+	public static List<CustumerTimeQuantum> getCanSelectedDateTime(String serviceDate) throws ParseException{
 		
 		List<CustumerTimeQuantum> custumerTImeQuantums=new ArrayList<CustumerTimeQuantum>();
 		
 		SimpleDateFormat sdfWeek=new SimpleDateFormat("E");
 		SimpleDateFormat sdfDate=new SimpleDateFormat("yyyy-MM-dd");
 		
-		Calendar rightNow = Calendar.getInstance();
+		Date currentDate= sdfDate.parse(serviceDate);
+		Calendar rightNow=Calendar.getInstance();
+		rightNow.setTime(currentDate);
 		String weekStrNow=sdfWeek.format(rightNow.getTime());
 		String dateStrNow=sdfDate.format(rightNow.getTime());
 		

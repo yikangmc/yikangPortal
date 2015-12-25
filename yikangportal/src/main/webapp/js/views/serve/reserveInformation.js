@@ -41,12 +41,31 @@ ReserveInformation.prototype={
 	 * ***/
 	getServicer:function(){
 		var formParam=$("#appointmentOrderForm").serialize();
+		//String appointmentDateTime,Long custumerTimeQuantumId,
+		//String mapPositionAddress,String districtCode,String detailAddress
+		if(null == $("#appointmentDateTime").val() || $("#appointmentDateTime").val() == ""){
+			alert("您好，请选择预约时间！");
+			return;
+		}
+		if(null == $("#custumerTimeQuantumId").val() ||  $("#custumerTimeQuantumId").val() == ""){
+			alert("您好，请选择预约时间！");
+			return;
+		}
+		if(null == $("#mapPositionAddress").val() || $("#mapPositionAddress").val() == ""){
+			alert("您好，请选择附近的热点地址！");
+			return;
+		}
+		
+		if(null == $("#detailAddress").val() || $("#detailAddress").val() ==  ""){
+			alert("您好，请填写详细地址！");
+			return;
+		}
+		
 		$.post(basePath+"appointmentOrder/getServicerInfo",formParam,function(data){
 			
 			if(null != data && data.status == "000000"){
 				
 				$("#serviceUserId").detach();
-				
 				var servicer=data.data;
 				var divStr="<div><img class='img-circle' src='"+servicer.photoUrl+"'></img><div>"+servicer.userServiceName+"<br>"+servicer.desc+"</div></div>";
 				var servicerHidden="<input type='hidden' id='serviceUserId' name='serviceUserId' value='"+servicer.userId+"'/>";
@@ -59,6 +78,27 @@ ReserveInformation.prototype={
 			}
 			
 		});
+	},
+	getServiceDate:function(serviceDate){
+		
+		$("#appointmentDateTime").val(serviceDate);
+		 $.post(basePath+"appointmentOrder/getCustumerTimeQuantums",{"serviceDate":serviceDate},function(data){
+			 
+			 if(null != data && data.status=="000000"){
+				 var custumerTimes=data.data;
+				 var custumerTimesStr="";
+				 $("#dv_timeover").empty();
+				 for(var i=0;i<custumerTimes.length;i++){
+					 var ct=custumerTimes[i];
+					 custumerTimesStr=custumerTimesStr+'<button class="btn_porject" onclick=\'serviceItemDetail.choseAppointmentTime("'+ct.timeQuantumId +'","'+ct.startTime+'")\'>'+ct.startTime +'</button>';
+				 }
+				 $("#dv_timeover").html(custumerTimesStr);
+				 $(".triangle-up").css("display","none");
+				 $("#upOne"+serviceDate).css("display","black");
+				 
+			 }
+			 
+		 });
 	}
 	
 	

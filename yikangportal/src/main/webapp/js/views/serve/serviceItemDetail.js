@@ -45,6 +45,7 @@ ServiceItemDetail.prototype={
 			$("#custumerTimeQuantumId").val(id);
 			var appointmentTimeStr= $("#appointmentDateTime").val()+" "+text;
 			$("#appointmentTime").val(appointmentTimeStr)
+			$("#appointmentTime").trigger("change");
 		}
 		
 		

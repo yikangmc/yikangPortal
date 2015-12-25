@@ -290,16 +290,13 @@
 				
 				<p style="height: 10px;"></p>
 				预约上门评估时间： 
-				<input id="appointmentTime" style="font-size: 27px; height: 50px;" type="text"
+				<input id="appointmentTime"  readonly="readonly" style="font-size: 27px; height: 50px;" type="text" onchange="reserveInformation.getServicer()"
 					class="col-md-12 col-sm-12 col-xs-12 input" data-toggle="modal" data-target="#myModal" 	/>
 				
-				<p style="height: 10px;"></p>
-				<input type="button" onclick="reserveInformation.getServicer()" value="获取服务人员"/>
+<!-- 				<p style="height: 10px;"></p> -->
+<!-- 				<input type="button" onclick="reserveInformation.getServicer()" value="获取服务人员"/> -->
 				
 				<div class="row" id="servicerDiv">
-					<div class="col-md-6">
-						无图片
-					</div>
 					<div class="col-md-6">
 						
 					</div>
@@ -326,15 +323,15 @@
 			                <ul style="height: 100%;">
 			                	<c:forEach items="${serviceDateList }" var="serviceDate">
 			                	     <li style="height: 60px; width: 33%; display: block; margin: 0 auto;">
-				                    	<a href="<%=basePath %>appointmentOrder/toReviceInfomation?serviceDate=${serviceDate.dateStr}">
+				                    	<a href="javascript:void(0)" onclick="reserveInformation.getServiceDate('${serviceDate.dateStr}')">
 				                            <div class="dv_times">
 				                          		<font color="#66bffb">${serviceDate.weekStr }</font>
 				                            </div>
-					                        <c:if test="${null != serviceDate.isSelected and  serviceDate.isSelected }">
-						                        <div class="triangle-up" id="up_one">
-								                	&nbsp;
-								                </div>
-					                        </c:if>
+					                      
+					                        <div class="triangle-up" id="upOne${serviceDate.weekStr }" style="display:${serviceDate.isSelected?"black":"none"}" >
+							                	&nbsp;
+							                </div>
+					                      
 				                        </a>
 				                    </li>
 			                	</c:forEach>
@@ -351,7 +348,7 @@
 		</div>
 	
 	<!-- 选择服务地址 -->
-	<div class="modal container fade" id="selectMapPostion" tabindex="-1" role="modal">
+	<div class="modal container fade" id="selectMapPostion" tabindex="-1" role="dialog">
 		<div class="container" style="background:white;">
 			<div class="modal-header span12">
 				<button class="close" type="button" data-dismiss="modal">×</button>
