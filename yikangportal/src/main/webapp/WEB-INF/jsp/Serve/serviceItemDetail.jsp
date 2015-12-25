@@ -9,6 +9,7 @@
 <meta name="description" 		content="易康美辰,预约评估及服务" />
 <meta name="generator" 			content="易康美辰" />
 <meta name="author" 			content="易康美辰技术部" />
+
 	<style type="text/css">
 		html,body {
 			font-family:"Microsoft YaHei";
@@ -90,11 +91,6 @@
 			width: 90%;
 			margin: 0 auto;
 			text-align: center;
-		}
-		.dv_topimg {
-			width: 100%;
-			height: 380px;
-			background-position: center;
 		}
 		.dv_title {
 			width: 100%;
@@ -244,19 +240,14 @@
 	<script type="text/javascript" src="<%=basePath%>/js/views/serve/serviceItemDetail.js"></script>
 </head>
 	<body> 
+		<img style=" width: 100%;" src="<%=basePath%>/img/ServeImg/ServiceIntroduce/9.jpg" />
 		<div class="dv_body">
-			<div class="dv_topimg">
-				<img style=" width: 100%; height: 100%;" src="<%=basePath%>/img/ServeImg/ServiceIntroduce/9.jpg" />
-			</div>
 			<form id="serviceItemForm" action="<%=basePath%>appointmentOrder/toReviceInfomation" method="post">
 				
 				<input type="hidden" name="serviceItemId" 		  value="${data.serviceItemId }" />
 				
 				<div id="medicinalApparatusIdsDiv" style="display:none">
 				</div>
-				
-				
-				
 			</form>
 			<div class="dv_title">
 				<ul>
@@ -270,7 +261,7 @@
 				<ul>
 					<li class="fontstyle" style="width: 26%;"><a onclick="cd_dv1()" style="color: #2d86ff" id="ser1">服务介绍</a></li>
 					<li class="fontstyle" style="width: 26%;"><a onclick="cd_dv2()" id="ser2">注意事项</a></li>
-					<li class="fontstyle" style="width: 48%;"><a onclick="cd_dv3()" id="ser3">所需药品和器材</a></li>
+					<li style="width: 48%;"><a onclick="cd_dv3()" id="ser3">所需药品和器材</a></li>
 				</ul>
 			</div>
 			<img style=" width: 100%;" src="<%=basePath%>/img/ServeImg/border.png" />

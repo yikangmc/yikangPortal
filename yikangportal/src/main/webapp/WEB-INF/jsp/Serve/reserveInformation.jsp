@@ -266,22 +266,25 @@
 
 				<p style="height: 10px;"></p>
 				他/她的联系方式： 
-				<input id="phoneNumber" name="phoneNumber" style="font-size: 27px; height: 50px;" type="text" class="col-md-12 col-sm-12 col-xs-12 input" />
+				<input name="phoneNumber" style="font-size: 27px;height: 80px; " type="text" class="col-md-12 col-sm-12 col-xs-12 input" />
 				
 				<p style="height: 10px;"></p>
 				联系人姓名： 
-				<input id="linkUserName" name="linkUserName" style="font-size: 27px; height: 50px;" type="text" class="col-md-12 col-sm-12 col-xs-12 input" />
+				<input name="linkUserName" style="font-size: 27px;height: 80px; " type="text" class="col-md-12 col-sm-12 col-xs-12 input" />
 				
 				<p style="height: 10px;"></p>
 				预约上门评估时间： 
-				<input id="appointmentTime"  readonly="readonly" style="font-size: 27px; height: 50px;" type="text" onchange="reserveInformation.getServicer()"
-					class="col-md-12 col-sm-12 col-xs-12 input" data-toggle="modal" onclick="serviceItemDetail.showAppointmentTime()"	/>
+				<input id="appointmentTime" style="font-size: 27px;height: 80px; " type="text"
+					class="col-md-12 col-sm-12 col-xs-12 input" data-toggle="modal" data-target="#myModal" 	/>
+			</div>
+				<p style="height: 10px;"></p>
+				<input type="button" style=" width: 100%; height: 50px; font-size: 26px;" onclick="reserveInformation.getServicer()" value="获取服务人员"/>
 				
-<!-- 				<p style="height: 10px;"></p> -->
-<!-- 				<input type="button" onclick="reserveInformation.getServicer()" value="获取服务人员"/> -->
-				
-				<div class="row" id="servicerDiv">
+				<div class="row" id="servicerDiv" style="font-size: 32px;">
 					<div class="col-md-6">
+						无图片
+					</div>
+					<div class="col-md-6" style="">
 						
 					</div>
 				</div>	
@@ -289,7 +292,6 @@
 				<button id="input_heightfour"  onclick="reserveInformation.submitAppointmentOrder()"
 					style="background: #F2A71C; font-size: 27px; height: 90px; color: #FFF;"
 					type="button" class="btn btn-lg col-md-12 col-sm-12 col-xs-12">马上预约</button>
-			</div>
 		</form>
 	</div>
 	
@@ -307,12 +309,11 @@
 			                <ul style="height: 100%;">
 			                	<c:forEach items="${serviceDateList }" var="serviceDate">
 			                	     <li style="height: 60px; width: 33%; display: block; margin: 0 auto;">
-				                    	<a href="javascript:void(0)" onclick="reserveInformation.getServiceDate('${serviceDate.dateStr}')">
+				                    	<a href="<%=basePath %>appointmentOrder/toReviceInfomation?serviceDate=${serviceDate.dateStr}">
 				                            <div class="dv_times">
 				                          		<font color="#66bffb">${serviceDate.weekStr }</font>
 				                            </div>
-					                      
-					                        <div class="triangle-up" id="upOne${serviceDate.weekStr }" style="display:${serviceDate.isSelected?"black":"none"}" >
+							            	<div class="triangle-up"  id="up_one">
 							                	&nbsp;
 							                </div>
 				                        </a>
