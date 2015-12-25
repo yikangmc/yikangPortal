@@ -46,6 +46,20 @@ ServiceItemDetail.prototype={
 			var appointmentTimeStr= $("#appointmentDateTime").val()+" "+text;
 			$("#appointmentTime").val(appointmentTimeStr)
 			$("#appointmentTime").trigger("change");
+		},
+		showAppointmentTime:function(){
+			
+			if(null == $("#mapPositionAddress").val() || $("#mapPositionAddress").val() == ""){
+				alert("您好，请选择附近的热点地址！");
+				return;
+			}
+			
+			if(null == $("#detailAddress").val() || $("#detailAddress").val() ==  ""){
+				alert("您好，请填写详细地址！");
+				return;
+			}
+			
+			$("#myModal").modal("show");
 		}
 		
 		

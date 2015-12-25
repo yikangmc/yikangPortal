@@ -18,6 +18,42 @@ ReserveInformation.prototype={
 	 * **/
 	submitAppointmentOrder:function(){
 		
+		
+		if(null == $("#appointmentDateTime").val() || $("#appointmentDateTime").val() == ""){
+			alert("您好，请选择预约时间！");
+			return;
+		}
+		if(null == $("#custumerTimeQuantumId").val() ||  $("#custumerTimeQuantumId").val() == ""){
+			alert("您好，请选择预约时间！");
+			return;
+		}
+		if(null == $("#mapPositionAddress").val() || $("#mapPositionAddress").val() == ""){
+			alert("您好，请选择附近的热点地址！");
+			return;
+		}
+		
+		if(null == $("#detailAddress").val() || $("#detailAddress").val() ==  ""){
+			alert("您好，请填写详细地址！");
+			return;
+		}
+		
+		if(null == $("#districtCode").val() || $("#districtCode").val() ==  ""){
+			alert("您好，请选择热点地址！");
+			return;
+		}
+
+		if(null == $("#linkUserName").val() || $("#linkUserName").val() ==  ""){
+			alert("您好，请填写联系人名称！");
+			return;
+		}
+		
+		if(null == $("#phoneNumber").val() || $("#phoneNumber").val() ==  ""){
+			alert("您好，请填写联系电话！");
+			return;
+		}
+		
+		
+		
 		var formParam=$("#appointmentOrderForm").serialize();
 		
 		$.post(basePath+"appointmentOrder/saveAppointmentOrder",formParam,function(data){

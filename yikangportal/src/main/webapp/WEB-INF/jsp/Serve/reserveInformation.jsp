@@ -282,16 +282,16 @@
 
 				<p style="height: 10px;"></p>
 				他/她的联系方式： 
-				<input name="phoneNumber" style="font-size: 27px; height: 50px;" type="text" class="col-md-12 col-sm-12 col-xs-12 input" />
+				<input id="phoneNumber" name="phoneNumber" style="font-size: 27px; height: 50px;" type="text" class="col-md-12 col-sm-12 col-xs-12 input" />
 				
 				<p style="height: 10px;"></p>
 				联系人姓名： 
-				<input name="linkUserName" style="font-size: 27px; height: 50px;" type="text" class="col-md-12 col-sm-12 col-xs-12 input" />
+				<input id="linkUserName" name="linkUserName" style="font-size: 27px; height: 50px;" type="text" class="col-md-12 col-sm-12 col-xs-12 input" />
 				
 				<p style="height: 10px;"></p>
 				预约上门评估时间： 
 				<input id="appointmentTime"  readonly="readonly" style="font-size: 27px; height: 50px;" type="text" onchange="reserveInformation.getServicer()"
-					class="col-md-12 col-sm-12 col-xs-12 input" data-toggle="modal" data-target="#myModal" 	/>
+					class="col-md-12 col-sm-12 col-xs-12 input" data-toggle="modal" onclick="serviceItemDetail.showAppointmentTime()"	/>
 				
 <!-- 				<p style="height: 10px;"></p> -->
 <!-- 				<input type="button" onclick="reserveInformation.getServicer()" value="获取服务人员"/> -->
