@@ -1,6 +1,5 @@
 ﻿<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%@ include file="/common/protalhead.jsp"%>
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
@@ -87,14 +86,14 @@
 			<a href="<%=basePath%>/appointmentOrder/serviceItemDetail?serviceItemId=${serviceItem.serviceItemId}">
 				<div class="dv_body">
 					<div class="col-sm-6 col-xs-6" style＝“flost:left;”>
-						<img style="width: 130px;" src="<%=basePath%>/img/ServeImg/1.png">
+						<img style="width: 125px;" src="<%=basePath%>/img/ServeImg/1.png">
 					</div>
 					<div class="col-sm-6 col-xs-6" style＝“flost:left;”>
 						<h5>${serviceItem.serviceTitle}</h5>
-						<span style="font-size: 4px;">${serviceItem.serviceContent}</span>
+						<span style="font-size: 9px;">${serviceItem.serviceContent}</span>
 						<p class="font_bottom">
 							<img src="<%=basePath%>/img/ServeImg/time.png" />${serviceItem.serviceTime } &nbsp; 
-							<font class="font_money" color="#F22D7B">${serviceItem.servicePrice} </font>
+							<font class="font_money" color="#F22D7B">${serviceItem.price} </font>
 						</p>
 					</div>
 				</div>

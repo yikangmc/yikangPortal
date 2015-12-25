@@ -3,7 +3,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="keywords" 	content="易康美辰,预约评估及服务" />
 	<meta name="description" content="易康美辰,预约评估及服务" />
@@ -39,10 +38,10 @@
 		.dv_body_title {
 			border-radius: 8px 8px 8px 8px;
 			width: 100%;
-			height: 70px;
-			background: #A2E2F2;
-			line-height: 70px;
-			font-size: 20px;
+			font-size: 38px;
+			margin:0 auto;
+			width:100%; 
+			height:170px;
 		}
 		
 		.btn_txt {
@@ -89,17 +88,6 @@
 			color: #FFF;
 			margin: 10px;
 		}
-		.dv_toptitle {
-			width: 100%;
-			height: 70px;
-			background: #000;
-			text-align: center;
-			line-height: 70px;
-			color: #FFF;
-			font-size: 28px;
-			font-family: Verdana, Geneva, sans-serif;
-			font-weight: 400;
-		}
 		.dv_body {
 			width:90%; 
 			margin:0 auto;
@@ -107,18 +95,13 @@
 			padding:10px;
 			text-align:center;
 		}
-		.dv_body_title {
-			margin:0 auto;
-			width:100%; 
-			height:170px;
-		}
 		.dv_times {
 			text-align:center;
 			font:Verdana, Geneva, sans-serif;
 			font-size:28px;
-			font-weight:500;
-			width:110px;
-			height:110px;
+			font-weight:300;
+			width:100px;
+			height:100px;
 			border-radius:100px;
 			border:solid rgb(140,140,140) 0px;
 			background: #c9f0fe;
@@ -135,9 +118,9 @@
 		.triangle-up {
 			width: 0;
 			height: 0;
-			border-left: 57px solid transparent;
-			border-right: 57px solid transparent;
-			border-bottom: 40px solid #c9f0fe;
+			border-left: 50px solid transparent;
+			border-right: 50px solid transparent;
+			border-bottom: 27px solid #c9f0fe;
 		}
 		.times {
 			margin:20px;
@@ -177,7 +160,7 @@
 			text-align: center;
 			line-height: 70px;
 			color: #FFF;
-			font-size: 52px;
+			font-size: 38px;
 			font-family: Verdana, Geneva, sans-serif;
 			font-weight: 400;
 		}
@@ -240,7 +223,6 @@
 	</style>
 
 </head>
-
 <body>
 	<div class="dv_toptitle">护龄家</div>
 	<div class="dv_body">
@@ -255,10 +237,10 @@
 				<input type="hidden"  name="medicinalApparatusId" value="${ma}" />
 			</c:forEach>
 				
-			<div class="dv_body_title">
+			<div style="background: #A2E2F2; height: 70px;" class="dv_body_title">
 				为谁做：
 				<div class="btn-group btn_txt">
-					<select class="selectpicker">
+					<select class="selectpicker" style="width: 100px; height: 40px; font-size: 32px;">
 						<c:forEach items="${appellations }" var="appellation">
 							<option value="${ appellation.dicCode}">${appellation.dicName}</option>
 						</c:forEach>
@@ -266,38 +248,43 @@
 				</div>
 				&nbsp; 他/她的年龄：
 				<div class="btn-group btn_txt">
-					<select name="timeBucket" class="selectpicker" style="width: 102px;">
+					<select name="timeBucket" class="selectpicker" style="width: 120px; height: 40px; font-size: 32px;">
 						<c:forEach items="${ageBrackets}" var="ageBracket">
 							<option value="${ageBracket.dicCode }">${ageBracket.dicName }</option>
 						</c:forEach>
 					</select>
 				</div>
 			</div>
-			<div style="margin: 0 auto;" class="dv_body_text">
+			<div style="margin: 0 auto; text-align: left;" class="dv_body_text">
 				
 				<p style="height: 10px;"></p>
 				他/她的住址： 
-				<input  class="col-md-12 col-sm-12 col-xs-12 input"	 id="mapPositionAddress" name="mapPositionAddress" placeholder="地址热点地址"  data-toggle="modal" data-target="#selectMapPostion" style="font-size: 27px; height: 70px;" type="text"  />
-				<input  class="col-md-12 col-sm-12 col-xs-12 input"  id="detailAddress" 	 name="detailAddress"  placeholder="详细地址" />
+				<input class="ipt_names input col-md-12 col-sm-12 col-xs-12" style="height: 80px; font-size: 27px; width: 100%; border: 1px solid #3682E7; -moz-border-radius: 8px; -webkit-border-radius: 8px; border-radius: 8px;" type="text" id="keyword" name="keyword" value="" placeholder="输入附近关键字" onfocus='this.value=""'/>
+				<input  class="col-md-12 col-sm-12 col-xs-12 input" style="height: 80px; "  id="detailAddress" 	 name="detailAddress"  placeholder="详细地址" />
+				<!-- hidden状态 -->
+				<input  class="col-md-12 col-sm-12 col-xs-12 input"	 id="mapPositionAddress" name="mapPositionAddress" placeholder="地址热点地址"  data-toggle="modal" data-target="#selectMapPostion" style="font-size: 27px; height: 70px;" type="hidden"  />
 
 				<p style="height: 10px;"></p>
 				他/她的联系方式： 
-				<input id="phoneNumber" name="phoneNumber" style="font-size: 27px; height: 50px;" type="text" class="col-md-12 col-sm-12 col-xs-12 input" />
+				<input name="phoneNumber" style="font-size: 27px;height: 80px; " type="text" class="col-md-12 col-sm-12 col-xs-12 input" />
 				
 				<p style="height: 10px;"></p>
 				联系人姓名： 
-				<input id="linkUserName" name="linkUserName" style="font-size: 27px; height: 50px;" type="text" class="col-md-12 col-sm-12 col-xs-12 input" />
+				<input name="linkUserName" style="font-size: 27px;height: 80px; " type="text" class="col-md-12 col-sm-12 col-xs-12 input" />
 				
 				<p style="height: 10px;"></p>
 				预约上门评估时间： 
-				<input id="appointmentTime"  readonly="readonly" style="font-size: 27px; height: 50px;" type="text" onchange="reserveInformation.getServicer()"
-					class="col-md-12 col-sm-12 col-xs-12 input" data-toggle="modal" onclick="serviceItemDetail.showAppointmentTime()"	/>
+				<input id="appointmentTime" style="font-size: 27px;height: 80px; " type="text"
+					class="col-md-12 col-sm-12 col-xs-12 input" data-toggle="modal" data-target="#myModal" 	/>
+			</div>
+				<p style="height: 10px;"></p>
+				<input type="button" style=" width: 100%; height: 50px; font-size: 26px;" onclick="reserveInformation.getServicer()" value="获取服务人员"/>
 				
-<!-- 				<p style="height: 10px;"></p> -->
-<!-- 				<input type="button" onclick="reserveInformation.getServicer()" value="获取服务人员"/> -->
-				
-				<div class="row" id="servicerDiv">
+				<div class="row" id="servicerDiv" style="font-size: 32px;">
 					<div class="col-md-6">
+						无图片
+					</div>
+					<div class="col-md-6" style="">
 						
 					</div>
 				</div>	
@@ -305,7 +292,6 @@
 				<button id="input_heightfour"  onclick="reserveInformation.submitAppointmentOrder()"
 					style="background: #F2A71C; font-size: 27px; height: 90px; color: #FFF;"
 					type="button" class="btn btn-lg col-md-12 col-sm-12 col-xs-12">马上预约</button>
-			</div>
 		</form>
 	</div>
 	
@@ -317,21 +303,19 @@
 				<h3>时间选择</h3>
 			</div>
 				<div class="dv_body col-md-12">
-			    	<div class="dv_body_title"> 
+			    	<div class="dv_body_title" style="margin-top:-35px;"> 
 			        	<span style="color:#4E84E9; font-size:22px; display:block;  margin:0 auto; width:100%;">请选择预约评估时间,浅色代表已被他人预约最好在家人的陪同下进行工作。</span>
-			            <div class="col-md-12" style="margin:0 auto; border:solid rgb(15,15,15) 0px;">
+			            <div class="col-md-12" style="margin:0 auto; border:solid rgb(15,15,15) 0px; margin-top: 0px;">
 			                <ul style="height: 100%;">
 			                	<c:forEach items="${serviceDateList }" var="serviceDate">
 			                	     <li style="height: 60px; width: 33%; display: block; margin: 0 auto;">
-				                    	<a href="javascript:void(0)" onclick="reserveInformation.getServiceDate('${serviceDate.dateStr}')">
+				                    	<a href="<%=basePath %>appointmentOrder/toReviceInfomation?serviceDate=${serviceDate.dateStr}">
 				                            <div class="dv_times">
-				                          		<font color="#66bffb">${serviceDate.weekStr }</font>
+				                          		<font color="#66bffb">${serviceDate.weekStr }</font>
 				                            </div>
-					                      
-					                        <div class="triangle-up" id="upOne${serviceDate.weekStr }" style="display:${serviceDate.isSelected?"black":"none"}" >
+							            	<div class="triangle-up"  id="up_one">
 							                	&nbsp;
 							                </div>
-					                      
 				                        </a>
 				                    </li>
 			                	</c:forEach>
@@ -374,17 +358,17 @@
 				<form id="loginForm">
 					<div class="row">
 						<div class="col-md-6   text-center">
-							<input class="form-control"  id="loginName" 	 name="loginName" 	type="text" placeholder="请输入手机号码"/>
+							<input class="form-control"  id="loginName" style="height: 60px;" name="loginName" 	type="text" placeholder="请输入手机号码"/>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-md-6   text-center">
-							<input class="form-control"  id="loginPassword"  name="loginPassword" 	type="text" placeholder="请输入密码"/>
+							<input class="form-control"  id="loginPassword" style="height: 60px;"  name="loginPassword" 	type="text" placeholder="请输入密码"/>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-md-6 col-md-offset-3">
-							<input class="btn_login btn" onclick="login.login()" type="button" value="登入" />
+							<input class="btn_login btn" onclick="login.login()" style="width: 260px;" type="button" value="登入" />
 						</div>
 					</div>
 			 	</form>
