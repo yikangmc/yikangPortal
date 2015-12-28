@@ -266,24 +266,20 @@
 
 				<p style="height: 10px;"></p>
 				他/她的联系方式： 
-				<input name="phoneNumber" style="font-size: 27px;height: 90px; " type="text" class="col-md-12 col-sm-12 col-xs-12 input" />
+				<input id="phoneNumber" name="phoneNumber" style="font-size: 27px;height: 90px; " type="text" class="col-md-12 col-sm-12 col-xs-12 input" />
 				
 				<p style="height: 10px;"></p>
 				联系人姓名： 
-				<input name="linkUserName" style="font-size: 27px;height: 90px; " type="text" class="col-md-12 col-sm-12 col-xs-12 input" />
+				<input id="linkUserName" name="linkUserName" style="font-size: 27px;height: 90px; " type="text" class="col-md-12 col-sm-12 col-xs-12 input" />
 				
 				<p style="height: 10px;"></p>
 				预约上门评估时间： 
 				<input id="appointmentTime" style="font-size: 27px;height: 90px; " type="text"
-					class="col-md-12 col-sm-12 col-xs-12 input" data-toggle="modal" data-target="#myModal" 	/>
+					class="col-md-12 col-sm-12 col-xs-12 input"
+				onchange="reserveInformation.getServicer()"  onclick="serviceItemDetail.showAppointmentTime()"		/>
 			</div>
-				<p style="height: 10px;"></p>
-				<input type="button" style=" width: 100%; height: 50px; font-size: 26px;" onclick="reserveInformation.getServicer()" value="获取服务人员"/>
 				
 				<div class="row" id="servicerDiv" style="font-size: 32px;">
-					<div class="col-md-6">
-						无图片
-					</div>
 					<div class="col-md-6" style="">
 						
 					</div>
@@ -295,7 +291,7 @@
 		</form>
 	</div>
 	
-	<!--选择服务时间点  -->
+		<!--选择服务时间点  -->
 	<div class="modal container fade" id="myModal" tabindex="-1" role="dialog">
 		<div class="container" style="background:white;">
 			<div class="modal-header span12">
@@ -303,19 +299,21 @@
 				<h3>时间选择</h3>
 			</div>
 				<div class="dv_body col-md-12">
-			    	<div class="dv_body_title" style="margin-top:-35px;"> 
+			    	<div class="dv_body_title"> 
 			        	<span style="color:#4E84E9; font-size:22px; display:block;  margin:0 auto; width:100%;">请选择预约评估时间,浅色代表已被他人预约最好在家人的陪同下进行工作。</span>
-			            <div class="col-md-12" style="margin:0 auto; border:solid rgb(15,15,15) 0px; margin-top: 0px;">
+			            <div class="col-md-12" style="margin:0 auto; border:solid rgb(15,15,15) 0px;">
 			                <ul style="height: 100%;">
 			                	<c:forEach items="${serviceDateList }" var="serviceDate">
 			                	     <li style="height: 60px; width: 33%; display: block; margin: 0 auto;">
-				                    	<a href="<%=basePath %>appointmentOrder/toReviceInfomation?serviceDate=${serviceDate.dateStr}">
+				                    	<a href="javascript:void(0)" onclick="reserveInformation.getServiceDate('${serviceDate.dateStr}')">
 				                            <div class="dv_times">
-				                          		<font color="#66bffb">${serviceDate.weekStr }</font>
+				                          		<font color="#66bffb">${serviceDate.weekStr }</font>
 				                            </div>
-							            	<div class="triangle-up"  id="up_one">
+					                      
+					                        <div class="triangle-up" id="upOne${serviceDate.weekStr }" style="display:${serviceDate.isSelected?"black":"none"}" >
 							                	&nbsp;
 							                </div>
+					                      
 				                        </a>
 				                    </li>
 			                	</c:forEach>
