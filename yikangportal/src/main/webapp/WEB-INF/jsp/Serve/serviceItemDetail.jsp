@@ -3,12 +3,13 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>查看单项服务详情</title>
-<meta name="keywords" 			content="易康美辰,预约评估及服务" />
-<meta name="description" 		content="易康美辰,预约评估及服务" />
-<meta name="generator" 			content="易康美辰" />
-<meta name="author" 			content="易康美辰技术部" />
+	<meta name="viewport" 			content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" 			content="易康美辰,预约评估及服务" />
+	<meta name="description" 		content="易康美辰,预约评估及服务" />
+	<meta name="generator" 			content="易康美辰" />
+	<meta name="author" 			content="易康美辰技术部" />
 
 	<style type="text/css">
 		html,body {
@@ -21,12 +22,12 @@
 		}
 		.btn_one {
 			width: 100%;
-			height: 160px; 
+			height: 60px; 
 			border-radius: 10px; 
 			border: 0px; 
 			background: #ffa919; 
 			color: #fff; 
-			font-size: 42px; 
+			font-size: 22px; 
 			font-weight:600;
 		}
 		#font_selete {
@@ -105,13 +106,13 @@
 			list-style-type: none;
 		}
 		.font-toptitle {
-			font-size: 36px;
+			font-size: 20px;
 			font-weight: 500;
 			padding-left:10px;
 			padding-top:10px;
 		}
 		.font-bottom {
-			font-size: 22px;
+			font-size: 12px;
 			font-weight: 500;
 			padding-top: 10px;
 			padding-left: 10px;
@@ -119,15 +120,15 @@
 		}
 		.font-mony {
 			color: #F22D7B;
-			font-size: 46px;
+			font-size: 24px;
 			font-weight: 500;
-			margin-left: 470px;
+			margin-left: 270px;
 		}
 		.dv_service_title {
 			margin-top: -15px;
 		}
 		.dv_service_title ul li {
-			font-size: 28px;
+			font-size: 18px;
 			float: left;
 			list-style-type: none;
 			padding-top: 10px;
@@ -138,13 +139,12 @@
 			height: 100%;
 			text-align: left;
 			padding: 23px;
-			line-height: 34px;
 		}
 		.v1 {
 			margin-top: -20px;
-			font-size: 34px;
+			font-size: 14px;
 			font-weight: 500;
-			width: 860px;
+			width: 100%;
 			margin: 0 auto;
 		}
 		.selectService {
@@ -277,7 +277,7 @@
 			<!-- 注意事项 -->
 			<div id="dv_2" class="dv_home">
 				<c:forEach items="${data.serviceNotes}" var="serviceNote">
-					<h1>${serviceNote.title}</h1><br/>
+					<h4>${serviceNote.title}</h4><br/>
 					<div class="v1">
 						${serviceNote.content }
 					</div>
@@ -285,7 +285,7 @@
 			</div>
 			
 			<div id="dv_3" class="dv_home">
-				<h1>【所需药品和器材】</h1><br/>
+				<h4>【所需药品和器材】</h4><br/>
 				<div class="v1">
 					<c:forEach items="${data.medicinalApparatus}" var="medicinalApparatus">
 						<div style=" height: 150px;" onclick="serviceItemDetail.selectMedicinalApparatuId(this,${medicinalApparatus.medicinalApparatuId })">
