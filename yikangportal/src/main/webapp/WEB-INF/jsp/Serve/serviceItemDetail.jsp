@@ -106,7 +106,7 @@
 			list-style-type: none;
 		}
 		.font-toptitle {
-			font-size: 20px;
+			font-size: 24px;
 			font-weight: 500;
 			padding-left:10px;
 			padding-top:10px;
@@ -120,9 +120,8 @@
 		}
 		.font-mony {
 			color: #F22D7B;
-			font-size: 24px;
+			font-size: 30px;
 			font-weight: 500;
-			margin-left: 270px;
 		}
 		.dv_service_title {
 			margin-top: -15px;
@@ -148,7 +147,7 @@
 			margin: 0 auto;
 		}
 		.selectService {
-			padding-bottom: 60px;
+			padding-bottom: 10px;
 			position: fixed;
 			bottom: 0px;
 			margin: 0 auto;
@@ -250,11 +249,21 @@
 				</div>
 			</form>
 			<div class="dv_title">
-				<ul>
-					<li class="font-toptitle">${data.serviceTitle }</li>
-					<li class="font-mony">${data.price }</li>
-					<li class="font-bottom">${data.serviceContent }</li>
-				</ul>
+				<div style="float: left; width: 80%;">
+					<ul>
+						<li class="font-toptitle">${data.serviceTitle }</li>
+					</ul>
+				</div>
+				<div style="float: left; width: 17%; height: 60px; line-height:75px;">
+					<ul>
+						<li class="font-mony">${data.price }</li>
+					</ul>
+				</div>
+				<div style=" background: red; width: 82%;">
+					<ul>
+						<li class="font-bottom">${data.serviceContent }</li>
+					</ul>
+				</div>
 			</div>
 			<img style=" width: 100%;" src="<%=basePath%>/img/ServeImg/border.png" />
 			<div class="dv_service_title">
@@ -269,7 +278,7 @@
 			<div id="dv_1" class="dv_home">
 				<div class="v1">
 					<c:forEach items="${data.serviceIntroduces }" var="serviceIntroduce">
-						<h1>【 ${serviceIntroduce.title} 】</h1><br/>
+						<h4>${serviceIntroduce.title}</h4><br/>
 						 &nbsp; &nbsp; ${serviceIntroduce.content}
 					</c:forEach>
 				</div>
@@ -289,11 +298,11 @@
 				<div class="v1">
 					<c:forEach items="${data.medicinalApparatus}" var="medicinalApparatus">
 						<div style=" height: 150px;" onclick="serviceItemDetail.selectMedicinalApparatuId(this,${medicinalApparatus.medicinalApparatuId })">
-							<div class="block">	
-								<img style="width: 125px; height: 125px;" src="${medicinalApparatus.picUrl }"/>
+							<div class="block" style="width: 65%;">	
+								<img style="width: 105px; height: 105px;" src="${medicinalApparatus.picUrl }"/>
 								<input type="hidden" name="medicinalApparatuId" value="${medicinalApparatus.medicinalApparatuId }" />
 							</div>
-							<div class="block" id="font_titleone" style="margin-top: 55px; text-align: center; width: 240px;">${medicinalApparatus.maName }</div>
+							<div class="block" id="font_titleone" style=" text-align: center; width: 33%;">${medicinalApparatus.maName }</div>
 						</div>
 					</c:forEach>
 				</div>
