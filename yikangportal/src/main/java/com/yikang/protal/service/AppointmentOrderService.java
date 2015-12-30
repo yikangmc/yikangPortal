@@ -41,7 +41,7 @@ public class AppointmentOrderService {
 			String districtCode,String detailAddress,
 			String dataSource,String dataGroup,String linkUserName,
 			Long serviceUserId,Long timeQuantumId,
-			String appointmentDateTime,String phoneNumber,
+			String appointmentDateTime,String phoneNumber,String myPhoneNumber,
 			Long userId){
 		
 		Map<String,Object>  paramData=new HashMap<String,Object>();
@@ -58,6 +58,7 @@ public class AppointmentOrderService {
 		paramData.put("phoneNumber", phoneNumber);
 		paramData.put("serviceUserId", serviceUserId);
 		paramData.put("userId", userId);
+		paramData.put("myPhoneNumber", myPhoneNumber);
 		
 		
 		try {

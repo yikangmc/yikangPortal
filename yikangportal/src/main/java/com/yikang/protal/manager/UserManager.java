@@ -123,4 +123,16 @@ public class UserManager {
     	paramData.put("loginPassword", loginPassword);
     	return userDao.loginUserByLoginNameAndLoginPassword(paramData);
     }
+    
+    /**
+     * @author liushuaic
+     * @date 2015/12/31 18:44
+     * @desc 获取某一个用户
+     * */
+    public User selectUserById(Long userId){
+    	return userDao.selectByPrimaryKey(userId);
+    }
+    
+    
+    
 }

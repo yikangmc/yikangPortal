@@ -93,6 +93,17 @@ public class UserService {
     	
     }
     
+	
+	/**
+	 * @author liushuaic
+	 * @date 查询某一个用户
+	 * **/
+    public User getUserByUserId(Long userId){
+    	return userManager.selectByPrimaryKey(userId);
+    			
+    }
+    
+    
     
  
 }

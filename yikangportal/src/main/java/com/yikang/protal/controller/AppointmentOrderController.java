@@ -23,10 +23,13 @@ import com.yikang.protal.common.utils.map.MapUtils;
 import com.yikang.protal.common.utils.map.model.assistant.MapResponseAssistant;
 import com.yikang.protal.entity.CustumerTimeQuantum;
 import com.yikang.protal.entity.Dictionary;
+import com.yikang.protal.entity.User;
 import com.yikang.protal.manager.DictionaryManager;
+import com.yikang.protal.manager.UserManager;
 import com.yikang.protal.service.AppointmentOrderService;
 import com.yikang.protal.service.ServiceItemService;
 import com.yikang.protal.service.TimeQuantumService;
+import com.yikang.protal.service.UserService;
 
 @Controller
 public class AppointmentOrderController {
@@ -44,7 +47,8 @@ public class AppointmentOrderController {
 	@Autowired
 	private DictionaryManager dictionaryManager;
 	
-	
+	@Autowired
+	private UserService  userService;
 	
 	
 	
@@ -94,11 +98,14 @@ public class AppointmentOrderController {
 				
 				 dataSource="1";
 				 dataGroup="1";
-				
+				String myPhoneNumber="";
+				User user=userService.getUserByUserId(userId);
+				//TODO  这个地方，应该是我的手机号，后面如果不是的登陆名不是手机号的话，需要修改
+				myPhoneNumber=user.getLoginName();
 				Map<String,Object> res=appointmentOrderService.saveAppointmentOrder(
 						serviceItemId, medicinalApparatusId, mapPositionAddress, 
 						districtCode, detailAddress, dataSource, dataGroup, linkUserName,serviceUserId, 
-						custumerTimeQuantumId,appointmentDateTime,phoneNumber,userId);
+						custumerTimeQuantumId,appointmentDateTime,phoneNumber,myPhoneNumber,userId);
 				if(null != res && res.get("status").toString().equals("000000")){
 					responseMessage.setStatus(ExceptionConstants.responseSuccess.responseSuccess.code);
 					responseMessage.setMessage("您好，您的服务预订成功！稍后会有工作人员联系您！");
