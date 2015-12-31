@@ -18,6 +18,7 @@ import org.codehaus.jackson.map.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.yikang.base.response.ResponseMessage;
 import com.yikang.common.encryption.AES;
 
 
@@ -29,6 +30,10 @@ import com.yikang.common.encryption.AES;
  * **/
 
 public class SendRequest {
+	
+	// 在线上
+//	private static String REQUEST_URL = "http://localhost:80/youthFountain/service/";
+	
 	private static String REQUEST_URL = "http://localhost:8090/youthFountain/service/";
 	
 	private static ObjectMapper objectMapper = new ObjectMapper();
@@ -150,5 +155,77 @@ public class SendRequest {
 		return null;
 	}
 	
+	
+	
+	
+	
+	@SuppressWarnings("unchecked")
+	public static ResponseMessage sendPostRetureResponseMessage(String serviceCode,Map<String,Object>  paramData ,Class<?> returnDataType) throws IOException {
+		SimpleDateFormat sdf=new  SimpleDateFormat("yyyy-MM-dd HH:mm:ss.S");
+		
+		CloseableHttpClient httpclient = HttpClients.createDefault();
+		
+		try {
+			
+			String paramDataJsonString=objectMapper.writeValueAsString(paramData);
+			
+			try {
+				paramDataJsonString=AES.Encrypt(paramDataJsonString, "1234567890abcDEF");
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			
+			HttpGet httpget = new HttpGet(REQUEST_URL+serviceCode+"?appId=234&accessTicket=99b5ee453affe2efad86f03909495dd1b9ce342e78fd9ac33497fe204e9991195e4c7afd323d91954ba85f0a1bf9bb45&machineCode=123123&paramData="+paramDataJsonString);
+			
+			System.out.println("Executing request " + httpget.getRequestLine());
+			
+			// Create a custom response handler
+			ResponseHandler<String> responseHandler = new ResponseHandler<String>() {
+				
+				public String handleResponse(final HttpResponse response) throws ClientProtocolException,IOException {
+					int status = response.getStatusLine().getStatusCode();
+					if (status >= 200 && status < 300) {
+						HttpEntity entity = response.getEntity();
+						System.out.println(entity.toString() +" -----------");
+						return entity != null ? EntityUtils.toString(entity)
+								: null;
+						
+					} else {
+						throw new ClientProtocolException(
+								"Unexpected response status: " + status);
+					}
+				}
+				
+			};
+			String responseBody = httpclient.execute(httpget, responseHandler);
+			
+			
+			ResponseMessage responseMessage =new ResponseMessage();
+			
+			System.out.println("接收到请求时间"+sdf.format(new Date()));
+			responseMessage=objectMapper.readValue(responseBody, responseMessage.getClass());
+			if(null != responseMessage.getData()){
+				String dataStr=responseMessage.getData().toString();
+				System.out.println("解析出请求时间"+sdf.format(new Date()));
+				String returnDataStr=AES.Decrypt(dataStr, "1234567890abcDEF");
+				sendRequestLogger.debug(returnDataStr);
+				System.out.println(returnDataStr);
+				Object returnData=objectMapper.readValue(returnDataStr, returnDataType);
+				responseMessage.setData(returnData);
+				
+			}
+
+			return responseMessage;
+		} catch(Exception e){
+			e.printStackTrace();
+		}finally {
+			httpclient.close();
+		}
+		return null;
+	}
+	
+	public static void main(String[] args) {
+		System.out.println((int)'y');
+	}
 
 }

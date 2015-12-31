@@ -1,5 +1,7 @@
 package com.yikang.protal.service;
 
+import java.io.IOException;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -7,6 +9,8 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import com.yikang.base.SendRequest;
+import com.yikang.base.response.ResponseMessage;
 import com.yikang.protal.entity.User;
 import com.yikang.protal.manager.UserManager;
 
@@ -67,4 +71,28 @@ public class UserService {
     public User loginUserByLoginNameAndLoginPassword(String loginName,String loginPassword){
     	return userManager.loginUserByLoginNameAndLoginPassword(loginName,loginPassword);
     }
+    
+    
+    
+    /**
+     * @author liushuaic
+     * @date 2015/12/31 10:56
+     * @desc 注册用户
+     * **/
+    public ResponseMessage registerUser(String loginName,String loginPassword){
+    	
+    	Map<String,Object> paramData=new HashMap<String,Object>();
+    	paramData.put("loginName", loginName);
+    	paramData.put("loginPassword", loginPassword);
+		try {
+			return SendRequest.sendPostRetureResponseMessage("00-17-08", paramData, Map.class);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return null;
+    	
+    }
+    
+    
+ 
 }

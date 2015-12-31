@@ -6,7 +6,7 @@ package com.yikang.common.error;
  * @author liushuaic
  * @date 2015/07/30 15:10
  * @desc 异常静态类
- * 
+ * 03
  * **/
 public class ExceptionConstants {
 	
@@ -104,6 +104,31 @@ public class ExceptionConstants {
 			this.errorMessage=errorMessage;
 		}
 	}
+	
+	
+	
+	/**
+	 * 
+	 * @author liushuaic
+	 * @date 2015/12/31 11:12
+	 * @desc 用户异常
+	 * 02
+	 * */
+	public enum UserException{
+		
+		userRegisterSuccess("000000","您好，您已经注册成功！"),
+		userRegisterBad("030201","用户注册异常！");
+		
+		public String errorCode;
+		public String errorMessage;
+		
+		private UserException(String errorCode,String errorMessage){
+			this.errorCode=errorCode;
+			this.errorMessage=errorMessage;
+		}
+		
+	}
+	
 	
 	
 }

@@ -274,7 +274,7 @@
 				
 				<p style="height: 10px;"></p>
 				预约上门评估时间： 
-				<input id="appointmentTime" style="font-size: 27px;height: 90px; " type="text"
+				<input id="appointmentTime" style="font-size: 27px;height: 90px; " readonly="readonly" type="text"
 					class="col-md-12 col-sm-12 col-xs-12 input"
 				onchange="reserveInformation.getServicer()"  onclick="serviceItemDetail.showAppointmentTime()"		/>
 			</div>
@@ -351,7 +351,7 @@
 		  <div class="modal-header span12">
 		    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 		    <h3>登录</h3>
-		  </div>
+		  </div> 
 			<div class="container span12  text-center">
 				<form id="loginForm">
 					<div class="row">
@@ -365,8 +365,10 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-md-6 col-md-offset-3">
+<!-- 						<div class="col-md-6 col-md-offset-3"> -->
+						<div class="col-md-6">
 							<input class="btn_login btn" onclick="login.login()" style="width: 260px;" type="button" value="登入" />
+							<input class="btn_login btn" onclick="login.showRegisterDialog()" style="width: 260px;" type="button" value="注册" />
 						</div>
 					</div>
 			 	</form>
@@ -374,19 +376,26 @@
 		</div>
 	</div>
 	
-	
-	<div class="modal hide fade" id="registerDialog" tabindex="-1" role="dialog">
-		<div id="light" class="white_content"> 
-		 	<!-- 注册 -->
-		 	<form action="registerForm">
-			 	<div id="con_right" class="con">
-					<input class="ipt_type ipt_radius" type="text" placeholder="请输入手机号码"/><br />
-					<input style="width: 56%;" class="ipt_type ipt_radius" type="text" placeholder="请输入手机号码"/>
-					<input style="width: 43%;" class="ipt_type btn_login" type="button" value="获取验证码" /><br />
-					<input class="ipt_type ipt_radius" type="text" placeholder="请输入6-20位字母,数字或符号"/><br />
-					<input class="ipt_type btn_login" type="button" value="确认" />
-			 	</div>
-		 	</form>
+	<button type="button" onclick="login.showRegisterDialog()">注册</button>
+	<div class="modal fade" id="registerDialog" tabindex="-1" role="dialog">
+		<div class="container " style="background:white;">
+			  <div class="modal-header span12">
+			    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			    <h3>注册</h3>
+			  </div>
+				<div class="container span12  text-center">
+			
+			 	<!-- 注册 -->
+			 	<form id="registerForm">
+				 	<div id="con_right" class="con">
+						<input id="mobileNumber"   name="loginName"  class="ipt_type ipt_radius"   type="text" placeholder="请输入手机号码"/><br />
+						<input style="width: 56%;" name="captcha" class="ipt_type ipt_radius" type="text" placeholder="验证码"/>
+						<input style="width: 43%;" class="ipt_type btn_login"  onclick="login.getCaptcha()" type="button" value="获取验证码" /><br />
+						<input class="ipt_type ipt_radius"  name="loginPassword" type="text" placeholder="请输入6-20位字母,数字或符号"/><br />
+						<input class="ipt_type btn_login" type="button" onclick="login.register()" value="注册" />
+				 	</div>
+			 	</form>
+			</div>
 		</div>
 	</div>
 	

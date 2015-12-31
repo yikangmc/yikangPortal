@@ -1,12 +1,12 @@
 package com.yikang.base.response;
 
-public class ResponseMessage {
+public class ResponseMessage<T> {
 
 	public String status;
 	
 	public String message;
 	
-	public Object data;
+	public T data;
 
 
 	public String getMessage() {
@@ -21,7 +21,7 @@ public class ResponseMessage {
 		return data;
 	}
 
-	public void setData(Object data) {
+	public void setData(T data) {
 		this.data = data;
 	}
 
