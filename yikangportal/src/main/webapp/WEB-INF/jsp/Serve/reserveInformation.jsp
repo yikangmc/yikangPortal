@@ -142,6 +142,9 @@
 			font-size:36px;
 			font-weight:500;
 		}
+		.ipt_pe {
+			margin-right: 20px;
+		}
 	</style>
 
 	<script type="text/javascript" src="<%=basePath%>/js/views/serve/serviceItemDetail.js"></script>
@@ -355,12 +358,12 @@
 			<div class="container span12  text-center">
 				<form id="loginForm">
 					<div class="row">
-						<div class="col-md-6   text-center">
+						<div class="col-md-6   text-center ipt_pe">
 							<input class="form-control"  id="loginName" style="height: 60px;" name="loginName" 	type="text" placeholder="请输入手机号码"/>
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-md-6   text-center">
+						<div class="col-md-6   text-center ipt_pe">
 							<input class="form-control"  id="loginPassword" style="height: 60px;"  name="loginPassword" 	type="text" placeholder="请输入密码"/>
 						</div>
 					</div>
