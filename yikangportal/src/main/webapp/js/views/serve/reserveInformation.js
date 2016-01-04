@@ -139,7 +139,7 @@ ReserveInformation.prototype={
 				 }
 				 $("#dv_timeover").html(custumerTimesStr);
 				 $(".triangle-up").css("display","none");
-				 $("#upOne"+serviceDate).css("display","black");
+				 $("#upOne"+serviceDate).css("display","");
 				 
 			 }
 			 
