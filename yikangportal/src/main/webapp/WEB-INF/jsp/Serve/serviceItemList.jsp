@@ -83,7 +83,7 @@
 	<body>
 		<div class="dv_title">护理家</div>
 		<c:forEach items="${data }" var="serviceItem">
-			<a href="<%=basePath%>/appointmentOrder/serviceItemDetail?serviceItemId=${serviceItem.serviceItemId}">
+			<a href="<%=basePath%>appointmentOrder/serviceItemDetail?serviceItemId=${serviceItem.serviceItemId}">
 				<div class="dv_body">
 					<div class="col-sm-6 col-xs-6" style＝“flost:left;”>
 						<img style="width: 125px;" src="<%=basePath%>/img/ServeImg/1.png">

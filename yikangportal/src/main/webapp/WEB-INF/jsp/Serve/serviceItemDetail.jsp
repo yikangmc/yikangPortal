@@ -239,7 +239,7 @@
 	<script type="text/javascript" src="<%=basePath%>/js/views/serve/serviceItemDetail.js"></script>
 </head>
 	<body> 
-		<img style=" width: 100%;" src="<%=basePath%>/img/ServeImg/ServiceIntroduce/9.jpg" />
+		<img style=" width: 100%;" src="${data.pictures[0].picUrl}" />
 		<div class="dv_body">
 			<form id="serviceItemForm" action="<%=basePath%>appointmentOrder/toReviceInfomation" method="post">
 				
@@ -294,7 +294,6 @@
 			</div>
 			
 			<div id="dv_3" class="dv_home">
-				<h4>【所需药品和器材】</h4><br/>
 				<div class="v1">
 					<c:forEach items="${data.medicinalApparatus}" var="medicinalApparatus">
 						<div style=" height: 150px;" onclick="serviceItemDetail.selectMedicinalApparatuId(this,${medicinalApparatus.medicinalApparatuId })">
