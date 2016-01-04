@@ -213,6 +213,9 @@
 	.ipt_sel {
 		height: 26px; font-size: 18px;
 	}
+	.ipt_models {
+		height: 60px; font-size: 22px; width: 100%;
+	}
 	</style>
 
 </head>
@@ -230,15 +233,16 @@
 				<input type="hidden"  name="medicinalApparatusId" value="${ma}" />
 			</c:forEach>
 				
-			<div style="background: #A2E2F2; height: 70px; padding-top: 10px;" class="dv_body_title">
+			<div style="background: #A2E2F2; height: 70px; padding-top: 4px;" class="dv_body_title">
 				为谁做：
 				<div class="btn-group btn_txt">
-					<select id="appelation" name="appellation" class="selectpicker" style="width: 100px; height: 40px; font-size: 32px;">
+					<select id="appelation" name="appellation" class="selectpicker ipt_sel">
 						<c:forEach items="${appellations }" var="appellation">
 							<option value="${ appellation.dicCode}">${appellation.dicName}</option>
 						</c:forEach>
 					</select>
-				</div><br />
+				</div>
+				<p style="height:2px;"> </p>
 				&nbsp; 他/她的年龄：
 				<div class="btn-group btn_txt">
 					<select name="timeBucket" class="selectpicker ipt_sel">
@@ -252,24 +256,23 @@
 				
 				<p style="height: 10px;"></p>
 				他/她的住址： 
-				<input value="soho" class="ipt_names input col-md-12 col-sm-12 col-xs-12" style="height: 60px; font-size: 22px; width: 100%; border: 1px solid #3682E7; -moz-border-radius: 8px; -webkit-border-radius: 8px; border-radius: 8px;" type="text" id="keyword" name="keyword" value="" placeholder="输入附近关键字" onfocus='this.value=""'/>
-				<input value="soho"  class="col-md-12 col-sm-12 col-xs-12 input" style="height: 60px; "  id="detailAddress" 	 name="detailAddress"  placeholder="详细地址" />
+				<input class="ipt_names input col-md-12 col-sm-12 col-xs-12 ipt_models" style="border: 1px solid #3682E7; -moz-border-radius: 8px; -webkit-border-radius: 8px; border-radius: 8px;" type="text" id="keyword" name="keyword" value="" placeholder="输入附近关键字" onfocus='this.value=""'/>
+				<input class="col-md-12 col-sm-12 col-xs-12 input ipt_models" style="height: 60px; "  id="detailAddress" 	 name="detailAddress"  placeholder="详细地址" />
 				<!-- hidden状态 -->
 				<input  class="col-md-12 col-sm-12 col-xs-12 input"	 id="mapPositionAddress" name="mapPositionAddress" placeholder="地址热点地址"  data-toggle="modal" data-target="#selectMapPostion" style="font-size: 27px; height: 70px;" type="hidden"  />
 
 				<p style="height: 10px;"></p>
 				他/她的联系方式： 
-				<input value="13240164022" id="phoneNumber" name="phoneNumber" style="font-size: 22px;height: 60px; " type="text" class="col-md-12 col-sm-12 col-xs-12 input" />
+				<input id="phoneNumber" name="phoneNumber" style="font-size: 22px;height: 60px; " type="text" class="col-md-12 col-sm-12 col-xs-12 input ipt_models" />
 				
 				<p style="height: 10px;"></p>
 				联系人姓名： 
-				<input value="jj" id="linkUserName" name="linkUserName" style="font-size: 22px;height: 60px; " type="text" class="col-md-12 col-sm-12 col-xs-12 input" />
+				<input id="linkUserName" name="linkUserName" style="font-size: 22px;height: 60px; " type="text" class="col-md-12 col-sm-12 col-xs-12 input ipt_models" />
 				
 				<p style="height: 10px;"></p>
 				预约上门评估时间： 
 				<input id="appointmentTime" style="font-size: 22px;height: 60px; " readonly="readonly" type="text"
-					class="col-md-12 col-sm-12 col-xs-12 input"
-				onchange="reserveInformation.getServicer(true)"  onclick="serviceItemDetail.showAppointmentTime()"		/>
+					class="col-md-12 col-sm-12 col-xs-12 input ipt_models" onchange="reserveInformation.getServicer(true)"  onclick="serviceItemDetail.showAppointmentTime()"		/>
 			</div>
 				
 				<div class="row" id="servicerDiv" style="font-size: 32px;">
