@@ -74,26 +74,35 @@ ReserveInformation.prototype={
 	 * @author liushuaic
 	 * @date 2015/12/17 09:57
 	 * @desc 获取服务人员
+	 * @param isAlert 是否提示
 	 * ***/
-	getServicer:function(){
+	getServicer:function(isAlert){
 		var formParam=$("#appointmentOrderForm").serialize();
 		//String appointmentDateTime,Long custumerTimeQuantumId,
 		//String mapPositionAddress,String districtCode,String detailAddress
 		if(null == $("#appointmentDateTime").val() || $("#appointmentDateTime").val() == ""){
-			alert("您好，请选择预约时间！");
+			if(isAlert){
+				alert("您好，请选择预约时间！");
+			}
 			return;
 		}
 		if(null == $("#custumerTimeQuantumId").val() ||  $("#custumerTimeQuantumId").val() == ""){
-			alert("您好，请选择预约时间！");
+			if(isAlert){
+				alert("您好，请选择预约时间！");
+			}
 			return;
 		}
 		if(null == $("#mapPositionAddress").val() || $("#mapPositionAddress").val() == ""){
-			alert("您好，请选择附近的热点地址！");
+			if(isAlert){
+				alert("您好，请选择附近的热点地址！");
+			}
 			return;
 		}
 		
 		if(null == $("#detailAddress").val() || $("#detailAddress").val() ==  ""){
-			alert("您好，请填写详细地址！");
+			if(isAlert){
+				alert("您好，请填写详细地址！");
+			}
 			return;
 		}
 		
@@ -193,6 +202,7 @@ $().ready(function(){
 	         //设置模糊搜索地址
 	         $("#mapPositionAddress").val(e.poi.name);
 	         $("#districtCode").val(e.poi.adcode);
+	         reserveInformation.getServicer(false);
 	         
 	      });
 	    });

@@ -4,10 +4,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="keywords" 	content="易康美辰,预约评估及服务" />
+	<meta name="keywords" 	 content="易康美辰,预约评估及服务" />
 	<meta name="description" content="易康美辰,预约评估及服务" />
-	<meta name="generator" 	content="易康美辰" />
-	<meta name="author" 	content="易康美辰技术部" />
+	<meta name="generator" 	 content="易康美辰" />
+	<meta name="author" 	 content="易康美辰技术部" />
 	<title>预约项目--填写个人信息</title>
 	<style type="text/css">
 		html, body {
@@ -243,7 +243,7 @@
 			<div style="background: #A2E2F2; height: 70px;" class="dv_body_title">
 				为谁做：
 				<div class="btn-group btn_txt">
-					<select class="selectpicker" style="width: 100px; height: 40px; font-size: 32px;">
+					<select id="appelation" name="appellation" class="selectpicker" style="width: 100px; height: 40px; font-size: 32px;">
 						<c:forEach items="${appellations }" var="appellation">
 							<option value="${ appellation.dicCode}">${appellation.dicName}</option>
 						</c:forEach>
@@ -279,7 +279,7 @@
 				预约上门评估时间： 
 				<input id="appointmentTime" style="font-size: 27px;height: 90px; " readonly="readonly" type="text"
 					class="col-md-12 col-sm-12 col-xs-12 input"
-				onchange="reserveInformation.getServicer()"  onclick="serviceItemDetail.showAppointmentTime()"		/>
+				onchange="reserveInformation.getServicer(true)"  onclick="serviceItemDetail.showAppointmentTime()"		/>
 			</div>
 				
 				<div class="row" id="servicerDiv" style="font-size: 32px;">
@@ -379,7 +379,6 @@
 		</div>
 	</div>
 	
-	<button type="button" onclick="login.showRegisterDialog()">注册</button>
 	<div class="modal fade" id="registerDialog" tabindex="-1" role="dialog">
 		<div class="container " style="background:white;">
 			  <div class="modal-header span12">
