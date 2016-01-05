@@ -279,7 +279,7 @@
 				<div class="v1">
 					<c:forEach items="${data.serviceIntroduces }" var="serviceIntroduce">
 						<h4>${serviceIntroduce.title}</h4><br/>
-						 &nbsp; &nbsp; ${serviceIntroduce.content}
+						${serviceIntroduce.content}
 					</c:forEach>
 				</div>
 			</div>

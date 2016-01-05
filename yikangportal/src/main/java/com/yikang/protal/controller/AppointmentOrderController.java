@@ -372,6 +372,10 @@ public class AppointmentOrderController {
 		return "Serve/validateUser";
 	}
 	
+	@RequestMapping
+	public String clear(){
+		return "Serve/clearConfluence";
+	}
 	
 	/**
 	 * @author liushuaic
