@@ -7,6 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>免费服务，轻松获取</title>
 <style type="text/css">
+
 	html,body {
 		background: #f7f7f7;
 		font-family: "Microsoft YaHei";

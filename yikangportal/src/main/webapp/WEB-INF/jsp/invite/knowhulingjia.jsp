@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" />
 <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
 <style type="text/css">
+
 	html,body {
 		font-family: "Microsoft YaHei";
 	}
