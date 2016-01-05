@@ -306,7 +306,7 @@
 		                    	<div class="dv_times" style="text-align: center;">
 			                    	<font color="#66bffb">${serviceDate.weekStr }</font>
 		                      	</div>
-					            <div class="triangle-up" id="upOne${serviceDate.weekStr }" style="display:${serviceDate.isSelected?"black":"none"}  style="text-align: center;"" >
+					            <div class="triangle-up" id="upOne${serviceDate.dateStr }" style="display:${serviceDate.isSelected?"black":"none"}" style="text-align: center;" >
 							    	&nbsp;
 							    </div>  
 				           	 </a>
