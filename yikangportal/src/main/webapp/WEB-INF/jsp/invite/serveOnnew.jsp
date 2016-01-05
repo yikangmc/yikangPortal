@@ -3,8 +3,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+<meta name="viewport" 			content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>无标题文档</title>
+<title>免费服务，轻松获取</title>
 <style type="text/css">
 	html,body {
 		background: #f7f7f7;
@@ -24,17 +25,17 @@
 	}
 	#bd_title {
 		color: #019ffb;
-		font-size: 44px;
+		font-size: 22px;
 	}
 	.bd_title_info{
-		font-size: 30px;
+		font-size: 16px;
 		margin: 28px 60px 40px 60px;
 	}
 	.ipt_styletwo {
 		border: 0px;
 		width: 50%;
-		height: 90px;
-		font-size: 36px;
+		height: 50px;
+		font-size: 22px;
 		float: left;
 		color: #fff;
 	}
