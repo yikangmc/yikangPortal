@@ -93,7 +93,7 @@
 			<a href="<%=basePath%>appointmentOrder/serviceItemDetail?serviceItemId=${serviceItem.serviceItemId}">
 				<div class="dv_body">
 					<div class="col-sm-6 col-xs-6" style＝“flost:left;”>
-						<img style="width: 125px;" src="<%=basePath%>/img/ServeImg/1.png">
+						<img style="width: 125px;" src="${serviceItem.picUrl}">
 					</div>
 					<div class="col-sm-6 col-xs-6" style＝“flost:left;”>
 						<h5>${serviceItem.serviceTitle}</h5>
