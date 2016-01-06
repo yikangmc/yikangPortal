@@ -8,6 +8,14 @@
 <title>了解护理家</title>
 <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" />
 <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+
+<script type="text/javascript">
+	var width = $(window).width();
+	var height = $(window).height();
+	if (width < 370) {
+		$("head").append('<meta name="viewport"	content="width=device-width,minimum-scale=0.7,maximum-scale=0.7,user-scalable=no" />');
+	}
+</script>
 <style type="text/css">
 
 	html,body {

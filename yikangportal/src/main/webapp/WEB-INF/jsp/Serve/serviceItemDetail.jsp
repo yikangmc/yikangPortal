@@ -11,6 +11,13 @@
 	<meta name="generator" 			content="易康美辰" />
 	<meta name="author" 			content="易康美辰技术部" />
 
+	<script type="text/javascript">
+		var width = $(window).width();
+		var height = $(window).height();
+		if (width < 370) {
+			$("head").append('<meta name="viewport"	content="width=device-width,minimum-scale=0.7,maximum-scale=0.7,user-scalable=no" />');
+		}
+	</script>
 	<style type="text/css">
 		html,body {
 			font-family:"Microsoft YaHei";
@@ -188,6 +195,8 @@
 		}
 	</style>
 	<script type="text/javascript">
+		
+	
 		var colorTag = 1;
 		var colorTagtwo = 1;
 		var colors = ["#999", "#2d86ff"];

@@ -10,6 +10,14 @@
 	<meta name="generator" 	 content="易康美辰" />
 	<meta name="author" 	 content="易康美辰技术部" />
 	<title>预约项目--填写个人信息</title>
+
+	<script type="text/javascript">
+		var width = $(window).width();
+		var height = $(window).height();
+		if (width < 370) {
+			$("head").append('<meta name="viewport"	content="width=device-width,minimum-scale=0.7,maximum-scale=0.7,user-scalable=no" />');
+		}
+	</script>
 	<style type="text/css">
 		html, body {
 			height: 100%;
@@ -62,7 +70,7 @@
 		}
 		
 		.dv_body_text {
-			font-size: 28px;
+			font-size: 22px;
 			font-family: Verdana, Geneva, sans-serif;
 		}
 		
@@ -214,7 +222,7 @@
 		height: 26px; font-size: 18px;
 	}
 	.ipt_models {
-		height: 60px; font-size: 22px; width: 100%;
+		height: 48px; font-size: 22px; width: 100%;
 	}
 	</style>
 

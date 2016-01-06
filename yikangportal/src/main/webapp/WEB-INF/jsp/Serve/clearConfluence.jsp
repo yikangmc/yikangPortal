@@ -6,6 +6,14 @@
 	<meta name="viewport" 			content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>预约成功---预约详情</title>
+	
+	<script type="text/javascript">
+		var width = $(window).width();
+		var height = $(window).height();
+		if (width < 370) {
+			$("head").append('<meta name="viewport"	content="width=device-width,minimum-scale=0.7,maximum-scale=0.7,user-scalable=no" />');
+		}
+	</script>
 	<style type="text/css">
 		.dv_title { height: 200px; background: #249dde;}
 

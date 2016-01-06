@@ -78,6 +78,13 @@
 				color: black;
 			}
 		</style>
+		<script type="text/javascript">
+			var width = $(window).width();
+			var height = $(window).height();
+			if (width < 370) {
+				$("head").append('<meta name="viewport"	content="width=device-width,minimum-scale=0.7,maximum-scale=0.7,user-scalable=no" />');
+			}
+		</script>
 	</head>
 
 	<body>

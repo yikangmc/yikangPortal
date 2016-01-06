@@ -7,6 +7,13 @@
 <meta name="viewport" 			content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>免费服务，轻松获取</title>
+<script type="text/javascript">
+	var width = $(window).width();
+	var height = $(window).height();
+	if (width < 370) {
+		$("head").append('<meta name="viewport"	content="width=device-width,minimum-scale=0.7,maximum-scale=0.7,user-scalable=no" />');
+	}
+</script>
 <style type="text/css">
 
 	html,body {
