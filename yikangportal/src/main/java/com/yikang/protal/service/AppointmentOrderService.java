@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.yikang.base.SendRequest;
+import com.yikang.base.response.ResponseMessage;
 import com.yikang.protal.entity.AppointmentOrder;
 import com.yikang.protal.manager.AppointmentOrderManager;
 
@@ -103,6 +104,31 @@ public class AppointmentOrderService {
 		
 		return null;
 	}
+	
+	
+	
+	
+	
+	/**
+	 * @author liushuaic
+	 * @date 2016/01/06 10:13
+	 * @desc 订单完成页面
+	 * **/
+	public ResponseMessage<Map<String,Object>> orderComplate(String orderId,String serviceItemId,String userId){
+		
+		Map<String,Object>  paramData=new HashMap<String,Object>();
+		paramData.put("orderId",orderId);
+		paramData.put("serviceItemId",serviceItemId);
+		paramData.put("userId",userId);
+		
+		try{
+			return SendRequest.sendPostRetureResponseMessage("00-21-05", paramData,Map.class);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
 	
 	
 	

@@ -58,7 +58,9 @@ ReserveInformation.prototype={
 		
 		$.post(basePath+"appointmentOrder/saveAppointmentOrder",formParam,function(data){
 			if(null != data && data.status == "000000"){
-				alert(data.message);
+				//alert(data.message);
+				var rtnData=data.data;
+				reserveInformation.orderComplate(rtnData.orderId,$("#serviceItemId").val());
 			}else{
 				if(null != data && data.status == "030002"){
 					$('#loginDialog').modal('show');
@@ -144,7 +146,17 @@ ReserveInformation.prototype={
 			 }
 			 
 		 });
+	},
+	/**
+	 * @author liushuaic
+	 * @date 2016/01/06 11:46
+	 * @desc 
+	 * 
+	 * */
+	orderComplate:function(orderId,serviceItemId){
+		window.location.href=basePath+"appointmentOrder/orderComplete?orderId="+orderId+"&serviceItemId="+serviceItemId;
 	}
+	
 	
 	
 }

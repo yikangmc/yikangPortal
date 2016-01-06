@@ -10,6 +10,7 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import org.apache.http.HttpRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -72,7 +73,7 @@ public class AppointmentOrderController {
 	 * **/
 	@RequestMapping
 	@ResponseBody
-	public ResponseMessage saveAppointmentOrder(HttpServletRequest rquest,
+	public ResponseMessage<Map<String,Object>> saveAppointmentOrder(HttpServletRequest rquest,
 			Long serviceItemId,Long[] medicinalApparatusId,
 			String mapPositionAddress,String detailAddress,String dataSource,String dataGroup,
 			String linkUserName,String districtCode,Long custumerTimeQuantumId,
@@ -80,7 +81,7 @@ public class AppointmentOrderController {
 			Long serviceUserId){
 
 		
-		ResponseMessage responseMessage=new ResponseMessage();
+		ResponseMessage<Map<String,Object>> responseMessage=new ResponseMessage<Map<String,Object>>();
 		HttpSession session=rquest.getSession();
 		Long userId=(Long)session.getAttribute("userId");
 		if(null != userId){
@@ -106,9 +107,15 @@ public class AppointmentOrderController {
 						serviceItemId, medicinalApparatusId, mapPositionAddress, 
 						districtCode, detailAddress, dataSource, dataGroup, linkUserName,serviceUserId, 
 						custumerTimeQuantumId,appointmentDateTime,phoneNumber,myPhoneNumber,userId);
+
 				if(null != res && res.get("status").toString().equals("000000")){
 					responseMessage.setStatus(ExceptionConstants.responseSuccess.responseSuccess.code);
 					responseMessage.setMessage("您好，您的服务预订成功！稍后会有工作人员联系您！");
+					
+					Map<String,Object> rtnData=(Map<String, Object>) res.get("data");
+//					String orderId=rtnData.get("orderId").toString();
+					responseMessage.setData(rtnData);
+					
 				}else{
 					responseMessage.setStatus(res.get("status").toString());
 					responseMessage.setMessage(res.get("message").toString());
@@ -234,6 +241,37 @@ public class AppointmentOrderController {
 		return "Serve/ReserveInformation2";
 		
 	}
+	
+	@RequestMapping
+	public String orderComplete(ModelMap modelMap,String orderId,String serviceItemId,HttpServletRequest httpServletRequest){
+		
+		HttpSession session=httpServletRequest.getSession();
+		
+		if(null != session.getAttribute("userId")){
+			
+			String userId=session.getAttribute("userId").toString();
+			ResponseMessage<Map<String,Object>> rm=appointmentOrderService.orderComplate(orderId, serviceItemId, userId);
+			
+			if(rm.getStatus().equals("000000")){
+				Map<String,Object> rtnData=(Map<String, Object>) rm.getData();
+				Map<String,Object> userServiceInfo=(Map<String, Object>)rtnData.get("userServiceInfo");
+				Map<String,Object> orderDetail=(Map<String, Object>)rtnData.get("orderDetail");
+				Map<String,Object> appointmentOrder=(Map<String, Object>)rtnData.get("appointmentOrder");
+				
+				modelMap.put("servicerName",userServiceInfo.get("userServiceName").toString());
+				modelMap.put("photoUrl",userServiceInfo.get("photoUrl").toString());
+				modelMap.put("serviceDate",orderDetail.get("appointmentDate").toString()+" "+orderDetail.get("startTime").toString());
+				modelMap.put("address", appointmentOrder.get("mapPostionAddress").toString()+ appointmentOrder.get("detailAddress").toString());
+				modelMap.put("linkUserName", appointmentOrder.get("linkUserName").toString());
+				modelMap.put("phoneNumber",appointmentOrder.get("phoneNumber").toString() );
+			}
+			
+			
+		}
+		
+		return "Serve/orderComplete";
+	}
+	
 	
 	
 	
