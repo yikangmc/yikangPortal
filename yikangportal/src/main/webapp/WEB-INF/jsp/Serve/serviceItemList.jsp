@@ -8,14 +8,13 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>服务列表</title>
     	<script src="<%=basePath%>js/viewport.js"></script>
-    	<script type="text/javascript">
-			var width = $(window).width();
-			var height = $(window).height();
-			alert("宽="+width+",高="+height)
-    	</script>
 		<style type="text/css">
+			html {
+				background: #999;
+			}
 			body {
 				width: 640px;
+				margin:0 auto;
 			}
 			*{ margin: 0px; padding: 0px;}
 			.dv_body {
