@@ -114,7 +114,7 @@ ReserveInformation.prototype={
 				
 				$("#serviceUserId").detach();
 				var servicer=data.data;
-				var divStr="<div><img class='img-circle' src='"+servicer.photoUrl+"'></img><div>"+servicer.userServiceName+"<br>"+servicer.desc+"</div></div>";
+				var divStr="<div><img class='img-circle' src='"+servicer.photoUrl+"'></img><div>"+servicer.userServiceName+"<br>"+(servicer.desc=='无'?'':servicer.desc)+"</div></div>";
 				var servicerHidden="<input type='hidden' id='serviceUserId' name='serviceUserId' value='"+servicer.userId+"'/>";
 				$("#servicerDiv").empty();
 				$("#servicerDiv").html(divStr);
