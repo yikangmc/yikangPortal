@@ -4,20 +4,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>查看单项服务详情</title>
-	<meta name="viewport" 			content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,width=device-width" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="keywords" 			content="易康美辰,预约评估及服务" />
 	<meta name="description" 		content="易康美辰,预约评估及服务" />
 	<meta name="generator" 			content="易康美辰" />
 	<meta name="author" 			content="易康美辰技术部" />
-
-	<script type="text/javascript">
-		var width = $(window).width();
-		var height = $(window).height();
-		if (width < 370) {
-			$("head").append('<meta name="viewport"	content="width=device-width,minimum-scale=0.7,maximum-scale=0.7,user-scalable=no" />');
-		}
-	</script>
+	<script src="<%=basePath%>js/viewport.js"></script>
 	<style type="text/css">
 		html,body {
 			font-family:"Microsoft YaHei";

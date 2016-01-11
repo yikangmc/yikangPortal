@@ -290,7 +290,7 @@
 				</div>	
 				
 				<button id="input_heightfour"  onclick="reserveInformation.submitAppointmentOrder()"
-					style="background: #F2A71C; font-size: 27px; height: 60px; color: #FFF;"
+					style="background: #F2A71C; font-size: 27px; height: 60px; color: #FFF; margin-bottom: 20px;"
 					type="button" class="btn btn-lg col-md-12 col-sm-12 col-xs-12">马上预约</button>
 		</form>
 	</div>
@@ -389,11 +389,11 @@
 			 	<!-- 注册 -->
 			 	<form id="registerForm">
 				 	<div id="con_right" class="con">
-						<input id="mobileNumber"   name="loginName"  class="form-control"   type="text" placeholder="请输入手机号码"/><br />
-						<input style="width: 56%;" name="captcha" class="form-control" type="text" placeholder="验证码"/>
-						<input style="width: 43%;" class="form-control"  onclick="login.getCaptcha()" type="button" value="获取验证码" /><br />
-						<input class="form-control"  name="loginPassword" type="text" placeholder="请输入6-20位字母,数字或符号"/><br />
-						<input class="form-control" type="button" onclick="login.register()" value="注册" />
+						<input id="mobileNumber" style="height: 60px;"   name="loginName"  class="form-control"   type="text" placeholder="请输入手机号码"/><br />
+						<input style="width: 56%; margin-right: 1%; height: 60px;" name="captcha" class="form-control" type="text" placeholder="验证码"/>
+						<input style="width: 40%; height: 60px;" class="form-control"  onclick="login.getCaptcha()" type="button" value="获取验证码" /><br />
+						<input style="height: 60px;" class="form-control"  name="loginPassword" type="text" placeholder="请输入6-20位字母,数字或符号"/><br />
+						<input class="form-control btn_login btn" style="height: 74px;" type="button" onclick="login.register()" value="注册" />
 				 	</div>
 			 	</form>
 			</div>

@@ -3,15 +3,23 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
-		<meta name="viewport" 			content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	    <meta name="format-detection" content="telephone=no" />
+	    <meta name="viewport" content="initial-scale=1.0,maximum-scale=0.6,minimum-scale=0.6,width=device-width" />
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>服务列表</title>
+    	<script src="<%=basePath%>js/viewport.js"></script>
+    	<script type="text/javascript">
+			var width = $(window).width();
+			var height = $(window).height();
+			alert("宽="+width+",高="+height)
+    	</script>
 		<style type="text/css">
+			body {
+				width: 640px;
+			}
 			*{ margin: 0px; padding: 0px;}
 			.dv_body {
-				padding:10px 5px 0px 5px;
-				width: 100%;
-				margin: 0 auto;
+				padding:18px 5px 0px 5px;
 				text-align: center;
 				font-family:"Microsoft YaHei";
 			}
@@ -20,34 +28,8 @@
 				height: 40px;
 				line-height: 40px;	
 				font-size: 22px;
-				font-weight: 600;
 				text-align: center;
 				color: #fff;
-			}
-			.dv_info {
-				margin: 0 auto;
-				margin-top: 20px;
-				margin-bottom: 20px;
-				width: 900px;
-				text-align: center;
-			}
-			.info_left {
-				float: left;
-			}
-			.info_right {
-				float: right;
-				padding-bottom: 20px;
-			}
-			.info_right ul li {
-				list-style-type: none;
-			}
-			.font_title {
-				text-align: center;
-				margin-top: 25px;
-				font-size:40px;
-				font-weight: 500;
-				width: 485px;
-				display: block;
 			}
 			.font_body {
 				text-align: center;
@@ -59,15 +41,15 @@
 			.font_bottom {
 				display: block;
 				text-align: center;
-				margin-top: 10px;
-				height: 50px;
-				line-height: 50px;
+				margin-top: 5px;
+				height: 40px;
+				line-height: 40px;
 				vertical-align: middle;
 				font-size:24px;
 				color: #999;
 			}
 			.font_money {
-				font-size: 28px;
+				font-size: 24px;
 			}
 			a{
 				text-decoration:none;
@@ -77,27 +59,28 @@
 				text-decoration:none;
 				color: black;
 			}
-		</style>
-		<script type="text/javascript">
-			var width = $(window).width();
-			var height = $(window).height();
-			if (width < 370) {
-				$("head").append('<meta name="viewport"	content="width=device-width,minimum-scale=0.7,maximum-scale=0.7,user-scalable=no" />');
+			.mag_dv {
+				float: left;
+				width: 30%;
 			}
-		</script>
+			.font_dv {
+				float: left;
+				width: 68%;
+				margin-right: 12px;
+			}
+		</style>
 	</head>
 
 	<body>
-		<div class="dv_title">护理家</div>
 		<c:forEach items="${data }" var="serviceItem">
 			<a href="<%=basePath%>appointmentOrder/serviceItemDetail?serviceItemId=${serviceItem.serviceItemId}">
 				<div class="dv_body">
-					<div class="col-sm-6 col-xs-6" style＝“flost:left;”>
-						<img style="width: 125px;" src="${serviceItem.picUrl}">
+					<div class="mag_dv ">
+						<img style="width: 135px; float:left; margin-left: 14px;" src="${serviceItem.picUrl}">
 					</div>
-					<div class="col-sm-6 col-xs-6" style＝“flost:left;”>
-						<h5>${serviceItem.serviceTitle}</h5>
-						<span style="font-size: 9px;">${serviceItem.serviceContent}</span>
+					<div class="font_dv ">
+						<p style="font-size: 24px;">${serviceItem.serviceTitle}</p>
+						<p style="font-size: 20px;">${serviceItem.serviceContent}</p>
 						<p class="font_bottom">
 							<img src="<%=basePath%>/img/ServeImg/time.png" />${serviceItem.serviceTime } &nbsp; 
 							<font class="font_money" color="#F22D7B">${serviceItem.servicePrice} </font>
