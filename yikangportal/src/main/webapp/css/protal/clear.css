@@ -1,0 +1,46 @@
+@charset "utf-8";
+/* CSS Document */
+/*初始化*/
+html { background: #f3f3f3; }
+body { width: 640px; }
+button { border-radius：0px; -webkit-border-radius:0px; }
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td { word-wrap: break-word;//word-break设置强行换行;normal 亚洲语言和非亚洲语言的文本规则，允许在字内换行
+word-break: normal;  margin:0; padding:0; font-family:幼圆 }
+body { background:#fff; color:#fff; font-size:2.8em; font-family: Verdana, Arial, Helvetica, sans-serif; }
+td,th,caption { font-size:14px; }
+h1, h2, h3, h4, h5, h6 { font-weight:normal; font-size:100%; }
+address, caption, cite, code, dfn, em, strong, th, var { font-style:normal; font-weight:normal;}
+a { color:#8c8c8c; text-decoration:none; }
+a:hover { text-decoration:none; }
+img { border:none; }
+ol,ul,li { list-style:none; }
+input, textarea, select, button { font:14px Verdana,Helvetica,Arial,sans-serif; }
+table { border-collapse:collapse; }
+html {overflow-y: scroll;}
+/* css common */
+.clearfix:after {content: "."; display: block; height:0; clear:both; visibility: hidden;}
+.clearfix { *zoom:1; }
+/* 自定义样式 */
+.dv_title { height: 270px; background: #54aad8; text-align: center; padding-top: 30;}
+.dv_info { padding: 50 20 50 20; color: #989898; float: right; background: #fff; width: 100%;  margin-bottom: 60px;}
+.dv_info p { text-align: right; font-size: 24px; height: 50px; background: #fff; }
+.dv_bottom { height: 78px; border-top: 1px #d8d8d8 solid; position: fixed; bottom: 0px; width: 100%; background: #fff;}
+
+.hrs { margin-top: 5px; height:1px; border:none; background: #d8d8d8; }
+.hrs_bottom { margin: 39 0 43 0; height:1px; border:none; background: #d8d8d8; }
+
+.ser_infotitle {padding: 16 24 8 24; font-size: 28px; color: #000; background: #fff; }
+.ser_infos { padding: 35 24 0 24; margin-top: -20px; background: #f8f8f8;}
+.ser_infos div { font-size: 26px; height: 52px; text-align: left;}
+.ser_servicetitle { float: left; width: 120px; color: #696562;}
+.ser_serviceinfo { color: #999997; float: left; padding-left: 20px; }
+.ser_servicerig { color: #999562; float: right; padding-left: 50px; }
+.ser_servicered { color: #ff4848; float: right; padding-left: 50px; }
+
+.fonts_money { font-size: 28px; height: 100%;color: #d8d8d8; float: right; line-height: 82px; color: #000; padding-right: 30px; }
+.fonts_moneyclick { float: right;}
+
+#btn_onclick { text-align: center; border: 0px; height: 100%; width: 200px; border: 0px; background: #ff6363; font-size: 32px; }
+
+#fonts_complete { font-size: 30px; height: 72px; line-height: 72px; }
+#fonts_sertime { font-size: 24px; } 
