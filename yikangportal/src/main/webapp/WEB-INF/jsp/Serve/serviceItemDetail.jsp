@@ -63,18 +63,12 @@
 
 		<div id="dir3" class="dv_body" style="display: none;">
 			<div class="ser_text_body">
-				<div class="ser_goods">
-					<img src="<%=basePath%>img/protal/0.png"><br />泡沫轴
-				</div>
-				<div class="ser_goods">
-					<img src="<%=basePath%>img/protal/0.png"><br />泡沫轴
-				</div>
-				<div class="ser_goods">
-					<img src="<%=basePath%>img/protal/0.png"><br />泡沫轴
-				</div>
-				<div class="ser_goods">
-					<img src="<%=basePath%>img/protal/0.png"><br />泡沫轴
-				</div>
+				<c:forEach items="${data.medicinalApparatus}" var="medicinalApparatus">
+					<div class="ser_goods" onclick="serviceItemDetail.selectMedicinalApparatuId(this,${medicinalApparatus.medicinalApparatuId })">
+						<img src="${medicinalApparatus.picUrl }"><br/>${medicinalApparatus.maName }
+						<input type="hidden" name="medicinalApparatuId" value="${medicinalApparatus.medicinalApparatuId }" />
+					</div>
+				</c:forEach>
 			</div>
 		</div>
 		<div class="dv_bottom">
