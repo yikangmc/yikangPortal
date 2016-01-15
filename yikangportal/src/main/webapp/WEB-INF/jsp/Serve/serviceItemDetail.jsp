@@ -66,6 +66,7 @@
 				<c:forEach items="${data.medicinalApparatus}" var="medicinalApparatus">
 					<div class="ser_goods" onclick="serviceItemDetail.selectMedicinalApparatuId(this,${medicinalApparatus.medicinalApparatuId })">
 						<img src="${medicinalApparatus.picUrl }">
+						
 						<p>${medicinalApparatus.maName }</p>
 						<input type="hidden" name="medicinalApparatuId" value="${medicinalApparatus.medicinalApparatuId }" />
 					</div>
