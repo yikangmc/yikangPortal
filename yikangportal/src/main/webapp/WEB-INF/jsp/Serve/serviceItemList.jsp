@@ -20,7 +20,7 @@
 						<div class="mag_title">${serviceItem.serviceTitle}</div>
 						<div class="mag_text">
 							${serviceItem.serviceContent}
-							<hr class="hrs" />
+							<img style="margin: 16 0 24 0; " src="<%=basePath%>img/protal/topborder.png">
 							<div>
 								<div class="btn_porject btn_money" >￥${serviceItem.servicePrice}</div>
 								<div class="btn_porject btn_time" ><img class="tm" src="<%=basePath%>img/protal/times.png">${serviceItem.serviceTime}min</div>

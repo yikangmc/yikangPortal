@@ -25,7 +25,7 @@
 		
 	<div class="dv_title">
 		<div class="font_title">${data.serviceTitle }</div><div class="font_money">￥${data.price }</div>
-		<hr class="hrs">
+		<img style="margin: 0 16 20 16; " src="<%=basePath%>img/protal/topborder.png">
 		<div class="ser_bod">
 			<img class="tm" src="<%=basePath%>img/protal/open.png">服务到家 
 			&nbsp; &nbsp;

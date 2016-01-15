@@ -21,14 +21,14 @@ html {overflow-y: scroll;}
 .clearfix { *zoom:1; }
 
 /* 自定义样式区 */
-.dv_porject { width: 100%; background: #ffffff; height: 478px; margin: 0 auto; margin-bottom: 20px;}
+.dv_porject { width: 100%; background: #ffffff; margin: 0 auto; margin-bottom: 20px; padding-bottom: 20px;}
 
 .mag_title { background-color:#333; filter:alpha(opacity=50); -moz-opacity:0.5; opacity:0.5; font-size: 30px; width:100%; margin-top: -74px; height: 74px; line-height: 74px; padding: 0 20 0 20;  }
-.mag_text { padding: 0 20 0 20; font-size: 22px; color: #777777; padding: 24 20 22 20;}
+.mag_text { font-size: 22px; color: #777777; padding: 24 20 22 20; }
 
-.hrs { padding: 0 10 0 10; height:1px; border:none; border-top:1px dashed #777333; }
+.hrs { margin: 30 0 20 0; margin: 0 auto;}
 
-.btn_porject { border-radius: 7px; border-style:solid; border-width:1px; background: #fff; width: 113px; height: 38px; line-height: 38px; text-align: center; margin: -10 0 0 0;}
+.btn_porject { border-radius: 7px; margin-top: 30px; border-style:solid; border-width:1px; background: #fff; width: 113px; height: 38px; line-height: 38px; text-align: center; margin: -10 0 0 0;}
 .btn_money { border-color: #ff7070; color: #ff7070; font-size: 20px; background:transparent; float: right;}
 .btn_time { border-color: #5b5b5b; color: #5b5b5b; font-size: 20px; background:transparent; float: right; margin-right: 23px;}
 .tm { margin: -5 6 0 0;}
