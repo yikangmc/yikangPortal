@@ -369,8 +369,8 @@
 					<div class="row">
 <!-- 						<div class="col-md-6 col-md-offset-3"> -->
 						<div class="col-md-6">
-							<input class="btn_login btn" onclick="login.login()" style="width: 260px;" type="button" value="登入" />
-							<input class="btn_login btn" onclick="login.showRegisterDialog()" style="width: 260px;" type="button" value="注册" />
+							<input class="btn_login btn" onclick="login.login()" style=" margin-bottom: -40px; width: 240px;" type="button" value="登入" />
+							<input class="btn_login btn" onclick="login.showRegisterDialog()" style=" width: 240px;" type="button" value="注册" />
 						</div>
 					</div>
 			 	</form>
