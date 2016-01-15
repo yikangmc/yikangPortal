@@ -27,9 +27,9 @@
 		<div class="font_title">${data.serviceTitle }</div><div class="font_money">￥${data.price }</div>
 		<hr class="hrs">
 		<div class="ser_bod">
-			<img class="tm" src="<%=basePath%>img/protal/open.png">限时优惠 
+			<img class="tm" src="<%=basePath%>img/protal/open.png">服务到家 
 			&nbsp; &nbsp;
-			<img class="tm" src="<%=basePath%>img/protal/shape.png">其他赠送 
+			<img class="tm" src="<%=basePath%>img/protal/shape.png">呵护备至 
 			<div class="btn_porject btn_time" ><img class="tm" src="<%=basePath%>img/protal/timesblue.png">${data.serviceTime }min</div>
 		</div>
 		<div class="hr_dv"></div>
@@ -65,7 +65,8 @@
 			<div class="ser_text_body">
 				<c:forEach items="${data.medicinalApparatus}" var="medicinalApparatus">
 					<div class="ser_goods" onclick="serviceItemDetail.selectMedicinalApparatuId(this,${medicinalApparatus.medicinalApparatuId })">
-						<img src="${medicinalApparatus.picUrl }"><br/>${medicinalApparatus.maName }
+						<img src="${medicinalApparatus.picUrl }">
+						<p>${medicinalApparatus.maName }</p>
 						<input type="hidden" name="medicinalApparatuId" value="${medicinalApparatus.medicinalApparatuId }" />
 					</div>
 				</c:forEach>
