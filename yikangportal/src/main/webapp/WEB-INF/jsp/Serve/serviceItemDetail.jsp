@@ -61,10 +61,20 @@
 			</c:forEach>
 		</div>
 
-		<div id="dir3" class="dv_body" style="display: none;"> 
-			<p class="ser_text_title">● 3333</p>
+		<div id="dir3" class="dv_body" style="display: none;">
 			<div class="ser_text_body">
-				病历，要简明扼要，患者的姓名、性别、年龄、职业、籍贯、工作单位或住址，主诉、现病史、既往史、各种阳性和阴性体征、诊断或印象及治疗处理意见等，均记载于病历上，由医师签全名。记录一律用钢笔（蓝或黑）书写，字迹清楚、用字规范、词句通顺、标点正确、书面整洁。如有药物过敏，须用红笔标明。病历不得涂改、补填、剪贴、医生应签全名。
+				<div class="ser_goods">
+					<img src="<%=basePath%>img/protal/0.png"><br />泡沫轴
+				</div>
+				<div class="ser_goods">
+					<img src="<%=basePath%>img/protal/0.png"><br />泡沫轴
+				</div>
+				<div class="ser_goods">
+					<img src="<%=basePath%>img/protal/0.png"><br />泡沫轴
+				</div>
+				<div class="ser_goods">
+					<img src="<%=basePath%>img/protal/0.png"><br />泡沫轴
+				</div>
 			</div>
 		</div>
 		<div class="dv_bottom">
