@@ -21,7 +21,7 @@ html {overflow-y: scroll;}
 .clearfix { *zoom:1; }
 
 /* 自定义样式区 */
-.dv_title { width: 640px; padding-bottom: 40px;}
+.dv_title { width: 640px; height: 100%;}
 .dv_bodytop { padding: 23 20 70 20; margin-top: 0px; color: #000;}
 .dv_body { padding: 0 20 40 20; margin-top: -30px; color: #000; }
 .dv_bottom { position: fixed; bottom: 0px; height: 74px; width: 640px;}
@@ -41,8 +41,8 @@ html {overflow-y: scroll;}
 .ser_title { height: 46px; color: #8c8c8c; bottom: 15px;  border-bottom: 1px #8c8c8c solid;}
 .ser_title ul li { float: left; font-size: 24px; text-align: center;}
 .ser_text_title { font-size: 24px; color: #464646;}
-.ser_text_body { font-size: 22px; color: #646464; padding-top: 7px; padding-bottom: 70px;}
-.ser_goods { font-size: 22px; color: #646464; text-align: center; width: 25%; margin-bottom: 70px; float: left;}
+.ser_text_body { font-size: 22px; color: #646464; padding-top: 7px; padding-bottom: 40px; }
+.ser_goods { font-size: 22px; color: #646464; text-align: center; width: 25%; margin-bottom: 78px; float: left;}
 
 .btn_porject { border-radius: 7px; border-style:solid; border-width:1px; background: #fff; width: 113px; height: 38px; line-height: 38px; text-align: center; margin: -10 0 0 0;}
 .btn_time { border-color: #5a74f5; color: #5a74f5; margin: -4 22 11 0; font-size: 20px; background:transparent; float: right; margin-right: 23px;}
