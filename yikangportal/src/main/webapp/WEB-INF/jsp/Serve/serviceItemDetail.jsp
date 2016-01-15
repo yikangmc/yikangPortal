@@ -45,7 +45,7 @@
 		</div>
 		<div id="dir1" class="dv_body"> 
 			<c:forEach items="${data.serviceIntroduces }" var="serviceIntroduce">
-				<p class="ser_text_title">● ${serviceIntroduce.title}</p>
+<%-- 				<p class="ser_text_title">● ${serviceIntroduce.title}</p> --%>
 				<div class="ser_text_body">
 					${serviceIntroduce.content}
 				</div>
@@ -54,7 +54,7 @@
 		
 		<div id="dir2" class="dv_body" style="display: none;"> 
 			<c:forEach items="${data.serviceNotes}" var="serviceNote">
-					<p class="ser_text_title">● ${serviceNote.title}</p>
+<%-- 					<p class="ser_text_title">● ${serviceNote.title}</p> --%>
 					<div class="ser_text_body">
 						${serviceNote.content }
 					</div>
