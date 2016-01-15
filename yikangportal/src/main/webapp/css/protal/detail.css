@@ -42,6 +42,7 @@ html {overflow-y: scroll;}
 .ser_title ul li { float: left; font-size: 24px; text-align: center;}
 .ser_text_title { font-size: 24px; color: #464646;}
 .ser_text_body { font-size: 22px; color: #646464; padding-top: 7px;}
+.ser_goods { font-size: 28px; color: #000; text-align: center; width: 25%; float: left;}
 
 .btn_porject { border-radius: 7px; border-style:solid; border-width:1px; background: #fff; width: 113px; height: 38px; line-height: 38px; text-align: center; margin: -10 0 0 0;}
 .btn_time { border-color: #5a74f5; color: #5a74f5; margin: -4 22 11 0; font-size: 20px; background:transparent; float: right; margin-right: 23px;}
