@@ -4,19 +4,28 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>加入瘦腿</title>
+<%@ include file="/common/protalhead.jsp"%>
+
+<script type="text/javascript" src="<%=path%>/js/views/tools/Tools.js"></script>
+<script type="text/javascript" src="<%=path%>/js/views/shareUser/appointmentList.js"></script>
+
 </head>
 <body>
 	<div class="container">
-		<div class="row">
-			<input type="text" >
-		</div>
-		<div class="row">
-			<input type="text" >
-		</div>
-		<div class="row">
-			<button type="button" value="提交">提交</button>
-		</div>
+		<form  method="post" >
+			<input type="hidden" name="userFromStr" value="瘦腿服务">
+			<div class="row">
+				<input type="text" name="mobileNumber">
+			</div>
+			<div class="row">
+				<input type="text" name="capatha" ><button onclick="tools.capatchaCountdown(this)" type="button">获取验证码</button>
+			</div>
+			<div class="row">
+				<button type="button" value="提交">提交</button>
+			</div>
+		</form>
+	
 	</div>
 </body>
 </html>
