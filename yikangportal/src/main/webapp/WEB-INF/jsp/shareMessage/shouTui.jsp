@@ -13,7 +13,7 @@
 </head>
 <body>
 	<div class="container">
-		<form  method="post" >
+		<form  action="<%=path%>shareUser/regiestUser" method="post" >
 			<input type="hidden" name="userFromStr" value="瘦腿服务">
 			<div class="row">
 				<input type="text" name="mobileNumber">
