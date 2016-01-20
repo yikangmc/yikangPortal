@@ -37,8 +37,23 @@ Appointment.prototype={
 					alert(data.message);
 				}
 			});
+		},
+		submitForm:function(src){
+			tools.capatchaCountdown(src);
+			appointment.getCaptcha();
+		},
+		saveYouHuiForServiceItemId:function(){
+			$.post(basePath+"appointmentUser/regiestUserAndServiceItemId",$("#userForm").serializeArray(),function(data){
+				if(null != data && data.status=="000000"){
+					alert(data.message);
+				}else{
+					alert(data.message);
+				}
+			});
 		}
 }
+
+
 
 var appointment=new Appointment();
 appointment.init();

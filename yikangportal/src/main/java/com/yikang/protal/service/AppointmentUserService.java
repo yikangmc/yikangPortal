@@ -56,6 +56,38 @@ public class AppointmentUserService {
 	
 	/**
 	 * @author liushuaic
+	 * @date 2015/09/21 12:26
+	 * 添加预约用户
+	 * 0:添加失败
+	 * -1:已经预约
+	 * >0:添加成功
+	 * */
+	public int insertSelective(String mobileNumber,Integer serviceItemId){
+		
+			List<AppointmentUser> data= appointmentUserManager.findAppointmentUserByMobileNumber(mobileNumber);
+			if(null== data || data.size()==0){
+				Date currentDateTime=Calendar.getInstance().getTime();
+				AppointmentUser appointmentUser=new AppointmentUser();
+				
+				appointmentUser.setCreateTime(currentDateTime);
+				appointmentUser.setUpdateTime(currentDateTime);
+				appointmentUser.setMobileNumber(mobileNumber);
+				appointmentUser.setCreateUserId(-1l);
+				
+				int i=appointmentUserManager.insertSelective(appointmentUser);
+				if(i>0){
+					return i;
+				}
+			}else{
+				return -1;
+			}
+			
+
+			return 0;
+	}
+	
+	/**
+	 * @author liushuaic
 	 * @date 2015/09/21 13:34
 	 * 修改预约用户信息
 	 * 

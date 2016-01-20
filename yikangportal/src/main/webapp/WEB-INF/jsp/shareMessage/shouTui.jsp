@@ -8,21 +8,21 @@
 <%@ include file="/common/protalhead.jsp"%>
 
 <script type="text/javascript" src="<%=path%>/js/views/tools/Tools.js"></script>
-<script type="text/javascript" src="<%=path%>/js/views/shareUser/appointmentList.js"></script>
+<script type="text/javascript" src="<%=path%>/js/views/shareUser/appointment.js"></script>
 
 </head>
 <body>
 	<div class="container">
-		<form  action="<%=path%>shareUser/regiestUser" method="post" >
+		<form id="userForm"  action="<%=path%>shareUser/regiestUser" method="post" >
 			<input type="hidden" name="userFromStr" value="瘦腿服务">
 			<div class="row">
 				<input type="text" name="mobileNumber">
 			</div>
 			<div class="row">
-				<input type="text" name="capatha" ><button onclick="tools.capatchaCountdown(this)" type="button">获取验证码</button>
+				<input type="text" name="captcha" ><button onclick="appointment.submitForm(this)" type="button">获取验证码</button>
 			</div>
 			<div class="row">
-				<button type="button" value="提交">提交</button>
+				<button type="button" onclick="appointment.saveYouHuiForServiceItemId()" value="提交">提交</button>
 			</div>
 		</form>
 	

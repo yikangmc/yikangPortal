@@ -113,6 +113,57 @@ public class AppointmentUserController{
 
 		return rtnData;
 	}
+	
+	
+	
+	/**
+	 * @author liushuaic
+	 * @date 2015/09/01 15:01
+	 * @desc 保存注册用户
+	 * 
+	 * **/
+	@RequestMapping
+	@ResponseBody
+	public Map<String, Object> regiestUserAndServiceItemId(ModelMap modelMap, String mobileNumber, String captcha, String userFromStr, 
+			Integer serviceItemId,
+			HttpServletRequest request) {
+
+		Map<String, Object> rtnData = new HashMap<String, Object>();
+		String sesionCaptcha = null;
+		if(null != request.getSession().getAttribute("captcha")){
+				sesionCaptcha=request.getSession().getAttribute("captcha").toString();
+			if (null != mobileNumber && null != captcha && null != sesionCaptcha && null != serviceItemId) {
+					if (captcha.equals(sesionCaptcha)) {
+						int i=appointmentUserService.insertSelective(mobileNumber, serviceItemId);
+						if (i>0) {
+							rtnData.put("status",ExceptionConstants.responseSuccess.responseSuccess.code);
+							rtnData.put("message", "恭喜，您预约成功！稍等，我们有服务人员跟，您联系。谢谢！");
+						} else {
+							
+							if(i==0){
+								rtnData.put("status",ExceptionConstants.systemException.systemException.errorCode);
+								rtnData.put("message", "预约失败！");
+							}else if(i==-1){
+								rtnData.put("status",ExceptionConstants.systemException.systemException.errorCode);
+								rtnData.put("message", "您已经预约过服务了！");
+							}
+						}
+						
+					} else {
+						rtnData.put("status",ExceptionConstants.systemException.systemException.errorCode);
+						rtnData.put("message", "抱歉，你的验证码，输入错误!");
+					}
+			}else{
+				rtnData.put("status",ExceptionConstants.systemException.systemException.errorCode);
+				rtnData.put("message", "请输入手机号 或验证码  ！");
+			}
+		}else{
+			rtnData.put("status",ExceptionConstants.systemException.systemException.errorCode);
+			rtnData.put("message", "还未获取验证码 ！");
+		}
+
+		return rtnData;
+	}
 
 	/**
 	 * @author liushuaic
