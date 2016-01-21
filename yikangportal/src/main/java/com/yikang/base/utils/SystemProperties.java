@@ -28,7 +28,7 @@ public class SystemProperties {
 	 * @date 2015/12/01 11:54
 	 * @desc 获取systemProperties 文件中的值
 	 * */
-	public String getPropertieValue(String key){
+	public static String getPropertieValue(String key){
 		return systemProperties.getProperty(key);
 	}
 
