@@ -80,9 +80,6 @@
 			height: 35px;
 			font-size: 24px;
 		}
-	 
-	 
-	 
 		.btn_porject {
 			background-color: #428bca;
 			border: 0px;
@@ -225,7 +222,6 @@
 		height: 48px; font-size: 22px; width: 100%;
 	}
 	</style>
-
 </head>
 <body>
 	<div class="dv_toptitle">护龄家</div>

@@ -36,9 +36,9 @@
 		<div class="dv_bodytop">
 			<div class="ser_title">
 				<ul>
-					<li style="width: 23%;"><a class="run1">服务介绍</a></li>
-					<li style="width: 38%;"><a class="run2">注意事项</a></li>
-					<li style="width: 39%;"><a class="run3">所需药品和器材</a></li>
+					<li style="width: 23%;"><a id="font1" class="run1" style="color: #000;">服务介绍</a></li>
+					<li style="width: 38%;"><a id="font2" class="run2">注意事项</a></li>
+					<li style="width: 39%;"><a id="font3" class="run3">所需药品和器材</a></li>
 				</ul>
 			</div>
 			<div id="box" class="ser_box">&nbsp;</div>
@@ -90,6 +90,10 @@
 		  	$("#dir1").css({"display":"block"});
 		  	$("#dir2").css({"display":"none"});
 		  	$("#dir3").css({"display":"none"});
+		  	$("#font1").css({"color":"000"});
+		  	$("#font2").css({"color":"c8c8c8"});
+		  	$("#font3").css({"color":"c8c8c8"});
+
 		});
 
 		$(".run2").click(function(){
@@ -97,6 +101,9 @@
 		  	$("#dir2").css({"display":"block"});
 		  	$("#dir1").css({"display":"none"});
 		  	$("#dir3").css({"display":"none"});
+		  	$("#font2").css({"color":"000"});
+		  	$("#font1").css({"color":"c8c8c8"});
+		  	$("#font3").css({"color":"c8c8c8"});
 		});
 
 		$(".run3").click(function(){
@@ -104,6 +111,9 @@
 		  	$("#dir3").css({"display":"block"});
 		  	$("#dir1").css({"display":"none"});
 		  	$("#dir2").css({"display":"none"});
+		  	$("#font3").css({"color":"000"});
+		  	$("#font2").css({"color":"c8c8c8"});
+		  	$("#font1").css({"color":"c8c8c8"});
 		});
 	</script>
 </body>
