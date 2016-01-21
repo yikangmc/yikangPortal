@@ -24,7 +24,7 @@
 		</dependency>
 
 
-		
+
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
@@ -183,7 +183,7 @@
 			<version>1.5.1.RELEASE</version>
 		</dependency>
 
-<!-- 容联云通信 短信发送 start -->
+		<!-- 容联云通信 短信发送 start -->
 		<dependency>
 			<groupId>com.ronglian</groupId>
 			<artifactId>CCP_REST_SDK_JAVA</artifactId>
@@ -191,7 +191,13 @@
 			<scope>system</scope>
 			<systemPath>${basedir}/libs/CCP_REST_SDK_JAVA_v2.7r.jar</systemPath>
 		</dependency>
-<!-- 容联云通信 短信发送 end -->
+		<!-- 容联云通信 短信发送 end -->
+		<dependency>
+			<groupId>Pingplusplus</groupId>
+			<artifactId>pingpp-java</artifactId>
+			<version>2.0.7</version>
+			<type>jar</type>
+		</dependency>
 
 
 	</dependencies>
@@ -228,7 +234,7 @@
 				<artifactId>tomcat7-maven-plugin</artifactId>
 				<version>2.1</version>
 				<configuration>
-<!-- 					<url>http://gcj-op.grandsoft.com.cn:8080/manager/text</url> -->
+					<!-- <url>http://gcj-op.grandsoft.com.cn:8080/manager/text</url> -->
 					<server>mytomcat</server>
 					<username>tomcat</username>
 					<password>tomcat</password>
@@ -256,6 +262,14 @@
 			<id>com.springsource.repository.bundles.external</id>
 			<name>EBR External Release Repository</name>
 			<url>http://repository.springsource.com/maven/bundles/external</url>
+		</repository>
+		<repository>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<id>central</id>
+			<name>bintray</name>
+			<url>http://jcenter.bintray.com</url>
 		</repository>
 	</repositories>
 
