@@ -3,406 +3,235 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>易康美辰</title>
-<meta name="keywords" 			content="易康美辰,预约评估及服务" />
-<meta name="description" 		content="易康美辰,预约评估及服务" />
-<meta name="generator" 			content="易康美辰" />
-<meta name="author" 			content="易康美辰技术部" />
-
-<style type="text/css">
-	.zhushi{width:900px;margin: 30px auto; }
-		.zhushi p{ line-height:24px; font-family:"微软雅黑";font-size:16px;text-align:left;}
-		.ck-slide { width: 100%; height: 100%; margin: 0 auto; float:left; background-image: url(img/protal/Indextwo/img/1.jpg)}
-		.ck-slide ul.ck-slide-wrapper { height: 320px;}
-		.left_banner {
-			background:url(img/protal/Indextwo/img/%E6%A1%88%E5%88%97%E8%AF%A6%E6%83%85%E8%83%8C%E6%99%AF.png);
-			width:510px;
-			position: absolute;
-			top:0px;
-			left:-563px;
-			z-index:2;
-			padding-left:50px;
-		}
-		.btn_info {
-			z-index:1; 
-			width:324px;
-			height:60px;
-			position:relative;
-			top:450px;
-			left:530px;
-		}
-		.btn_info_title {
-			z-index:1; 
-			width:324px;
-			height:60px;
-			position:relative;
-			top:420px;
-			left:530px;
-		}
-		.ck-slide .ck-prev {
-			left: 5px;
-		}
-		.ck-slide .ck-next {
-			right: 5px;
-		}
-	.dv_fonts_btomm {
-		margin-top:-10px;
-		margin-bottom:10px;
-	}
-	.dv_imgs {
-		width:220px;
-		height:220px;
-		margin-bottom:60px;
-	}
-	.dv_ty {
-		width:100%;
-		height:1080px;
-	}
-	.dv_top {
-		width:100%; 
-		padding-top:20px; 
-		position:fixed;
-		z-index:1;
-		height:70px;
-		background-image: url(img/protal/Indextwo/bannertop.png);
-		-moz-box-shadow:0px 4px 9px #BABABA; -webkit-box-shadow:0px 4px 9px #BABABA; box-shadow:0px 4px 9px #BABABA;
-	}
-	.dv_left_title {
-		height:50px; 
-		width:200px; 
-		text-align:center; 
-		margin:auto; 
-		margin-top:-3px;	
-	}
-	.img_select_now {
-		display:none; 
-		width:173px; 
-		height:39px;
-	}
-	.title_two {
-		margin-top:-8px; 
-		float:right; 
-		margin-top:-48px; 
-		padding-right:70px;	
-	}
-	.uls ul li {
-		text-align:center;
-		list-style-type:none;
-		float:left;	
-		margin:1%;
-	}
-	.Service ul li {
-		margin:6%;
-	}
-	img {
-		border: 0;
-	}
-	.ck-slide ul {
-		margin: 0;
-		padding: 0;
-		list-style-type: none;
-	}
-	.ck-slide {
-		position: relative;
-		overflow: hidden;
-	}
-	.ck-slide ul.ck-slide-wrapper {
-		position: absolute;
-		top: 0;
-		left: 0;
-		z-index: 1;
-		margin: 0;
-		padding: 0;
-	}
-	.ck-slide ul.ck-slide-wrapper li {
-		position: absolute; margin-top:0px;
-	}
-	.ck-slide ul.ck-slide-wrapper li a{
-		/*a标签是行内元素，宽高对a标签不起作用，这里必须添加line-height:0px;display:black，否则垂直滚动<li>之间会出现间隔*/
-		line-height:0px;
-		display:block;
-	}
-	.ck-slide .ck-prev, .ck-slide .ck-next {
-		position: absolute;
-		top: 50%;
-		z-index: 2;
-		width: 35px;
-		height: 70px;
-		margin-top: -35px;
-		border-radius: 3px;
-		opacity: .15;
-		background: red;
-		text-indent: -9999px;
-		background-repeat: no-repeat;
-		transition: opacity .2s linear 0s;
-	}
-	.ck-slide .ck-prev {
-		left: 5px;
-/* 		background: url(../images/arrow-left.png) #000 50% no-repeat; */
-	}
-	.ck-slide .ck-next {
-		right: 5px;
-/* 		background: url(../images/arrow-right.png) #000 50% no-repeat; */
-	}
-	.ck-slidebox {
-		position: absolute;
-		left: 50%;
-		bottom: 12px;
-		z-index: 30;
-	}
-	.ck-slidebox ul {
-		height: 20px;
-		padding: 0 4px;
-		border-radius: 8px;
-		background: rgba(0,0,0,0.5);
-	}
-	.ck-slidebox ul li {
-		float: left;
-		height: 12px;
-		margin: 4px 4px;
-	}
-	.ck-slidebox ul li em {
-		display: block;
-		width: 12px;
-		height: 12px;
-		border-radius: 100%;
-		background-color: #fff;
-		text-indent: -9999px;
-		cursor: pointer;
-	}
-	.ck-slidebox ul li.current em {
-		background-color: #fe6500;
-	}
-	.ck-slidebox ul li em:hover {
-		background-color: #fe6500;
-	}
-</style>
+	<meta name="keywords" 			content="易康美辰,预约评估及服务" />
+	<meta name="description" 		content="易康美辰,预约评估及服务" />
+	<meta name="generator" 			content="易康美辰" />
+	<meta name="author" 			content="易康美辰技术部" />
+	<meta name="viewport" 			content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
+   	<!-- <script src="<%=basePath%>js/indexviewport.js"></script>-->
+    <link rel="stylesheet" type="text/css" href="<%=basePath%>css/protal/main.css">
+	<link href='http://fonts.useso.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+	<title>护理家</title>
 </head>
-
-<body>
-	<div>
-		<div id="toptiles1" class="dv_top" style="margin-top: -70px;">
-          	<div id="titleone" class="fonts" style="margin-top:-4px; float:left; text-align:center; padding-left:76px;">
-            	<img style="width:118px; height:38px;" src="img/protal/hlg.png" />
-            </div>
-            <div id="lefttitle" class="dv_left_title">
-        		<div id="tanks1"></div>
-            	<img id="imgselectnowone" class="img_select_now" src="img/protal/fulc.png" />
-            	<img id="imgselectnowtwo" class="img_select_now" src="img/protal/funl.png" />
-            </div>
-            <div id="titletwo" class="fonts title_two">
-              	<a href="#01"><img class="imgs1" style="width:122px; height:29px;" src="img/protal/fw2.png" /></a>&nbsp;
-               	&nbsp;
-                <a href="#02"><img class="imgs1" style="width:122px; height:29px;" src="img/protal/fw1.png" /></a>
-            </div>
-            <div style="margin-top:-17px;">
-            	<div id="toptitlehr"></div>
-            </div>
-      	</div>
-        <div class="dv_1" id="pa" style="margin-top: 70px;" >
-           	<img id="images2" style="width: 100%" src="img/protal/Indextwo/home.jpg" />
-        </div>
-
-        <div class="dv_ty" id="dv_bak" style="height: 900px; margin-top: 130px; z-index: -0;">
-        	<div class="ck-slide">
-			<a href="javascript:;" class="ctrl-slide ck-prev" onClick="moveDiv()">上一张</a> 
-			<a href="javascript:;" class="ctrl-slide ck-next" onClick="moveDiv()">下一张</a>
-        		<div class="btn_info_title">
-        			<img src="img/protal/Indextwo/img/backtitle.png" />
-            		<div style="margin-top: -52px; margin-left: 55px; font-size:34px; font-weight:500; color:#FFF;">
-          			护理家项目案例	
+	<body>
+		<div class="dv_title">
+			<div class="tit_bnr">
+				<div class="tit_logo"><img src="<%=basePath%>img/protal/mainIndex/logo.png"/></div>
+				<div class="tit_onlys">
+					<ul>
+						<li>首页</li>
+						<li><a style="color: #000;" href="#ser">服务</a></li>
+						<li>加入我们</li>
+						<li>
+							<a href="javascript:void(0)" class="run" onclick="overlay()" ><div class="btn_porject">预约服务</div></a>
+						</li>
+					</ul>
+				</div>
+			</div>
 		</div>
-        </div>
-        <a href="javascript:void(0);" id="btn_ckOne">
-    		<div class="btn_info">
-              	<img src="img/protal/Indextwo/img/libinfo.png" />
-         		<div style="margin-top: -52px; margin-left: 70px; font-size:30px; font-weight:500;">
-                     	项目介绍 &nbsp; 〉
-            		</div>
-    		</div>
-        </a>
-        <!-- 1 -->
-        <div style=" width:465px; padding:30px; padding-left: 40px; padding-right: 40px; font-size:20px; height:800px; margin-top: -80px; background: #ffc116; border-top-right-radius: 13px; border-bottom-right-radius: 13px;">
-            	高血压中医护理 
-		<br> &nbsp; &nbsp; 定期监测血压，实现降压达标，平稳有效地控制血压，减缓靶器官的损害，控制心脑血管并发症的发生，改善生存质量，降低疾病负担。
-		<br>
-		病理与服务介绍
-		<br> &nbsp; &nbsp; 高血压是最常见的慢性病，也是心脑血管病最主要的危险因素，脑卒中、心肌梗死、心力衰竭及慢性肾脏病是其主要并发症。实践证明，高血压是可以预防和控制的疾病，降低高血压患者的血压水平，可明显减少脑卒中的发生。
-		<br>护理措施包括
-		<br> &nbsp; &nbsp; 1.常规药物治疗：坚持长期终生用药，小剂量开始，优先选择长效制剂，联合应用及个体化。
-		<br> &nbsp; &nbsp; 2.非药物治疗：为您量身制定计划，减少钠盐摄入，控制体重，戒烟限酒，坚持运动，减轻精神压力，保持心情轻松愉快。
-		<br> &nbsp; &nbsp; 3.中医药物调理：为您提供中医养生调理汤药，有效控制血压，抑制并发症发生，让您可以放心轻松的生活。
-          </div>
+		<div class="mag_banner">
+			<img src="<%=basePath%>img/protal/mainIndex/banner.png"/>
 		</div>
-	</div>
-        </div>
-        <div class="dv_ty">
-        	&nbsp;
-        	<div class="Service uls" style=" width:1366px; margin:0 auto; margin-top:143px;">
-            	<ul>
-                	<li>
-                    	<div class="dv_imgs">
-                        	<img style=" width:220px; height:190px; margin-top:20px;" src="img/protal/Indextwo/xlgy.png"  /><br />
-                        </div>
-                        	<img style="width:201px; height:47px;" src="img/protal/Indextwo/xlgy1.png"  />
-                    </li>
-                	<li>
-                    	<div class="dv_imgs">
-                        	<img src="img/protal/Indextwo/hlpg.png"  /><br />
-                        </div>
-                        	<img style="width:201px; height:47px;" src="img/protal/Indextwo/hlpg1.png"  />
-                    </li>
-                	<li>
-                    	<div class="dv_imgs">
-                        	<img style="width:220px; height:155px; margin-top:30px;" src="img/protal/Indextwo/lchl.png"  /><br />
-                        </div>
-                        	<img style="width:201px; height:47px;" src="img/protal/Indextwo/lchl1.png"  />
-                    </li>
-                	<li>
-                    	<div class="dv_imgs">
-                        	<img style="width:180px; height:220px;" src="img/protal/Indextwo/zyhl.png"  /><br />
-                        </div>
-                        	<img style="width:201px; height:47px;" src="img/protal/Indextwo/zyhl1.png"  />
-                    </li>
-                	<li>
-                    	<div class="dv_imgs">
-                        	<img style="width:200px; height:220px;" src="img/protal/Indextwo/kf.png"  /><br />
-                        </div>
-                        	<img style=" width:110px; height: 53px;" src="img/protal/Indextwo/kf1.png"  />
-                    </li>
-                </ul>
-            </div>
-        </div>
+		<div class="dv_main">
+			<div class="dv_bodys">
+				<ul>
+					<li><img src="<%=basePath%>img/protal/mainIndex/icon_1.png"/><p class="p_server">一对一定制化康复护理方案</p></li>
+					<li><img src="<%=basePath%>img/protal/mainIndex/icon_2.png"/><p class="p_server">实时呼叫，实时应答及时上门护理</p></li>
+					<li><img src="<%=basePath%>img/protal/mainIndex/icon_3.png"/><p class="p_server">执证康复护师提供专业康复护理服务</p></li>
+					<li><img src="<%=basePath%>img/protal/mainIndex/icon_4.png"/><p class="p_server">美国护理体系严格实施风控管理</p></li>
+				</ul>
+			</div>
+		</div>
+		<div class="mag_banner">
+			<img src="<%=basePath%>img/protal/mainIndex/banner2.png">
+		</div>
+		<div class="dv_info">
+			<div class="dv_ser_title">
+				<p class="p_infotitle">我们致力于给予您最好的服务</p>
+				<a id="ser"></a>
+				<div class="p_infobody">护理家提供的康复护理服务、评估体系均来源美国广泛采用的最先进的评估体系，并对不同病种进行分类，将服务进行标准化，严格控制服务中每个环节，做到可量化、可控制</div>
+			</div>
+			<div class="dv_ser_info">
+				<ul>
+					<li>
+						<div class="ser_info">
+							<div class="ser_model">
+								<img style="width: 100%" src="<%=basePath%>img/protal/test.png">
+								<p class="ser_p_title">脑卒中的康复和护理</p>
+								<hr class="hrs" />
+								<p class="ser_p_body">通过泡沫轴对筋膜链的松懈疗法,帮助您轻松瘦腿。</p>
+							</div>
+							<div class="ser_p_bottom">
+								￥398.0
+								<button class="btn_cikinfo"><a href="">预约服务</a></button>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="ser_info">
+							<div class="ser_model">
+								<img style="width: 100%" src="<%=basePath%>img/protal/test.png">
+								<p class="ser_p_title">脑卒中的康复和护理</p>
+								<hr class="hrs" />
+								<p class="ser_p_body">通过泡沫轴对筋膜链的松懈疗法,帮助您轻松瘦腿。</p>
+							</div>
+							<div class="ser_p_bottom">
+								￥398.0
+								<button class="btn_cikinfo"><a href="">预约服务</a></button>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="ser_info">
+							<div class="ser_model">
+								<img style="width: 100%" src="<%=basePath%>img/protal/test.png">
+								<p class="ser_p_title">脑卒中的康复和护理</p>
+								<hr class="hrs" />
+								<p class="ser_p_body">通过泡沫轴对筋膜链的松懈疗法,帮助您轻松瘦腿。</p>
+							</div>
+							<div class="ser_p_bottom">
+								￥398.0
+								<button class="btn_cikinfo"><a href="">预约服务</a></button>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="ser_info">
+							<div class="ser_model">
+								<img style="width: 100%" src="<%=basePath%>img/protal/test.png">
+								<p class="ser_p_title">脑卒中的康复和护理</p>
+								<hr class="hrs" />
+								<p class="ser_p_body">通过泡沫轴对筋膜链的松懈疗法,帮助您轻松瘦腿。</p>
+							</div>
+							<div class="ser_p_bottom">
+								￥398.0
+								<button class="btn_cikinfo"><a href="">预约服务</a></button>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="ser_info">
+							<div class="ser_model">
+								<img style="width: 100%" src="<%=basePath%>img/protal/test.png">
+								<p class="ser_p_title">脑卒中的康复和护理</p>
+								<hr class="hrs" />
+								<p class="ser_p_body">通过泡沫轴对筋膜链的松懈疗法,帮助您轻松瘦腿。</p>
+							</div>
+							<div class="ser_p_bottom">
+								￥398.0
+								<button class="btn_cikinfo"><a href="">预约服务</a></button>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="ser_info">
+							<div class="ser_model">
+								<img style="width: 100%" src="<%=basePath%>img/protal/test.png">
+								<p class="ser_p_title">脑卒中的康复和护理</p>
+								<hr class="hrs" />
+								<p class="ser_p_body">通过泡沫轴对筋膜链的松懈疗法,帮助您轻松瘦腿。</p>
+							</div>
+							<div class="ser_p_bottom">
+								￥398.0
+								<button class="btn_cikinfo"><a href="">预约服务</a></button>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="ser_info">
+							<div class="ser_model">
+								<img style="width: 100%" src="<%=basePath%>img/protal/test.png">
+								<p class="ser_p_title">脑卒中的康复和护理</p>
+								<hr class="hrs" />
+								<p class="ser_p_body">通过泡沫轴对筋膜链的松懈疗法,帮助您轻松瘦腿。</p>
+							</div>
+							<div class="ser_p_bottom">
+								￥398.0
+								<button class="btn_cikinfo"><a href="">预约服务</a></button>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="ser_info">
+							<div class="ser_model">
+								<img style="width: 100%" src="<%=basePath%>img/protal/test.png">
+								<p class="ser_p_title">脑卒中的康复和护理</p>
+								<hr class="hrs" />
+								<p class="ser_p_body">通过泡沫轴对筋膜链的松懈疗法,帮助您轻松瘦腿。</p>
+							</div>
+							<div class="ser_p_bottom">
+								￥398.0
+								<button class="btn_cikinfo"><a href="">预约服务</a></button>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="dv_bottom">
+			<div class="bom">
+				<div class="navigation">
+					<ul>
+						<li>关于我们&nbsp;丨&nbsp;
+							媒体报道&nbsp;丨&nbsp;
+							加入我们&nbsp;丨&nbsp;
+							联系我们&nbsp;丨&nbsp;
+							帮助中心&nbsp;丨&nbsp;
+							友情</li>
+						<li>服务合作：BD@stellarheal.com &nbsp;&nbsp; 投诉建议：support@stellarheal.com</li>
+						<li>&copy;2016易康美辰健康科技（北京）有限公司&nbsp; 京ICP证xxxxxx号-3 京公网安备xxxxxxxx</li>
+					</ul>
+				</div>
+				<div class="code">
+					<div class="code_qr">
+						<img src="<%=basePath%>img/protal/mainIndex/code.png">
+					</div>
+					<div class="code_liaison">
+						<p id="contact_us">联系我们</p>
+						<p id="contact_phone">400-616-0909</p>
+						<p id="contact_time">周一至周五&nbsp;9:00-20:00</p>
+						<p id="icon">
+							<a target="_Blank" href="http://weibo.com/u/5368694680?wvr=5&c=spr_web_sq_kings_weibo_t001&sudaref=www.duba.com&is_all=1">
+							<img src="<%=basePath%>img/protal/mainIndex/xl1.png" 
+							onMouseOver="this.src='<%=basePath%>img/protal/mainIndex/xl.png'" 
+							onMouseOut="this.src='<%=basePath%>img/protal/mainIndex/xl1.png'">
+							</a>
+							&nbsp;
+							<img src="<%=basePath%>img/protal/mainIndex/yx.png" 
+							onMouseOver="this.src='<%=basePath%>img/protal/mainIndex/yx1.png'" 
+							onMouseOut="this.src='<%=basePath%>img/protal/mainIndex/yx.png'">
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
 
-		<div class="dv_ty">
-        	&nbsp;
-        	<div class="uls" style=" width:1366px; margin:0 auto; margin-top:140px;">
-            	<ul>
-                	<li>
-                        	<img style=" width: 372px; height:336px;" src="img/protal/Indextwo/1.png"  /><br />
-                    	<div class="dv_fonts_btomm">
-                        	<img style="width: 220px; height: 36px;" src="img/protal/Indextwo/01.png"  /><br />
-                        </div>
-                        	<img style=" width: 194px; height: 50px; " src="img/protal/Indextwo/001.png"  />
-                    </li>
-                	<li>
-                        	<img style=" width: 372px; height:336px;" src="img/protal/Indextwo/2.png"  /><br />
-                    	<div class="dv_fonts_btomm">
-                        	<img style="width: 209px; height: 36px;" src="img/protal/Indextwo/02.png"  /><br />
-                        </div>
-                        	<img style=" width: 210px; height:50px; " src="img/protal/Indextwo/002.png"  />
-                    </li>
-                	<li>
-                        	<img style="width: 372px; height:336px;" src="img/protal/Indextwo/3.png"  /><br />
-                    	<div class="dv_fonts_btomm">
-                        	<img style=" width: 430px; height: 38px;" src="img/protal/Indextwo/03.png"  /><br />
-                        </div>
-                        	<img style=" width: 210px; height:50px; " src="img/protal/Indextwo/003.png"  />
-                    </li>
-                	<li>
-                        	<img style="width: 372px; height: 336px;" src="img/protal/Indextwo/4.png"  /><br />
-                    	<div class="dv_fonts_btomm">
-                        	<img style=" width: 211px; height: 37px;" src="img/protal/Indextwo/04.png"  /><br />
-                        </div>
-                        	<img style=" width: 238px; height: 50px; " src="img/protal/Indextwo/004.png"  />
-                    </li>
-                	<li>
-                        	<img style="width: 372px; height: 336px;" src="img/protal/Indextwo/5.png"  />
-                    	<div class="dv_fonts_btomm">
-                        	<img style=" width: 380px; height: 40px;" src="img/protal/Indextwo/05.png"  /><br />
-                        </div>
-                        	<img style=" width: 209px; height: 50px;" src="img/protal/Indextwo/005.png"  />
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <div style=" width:100%; height:450px; margin-top:10%; padding-top: 40px; background:#2854a1;">
-        	<div id="bottomtitle" style="width:59%; height:240px; margin:0 auto; position:relative; top:25%; right:10%; ">
-                	<div style=" margin:20px 20px 10px 20px;">
-                    	<img class="bottomimg1" style="width:465px; height:25px;" src="img/protal/hr@stellarheal.com.png" />
-                        <img class="bottomimg2" style="width:234px; height:14px; display:none;" src="img/protal/hr@stellarheal.com.png" />
-                        <br />
-                    </div>
-                	<div style=" margin:20px 20px 10px 20px;">
-                    	<img class="bottomimg1" style="width:533px; height:29px;" src="img/protal/yikang@stellarheal.com.png"/>
-                        <img class="bottomimg2" style="width:183px; height:14px; display:none;" src="img/protal/yikang@stellarheal.com.png" />
-                        <br />
-                    </div>
-                	<div style=" margin:20px 20px 10px 20px;">
-                    	<img class="bottomimg1" style="width:740px; height:23px;" src="img/protal/yinsi.png" />
-                        <img class="bottomimg2" style="width:366px; height:14px; display:none;" src="img/protal/phone/yinsi.png" />
-                        <br />
-                    </div>
-                	<div style=" margin:20px 20px 10px 20px;">
-                    	<img class="bottomimg1" style="width:917px; height:30px;" src="img/protal/phone/copyright-.png" />
-                        <img class="bottomimg2" style="width:437px; height:14px; display:none;" src="img/protal/phone/copyright-.png" />
-                        <br />
-                    </div>
-                </div>
-        </div>
-<script type="text/javascript">
-		window.onscroll = now;
-        $(document).ready(function(){
-        	var width = $(window).width();
-         	var heigth = $(window).height();
-          	//alert("当前的宽"+parseInt(width)+"，当前的高"+parseInt(heigth));
-          	var infoanimateLeft = parseInt(screen.height); // 获得当前分辨率
-          	var bigimg = document.getElementById("#midtopimg");  
-   			if(heigth >= width){
-
-     		};
-  		});
-		$(function() {
-			$("#btn_ckOne").click(function() {
-				var div = $(".left_banner");
-				if(div.hasClass("dest")) {
-					div.removeClass("dest").animate({left: -563}, 700);
-				} else {
-					div.addClass("dest").animate({left: 0}, 700);
-				}
-			})
-		});
-
-// 		$('.ck-slide').ckSlide({
-// 			autoPlay: false,
-// 			dir: 'x',			//淡出，x水平，y 垂直
-// 		});
-
-		function now(){
-				var top = document.body.scrollTop;
-				var widthone = $(window).width();
-				var heigthtwo = $(window).height();
-				if(widthone >= heigthtwo){
-					if(top < 700){
-						$("#imgselectnowone").css({"display":"none"});
-						$("#imgselectnowtwo").css({"display":"none"});
-					}
-					if(top >= 700 && top < 1700) {
-						$("#imgselectnowone").css({"display":"block"});
-						$("#imgselectnowtwo").css({"display":"none"});
-					}
-					if(top >= 1700) {
-						$("#imgselectnowone").css({"display":"none"});
-						$("#imgselectnowtwo").css({"display":"block"});
-					}
-				}
-				if(widthone <= heigthtwo){
-					if(top < 900){
-						$("#imgselectnowone").css({"display":"none"});
-						$("#imgselectnowtwo").css({"display":"none"});
-					}
-					if(top >= 900 && top < 2500) {
-						$("#imgselectnowone").css({"display":"block"});
-						$("#imgselectnowtwo").css({"display":"none"});
-					}
-					if(top >= 2500) {
-						$("#imgselectnowone").css({"display":"none"});
-						$("#imgselectnowtwo").css({"display":"block"});
-					}
-				}
-		}
-    </script>
-</body>
+		<!-- 弹出框 -->
+		
+		<div id="modal-overlay"> 
+		    <div class="modal-data">
+				<a href="javascript:void(0)" onclick="overlay()"><div class="clear">×</div></a>
+				<p class="p_model_title">预约我们的服务</p>
+				<input class="ipt_porject" type="text" placeholder="请输入您的手机号" />
+				<select class="ipt_porject" >
+					<option value="0">请输入你要预约的服务类型</option>
+					<option value="1">康复瘦腿</option>
+					<option value="2">康复瘦腿</option>
+					<option value="3">康复瘦腿</option>
+					<option value="4">康复瘦腿</option>
+				</select>
+				<input class="ipt_porject" type="text" placeholder="若有其他要求可在此处填写" />
+				<button class="btn_onclick">立即预约</button>
+			</div>	
+		</div>
+		
+		<script type="text/javascript">
+			function overlay(){
+			    var e1 = document.getElementById('modal-overlay');           
+			    e1.style.visibility =  (e1.style.visibility == "visible"  ) ? "hidden" : "visible";
+			}
+		</script>
+	</body>
 </html>
