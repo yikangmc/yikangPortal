@@ -124,7 +124,7 @@ var _hmt = _hmt || [];
 		</div>
 
 		<!-- 弹出框 -->
-		<div id="modal-overlay"> 
+		<div id="modal-overlay">
 		    <div class="modal-data">
 				<a href="javascript:void(0)" onclick="overlay()"><div class="clear">×</div></a>
 				<p class="p_model_title">预约我们的服务</p>
@@ -138,7 +138,7 @@ var _hmt = _hmt || [];
 				</select>
 				<input class="ipt_porject" type="text" placeholder="若有其他要求可在此处填写" />
 				<button class="btn_onclick">立即预约</button>
-			</div>	
+			</div>
 		</div>
 		
 		<script type="text/javascript">

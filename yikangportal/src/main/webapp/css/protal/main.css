@@ -73,14 +73,15 @@ html {overflow-y: scroll;}
 .ser_p_bottom button:hover { background: #33afe3; }
 
 .modal-data{
-	position: fixed;
+    position:relative;
 	top: 20%;
 	left: 0; right: 0;
 	width: 640px;
 	height: 426px;
+    z-index: 1001;
     text-align:center;
     margin: 100px auto;
-	background: #fff;
+	background-color: #fff;
 	border: 3px #999 solid;
 	border-radius: 12px;
 	padding: 8 0 10 0;
@@ -95,6 +96,7 @@ html {overflow-y: scroll;}
     height:100%;
     text-align:center;
     z-index: 1000;
+    background:rgba(0,0,0,0.5)!important;background:#000;filter:Alpha(opacity=60);
 }
 
 
