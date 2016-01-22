@@ -33,7 +33,6 @@ response.sendRedirect("/index/");
 <%-- 				<c:forEach items=""> --%>
 <!-- 					<img src="" alt="" /> -->
 <%-- 				</c:forEach> --%>
-				test
 			</div>
 		</div>
 	</div>

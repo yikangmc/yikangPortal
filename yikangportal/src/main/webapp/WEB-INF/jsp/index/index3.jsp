@@ -33,9 +33,9 @@
 			</div>
 			<div class="tit_onlys">
 				<ul>
-					<li>首页</li>
-					<li><a style="color: #000;" href="#ser">服务</a></li>
-					<li>加入我们</li>
+					<li><a href="#">首页</a></li>
+					<li><a href="#ser">服务</a></li>
+					<li><a href="#">加入我们</a></li>
 					<li><a href="javascript:void(0)" class="run"
 						onclick="overlay()"><div class="btn_porject">预约服务</div></a></li>
 				</ul>
@@ -141,7 +141,7 @@
 				<select class="ipt_porject" name="serviceItemId"  id="inputServiceItmeId">
 					<option value="">请输入你要预约的服务类型</option>
 					<c:forEach items="${data }" var="serviceItem">
-						<option value="${serviceItem.serviceItemId }">${serviceItem.serviceTitle }</option>
+						<option style="color: #000" value="${serviceItem.serviceItemId }">${serviceItem.serviceTitle }</option>
 					</c:forEach>
 				</select> 
 				<input class="ipt_porject" id="inputRemark" name="remark" maxlength="100" type="text" placeholder="若有其他要求可在此处填写" />

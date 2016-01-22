@@ -13,6 +13,7 @@ Index.prototype={
 						}else{
 							alert(data.message);
 						}
+						$("#modal-overlay").css({"visibility":"hidden"});
 					}
 				});
 			}
