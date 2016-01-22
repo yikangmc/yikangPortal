@@ -102,7 +102,7 @@
 						联系我们&nbsp;丨&nbsp; 帮助中心&nbsp;丨&nbsp; 友情</li>
 					<li><a href="mailTo:BD@stellarheal.com">服务合作：BD@stellarheal.com</a> &nbsp;&nbsp;
 						<a href="mailTo:support@stellarheal.com">投诉建议：support@stellarheal.com</a></li>
-					<li>&copy;2016易康美辰健康科技（北京）有限公司&nbsp; 京ICP证xxxxxx号-3
+					<li>&copy;2016易康美辰健康科技（北京）有限公司&nbsp; 京ICP证15059991号
 						京公网安备xxxxxxxx</li>
 				</ul>
 			</div>
