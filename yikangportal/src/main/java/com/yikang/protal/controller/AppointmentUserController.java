@@ -125,7 +125,7 @@ public class AppointmentUserController{
 	@RequestMapping
 	@ResponseBody
 	public Map<String, Object> regiestUserAndServiceItemId(ModelMap modelMap, String mobileNumber, String captcha, String userFromStr, 
-			Integer serviceItemId,
+			Long serviceItemId,
 			HttpServletRequest request) {
 
 		Map<String, Object> rtnData = new HashMap<String, Object>();
@@ -164,6 +164,51 @@ public class AppointmentUserController{
 
 		return rtnData;
 	}
+	
+	
+	
+	
+	/**
+	 * @author liushuaic
+	 * @date 2016/1/22 11:22
+	 * @desc 预约服务
+	 * 
+	 * **/
+	@RequestMapping
+	@ResponseBody
+	public Map<String, Object> regiestUserAndServiceItemIdAndRemark(ModelMap modelMap, String mobileNumber, String userFromStr, 
+			Long serviceItemId,String remark,
+			HttpServletRequest request) {
+
+		Map<String, Object> rtnData = new HashMap<String, Object>();
+			if (null != mobileNumber && null != serviceItemId) {
+				int i=appointmentUserService.insertSelective(mobileNumber, serviceItemId,remark);
+				if (i>0) {
+					rtnData.put("status",ExceptionConstants.responseSuccess.responseSuccess.code);
+					rtnData.put("message", "恭喜，您预约成功！稍等，我们有服务人员跟，您联系。谢谢！");
+				} else {
+					
+					if(i==0){
+						rtnData.put("status",ExceptionConstants.systemException.systemException.errorCode);
+						rtnData.put("message", "预约失败！");
+					}else if(i==-1){
+						rtnData.put("status",ExceptionConstants.systemException.systemException.errorCode);
+						rtnData.put("message", "您已经预约过该项服务了！");
+					}
+				}
+						
+		}else{
+			rtnData.put("status",ExceptionConstants.systemException.systemException.errorCode);
+			rtnData.put("message", "还未获取验证码 ！");
+		}
+
+		return rtnData;
+	}
+	
+	
+	
+	
+	
 
 	/**
 	 * @author liushuaic

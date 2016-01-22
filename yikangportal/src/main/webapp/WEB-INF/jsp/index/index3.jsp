@@ -1,30 +1,30 @@
+
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%@ include file="/common/protalhead.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta name="keywords" content="易康美辰,预约评估及服务" />
-<meta name="description" content="易康美辰,预约评估及服务" />
-<meta name="generator" content="易康美辰" />
-<meta name="author" content="易康美辰技术部" />
-<meta name="viewport"
-	content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" type="text/css"
-	href="<%=basePath%>css/protal/main.css">
-	<link href='http://fonts.useso.com/css?family=Lato:300,400,700'
-		rel='stylesheet' type='text/css'>
-		<title>易康美辰</title>
+	<meta name="keywords" content="易康美辰,预约评估及服务" />
+	<meta name="description" content="易康美辰,预约评估及服务" />
+	<meta name="generator" content="易康美辰" />
+	<meta name="author" content="易康美辰技术部" />
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="<%=basePath%>css/protal/main.css" />
+	<link href='http://fonts.useso.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css' />
+	<title>易康美辰</title>
+	<script type="text/javascript">
+		 var _hmt = _hmt || [];
+		 (function() {
+		 	var hm = document.createElement("script");
+		 	hm.src = "//hm.baidu.com/hm.js?bfa063bc01b8c0b11ee446bb9d4072a4";
+		 	var s = document.getElementsByTagName("script")[0];
+		 	s.parentNode.insertBefore(hm, s);
+		 })();
+	</script>
+	<script type="text/javascript" src="<%=basePath%>js/views/index/index3.js"></script>
 </head>
-<script>
-	var _hmt = _hmt || [];
-	(function() {
-		var hm = document.createElement("script");
-		hm.src = "//hm.baidu.com/hm.js?bfa063bc01b8c0b11ee446bb9d4072a4";
-		var s = document.getElementsByTagName("script")[0];
-		s.parentNode.insertBefore(hm, s);
-	})();
-</script>
+
 <body>
 	<div class="dv_title">
 		<div class="tit_bnr">
@@ -60,7 +60,7 @@
 		</div>
 	</div>
 	<div class="mag_banner" style="height: 400px;">
-		<img src="<%=basePath%>img/protal/mainIndex/banner2.png">
+		<img src="<%=basePath%>img/protal/mainIndex/banner2.png"/>
 	</div>
 	<div class="dv_info">
 		<div class="dv_ser_title">
@@ -76,15 +76,15 @@
 						<li>
 							<div class="ser_info">
 								<div class="ser_model">
-									<img style="width: 100%" src="${serviceItem.webPicUrl}">
+									<img style="width: 100%" src="${serviceItem.webPicUrl}"/>
 										<p class="ser_p_title">${serviceItem.serviceTitle}</p>
 										<hr class="hrs" />
 										<p class="ser_p_body">${serviceItem.serviceContent}</p>
 								</div>
 								<div class="ser_p_bottom">
 									￥${serviceItem.servicePrice}
-									<button class="btn_cikinfo">
-										<a href="">预约服务</a>
+									<button class="btn_cikinfo" data-service-item-id="${serviceItem.serviceItemId }" onclick="index.fillForm(this)">
+										<a href="javascript:void(0)">预约服务</a>
 									</button>
 								</div>
 							</div>
@@ -132,19 +132,22 @@
 
 	<!-- 弹出框 -->
 	<div id="modal-overlay">
-		<div class="modal-data">
-			<a href="javascript:void(0)" onclick="overlay()"><div
-					class="clear">×</div></a>
-			<p class="p_model_title">预约我们的服务</p>
-			<input class="ipt_porject" type="text" placeholder="请输入您的手机号" />
-			<select class="ipt_porject">
-				<option value="">请输入你要预约的服务类型</option>
-				<c:forEach items="${data }" var="serviceItem">
-					<option value="${serviceItem.serviceItemId }">${serviceItem.serviceTitle }</option>
-				</c:forEach>
-			</select> <input class="ipt_porject" type="text" placeholder="若有其他要求可在此处填写" />
-			<button class="btn_onclick">立即预约</button>
-		</div>
+		<form id="formServiceForm">
+			<div class="modal-data">
+				<a href="javascript:void(0)" onclick="overlay()">
+				<div class="clear">×</div></a>
+				<p class="p_model_title">预约我们的服务</p>
+				<input class="ipt_porject" name="mobileNumber" id="inputMobileNumber" maxlength="11" type="text" placeholder="请输入您的手机号" />
+				<select class="ipt_porject" name="serviceItemId"  id="inputServiceItmeId">
+					<option value="">请输入你要预约的服务类型</option>
+					<c:forEach items="${data }" var="serviceItem">
+						<option value="${serviceItem.serviceItemId }">${serviceItem.serviceTitle }</option>
+					</c:forEach>
+				</select> 
+				<input class="ipt_porject" id="inputRemark" name="remark" maxlength="100" type="text" placeholder="若有其他要求可在此处填写" />
+				<button class="btn_onclick" type="button" onclick="index.getServiceItem()">立即预约</button>
+			</div>
+		</form>
 	</div>
 
 	<script type="text/javascript">

@@ -1,5 +1,6 @@
 package com.yikang.protal.manager;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -49,6 +50,20 @@ public class AppointmentUserManager {
 	 * */
 	public List<AppointmentUser> findAppointmentUserByMobileNumber(String mobileNumber){
 		return appointmentUserDao.findAppointmentUserByMobileNumber(mobileNumber);
+	}
+	
+	
+	/**
+	 * @author liushuaic
+	 * @date 2016/1/22 11:38
+	 * @desc 查询查询数据是否重复
+	 * */
+	public List<AppointmentUser> findAppointmentUserByMobileNumberAndServiceItemId(String mobileNumber,Long serviceItemId){
+		Map<String,Object> paramData=new HashMap<String,Object>();
+		paramData.put("mobileNumber", mobileNumber);
+		paramData.put("serviceItemId", serviceItemId);
+		
+		return appointmentUserDao.findAppointmentUserByMobileNumberAndServiceItemId(paramData);
 	}
 	
 }

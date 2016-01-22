@@ -36,5 +36,14 @@ public interface AppointmentUserDao {
     List<AppointmentUser> findAppointmentUserByMobileNumber(@Param("mobileNumber") String mobileNumber);
     
     
+    /**
+     * @author liushuaic
+     * @date 2015/09/21 16:22
+     * @param mobileNumber
+     * @param serviceItemId
+     * */
+    List<AppointmentUser> findAppointmentUserByMobileNumberAndServiceItemId(Map<String,Object> paramMap);
+    
+    
 
 }

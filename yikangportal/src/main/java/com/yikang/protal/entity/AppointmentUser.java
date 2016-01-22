@@ -3,113 +3,123 @@ package com.yikang.protal.entity;
 import java.util.Date;
 
 public class AppointmentUser {
-	private Long appointmentUserId;
+    private Long appointmentUserId;
 
-	private Byte sex;
+    private Byte sex;
 
-	private Date createTime;
+    private Date createTime;
 
-	private Date updateTime;
+    private Date updateTime;
 
-	private Long createUserId;
+    private Long createUserId;
 
-	private Byte returnVisit;
+    private Byte returnVisit;
 
-	private Byte userStatus;
+    private Byte userStatus;
 
-	private Byte haveSenior;
+    private Byte haveSenior;
 
-	private Long returnVisitUserId;
+    private Long returnVisitUserId;
 
-	private String mobileNumber;
+    private String mobileNumber;
 
-	private Long serviceItmeId;
+    private Long serviceItemId;
 
-	public Long getAppointmentUserId() {
-		return appointmentUserId;
-	}
+    private String remarks;
 
-	public void setAppointmentUserId(Long appointmentUserId) {
-		this.appointmentUserId = appointmentUserId;
-	}
+    public Long getAppointmentUserId() {
+        return appointmentUserId;
+    }
 
-	public Byte getSex() {
-		return sex;
-	}
+    public void setAppointmentUserId(Long appointmentUserId) {
+        this.appointmentUserId = appointmentUserId;
+    }
 
-	public void setSex(Byte sex) {
-		this.sex = sex;
-	}
+    public Byte getSex() {
+        return sex;
+    }
 
-	public Date getCreateTime() {
-		return createTime;
-	}
+    public void setSex(Byte sex) {
+        this.sex = sex;
+    }
 
-	public void setCreateTime(Date createTime) {
-		this.createTime = createTime;
-	}
+    public Date getCreateTime() {
+        return createTime;
+    }
 
-	public Date getUpdateTime() {
-		return updateTime;
-	}
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
 
-	public void setUpdateTime(Date updateTime) {
-		this.updateTime = updateTime;
-	}
+    public Date getUpdateTime() {
+        return updateTime;
+    }
 
-	public Long getCreateUserId() {
-		return createUserId;
-	}
+    public void setUpdateTime(Date updateTime) {
+        this.updateTime = updateTime;
+    }
 
-	public void setCreateUserId(Long createUserId) {
-		this.createUserId = createUserId;
-	}
+    public Long getCreateUserId() {
+        return createUserId;
+    }
 
-	public Byte getReturnVisit() {
-		return returnVisit;
-	}
+    public void setCreateUserId(Long createUserId) {
+        this.createUserId = createUserId;
+    }
 
-	public void setReturnVisit(Byte returnVisit) {
-		this.returnVisit = returnVisit;
-	}
+    public Byte getReturnVisit() {
+        return returnVisit;
+    }
 
-	public Byte getUserStatus() {
-		return userStatus;
-	}
+    public void setReturnVisit(Byte returnVisit) {
+        this.returnVisit = returnVisit;
+    }
 
-	public void setUserStatus(Byte userStatus) {
-		this.userStatus = userStatus;
-	}
+    public Byte getUserStatus() {
+        return userStatus;
+    }
 
-	public Byte getHaveSenior() {
-		return haveSenior;
-	}
+    public void setUserStatus(Byte userStatus) {
+        this.userStatus = userStatus;
+    }
 
-	public void setHaveSenior(Byte haveSenior) {
-		this.haveSenior = haveSenior;
-	}
+    public Byte getHaveSenior() {
+        return haveSenior;
+    }
 
-	public Long getReturnVisitUserId() {
-		return returnVisitUserId;
-	}
+    public void setHaveSenior(Byte haveSenior) {
+        this.haveSenior = haveSenior;
+    }
 
-	public void setReturnVisitUserId(Long returnVisitUserId) {
-		this.returnVisitUserId = returnVisitUserId;
-	}
+    public Long getReturnVisitUserId() {
+        return returnVisitUserId;
+    }
 
-	public String getMobileNumber() {
-		return mobileNumber;
-	}
+    public void setReturnVisitUserId(Long returnVisitUserId) {
+        this.returnVisitUserId = returnVisitUserId;
+    }
 
-	public void setMobileNumber(String mobileNumber) {
-		this.mobileNumber = mobileNumber == null ? null : mobileNumber.trim();
-	}
+    public String getMobileNumber() {
+        return mobileNumber;
+    }
 
-	public Long getServiceItmeId() {
-		return serviceItmeId;
-	}
+    public void setMobileNumber(String mobileNumber) {
+        this.mobileNumber = mobileNumber == null ? null : mobileNumber.trim();
+    }
 
-	public void setServiceItmeId(Long serviceItmeId) {
-		this.serviceItmeId = serviceItmeId;
-	}
+    public Long getServiceItemId() {
+        return serviceItemId;
+    }
+
+    public void setServiceItemId(Long serviceItemId) {
+        this.serviceItemId = serviceItemId;
+    }
+
+    public String getRemarks() {
+        return remarks;
+    }
+
+    public void setRemarks(String remarks) {
+        this.remarks = remarks == null ? null : remarks.trim();
+    }
 }
