@@ -14,7 +14,7 @@ ServePrecept.prototype={
 			//预约服务
 			$.post(basePath+"invite/serveOnNew.html",$("#inviteForm").serialize(),function(data){
 				if(null !== data && data.status ==="000000"){
-					alert(data.message);
+					//alert(data.message);
 					if(null != $("#invitationCode").val()){
 						window.location.href=basePath+"invite/toServeOnNew?invitationCode="+$("#invitationCode").val();
 					}else{
