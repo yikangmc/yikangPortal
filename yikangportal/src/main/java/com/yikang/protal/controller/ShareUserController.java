@@ -262,61 +262,6 @@ public class ShareUserController {
 	public String ServeProject(){
 		return "Serve/ServeProject";
 	}
-
-	@RequestMapping
-	public String ServeProject2(){
-		return "Serve/ServeProject2";
-	}
-
-	@RequestMapping
-	public String ServeProject3(){
-		return "Serve/ServeProject3";
-	}
-
-	@RequestMapping
-	public String ServeProject4(){
-		return "Serve/ServeProject4";
-	}
-
-	@RequestMapping
-	public String ServeProject5(){
-		return "Serve/ServeProject5";
-	}
-
-	@RequestMapping
-	public String ServeProject6(){
-		return "Serve/ServeProject6";
-	}
-
-	@RequestMapping
-	public String ServeProject7(){
-		return "Serve/ServeProject7";
-	}
-
-	@RequestMapping
-	public String ServeProject8(){
-		return "Serve/ServeProject8";
-	}
-
-	@RequestMapping
-	public String ServeProject9(){
-		return "Serve/ServeProject9";
-	}
-
-	@RequestMapping
-	public String ServeProject10(){
-		return "Serve/ServeProject10";
-	}
-
-	@RequestMapping
-	public String ServeProject11(){
-		return "Serve/ServeProject11";
-	}
-
-	@RequestMapping
-	public String ServeProject12(){
-		return "Serve/ServeProject12";
-	}
 	
 	@RequestMapping
 	public String ServiceIntroduce(){

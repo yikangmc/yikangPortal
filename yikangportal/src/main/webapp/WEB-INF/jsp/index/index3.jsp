@@ -1,4 +1,3 @@
-
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%@ include file="/common/protalhead.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -10,8 +9,8 @@
 	<meta name="author" content="易康美辰技术部" />
 	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<link rel="stylesheet" type="text/css" href="<%=basePath%>css/protal/main.css" />
-	<link href='http://fonts.useso.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css' />
 	<title>易康美辰</title>
 	<script type="text/javascript">
 		 var _hmt = _hmt || [];
@@ -23,6 +22,8 @@
 		 })();
 	</script>
 	<script type="text/javascript" src="<%=basePath%>js/views/index/index3.js"></script>
+	<style type="text/css">
+	</style>
 </head>
 
 <body>
@@ -37,30 +38,28 @@
 					<li><a href="#ser">服务</a></li>
 					<li><a href="#">加入我们</a></li>
 					<li><a href="javascript:void(0)" class="run"
-						onclick="overlay()"><div class="btn_porject">预约服务</div></a></li>
+						onclick="overlay()"><button class="btn_porject">预约服务</button></a></li>
 				</ul>
 			</div>
 		</div>
 	</div>
-	<div class="mag_banner">
-		<img src="<%=basePath%>img/protal/mainIndex/banner.png" />
+	<div class="mag_banner" style="background: url(<%=basePath%>img/protal/mainIndex/banner.png) no-repeat; background-position: center; ">
 	</div>
 	<div class="dv_main">
 		<div class="dv_bodys">
 			<ul>
 				<li><img src="<%=basePath%>img/protal/mainIndex/icon_1.png" />
-				<p class="p_server">一对一定制化康复护理方案</p></li>
+			        <p class="p_server">一对一定制化康复<br />护理方案</p></li>
 				<li><img src="<%=basePath%>img/protal/mainIndex/icon_2.png" />
-				<p class="p_server">实时呼叫，实时应答及时上门护理</p></li>
+				<p class="p_server">实时呼叫，实时应答<br />及时上门护理</p></li>
 				<li><img src="<%=basePath%>img/protal/mainIndex/icon_3.png" />
-				<p class="p_server">执证康复护师提供专业康复护理服务</p></li>
+				<p class="p_server">执证康复护师<br />提供专业康复护理服务</p></li>
 				<li><img src="<%=basePath%>img/protal/mainIndex/icon_4.png" />
-				<p class="p_server">美国护理体系严格实施风控管理</p></li>
+				<p class="p_server">美国护理体系<br />严格实施风控管理</p></li>
 			</ul>
 		</div>
 	</div>
-	<div class="mag_banner" style="height: 400px;">
-		<img src="<%=basePath%>img/protal/mainIndex/banner2.png"/>
+		<div class="mag_banner" style="background: url(<%=basePath%>img/protal/mainIndex/banner2.png) no-repeat; background-position: center; height: 240px; height: 240px\9; margin-top: 270px;">
 	</div>
 	<div class="dv_info">
 		<div class="dv_ser_title">
@@ -76,34 +75,53 @@
 						<li>
 							<div class="ser_info">
 								<div class="ser_model">
-									<img style="width: 100%" src="${serviceItem.webPicUrl}"/>
+									<img style="width: 100%" src="<%=basePath%>img/test.png"/>
 										<p class="ser_p_title">${serviceItem.serviceTitle}</p>
 										<hr class="hrs" />
 										<p class="ser_p_body">${serviceItem.serviceContent}</p>
 								</div>
 								<div class="ser_p_bottom">
 									￥${serviceItem.servicePrice}
-									<button class="btn_cikinfo" data-service-item-id="${serviceItem.serviceItemId }" onclick="index.fillForm(this)">
-										<a href="javascript:void(0)">预约服务</a>
-									</button>
+									 &nbsp;|
+									<a class="btn_cikinfo" data-service-item-id="${serviceItem.serviceItemId }" onclick="index.fillForm(this)">
+										预约服务
+									</a>
+									<div style="float: right; margin-right:-68px; font-size: 10px;">►</div>
 								</div>
 							</div>
 						</li>
 					</c:if>
 				</c:forEach>
+				<!-- test -->
+				<li>
+					<div class="ser_info">
+						<div class="ser_model">
+							<img style="width: 100%" src="<%=basePath%>img/test.png"/>
+								<p class="ser_p_title">一二三四五六${serviceItem.serviceTitle}</p>
+								<hr class="hrs" />
+								<p class="ser_p_body">${serviceItem.serviceContent}文案文案文案文案文案文案文案文案文案</p>
+						</div>
+						<a data-service-item-id="${serviceItem.serviceItemId }" onclick="index.fillForm(this)">
+							<div class="btn_server">
+								<div class="font_boj font_money">￥${serviceItem.servicePrice}164.00</div>
+								<div class="font_boj font_click">预约服务</div>
+								<div style="height: 18px; margin: 8 0 6 0 ; color: #0698ba; float: left; font-size: 12px; width: 3%;">►</div>
+							</div>
+						</a>
+					</div>
+				</li>
 			</ul>
-		</div>
+		</div>	
 	</div>
 	<div class="dv_bottom">
 		<div class="bom">
 			<div class="navigation">
 				<ul>
 					<li>关于我们&nbsp;丨&nbsp; 媒体报道&nbsp;丨&nbsp; 加入我们&nbsp;丨&nbsp;
-						联系我们&nbsp;丨&nbsp; 帮助中心&nbsp;丨&nbsp; 友情</li>
+						联系我们&nbsp;丨&nbsp; 帮助中心&nbsp;丨&nbsp; 友情链接</li>
 					<li><a href="mailTo:BD@stellarheal.com">服务合作：BD@stellarheal.com</a> &nbsp;&nbsp;
 						<a href="mailTo:support@stellarheal.com">投诉建议：support@stellarheal.com</a></li>
-					<li>&copy;2016易康美辰健康科技（北京）有限公司&nbsp; 京ICP证15059991号
-						京公网安备xxxxxxxx</li>
+					<li>&copy;2016易康美辰健康科技（北京）有限公司&nbsp; 京ICP证15059991号</li>
 				</ul>
 			</div>
 			<div class="code">
@@ -155,6 +173,10 @@
 			var e1 = document.getElementById('modal-overlay');
 			e1.style.visibility = (e1.style.visibility == "visible") ? "hidden"
 					: "visible";
+		}
+
+		function btns() {
+			document.getElementById("ser_p_bottom").css();
 		}
 	</script>
 </body>

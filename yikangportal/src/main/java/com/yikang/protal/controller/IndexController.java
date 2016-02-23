@@ -24,7 +24,12 @@ public class IndexController {
 		modelMap.put("data", resData.get("data"));
 		return "index/index3";
 	}
-	
-	
+
+	@RequestMapping
+	public String mindex(ModelMap modelMap){
+		Map<String,Object> resData=serviceItemService.listServiceItem();
+		modelMap.put("data", resData.get("data"));
+		return "index/mindex";
+	}
 	
 }
