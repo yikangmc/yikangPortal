@@ -37,7 +37,7 @@
 		.dv_ser_info ul li { float: left; width: 25%; float: left; }
 		.ser_info { margin: 10 8 10 8; height: 372px; width: 210px; text-align: center; margin-bottom: 50px; }
 		.ser_model {  background: #fafafa; padding-bottom: 7px;}
-		.ser_p_title { font-size: 14px; color: #787878; padding: 13 0 13 0; }
+		.ser_p_title { font-size: 14px; color: #787878; padding: 13 0 13 0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
 		.ser_p_body { font-size: 12px; color: #787878;  padding: 13 12 0 12; }
 		.ser_p_bottom { height: 30px; background: #fff; border: #0698da 1px solid; margin-top: 14px; font-size: 14px; color: #e43535; text-align: center; line-height: 30px; }
 		.btn_cikinfo { height: 100%; width: 98px; border: 0; background: #059bda; text-align: center; line-height: 24px; float: right; color: #fff; font-size: 14px; }
@@ -82,8 +82,8 @@
 	<body>
 		<div class="title">
 			<div style="float: left;"><img  src="<%=basePath%>img/protal/indexPhone/logo.png"></div>
-			<div style="float: left; padding-top: 4px; margin-left: 96px;">首页 &nbsp; &nbsp; 服务 &nbsp; &nbsp; 加入我们</div>
-			<div style="float: left; padding: 4 0 0 60;"><a href="javascript:void(0)" class="run"
+			<div style="float: left; padding-top: 8px; margin-left: 96px;">首页 &nbsp; &nbsp; 服务 &nbsp; &nbsp; 加入我们</div>
+			<div style="float: left; padding: 8 0 0 60;"><a href="javascript:void(0)" class="run"
 						onclick="overlay()"><button class="btn_porject">预约服务</button></a></div>
 		</div>
 		<img src="<%=basePath%>img/protal/indexPhone/banner.png">
@@ -105,7 +105,7 @@
 			<ul>
 				<c:forEach items="${data }" var="serviceItem"  varStatus="status">
 					<c:if test="${serviceItem.webPicUrl != null and  serviceItem.webPicUrl != '' and (serviceItem.serviceItemId==1 or serviceItem.serviceItemId==2 or  serviceItem.serviceItemId==5 or serviceItem.serviceItemId==6 )}">
-						<li>
+						<li style="width: 50%; padding-left: 12px;">
 							<div class="ser_info">
 								<div class="ser_model">
 									<img style="width: 100%" src="${serviceItem.webPicUrl}"/>
@@ -116,7 +116,7 @@
 								<div class="ser_p_bottom">
 									￥${serviceItem.servicePrice}
 									<button class="btn_cikinfo" data-service-item-id="${serviceItem.serviceItemId }" onclick="index.fillForm(this)">
-										<a href="javascript:void(0)">预约服务</a>
+										<a style="color: #fff;" href="javascript:void(0)">预约服务</a>
 									</button>
 								</div>
 							</div>

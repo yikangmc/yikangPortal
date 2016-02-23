@@ -82,34 +82,15 @@
 								</div>
 								<div class="ser_p_bottom">
 									￥${serviceItem.servicePrice}
-									 &nbsp;|
-									<a class="btn_cikinfo" data-service-item-id="${serviceItem.serviceItemId }" onclick="index.fillForm(this)">
-										预约服务
-									</a>
-									<div style="float: right; margin-right:-68px; font-size: 10px;">►</div>
+									<button class="btn_cikinfo" style="background: #fff; margin-top: 2px;" data-service-item-id="${serviceItem.serviceItemId }" onclick="index.fillForm(this)">
+										<a style="color: #0698ba;" href="javascript:void(0)">预约服务</a>
+									</button>
 								</div>
 							</div>
 						</li>
+						
 					</c:if>
 				</c:forEach>
-				<!-- test -->
-				<li>
-					<div class="ser_info">
-						<div class="ser_model">
-							<img style="width: 100%" src="${serviceItem.webPicUrl}"/>
-								<p class="ser_p_title">${serviceItem.serviceTitle}</p>
-								<hr class="hrs" />
-								<p class="ser_p_body">${serviceItem.serviceContent}</p>
-						</div>
-						<a data-service-item-id="${serviceItem.serviceItemId }" onclick="index.fillForm(this)">
-							<div class="btn_server">
-								<div class="font_boj font_money">￥${serviceItem.servicePrice}164.00</div>
-								<div class="font_boj font_click">预约服务</div>
-								<div style="height: 18px; margin: 8 0 6 0 ; color: #0698ba; float: left; font-size: 12px; width: 3%;">►</div>
-							</div>
-						</a>
-					</div>
-				</li>
 			</ul>
 		</div>	
 	</div>
