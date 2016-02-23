@@ -75,7 +75,7 @@
 						<li>
 							<div class="ser_info">
 								<div class="ser_model">
-									<img style="width: 100%" src="<%=basePath%>img/test.png"/>
+									<img style="width: 100%" src="${serviceItem.webPicUrl}"/>
 										<p class="ser_p_title">${serviceItem.serviceTitle}</p>
 										<hr class="hrs" />
 										<p class="ser_p_body">${serviceItem.serviceContent}</p>
@@ -96,10 +96,10 @@
 				<li>
 					<div class="ser_info">
 						<div class="ser_model">
-							<img style="width: 100%" src="<%=basePath%>img/test.png"/>
-								<p class="ser_p_title">一二三四五六${serviceItem.serviceTitle}</p>
+							<img style="width: 100%" src="${serviceItem.webPicUrl}"/>
+								<p class="ser_p_title">${serviceItem.serviceTitle}</p>
 								<hr class="hrs" />
-								<p class="ser_p_body">${serviceItem.serviceContent}文案文案文案文案文案文案文案文案文案</p>
+								<p class="ser_p_body">${serviceItem.serviceContent}</p>
 						</div>
 						<a data-service-item-id="${serviceItem.serviceItemId }" onclick="index.fillForm(this)">
 							<div class="btn_server">

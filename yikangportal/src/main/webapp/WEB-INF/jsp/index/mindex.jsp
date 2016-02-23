@@ -104,11 +104,11 @@
 		<div class="dv_ser_info">
 			<ul>
 				<c:forEach items="${data }" var="serviceItem"  varStatus="status">
-					<c:if test="${serviceItem.webPicUrl != null and  serviceItem.webPicUrl != '' and status.index<4}">
+					<c:if test="${serviceItem.webPicUrl != null and  serviceItem.webPicUrl != '' and (serviceItem.serviceItemId==1 or serviceItem.serviceItemId==2 or  serviceItem.serviceItemId==5 or serviceItem.serviceItemId==6 )}">
 						<li>
 							<div class="ser_info">
 								<div class="ser_model">
-									<img style="width: 100%" src="<%=basePath%>img/test.png"/>
+									<img style="width: 100%" src="${serviceItem.webPicUrl}"/>
 										<p class="ser_p_title">${serviceItem.serviceTitle}</p>
 										<hr class="hrs" />
 										<p class="ser_p_body">${serviceItem.serviceContent}</p>
@@ -149,7 +149,9 @@
 				<select class="ipt_porject" name="serviceItemId"  id="inputServiceItmeId">
 					<option value="">请输入你要预约的服务类型</option>
 					<c:forEach items="${data }" var="serviceItem">
-						<option style="color: #000" value="${serviceItem.serviceItemId }">${serviceItem.serviceTitle }</option>
+						<c:if test="${serviceItem.webPicUrl != null and  serviceItem.webPicUrl != '' and (serviceItem.serviceItemId==1 or serviceItem.serviceItemId==2 or  serviceItem.serviceItemId==5 or serviceItem.serviceItemId==6 )}">
+							<option style="color: #000" value="${serviceItem.serviceItemId }">${serviceItem.serviceTitle }</option>
+						</c:if>
 					</c:forEach>
 				</select> 
 				<input class="ipt_porject" id="inputRemark" name="remark" maxlength="100" type="text" placeholder="若有其他要求可在此处填写" />
