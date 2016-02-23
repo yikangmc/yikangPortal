@@ -59,7 +59,7 @@ html {overflow-y: scroll;}
 .ser_info { margin: 10 8 50 8; height: 374px; border: #f0eded 1px solid; width: 210px; text-align: center; }
 /*.ser_info:hover { border: 1px #059bda solid; padding: 0px;}*/
 .ser_model { padding-bottom: 7px;}
-.ser_p_title { font-size: 18px; color: #059bda; padding: 9 0 10 10;  text-align: left; }
+.ser_p_title { font-size: 18px; color: #059bda; padding: 9 0 10 10;  text-align: left; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
 .ser_p_body { font-size: 12px; color: #a3a9ab; line-height: 22px;  padding: 10 12 0 12; text-align: left; }
 .ser_p_bottom { height: 30px; width: 172px; background: #fff; padding: 0 6 0 6; border: #0698da 1px solid; margin: 0 20 0 10; border-radius: 10px; font-size: 14px; color: #059bda; line-height: 30px; }
 .ser_p_bottom:hover { border-color: #06b5ff; color: #06b5ff; }
@@ -73,7 +73,7 @@ html {overflow-y: scroll;}
 
 .btn_porject { border-radius: 7px; border-style:solid; border-color: #ff6363; color: #ff6363; border-width:1px; background-color: transparent; width: 90px; height: 28px; line-height: 27px; text-align: center; margin: -3 0 0 0; }
 .btn_porject:hover { background-color: #ff6363; color: #fff; }
-.btn_cikinfo { height: 100%; margin-top: 2px; width: 80px; border: 0; color: #059bda; text-align: left; line-height: 24px; float: right; font-size: 14px; }
+.btn_cikinfo { height: 20px; width: 80px; border: 0; color: #059bda; text-align: left; line-height: 24px; float: right; font-size: 14px; }
 .btn_onclick {  width: 352px; height: 66px; background: #ff6363; border: 0; font-size: 18px; color: #fff; border-radius: 7px; }
 
 .btn_server { width: 176px; height: 30px; border-radius: 10px; padding: 6 0 6 0;  border: #0698ba 1px solid; font-size: 14px; margin: 0 20 0 10; }
