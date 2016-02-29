@@ -4,14 +4,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta name="keywords" content="易康美辰,预约评估及服务" />
+	<meta name="keywords" content="护理家，术后康复训练，康复护理" />
 	<meta name="description" content="易康美辰,预约评估及服务" />
 	<meta name="generator" content="易康美辰" />
 	<meta name="author" content="易康美辰技术部" />
+	<meta name="description" content="护理家，给你的健康加满分，为您提供居家型的术后康复训练，慢性病的康复治疗，和专业的居家护理服务， 术后康复的治疗进行早期的康复疗法接入，慢性病的康复拥有护理家标准的服务体系针对性一对一提供治疗， 让您在家和医院均能享受安全的舒适的服务标准" />
 	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<link rel="stylesheet" type="text/css" href="<%=basePath%>css/protal/main.css" />
-	<title>易康美辰</title>
+	<title>护理家-居家型术后及慢性病康复护理专家</title>
 	<script type="text/javascript">
 		 var _hmt = _hmt || [];
 		 (function() {
@@ -43,7 +45,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="mag_banner" style="background: url(<%=basePath%>img/protal/mainIndex/banner.png) no-repeat; background-position: center; ">
+	<div class="mag_banner" style="background: url(<%=basePath%>img/protal/mainIndex/banner.jpg) no-repeat; background-position: center; ">
 	</div>
 	<div class="dv_main">
 		<div class="dv_bodys">
@@ -80,17 +82,19 @@
 										<hr class="hrs" />
 										<p class="ser_p_body">${serviceItem.serviceContent}</p>
 								</div>
-								<div class="ser_p_bottom">
-									￥${serviceItem.servicePrice}
-									<button class="btn_cikinfo" style="background: #fff; margin-top: 2px;" data-service-item-id="${serviceItem.serviceItemId }" onclick="index.fillForm(this)">
-										<a style="color: #0698ba;" href="javascript:void(0)">预约服务</a>
-									</button>
-								</div>
+								<a style="background: #fff; margin-top: 2px;" data-service-item-id="${serviceItem.serviceItemId }" onclick="index.fillForm(this)">
+									<div class="ser_p_bottom">
+										￥${serviceItem.servicePrice}
+										|
+											预约服务
+										>
+									</div>
+								</a>
 							</div>
 						</li>
-						
 					</c:if>
 				</c:forEach>
+				
 			</ul>
 		</div>	
 	</div>

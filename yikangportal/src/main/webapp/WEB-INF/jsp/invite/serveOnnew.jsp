@@ -3,84 +3,31 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta name="viewport" 			content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>免费服务，轻松获取</title>
-
-<script type="text/javascript">
-	var width = $(window).width();
-	var height = $(window).height();
-	if (width < 370) {
-		$("head").append('<meta name="viewport"	content="width=device-width,minimum-scale=0.7,maximum-scale=0.7,user-scalable=no" />');
-	}
-</script>
-<style type="text/css">
-
-	html,body {
-		background: #f7f7f7;
-		font-family: "Microsoft YaHei";
-		width: 100%;
-	}
-	#dv_two {
-		width: 100%;
-		margin: 0 auto;
-		position: absolute;
-		text-align: center;
-	}
-	.bodys {
-		margin-top: 40px;
-		width: 100%;
-		text-align: center;
-	}
-	#bd_title {
-		color: #019ffb;
-		font-size: 22px;
-	}
-	.bd_title_info{
-		font-size: 16px;
-		margin: 28px 60px 40px 60px;
-	}
-	.ipt_styletwo {
-		border: 0px;
-		width: 50%;
-		height: 50px;
-		font-size: 22px;
-		float: left;
-		color: #fff;
-	}
-</style>
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
+    	<script src="<%=basePath%>js/viewport740.js"></script>
+    	<link rel="stylesheet" type="text/css" href="<%=basePath%>css/protal/invite/serveOnnew.css">
+	<title>护理家</title>
 </head>
-
 	<body>
-
-		<div>
-			<img style="width: 100%;" src="<%=basePath %>img/ServeImg/ServePrecept/banner.png">
-		</div>
-		<div id="dv_two">
-			<div class="bodys">
-				<p id="bd_title">
-					不出户，给予您更好的康复服务
-				</p>
-				<p class="bd_title_info">
-					恭喜您！您已获得护理家为您提供的一次居家护理方案定制服务
-				</p>
+		<div class="dv_home" style=" background: url(<%=basePath%>img/protal/invite/backgroundmag.png) no-repeat;">
+			<div class="font_master">
+				Hi，我是${user.userName }
+				<div class="font_infos">我在<font id="tel" style="color: #f4ebca;">护理家</font><br />会时刻关注你的动态</div>
 			</div>
-			<div class="bodys_two">
-				<p style="color: #fe9941; font-size: 38px;">${user.userName }</p>
-				<p style="color: #fe9941; font-size: 34px;">
-					<c:if test="${null ne user}">
-						<font color="000">医生随诊码:</font>
-						<font color="fe9941">${user.invitationCode }</font><br />
-					</c:if>
-					<font color="000">还差下一步</font><br/>
-					<img src="<%=basePath %>img/ServeImg/ServePrecept/erweima.png"/>
+			<div class="dv_fonts">
+				<p id="font_title">不出户给予您更好的康复服务</p>
+				<p id="font_phone" style＝" color: #fc5c41;">${schedule }</p>
+				<p id="font_ck">
+					恭喜您！您已获得护理家为您提供的一次康复护理方案定制服务
 				</p>
+				<img src="<%=basePath%>img/protal/invite/202.png">
 			</div>
-			<div>
-				<a href="<%=basePath %>invite/inviteRegister${user.invitationCode ne null ? "?invitationCode=" :"" }${user.invitationCode}"><button style=" background: #f46151;" type="button" class="ipt_styletwo">现在就要预约</button></a>
-				<a href="<%=basePath %>invite/knowhulingjia" style=" font-size: 26px; color: #019ffb;" href="#"><button style=" background: #66c5f1;" type="button" class="ipt_styletwo">了解护理家</button></a>
+			<div class="dv_bottom">
+				<button class="btn_porject btn_getserver">立即预约</button>
+				<button class="btn_porject btn_gethulijia">了解护理家</button>
 			</div>
 		</div>
 	</body>
 </html>
-		

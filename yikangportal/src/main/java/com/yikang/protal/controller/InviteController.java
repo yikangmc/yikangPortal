@@ -75,7 +75,6 @@ public class InviteController {
 	public ResponseMessage serveOnNew(ModelMap modelMap,String invitationCode,HttpServletRequest request,String mobileNumber){
 		
 		ResponseMessage responseMessage=new ResponseMessage();
-		
 		if(ParamValidateUtil.validateMobileNumber(mobileNumber)){
 			// 校验邀请码
 			if(null != invitationCode && invitationCode.length()>=4 && invitationCode.length()<10){
@@ -83,10 +82,15 @@ public class InviteController {
 				invitationCode="";
 			}
 			if(shareUserService.saveShareUser(mobileNumber, "4", request,invitationCode)){
-				
+
 				User userData = userService.getUserByInvitationCode(invitationCode);
 				modelMap.put("inviteCode", invitationCode);
 				modelMap.put("user", userData);
+				
+				String mobile = mobileNumber; 
+				String ret = mobile.replaceAll("(\\d{3})(\\d{4})(\\d{4})", "$1****$3");
+				request.getSession().setAttribute("schedule", ret);
+				
 				responseMessage.setStatus(ExceptionConstants.invationException.invationSuccess.errorCode);
 				responseMessage.setMessage(ExceptionConstants.invationException.invationSuccess.errorMessage);
 				return responseMessage;
