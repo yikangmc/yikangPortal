@@ -32,6 +32,9 @@ public class IndexController {
 		}
 	}
 	
-	
+	@RequestMapping
+	public String declare(){
+		return "index/declare";
+	}
 	
 }

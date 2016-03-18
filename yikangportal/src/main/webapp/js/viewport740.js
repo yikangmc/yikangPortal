@@ -21,7 +21,7 @@ var getBrowserInfo = function () {
 var browserInfo = getBrowserInfo();
 var defaultWidth=740;
 var viewPixel=devicePixelRatio || 1;
-var densitydpi = defaultWidth / screen.width * viewPixel * 160;
+var densitydpi = defaultWidth / screen.width * viewPixel * 170;
 var metaHtml='';
 if(browserInfo.browser == 'firefox'){
     var scripts = document.getElementsByTagName('script');
