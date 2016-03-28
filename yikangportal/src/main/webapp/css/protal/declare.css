@@ -3,7 +3,7 @@
 html { padding: 0; margin: 0; height: 100%; }
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td { word-wrap: break-word;//word-break设置强行换行;normal 亚洲语言和非亚洲语言的文本规则，允许在字内换行
 word-break: normal;  margin:0; padding:0; font-family: "微软雅黑"; }
-body { color:#000; font-size:2.8em; font-family: "微软雅黑"; }
+body { color:#000; text-align: center; font-size:2.8em; font-family: "微软雅黑"; }
 td,th,caption { font-size:14px; }
 h1, h2, h3, h4, h5, h6 { font-weight:normal; font-size:100%; }
 address, caption, cite, code, dfn, em, strong, th, var { font-style:normal; font-weight:normal;}
@@ -27,7 +27,7 @@ html {overflow-y: scroll;}
 .tit_onlys a { color: #323232; }
 .tit_onlys a:hover{ color: #33afe3; }
 .tit_onlys ul li { font-size: 18px; color: #323232; padding: 27 34 20 0; text-align: right; float: left;}
-.btn_porject { border-radius: 6px; border: 1px 323232 solid; color: #323232; background-color: transparent; 
+.btn_porject { border-radius: 6px; border: 1px #ff6363 solid; color: #ff6363; background-color: transparent; 
 	width: 90px; height: 30px; text-align: center; margin: -3 0 0 0;  font-size: 15px;
 }
 .btn_porject:hover { background-color: #1795fc; border-color: #1795fc; color: #fff; }

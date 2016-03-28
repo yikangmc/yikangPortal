@@ -13,17 +13,8 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<link rel="stylesheet" type="text/css" href="<%=basePath%>css/protal/main.css" />
-	<title>护理家-居家型术后及慢性病康复护理专家</title>
-	<!-- <script>
-		 var _hmt = _hmt || [];
-		 (function() {
-		 	var hm = document.createElement("script");
-		 	hm.src = "//hm.baidu.com/hm.js?bfa063bc01b8c0b11ee446bb9d4072a4";
-		 	var s = document.getElementsByTagName("script")[0];
-		 	s.parentNode.insertBefore(hm, s);
-		 })();
-	</script> 
-	-->
+	<link rel="stylesheet" type="text/css" href="<%=basePath%>css/protal/publicStyle.css">
+	<title>佳佳康复-居家型术后及慢性病康复护理专家</title>
 	<script type="text/javascript">
 		var _hmt = _hmt || [];
 		(function() {
@@ -34,24 +25,53 @@
 		})();
 	</script>
 	<script type="text/javascript" src="<%=basePath%>js/views/index/index3.js"></script>
-	<style type="text/css">
-	</style>
 </head>
 
 <body>
+	<!-- 悬浮窗 -->
+	<div class="box">
+	<a href="javascript:;" onmouseover="onlicks()"><span id="boxtitle" class="title">在线客服</span></a>
+	    <ul>
+	        <li class="box_tel">
+	            <p class="num">400-616-0909</p>
+	            <p class="hot">全国统一服务热线</p>
+	        </li>
+	        <li>
+	        	<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=3123641388&site=qq&menu=yes">
+		        	<button id="btn">
+		        		在线QQ
+		        	</button>
+	        	</a>
+	        </li>
+	        <li><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=3123641388&site=qq&menu=yes">
+	        	<img border="0" width="100%" src="<%=basePath%>img/protal/mainIndex/202.jpg" alt="我们竭诚为您服务！" title="我们竭诚为您服务！"/></a></li>
+	        <li class="ewm">
+	        	<div id="font_left">扫一扫</div>
+	        	<div id="font_right">关注佳佳康复</div></li>
+	    </ul>
+	</div>
 	<div class="dv_title">
 		<div class="tit_bnr">
 			<div class="tit_logo">
-				<img src="<%=basePath%>img/protal/mainIndex/logo.png" />
+				<img src="<%=basePath%>img/protal/declare/logo.png" />
 			</div>
 			<div class="tit_onlys">
-				<ul>
-					<li><a href="#">首页</a></li>
-					<li><a href="#ser">服务</a></li>
-					<li><a href="#">加入我们</a></li>
-					<li><a href="javascript:void(0)" class="run"
-						onclick="overlay()"><button class="btn_porject">预约服务</button></a></li>
-				</ul>
+				<div>
+					<ul>
+						<li><a href="http://www.gethuli.com">首页</a></li>
+						<li><a href="#ser">服务</a></li>
+						<li><a href="http://www.jjkangfu.com/index/declare">加入我们</a></li>
+						<li><a href="javascript:void(0)" class="run"
+							onclick="overlay()"><button class="btn_porject">预约服务</button></a>
+						</li>
+						<li>
+							<div style="text-align: center; width:150px; position: absolute; top: 14px;">
+								<p style="font-size:20px; color: #ff3c3c;">400-616-0909</p>
+								<p style="font-size:12px; color: #515151;">周一至周五10:30-19:00</p>
+							</div>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -114,12 +134,12 @@
 			<div class="navigation">
 				<ul>
 					<li>
-						<a href="<%=basePath%>/index/declare">关于我们</a>&nbsp;丨&nbsp; 
-						<a href="<%=basePath%>/index/declare">媒体报道</a>&nbsp;丨&nbsp; 
-						<a href="<%=basePath%>/index/declare">加入我们</a>&nbsp;丨&nbsp;
-						<a href="<%=basePath%>/index/declare">联系我们</a>&nbsp;丨&nbsp; 
-						<a href="<%=basePath%>/index/declare">帮助中心</a>&nbsp;丨&nbsp; 
-						<a href="<%=basePath%>/index/declare">友情链接</a>
+						<a href="<%=basePath%>index/declare">关于我们</a>&nbsp;丨&nbsp; 
+						<a href="<%=basePath%>index/declare">媒体报道</a>&nbsp;丨&nbsp; 
+						<a href="<%=basePath%>index/declare">加入我们</a>&nbsp;丨&nbsp;
+						<a href="<%=basePath%>index/declare">联系我们</a>&nbsp;丨&nbsp; 
+						<a href="<%=basePath%>index/declare">帮助中心</a>&nbsp;丨&nbsp; 
+						<a href="<%=basePath%>index/declare">友情链接</a>
 					</li>
 					<li><a href="mailTo:BD@stellarheal.com">服务合作：BD@stellarheal.com</a> &nbsp;&nbsp;
 						<a href="mailTo:support@stellarheal.com">投诉建议：support@stellarheal.com</a></li>
@@ -133,7 +153,7 @@
 				<div class="code_liaison">
 					<p id="contact_us">联系我们</p>
 					<p id="contact_phone">400-616-0909</p>
-					<p id="contact_time">周一至周五&nbsp;9:00-20:00</p>
+					<p id="contact_time">周一至周五&nbsp;10:30-19:00</p>
 					<p id="icon">
 						<a target="_Blank"
 							href="http://weibo.com/u/5368694680">
@@ -149,7 +169,9 @@
 			</div>
 		</div>
 	</div>
-
+	<div id="dv_mode">
+		
+	</div>
 	<!-- 弹出框 -->
 	<div id="modal-overlay">
 		<form id="formServiceForm">
@@ -180,6 +202,11 @@
 		function btns() {
 			document.getElementById("ser_p_bottom").css();
 		}
+
+		function onlicks (){
+            $(".box").animate({right:"-181"});
+            if ($(".box").css("right")=="-181px") $(".box").animate({right:"0"});
+        }
 	</script>
 </body>
 </html>

@@ -5,7 +5,7 @@
 <head>
 <meta name="viewport" 			content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>了解护理家</title>
+<title>了解佳佳康复</title>
 <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" />
 <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
 <script src="<%=basePath%>js/viewport.js"></script>

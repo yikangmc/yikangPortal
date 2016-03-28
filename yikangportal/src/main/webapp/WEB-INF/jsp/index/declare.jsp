@@ -8,7 +8,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
     <link rel="stylesheet" type="text/css" href="<%=basePath%>css/protal/declare.css">
-	<title>易康美辰</title>
+	<title>佳佳康复-居家型术后及慢性病康复护理专家</title>
 	<style>
 	.ol
 	{
@@ -68,7 +68,7 @@
 
 	<!-- 关于我们 not1 -->
 	<section class="page pagenone">
-		<img style="" src="<%=basePath%>img/protal/declare/banner.png">
+		<img style="" src="<%=basePath%>img/protal/declare/banner.jpg">
 		<div class="Paragraph">
 			<p class="title">佳佳康复的品牌</p>
 			<div class="info">
@@ -76,7 +76,7 @@
 			</div>
 		</div>
 		<div class="Paragraph">
-			<p class="title">为什么做护理家</p>
+			<p class="title">为什么做佳佳康复</p>
 			<div class="info">
 				后医疗服务的巨大需求<br />
 				移动互联网的发展对行业的变革机会<br />
@@ -86,7 +86,7 @@
 			</div>
 		</div>
 		<div class="Paragraph">
-			<p class="title">护理家做什么</p>
+			<p class="title">佳佳康复做什么</p>
 			<div class="info">
 				利用移动互联网的先进模式重构后医疗服务的服务模式<br />
 				最完善的康复病种及慢性病线上问诊及增值服务互联网垂直型互动社区<br />
@@ -124,11 +124,11 @@
 					</tr>
 					<tr>
 						<td class="tbl_time">2015.11</td>
-						<td class="tbl_info">易康美辰将主营业务转为术后居家康复护理与运动康复，并建立三级平台产品护理家</td>
+						<td class="tbl_info">易康美辰将主营业务转为术后居家康复护理与运动康复，并建立三级平台产品佳佳康复</td>
 					</tr>
 					<tr>
 						<td class="tbl_time">2016.02</td>
-						<td class="tbl_info">护理家与台湾康复专家，富士康整骨复健科创始人胡家珍建立合作关系</td>
+						<td class="tbl_info">佳佳康复与台湾康复专家，富士康整骨复健科创始人胡家珍建立合作关系</td>
 					</tr>
 				</table>
 			</div>

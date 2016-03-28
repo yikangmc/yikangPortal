@@ -7,69 +7,72 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
     <script src="<%=basePath%>js/viewport.js"></script>
-    <script src="<%=basePath%>js/senAdult.js" type="text/javascript"></script>
-    <link rel="stylesheet" type="text/css" href="<%=basePath%>css/SenAdult.css">
-    <script type="text/javascript">
-        document.body.style.height = view().h+"px";
-        // 1
-        function fnLoad(){
-            var iTime = new Date().getTime();
-            var oW = id("welcome");
-            var arr= [""];
-            var BimgLoad = true;
-            var bTime = false;
-            var oTimer = 0;
-            setInterval(function(){
-                if (new Date().getTime() -iTime >= 5000) {
-                    bTime = true;
-                };
-                if(BimgLoad&&bTime) {
-                    clearInterval(oTimer);
-                    oW.style.opacity=0;
-                    //问题1：调用removeClass出错 2：没有移除pageShow
-                    setInterval(function(){
-                        end();
-                    },500)
-                };
-            },1000);
-            function end(){
-                oW.style.display="none";
-            }
-            // for ( var i = 0; i < arr.length; i++){
-            //     var oImg = new Image();
-            //     oImg.src=arr[i];
-            //     oImg.onload = function(){
+    <script src="<%=basePath%>js/senAdult.js"></script>
+    <title>测试页面</title>
+    <style type="text/css">
+        ul li { list-style-type: none; text-align: center; }
+        .box {width:180px; height:320px; background:#fff; position:fixed; right: -180px; top:250px;
+            border:1px solid #ddd; border-right: none; z-index: 100000; padding-top: 10px;
+        }
+        .box .title{ width:30px;height:105px; padding: 24 8 30 9; position: absolute;left:-31px; font-size: 14px; 
+            background:#ff8484;top:120px;color:#fff;line-height:15px;text-align: center;vertical-align: middle;
+            border-radius:5px 0 0 5px; cursor: pointer;
+        }
 
-            //     }
-            // }
+        .box ul .box_tel .num{ font-size: 22px; color: #e66f70; font-weight: bold; font-family: 微软雅黑; }
+        .box ul .box_tel .hot { color: #999999; font-size: 12px; }
+        .box ul #btn { border-radius: 4px; background-color: #54b0fb; width: 87%; height: 32px; font-family: Arial;
+            border: 0px; color: #fff; letter-spacing: 1.5px; word-spacing: 1.5px; margin-bottom: 6px;
+        }
+        .box ul .ewm{ font-size: 16px; color: #999999; margin-top: -4px; }
+        .box #font_left { width: 50px; float: left; margin-left: 12px; text-align: left; }
+        .box #font_right { width: 100px; float: right; margin-right: 12px; text-align: right; }
+    </style>
+    <script type="text/javascript">
+        function onlicks (){
+            // $(".box").animate({right:"-181"});
+            // if ($(".box").css("right")=="-181px") $(".box").animate({right:"0"});
+            var box = document.getElementById('box');
+            if (box.style.right == "-180px") {
+                for (j = 0;j < 180; j++){
+                    setTimeout(function(){
+                        var right = box.style.right ? box.style.right : 0;
+                        right = parseInt(right) + 1;
+                        box.style.right = right;
+                    },j);
+                }
+            } else {
+                for (i = 0;i < 180; i++){
+                    setTimeout(function(){
+                        var right = box.style.right ? box.style.right : 0;
+                        right = parseInt(right) - 1;
+                        box.style.right = right;
+                    },i);
+                }
+            }
         }
     </script>
-    <title>纯CSS下拉框</title>
 </head>
     <body>
-        <section class="page pageShow" id="welcome">
-            <div class="tree">
-                <span class="1"><img src="<%=basePath%>img/protal/invite/yun.png" /></span>
-                <img src="<%=basePath%>img/protal/indexPhone/logo.png">
-            </div>
-            <div id="logo">
-                易康美晨健康科技（北京）健康科技有限公司
-            </div>
-        </section>
-        <script type="text/javascript">fnLoad();</script>
-        <section class="page">上传成功</section>
-        <section class="page">表单页</section>
-        <section class="page">新闻页</section>
-        <section class="page">跳转页</section>
-        <section class="page pageShow">
-            <section id="tabPic">
-                <ul id="picList">
-                    <li><img src=""></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </section>
-        </section>
+    <!-- 悬浮窗 -->
+    <div class="box" id="box">
+    <a href="javascript:;" onmouseover="onlicks()"><span class="title">关闭窗口</span></a>
+        <ul>
+            <li class="box_tel">
+                <p class="num">400-616-0909</p>
+                <p class="hot">全国统一服务热线</p>
+            </li>
+            <li>
+                <button id="btn">
+                    在线QQ
+                </button>
+            </li>
+            <li><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=3123641388&site=qq&menu=yes">
+                <img border="0" width="100%" src="<%=basePath%>img/protal/mainIndex/202.jpg" alt="我们竭诚为您服务！" title="我们竭诚为您服务！"/></a></li>
+            <li class="ewm">
+                <div id="font_left">扫一扫</div>
+                <div id="font_right">关注佳佳康复</div></li>
+        </ul>
+    </div>
     </body>
 </html>

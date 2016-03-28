@@ -12,7 +12,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     	<script src="<%=basePath%>js/viewport740.js"></script>
     	<link rel="stylesheet" type="text/css" href="<%=basePath%>css/protal/mainm.css">
-	<title>护理家-居家型术后及慢性病康复护理专家</title>
+	<title>佳佳康复-居家型术后及慢性病康复护理专家</title>
 	<script type="text/javascript">
 		 var _hmt = _hmt || [];
 		 (function() {
@@ -66,6 +66,66 @@
 						</li>
 						</c:if>
 					</c:forEach>
+						<li>
+							<div class="ser_info">
+								<img src="<%=basePath%>img/indextest.jpg">
+								<img src="${serviceItem.webPicUrl}"><br />
+								<p class="ser_title">${serviceItem.serviceTitle}康复康复</p>
+								<hr class="hrs" />
+								<p class="ser_infos">${serviceItem.serviceContent}康复康复康复康复康复康复康复康复康复康复康复康复</p>
+								<a data-service-item-id="${serviceItem.serviceItemId }" onclick="index.fillForm(this)">
+									<div class="btn_porject">
+										<font class="btn_money">￥213.00${serviceItem.servicePrice}&nbsp;</font>|&nbsp;
+										<font class="btn_getser">预约服务</font>&nbsp;>
+									</div>
+								</a>
+							</div>
+						</li>
+						<li>
+							<div class="ser_info">
+								<img src="<%=basePath%>img/indextest.jpg">
+								<img src="${serviceItem.webPicUrl}"><br />
+								<p class="ser_title">${serviceItem.serviceTitle}康复康复</p>
+								<hr class="hrs" />
+								<p class="ser_infos">${serviceItem.serviceContent}康复康复康复康复康复康复康复康复康复康复康复康复</p>
+								<a data-service-item-id="${serviceItem.serviceItemId }" onclick="index.fillForm(this)">
+									<div class="btn_porject">
+										<font class="btn_money">￥213.00${serviceItem.servicePrice}&nbsp;</font>|&nbsp;
+										<font class="btn_getser">预约服务</font>&nbsp;>
+									</div>
+								</a>
+							</div>
+						</li>
+						<li>
+							<div class="ser_info">
+								<img src="<%=basePath%>img/indextest.jpg">
+								<img src="${serviceItem.webPicUrl}"><br />
+								<p class="ser_title">${serviceItem.serviceTitle}康复康复</p>
+								<hr class="hrs" />
+								<p class="ser_infos">${serviceItem.serviceContent}康复康复康复康复康复康复康复康复康复康复康复康复</p>
+								<a data-service-item-id="${serviceItem.serviceItemId }" onclick="index.fillForm(this)">
+									<div class="btn_porject">
+										<font class="btn_money">￥213.00${serviceItem.servicePrice}&nbsp;</font>|&nbsp;
+										<font class="btn_getser">预约服务</font>&nbsp;>
+									</div>
+								</a>
+							</div>
+						</li>
+						<li>
+							<div class="ser_info">
+								<img src="<%=basePath%>img/indextest.jpg">
+								<img src="${serviceItem.webPicUrl}"><br />
+								<p class="ser_title">${serviceItem.serviceTitle}康复康复</p>
+								<hr class="hrs" />
+								<p class="ser_infos">${serviceItem.serviceContent}康复康复康复康复康复康复康复康复康复康复康复康复</p>
+								<a data-service-item-id="${serviceItem.serviceItemId }" onclick="index.fillForm(this)">
+									<div class="btn_porject">
+										<font class="btn_money">￥213.00${serviceItem.servicePrice}&nbsp;</font>|&nbsp;
+										<font class="btn_getser">预约服务</font>&nbsp;>
+									</div>
+								</a>
+							</div>
+						</li>
 						<li>
 							<div class="ser_info">
 								<img src="<%=basePath%>img/indextest.jpg">

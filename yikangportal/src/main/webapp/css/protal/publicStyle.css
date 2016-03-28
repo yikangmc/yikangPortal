@@ -1,0 +1,18 @@
+ul li { list-style-type: none; }
+
+.box {width:180px; height:320px; background:#fff; position:fixed; top:250px; right:0px; 
+	border:1px solid #ddd; border-right: none; z-index: 100000; padding-top: 10px;
+}
+.box .title{ width:30px;height:105px; padding: 24 8 30 9; position: absolute;left:-31px; font-size: 14px; 
+	background:#ff8484;top:120px;color:#fff;line-height:15px;text-align: center;vertical-align: middle;
+	border-radius:5px 0 0 5px; cursor: pointer;
+}
+
+.box ul .box_tel .num{ font-size: 22px; color: #e66f70; font-weight: bold; font-family: 微软雅黑; }
+.box ul .box_tel .hot { color: #999999; font-size: 12px; }
+.box ul #btn { border-radius: 4px; background-color: #54b0fb; width: 87%; height: 32px; font-family: Arial;
+	border: 0px; color: #fff; letter-spacing: 1.5px; word-spacing: 1.5px; margin-bottom: 6px;
+}
+.box ul .ewm{ font-size: 16px; color: #999999; margin-top: -4px; }
+.box #font_left { width: 50px; float: left; margin-left: 12px; text-align: left; }
+.box #font_right { width: 100px; float: right; margin-right: 12px; text-align: right; }
