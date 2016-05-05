@@ -33,7 +33,9 @@ public class IndexController {
 	}
 	
 	@RequestMapping
-	public String declare(){
+	public String declare(ModelMap modelMap,HttpServletRequest request){
+		Map<String,Object> resData=serviceItemService.listServiceItem();
+		modelMap.put("data", resData.get("data"));
 		return "index/declare";
 	}
 	

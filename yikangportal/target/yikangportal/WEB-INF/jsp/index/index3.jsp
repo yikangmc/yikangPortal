@@ -30,7 +30,7 @@
 <body>
 	<!-- 悬浮窗 -->
 	<div class="box">
-	<a href="javascript:;" onclick="onlicks()"><span class="title">在线客服</span></a>
+	<a href="javascript:;" onmouseover="onlicks()"><span id="boxtitle" class="title">在线客服</span></a>
 	    <ul>
 	        <li class="box_tel">
 	            <p class="num">400-616-0909</p>
@@ -53,7 +53,9 @@
 	<div class="dv_title">
 		<div class="tit_bnr">
 			<div class="tit_logo">
-				<img src="<%=basePath%>img/protal/declare/logo.png" />
+				<a href="http://www.gethuli.com">
+					<img src="<%=basePath%>img/protal/declare/logo.png" />
+				</a>
 			</div>
 			<div class="tit_onlys">
 				<div>
@@ -107,9 +109,7 @@
 						<li>
 							<div class="ser_info">
 								<div class="ser_model">
-									
-									<img style="width: 100%" src="<%=basePath%>img/indextest.jpg"/>
-									<!-- <img style="width: 100%" src="${serviceItem.webPicUrl}"/> -->
+									<img style="width: 100%" src="${serviceItem.webPicUrl}"/>
 										<p class="ser_p_title">${serviceItem.serviceTitle}</p>
 										<hr class="hrs" />
 										<p class="ser_p_body">${serviceItem.serviceContent}</p>

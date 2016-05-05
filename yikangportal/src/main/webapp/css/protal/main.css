@@ -81,11 +81,11 @@ html {overflow-y: scroll;}
 }
 .p_model_title { font-size: 18px; padding: 23 0 23 0; color: #323232;}
 
-.btn_porject { border-radius: 7px; border-style:solid; border-color: #ff6363; color: #ff6363; 
+.btn_porject { border-radius: 7px; border-style:solid; border-color: #616161; color: #616161; 
     border-width:1px; background-color: transparent; width: 90px; height: 28px; 
     line-height: 28px; text-align: center; font-size: 16px; margin: -3 0 0 0; 
 }
-.btn_porject:hover { background-color: #ff6363; color: #fff; }
+.btn_porject:hover { background-color: #1795fc; border-color: #1795fc; color: #fff; }
 .btn_cikinfo { height: 20px; width: 80px; border: 0; color: #059bda; text-align: left; line-height: 24px; 
     float: right; font-size: 14px; 
 }

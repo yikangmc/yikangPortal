@@ -19,7 +19,6 @@
 		border-bottom: 2px #1795fc solid;
 		color: #1795fc;
 	}
-
 	.ol a {
 		color: #505050;
 	}
@@ -27,21 +26,32 @@
 		color: #1795fc;
 	}
 	</style>
+	<script type="text/javascript">
+		function overlay() {
+			var e1 = document.getElementById('modal-overlay');
+			e1.style.visibility = (e1.style.visibility == "visible") ? "hidden"
+					: "visible";
+		}
+
+	</script>
 </head>
 	<body>
 	<div class="dv_title">
 		<div class="tit_bnr">
 			<div class="tit_logo">
-				<img src="<%=basePath%>img/protal/declare/logo.png" />
+				<a href="http://www.gethuli.com">
+					<img src="<%=basePath%>img/protal/declare/logo.png" />
+				</a>
 			</div>
 			<div class="tit_onlys">
 				<div>
 					<ul>
 						<li><a href="http://www.gethuli.com">首页</a></li>
-						<li><a href="#ser">服务</a></li>
+						<li><a href="http://www.gethuli.com/#ser">服务</a></li>
 						<li><a href="#">加入我们</a></li>
-						<li><a href="javascript:void(0)" class="run"
-							onclick="overlay()"><button class="btn_porject">预约服务</button></a>
+						<li><a href="javascript:void(0)" class="run" onclick="overlay()">
+								<button class="btn_porject">预约服务</button>
+							</a>
 						</li>
 						<li>
 							<div style="text-align: center; width:150px; position: absolute; top: 14px;">
@@ -97,7 +107,7 @@
 		<div class="Paragraph">
 			<p class="title">佳佳康复的发展历程</p>
 			<div class="info">
-				<table>
+				<table style="margin-top: 8px;">
 					<tr>
 						<td class="tbl_time">2015.04</td>
 						<td class="tbl_info">公司成立，以建立中国诊后大健康平台为己任而努力经营，方向为以深度医疗服务为切入点推向全国，<br />以期后期建立诊后大健康数据平台</td>
@@ -353,17 +363,38 @@
 			<span><a href="http://www.lvzheng.com" target="_Blank">小微律政</a></span>
 		</div>
 	</section>
+
+	<!-- 弹出框 -->
+	<div id="modal-overlay">
+		<form id="formServiceForm">
+			<div class="modal-data">
+				<a href="javascript:void(0)" onclick="overlay()">
+				<div class="clear">×</div></a>
+				<p class="p_model_title">预约我们的服务</p>
+				<input class="ipt_porject" name="mobileNumber" id="inputMobileNumber" maxlength="11" type="text" placeholder="请输入您的手机号" />
+				<select class="ipt_porject" name="serviceItemId"  id="inputServiceItmeId">
+					<option value="">请输入你要预约的服务类型</option>
+					<c:forEach items="${data }" var="serviceItem">
+						<option style="color: #000" value="${serviceItem.serviceItemId }">${serviceItem.serviceTitle }</option>
+					</c:forEach>
+				</select> 
+				<input class="ipt_porject" id="inputRemark" name="remark" maxlength="100" type="text" placeholder="若有其他要求可在此处填写" />
+				<button class="btn_onclick" type="button" onclick="index.getServiceItem()">立即预约</button>
+			</div>
+		</form>
+	</div>
+
 	<div class="dv_bottom">
 		<div class="bom">
 			<div class="navigation2">
 				<ul>
 					<li>
-						<a href="<%=basePath%>/index/declare">关于我们</a>&nbsp;丨&nbsp; 
-						<a href="<%=basePath%>/index/declare">媒体报道</a>&nbsp;丨&nbsp; 
-						<a href="<%=basePath%>/index/declare">加入我们</a>&nbsp;丨&nbsp;
-						<a href="<%=basePath%>/index/declare">联系我们</a>&nbsp;丨&nbsp; 
-						<a href="<%=basePath%>/index/declare">帮助中心</a>&nbsp;丨&nbsp; 
-						<a href="<%=basePath%>/index/declare">友情链接</a>
+						<a href="<%=basePath%>index/declare">关于我们</a>&nbsp;丨&nbsp; 
+						<a href="<%=basePath%>index/declare">媒体报道</a>&nbsp;丨&nbsp; 
+						<a href="<%=basePath%>index/declare">加入我们</a>&nbsp;丨&nbsp;
+						<a href="<%=basePath%>index/declare">联系我们</a>&nbsp;丨&nbsp; 
+						<a href="<%=basePath%>index/declare">帮助中心</a>&nbsp;丨&nbsp; 
+						<a href="<%=basePath%>index/declare">友情链接</a>
 					</li>
 					<li><a href="mailTo:BD@stellarheal.com">服务合作：BD@stellarheal.com</a> &nbsp;&nbsp;
 						<a href="mailTo:support@stellarheal.com">投诉建议：support@stellarheal.com</a></li>
@@ -384,17 +415,16 @@
 							<img src="<%=basePath%>img/protal/mainIndex/xl1.png"
 							onMouseOver="this.src='<%=basePath%>img/protal/mainIndex/xl.png'"
 							onMouseOut="this.src='<%=basePath%>img/protal/mainIndex/xl1.png'"/>
-						</a> &nbsp; 
-						<a target="_Blank" href=""> <img
+						</a> &nbsp; <a target="_Blank" href=""> <img
 							src="<%=basePath%>img/protal/mainIndex/yx.png"
 							onMouseOver="this.src='<%=basePath%>img/protal/mainIndex/yx1.png'"
-							onMouseOut="this.src='<%=basePath%>img/protal/mainIndex/yx.png'"/>
-						</a>
+							onMouseOut="this.src='<%=basePath%>img/protal/mainIndex/yx.png'"/></a>
 					</p>
 				</div>
 			</div>
 		</div>
 	</div>
+
 	<script type="text/javascript">
 		var ico = function(n){
 			return document.querySelectorAll(n);
@@ -404,16 +434,37 @@
 			function(i){
 				ico('.op')[i].onclick = function(){
 					for (var n in ico('section')){
-					ico('section')[n].className = 'page';
-					ico('.bnr li')[n].className = 'ol';
-					ico('.bnr li a')[n].className = 'cr a';
-				}
+						ico('section')[n].className = 'page';
+						ico('.bnr li')[n].className = 'ol';
+						ico('.bnr li a')[n].className = 'cr a';
+					}
 					ico('section')[i].className = 'page pagenone';
 					ico('.bnr li')[i].className = 'olb';
 					ico('.bnr li a')[i].className = 'ocr a';
 				};
 			})(i);
 		}
+
+		// 页面跳转
+		var pageUrls = location.search;
+		var showPage = pageUrls.charAt(pageUrls.length-1);
+		var sp = showPage-1;
+		// var show = document.getElementsByTagName("section")[showPage];
+		for (var i = 0;i < ico('.op').length;i++){(
+			function(i){
+				ico('.op')[i].onclick = function(){
+					for (var n in ico('section')){
+						ico('section')[n].className = 'page';
+						ico('.bnr li')[n].className = 'ol';
+						ico('.bnr li a')[n].className = 'cr a';
+					}
+					ico('section')[i].className = 'page pagenone';
+					ico('.bnr li')[i].className = 'olb';
+					ico('.bnr li a')[i].className = 'ocr a';
+				};
+			})(i);
+		}
+		// alert(showPage);
 	</script>
 	</body>
 </html>
