@@ -53,14 +53,16 @@
 	<div class="dv_title">
 		<div class="tit_bnr">
 			<div class="tit_logo">
-				<img src="<%=basePath%>img/protal/declare/logo.png" />
+				<a href="http://www.gethuli.com">
+					<img src="<%=basePath%>img/protal/declare/logo.png" />
+				</a>
 			</div>
 			<div class="tit_onlys">
 				<div>
 					<ul>
 						<li><a href="http://www.gethuli.com">首页</a></li>
 						<li><a href="#ser">服务</a></li>
-						<li><a href="http://www.jjkangfu.com/index/declare">加入我们</a></li>
+						<li><a href="index/declare?id=3">加入我们</a></li>
 						<li><a href="javascript:void(0)" class="run"
 							onclick="overlay()"><button class="btn_porject">预约服务</button></a>
 						</li>
@@ -107,9 +109,7 @@
 						<li>
 							<div class="ser_info">
 								<div class="ser_model">
-									
-									<img style="width: 100%" src="<%=basePath%>img/indextest.jpg"/>
-									<!-- <img style="width: 100%" src="${serviceItem.webPicUrl}"/> -->
+									<img style="width: 100%" src="${serviceItem.webPicUrl}"/>
 										<p class="ser_p_title">${serviceItem.serviceTitle}</p>
 										<hr class="hrs" />
 										<p class="ser_p_body">${serviceItem.serviceContent}</p>
@@ -134,12 +134,12 @@
 			<div class="navigation">
 				<ul>
 					<li>
-						<a href="<%=basePath%>index/declare">关于我们</a>&nbsp;丨&nbsp; 
-						<a href="<%=basePath%>index/declare">媒体报道</a>&nbsp;丨&nbsp; 
-						<a href="<%=basePath%>index/declare">加入我们</a>&nbsp;丨&nbsp;
-						<a href="<%=basePath%>index/declare">联系我们</a>&nbsp;丨&nbsp; 
-						<a href="<%=basePath%>index/declare">帮助中心</a>&nbsp;丨&nbsp; 
-						<a href="<%=basePath%>index/declare">友情链接</a>
+						<a href="index/declare?id=1">关于我们</a>&nbsp;丨&nbsp; 
+						<a href="index/declare?id=2">媒体报道</a>&nbsp;丨&nbsp; 
+						<a href="index/declare?id=3">加入我们</a>&nbsp;丨&nbsp;
+						<a href="index/declare?id=4">联系我们</a>&nbsp;丨&nbsp; 
+						<a href="index/declare?id=5">帮助中心</a>&nbsp;丨&nbsp; 
+						<a href="index/declare?id=6">友情链接</a>
 					</li>
 					<li><a href="mailTo:BD@stellarheal.com">服务合作：BD@stellarheal.com</a> &nbsp;&nbsp;
 						<a href="mailTo:support@stellarheal.com">投诉建议：support@stellarheal.com</a></li>
