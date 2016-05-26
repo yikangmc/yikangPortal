@@ -91,19 +91,33 @@
 				</div>
 			</div>
 
+			<!-- 活动方信息 -->
+			<div class="activity_info">
+				<p class="ainfo_title">活动发起方</p>
+				<div class="ainfo_body">
+					<div class="ainfo_mags">
+						<img class="mags" src="<%=basePath%>img/protal/appPage/picture.png">
+					</div>
+					<div class="ainfo_serve">
+						<p id="fonts_name">康复师周玲</p>
+						<p id="fonts_activity">发起活动12场</p>
+					</div>
+					<div class="ainfo_on">
+						<!-- 
+							[btn_attention_on] State of 关注
+							[btn_attention_ck] State of 已关注
+						 -->
+						<div id="btns" class="btn_attention_on">关注</div>
+					</div>
+				</div>
+			</div>
+			<!-- 报名状态 -->
+			<div>
+				<button class="btn_State"></button>
+			</div>
 		</div>
-
-		<script type="text/javascript">
-			$(".run1").click(function(){
-			  	$("#line").animate(	{"margin-left":"60px"})
-			  	$("#fnt1").css({"color":"#0faadd"})
-			  	$("#fnt2").css({"color":"#333"})
-			});
-			$(".run2").click(function(){
-			  	$("#line").animate(	{"margin-left":"434px"})
-			  	$("#fnt2").css({"color":"#0faadd"})
-			  	$("#fnt1").css({"color":"#333"})
-			});
-		</script>
 	</body>
+
+	<!-- js区 -->
+	<script src="<%=basePath%>js/activity.js"></script>
 </html>

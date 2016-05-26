@@ -28,7 +28,7 @@
 /* 3 活动介绍 */
 .mainactivity { width: 100%; height: auto; padding: 22 20 20 20; margin-top: 20px; background-color: #fff; 
 	font-size: 26px; color: #656565; word-spacing: 3px; letter-spacing: 3px; }
-.mainactivity p:nth-child(1) { font-size: 28px; color: #505050; };
+.mainactivity p:nth-child(1) { font-size: 28px; color: #505050; }
 
 #hrs { color: #f0f0f0; }
 
@@ -42,3 +42,30 @@
 .bod_label { font-size: 26px; text-align: center; width: 86px; height: 36px; background-color: #eff0f1; float: left; margin: 0 10 0 10; }
 .bod_bottoms { padding: 20 0 20 0;height: 40px; }
 .bod_bottoms ul li { width: 33%; float: left; text-align: center; font-size: 24px; color: #727374; border-left: 1px #f0f0f0 solid; }
+
+/* 活动方 */
+.activity_info { height: 400px; margin-top: 20px; padding: 0 20 0 20; background-color: #fff; }
+
+.ainfo_title { font-size: 26px; color: #656565; height: 62px; line-height: 62px; border-bottom: 1px #f0f0f0 solid; }
+.ainfo_body { width: 100%; height: 120px; padding: 30 0 30 0; }
+
+.ainfo_mags { float: left; width: 13%; }
+.ainfo_serve { float: left; width: 70%; padding: 10 0 0 12; }
+.ainfo_on { float: left; width: 17%; padding: 24 0 0 0; }
+
+#fonts_name { font-size: 26px; color: #323232; }
+#fonts_activity { font-size: 24px; color: #646464; }
+
+.btn_attention_on { width: 82px; height: 40px; line-height: 40px; text-align: center; border: 1px #0eaadd solid; 
+	font-size: 24px; color: #0faadd; float: right; border-radius: 3px; }
+.btn_attention_ck {  width: 82px; height: 40px; line-height: 40px; text-align: center; background-color: #0eaadd;
+	font-size: 24px; color: #fff; float: right; border-radius: 3px; }
+
+.mags { width: 90%; }
+
+
+
+
+
+
+
