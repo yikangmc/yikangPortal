@@ -1,11 +1,70 @@
-/* This templateDetailsPags css */
-body {
-	background: #f5f6f7;
+/* 主题 */
+.bodys {
+	width: 100%;
+}
+
+.bod-Title {
+	height: 150px;
+	padding: 26 34 0 34;
+	background-color: #fff;
+}
+
+.bod-Title>div:nth-of-type(1) {
+	width: 80%;
+	height: 140px;
+	float: left;
+	padding: 6 0 0 0;
+}
+
+.bod-Title>div:nth-of-type(2) {
+	width: 20%;
+	height: 140px;
+	float: left;
+}
+
+.bod-Title div p {
+	font-size: 30px;
+	color: #333333;
+	padding-bottom: 4px;
+}
+
+.bod-Title div p span {
+	font-size: 20px;
+	color: #656565;
+}
+
+.bod-Time {
+	padding-left: 20px;
+}
+
+.btn-Collect-on {
+	width: 82px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	background-color: #0eaadd;
+	font-size: 24px;
+	color: #fff;
+	float: right;
+	border-radius: 3px;
+	margin-top: 10px;
+}
+
+.btn-Collect {
+	width: 82px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	border: 1px #0eaadd solid;
+	font-size: 24px;
+	color: #0eaadd;
+	float: right;
+	border-radius: 3px;
+	margin-top: 10px;
 }
 
 .dv_body {
-	margin-top: 20px;
-	padding: 20px;
+	padding: 0 20 20 20;
 	width: 100%;
 	background-color: #fff;
 	height: auto;
@@ -65,7 +124,7 @@ body {
 .bod_info {
 	font-size: 24px;
 	color: #646464;
-	padding: 28 10 30 10;
+	padding: 16 10 30 10;
 	letter-spacing: 1;
 	word-spacing: 1;
 }
@@ -110,34 +169,6 @@ body {
 
 .mag:nth-of-type(3) {
 	margin-top: 0px;
-}
-
-/* 2 支持 */
-.dv_support {
-	background: #fff;
-	height: 110px;
-	padding: 0 20 0 20;
-	margin-top: 20px;
-}
-
-.sup_font {
-	width: 22%;
-	float: left;
-	font-size: 24px;
-	color: #323232;
-	padding-top: 36px;
-}
-
-.sup_mags {
-	width: 78%;
-	float: left;
-	padding: 25 0 0 24;
-	word-spacing: 1px;
-	letter-spacing: 1px;
-}
-
-.sup_font font:nth-of-type(1) {
-	color: #ff2424;
 }
 
 /* 评论 */

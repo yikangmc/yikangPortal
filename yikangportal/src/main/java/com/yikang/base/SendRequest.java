@@ -34,7 +34,9 @@ public class SendRequest {
 	// 在线上
 //	private static String REQUEST_URL = "http://localhost:80/youthFountain/service/";
 	
-	private static String REQUEST_URL = "http://localhost:8090/youthFountain/service/";
+	private static String REQUEST_URL = "http://127.0.0.1:8080/yikangservice/service/";
+	
+//	private static String REQUEST_URL = "http://localhost:8090/youthFountain/service/";
 	
 	private static ObjectMapper objectMapper = new ObjectMapper();
 	
@@ -132,11 +134,11 @@ public class SendRequest {
 				}
 				
 			};
-			String responseBody = httpclient.execute(httpget, responseHandler);
+			String responseBody = httpclient.execute(httpget, responseHandler);//get yikangservice
 			Map<String,Object> data=new HashMap<String, Object>();
 			System.out.println("接收到请求时间"+sdf.format(new Date()));
 			data=objectMapper.readValue(responseBody, Map.class);
-			if(data.containsKey("data")){
+			if(data.containsKey("data") && null != data.get("data")){
 				String dataStr=data.get("data").toString();
 				System.out.println("解析出请求时间"+sdf.format(new Date()));
 				String returnDataStr=AES.Decrypt(dataStr, "1234567890abcDEF");

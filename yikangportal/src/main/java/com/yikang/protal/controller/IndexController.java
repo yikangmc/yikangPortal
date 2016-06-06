@@ -25,6 +25,7 @@ public class IndexController {
 	public String indexThree(ModelMap modelMap,HttpServletRequest request){
 		Map<String,Object> resData=serviceItemService.listServiceItem();
 		modelMap.put("data", resData.get("data"));
+		
 		if(TOOLS.JudgeIsMoblie(request)){
 			return  "index/mindex";
 		}else{

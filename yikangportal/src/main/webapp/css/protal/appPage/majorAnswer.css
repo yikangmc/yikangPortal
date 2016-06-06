@@ -1,49 +1,81 @@
-/* This templateDetailsPags css */
-body {
-	background: #f5f6f7;
+/* 主题 */
+.bodys {
+	width: 100%;
 }
 
-.dv_body {
-	margin-top: 20px;
-	padding: 20px;
-	width: 100%;
+.bod-Title {
+	height: 150px;
+	padding: 26 20 0 20;
 	background-color: #fff;
-	height: auto;
 }
 
-#all {
-	color: #0faadd;
+.bod-Title>div:nth-of-type(1) {
+	width: 80%;
+	height: 140px;
+	float: left;
+	padding: 6 0 0 0;
 }
 
-/* 1主体信息 */
-.bod_title {
-	border-bottom: 1px #f0f0f0 solid;
-	padding-bottom: 14px;
-	vertical-align: middle;
-	width: 100%;
+.bod-Title>div:nth-of-type(2) {
+	width: 20%;
+	height: 140px;
+	float: left;
 }
 
-.bod_title p {
-	vertical-align: middle;
-	vertical-align: middle;
+.bod-Title div p {
+	font-size: 30px;
+	color: #333333;
+	padding-bottom: 4px;
 }
 
-.spn:nth-of-type(1) {
+.bod-Title div p span {
+	font-size: 20px;
 	color: #656565;
-	font-size: 28px;
-	padding-left: 14px;
-	line-height: 30px;
-	position: relative;
-	top: 4px;
 }
 
-.spn:nth-of-type(3) {
+.bod-Time {
+	padding-left: 20px;
+}
+
+.btn-Collect-on {
+	width: 82px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	background-color: #0eaadd;
+	font-size: 24px;
+	color: #fff;
 	float: right;
-	font-size: 22px;
-	color: #656565;
-	margin-top: 16px;
+	border-radius: 3px;
+	margin-top: 10px;
 }
 
+.btn-Collect {
+	width: 82px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	border: 1px #0eaadd solid;
+	font-size: 24px;
+	color: #0eaadd;
+	float: right;
+	border-radius: 3px;
+	margin-top: 10px;
+}
+
+/* 正文 */
+.mainactivity {
+	width: 100%;
+	height: auto;
+	padding: 0 20 20 20;
+	background-color: #fff;
+	font-size: 26px;
+	color: #656565;
+	word-spacing: 1px;
+	letter-spacing: 1px;
+}
+
+/* 标签 */
 .tit_label {
 	font-size: 18px;
 	color: #fff;
@@ -60,24 +92,20 @@ body {
 .labels {
 	width: 100%;
 	height: 60px;
+	margin-top: 38px;
 }
 
 .bod_info {
-	font-size: 24px;
+	font-size: 26px;
 	color: #646464;
 	padding: 28 10 30 10;
 	letter-spacing: 1;
 	word-spacing: 1;
 }
 
-.bod_info img {
-	width: 157px;
-	height: 157px;
-	margin: 8 4 8 4;
-}
-
 .bod_label {
-	font-size: 24px;
+	font-size: 26px;
+	color: #333;
 	text-align: center;
 	width: 86px;
 	height: 36px;
@@ -96,48 +124,20 @@ body {
 	float: left;
 	text-align: center;
 	font-size: 24px;
-	color: #727374;
+	color: #505050;
 	border-left: 1px #f0f0f0 solid;
 }
 
-.mag:nth-of-type(1) {
-	margin-top: -5px;
-}
-
-.mag:nth-of-type(2) {
-	margin-top: -4px;
-}
-
-.mag:nth-of-type(3) {
-	margin-top: 0px;
-}
-
-/* 2 支持 */
-.dv_support {
-	background: #fff;
-	height: 110px;
-	padding: 0 20 0 20;
-	margin-top: 20px;
-}
-
-.sup_font {
-	width: 22%;
-	float: left;
+.mBodys {
 	font-size: 24px;
-	color: #323232;
-	padding-top: 36px;
 }
 
-.sup_mags {
-	width: 78%;
-	float: left;
-	padding: 25 0 0 24;
-	word-spacing: 1px;
-	letter-spacing: 1px;
+.mBodys img {
+	margin: 8 0 8 0;
 }
 
-.sup_font font:nth-of-type(1) {
-	color: #ff2424;
+.mag {
+	margin-top: -4px;
 }
 
 /* 评论 */
@@ -159,7 +159,7 @@ body {
 
 .comm_info {
 	height: auto;
-	padding: 42 0 50 0;
+	padding: 14 0 50 0;
 }
 
 .comm_info div:nth-of-type(1) {
@@ -223,6 +223,34 @@ body {
 	position: relative;
 	left: 86px;
 	top: 22px;
+}
+
+/* 支持 */
+.dv_support {
+	background: #fff;
+	height: 110px;
+	padding: 0 20 0 20;
+	margin-top: 20px;
+}
+
+.sup_font {
+	width: 22%;
+	float: left;
+	font-size: 24px;
+	color: #323232;
+	padding-top: 36px;
+}
+
+.sup_mags {
+	width: 78%;
+	float: left;
+	padding: 25 0 0 24;
+	word-spacing: 1px;
+	letter-spacing: 1px;
+}
+
+.sup_font font:nth-of-type(1) {
+	color: #ff2424;
 }
 
 #hrs {

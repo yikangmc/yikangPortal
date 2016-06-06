@@ -19,11 +19,13 @@
 				<ul>
 					<a class="run1">
 						<li id="fnt1">
-							<img id="mag1" src="<%=basePath%>img/protal/appPage/activity.png">活动详情</li>
+							<img id="mag1" src="<%=basePath%>img/protal/appPage/activity.png">活动详情
+							</li>
 					</a>
 					<a class="run2">
 						<li id="fnt2">
-							<img id="mag2" src="<%=basePath%>img/protal/appPage/chat.png">聊天互动</li>
+							<img id="mag2" src="<%=basePath%>img/protal/appPage/chat.png">聊天互动
+							</li>
 					</a>
 				</ul>
 			</div>
@@ -33,12 +35,12 @@
 			<!-- 主题 -->
 			<div class="main_info">
 				<div class="minfos">
-					<p>骨盆矫正公开课第一期开课啦</p>
-					<p>04月12日 星期4 12:30</p>
-					<p>北京市朝阳区朝外大街26好朝外MEN写字中心B座2505</p>
+					<p>${responsData.title }</p>
+					<p>${responsData.updateTime }</p>
+					<p>${responsData.mapPsitionAddress }</p>
 				</div>
 				<div class="minfos">
-					￥10
+					￥ ${responsData.cost }
 				</div>
 			</div>
 
@@ -65,7 +67,7 @@
 			<div class="mainactivity">
 				<p>活动介绍</p>
 				<hr id="hrs" />
-				<div class="mbodys">
+				<div class="mBodys">
 					清晨，不知何处的鸟儿早已在树上，清晨，不知何处的鸟儿早已在树上，清晨，不知何处的鸟儿早已在树上，清晨，不知何处的鸟儿早已在树上，清晨，不知何处的鸟儿早已在树上清晨，不知何处的鸟儿早已在树上清晨，不知何处的鸟儿早已在树上清晨，不知何处的鸟儿早已在树上清晨，不知何处的鸟儿早已在树上
 					<img src="<%=basePath%>img/protal/appPage/testbanner.png">
 					清晨，不知何处的鸟儿早已在树上清晨，不知何处的鸟儿早已在树上清晨，不知何处的鸟儿早已在树上清晨，不知何处的鸟儿早已在树上清晨，不知何处的鸟儿早已在树上
@@ -112,12 +114,9 @@
 				</div>
 			</div>
 			<!-- 报名状态 -->
-			<div>
-				<button class="btn_State"></button>
-			</div>
+			<div id="btn_state" class="btn_state">报名</div>
 		</div>
 	</body>
-
 	<!-- js区 -->
 	<script src="<%=basePath%>js/activity.js"></script>
 </html>
