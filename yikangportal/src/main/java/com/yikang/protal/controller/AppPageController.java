@@ -116,6 +116,7 @@ public class AppPageController {
 	 * 
 	 * @return null
 	 */
+	@RequestMapping
 	public String textEditor() {
 		
 		return "appPage/textEditor";

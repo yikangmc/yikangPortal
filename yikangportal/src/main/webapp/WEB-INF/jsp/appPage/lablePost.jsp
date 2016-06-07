@@ -57,12 +57,9 @@
 				获<font>${responsData.stars}</font>支持
 			</div>
 			<div class="sup_mags">
-				<img src="<%=basePath%>img/protal/appPage/picture.png">
-				<img src="<%=basePath%>img/protal/appPage/picture.png">
-				<img src="<%=basePath%>img/protal/appPage/picture.png">
-				<img src="<%=basePath%>img/protal/appPage/picture.png">
-				<img src="<%=basePath%>img/protal/appPage/picture.png">
-				<img src="<%=basePath%>img/protal/appPage/picture.png">
+				<c:forEach items="${responsData.formPostsStarLists }" var="PostStarlists">
+					<img width="60px" src="${PostStarlists.photoUrl }">
+				</c:forEach>
 
 				<!-- 查看所有 -->
 				<a><img src="<%=basePath%>img/protal/appPage/aller.png"></a>
@@ -77,7 +74,7 @@
 			<c:forEach items="${responsData.forumPostsAnswers }" var="userAnswers">
 			<div class="comm_info">
 				<div>
-					<img src="${userAnswers.content }">
+					<img width="60px" src="${userAnswers.createUserPhotoUrl }">
 				</div>
 				<div>
 					<span class="spn_name">${userAnswers.createUserName }</span>

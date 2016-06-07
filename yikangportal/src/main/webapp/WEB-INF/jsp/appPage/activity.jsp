@@ -50,13 +50,9 @@
 					获<font>3284</font>支持
 				</div>
 				<div class="sup_mags">
-					<img src="<%=basePath%>img/protal/appPage/picture.png">
-					<img src="<%=basePath%>img/protal/appPage/picture.png">
-					<img src="<%=basePath%>img/protal/appPage/picture.png">
-					<img src="<%=basePath%>img/protal/appPage/picture.png">
-					<img src="<%=basePath%>img/protal/appPage/picture.png">
-					<img src="<%=basePath%>img/protal/appPage/picture.png">
-
+					<c:forEach items="${responsData.followUsers }" var="followUser">
+						<img style="width:60px;" src="${followUser.photoUrl }">
+					</c:forEach>
 					<!-- 查看所有 -->
 					<a><img src="<%=basePath%>img/protal/appPage/aller.png"></a>
 
@@ -68,28 +64,7 @@
 				<p>活动介绍</p>
 				<hr id="hrs" />
 				<div class="mBodys">
-					清晨，不知何处的鸟儿早已在树上，清晨，不知何处的鸟儿早已在树上，清晨，不知何处的鸟儿早已在树上，清晨，不知何处的鸟儿早已在树上，清晨，不知何处的鸟儿早已在树上清晨，不知何处的鸟儿早已在树上清晨，不知何处的鸟儿早已在树上清晨，不知何处的鸟儿早已在树上清晨，不知何处的鸟儿早已在树上
-					<img src="<%=basePath%>img/protal/appPage/testbanner.png">
-					清晨，不知何处的鸟儿早已在树上清晨，不知何处的鸟儿早已在树上清晨，不知何处的鸟儿早已在树上清晨，不知何处的鸟儿早已在树上清晨，不知何处的鸟儿早已在树上
-				</div>
-
-				<!-- 标签 -->
-				<div class="labels">
-					<div class="bod_label">瘦身</div>
-					<div class="bod_label">瘦身</div>
-					<div class="bod_label">瘦身</div>
-					<div class="bod_label">瘦身</div>
-				</div>
-
-				<div class="bod_bottoms">
-					<ul>
-						<li style="border: 0px;">
-							<img class="mag" src="<%=basePath%>img/protal/appPage/like.png"> 3284</li>
-						<li>
-							<img class="mag" src="<%=basePath%>img/protal/appPage/commentary.png"> 183</li>
-						<li>
-							<img class="mag" src="<%=basePath%>img/protal/appPage/all.png"> 更多</li>
-					</ul>
+					${responsData.content }
 				</div>
 			</div>
 
@@ -98,11 +73,11 @@
 				<p class="ainfo_title">活动发起方</p>
 				<div class="ainfo_body">
 					<div class="ainfo_mags">
-						<img class="mags" src="<%=basePath%>img/protal/appPage/picture.png">
+						<img class="mags" src="${responsData.photoUrl }">
 					</div>
 					<div class="ainfo_serve">
-						<p id="fonts_name">康复师周玲</p>
-						<p id="fonts_activity">发起活动12场</p>
+						<p id="fonts_name">${responsData.createUsername }</p>
+						<p id="fonts_activity">发起活动${responsData.partakeNums }场</p>
 					</div>
 					<div class="ainfo_on">
 						<!-- 

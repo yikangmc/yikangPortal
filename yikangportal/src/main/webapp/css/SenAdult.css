@@ -23,5 +23,5 @@ html {overflow-y: scroll;}
 
 
 #imgUpload { }
-#destination { width:100%; height: 98%; overflow: auto; border:1px solid #000000; color: #333; font-size: 26px; padding: 20px; }
+#destination { width:750px; height: 98%; overflow: auto; border:1px solid #000000; color: #333; font-size: 26px; padding: 20 20 100 20; }
 
