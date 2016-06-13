@@ -5,8 +5,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" type="text/css" href="<%=basePath%>css/protal/appPage/appWholecs.css">
-<link rel="stylesheet" type="text/css"href="<%=basePath%>css/protal/appPage/textEditor.css">
-<script src="<%=basePath%>js/textEditor/main.css"></script>
+<link rel="stylesheet" type="text/css"href="<%=basePath%>css/protal/appPage/textEditorOther.css">
+<script src="<%=basePath%>js/textEditor/main.js"></script>
 <script src="<%=basePath%>js/viewport750.js"></script>
 <title>富文本编辑器</title>
 <style type="text/css">
@@ -21,18 +21,46 @@
 
 <body>
 	<div class="main">
+		<p class="ipt-title">
+			<input class="ipt-value" type="text" placeholder="填写专业内容标题（必填）" />
+		</p>
 		<div id="destination" contenteditable="true">
-
+			
 		</div>
 
 		<div class="btm-fixed">
-			<div class="fileInputContainer" 
-					style="background: url(<%=basePath%>img/protal/appPage/all_mags.png) 
-						no-repeat; background-position: center; ">
+			<p>为专业内容添加标签</p>
+			<div id="lables">
+				<div class="labs">
+					运动康复
+				</div>
+				<div class="labs">
+					治疗
+				</div>
+			</div>
+			<a id="all">+</a>
+			<p>上传一张标题图</p>
+			<div>
 				<input type="file" id="imgUpload" class="fileInput" 
-						name="imgUpload" draggable="true" single />
+						name="imgUpload" />
 			</div>
 		</div>
 	</div>
+	<script type="text/javascript">
+		var Value = "康复",
+		 	Label = "<div class='labs'>"
+					+	Value	+
+					"</div>";
+		$('#all').click(function(){
+			var index = $('.labs').size();
+
+			if (index <= 3) {
+					$('#lables').append(Label);
+				} else {
+					alert("最多只能4个标签哟~");
+			}
+
+		});
+	</script>
 </body>
 </html>

@@ -40,7 +40,9 @@
 				</div>
 				<!-- 标签 -->
 				<div class="labels">
-					<div class="bod_label">标签</div>
+					<c:forEach items="${responseData.taglibs }" var="tags">
+						<div class="bod_label">${tags.tagName }</div>
+					</c:forEach>
 				</div>
 				
 				<div class="bod_bottoms">

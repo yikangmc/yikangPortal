@@ -1,0 +1,53 @@
+#destination { 
+	width:750px; 
+	height: 73%;
+    background-color: red;
+	overflow: auto; 
+	font-size: 26px; 
+	padding: 14 14 100 14;
+	background: #fff;
+}
+
+.btm-fixed {
+	height: 19%;
+    width: 100%;
+    padding: 20 14 0 14;
+}	
+
+.btm-fixed p {
+    color: #757677;
+}
+
+.ipt-title { height: 70px; margin: 14 0 14 0; }
+.ipt-value { height: 70px; width: 100%; font-size: 26px; padding: 0 14 0 14; border: 0; }
+
+#all {
+	font-size: 42px;
+	color: black;
+	position: relative;
+	top: -2px;
+	left: 26px;
+}
+
+#lables {
+	height: 40px;
+	float: left;
+}
+
+.labs {
+	min-width: 70px; 
+	width: auto;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	padding: 0 12 0 12;
+	margin: 6 6 6 6;
+	font-size: 22px;
+	color: #fff;
+	background: #00aade;
+	float: left;
+}
+
+#imgUpload {
+
+}

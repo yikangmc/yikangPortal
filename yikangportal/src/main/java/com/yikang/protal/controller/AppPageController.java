@@ -122,4 +122,14 @@ public class AppPageController {
 		return "appPage/textEditor";
 	}
 	
+	/**
+	 * 
+	 * @return
+	 */
+	@RequestMapping
+	public String textEditorOther() {
+		
+		return "appPage/textEditorOther";
+	}
+	
 }
