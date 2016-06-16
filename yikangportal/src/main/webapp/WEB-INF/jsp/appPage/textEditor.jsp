@@ -6,7 +6,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" type="text/css" href="<%=basePath%>css/protal/appPage/appWholecs.css">
 <link rel="stylesheet" type="text/css"href="<%=basePath%>css/protal/appPage/textEditor.css">
-<script src="<%=basePath%>js/textEditor/main.css"></script>
 <script src="<%=basePath%>js/viewport750.js"></script>
 <title>富文本编辑器</title>
 <style type="text/css">
@@ -20,19 +19,28 @@
 </head>
 
 <body>
-	<div class="main">
-		<div id="destination" contenteditable="true">
+<div class="main">
+	<input id="dataList" type="button" 
+			style="position:absolute; top:50px; left:120px; z-index: 1999; width: 200px; height: 60px;" onclick="editorData">
+	<div id="destination" contenteditable="true">
 
-		</div>
+	</div>
 
-		<div class="btm-fixed">
-			<div class="fileInputContainer" 
-					style="background: url(<%=basePath%>img/protal/appPage/all_mags.png) 
-						no-repeat; background-position: center; ">
-				<input type="file" id="imgUpload" class="fileInput" 
-						name="imgUpload" draggable="true" single />
-			</div>
+	<div class="btm-fixed">
+		<div class="fileInputContainer"
+			style="background: url(<%=basePath%>img/protal/appPage/all_mags.png) 
+				no-repeat; background-position: center; ">
+		<!--  onchange="$.upload()" -->
+			<input type="button" class="fileInput" name="files" 
+					draggable="true" capture="camera" onclick="$.upload()">
 		</div>
 	</div>
+</div>
+
+<script src="<%=basePath%>js/textEditor/imageCommit.js"></script>
+<script src="<%=basePath%>js/textEditor/mobileFix.mini.js?v=ad62f13"></script>
+<script src="<%=basePath%>js/textEditor/exif.js?v=dd609b9"></script>
+<script src="<%=basePath%>js/textEditor/lrz.js?v=3d33fcf"></script>
+<script src="<%=basePath%>js/textEditor/index.js?v=c970150"></script>
 </body>
 </html>

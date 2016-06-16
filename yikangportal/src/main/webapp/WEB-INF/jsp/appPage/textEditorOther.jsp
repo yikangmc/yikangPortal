@@ -55,9 +55,7 @@
 			var index = $('.labs').size();
 
 			if (index <= 3) {
-					$('#lables').append(Label);
-				} else {
-					alert("最多只能4个标签哟~");
+				$('#lables').append(Label); } else { alert("最多只能4个标签哟~"); 
 			}
 
 		});

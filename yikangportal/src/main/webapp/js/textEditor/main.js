@@ -77,7 +77,6 @@ $(document).ready(
 						freader.onload = function(e) {
 							var img = '<img src="'+e.target.result+'" style="width:100%" />';
 							$("#destination").append(img);
-							alert($("#destination").innerHTML);
 						}
 					}
 				});

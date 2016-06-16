@@ -2,7 +2,7 @@
     var input = document.querySelector('input');
 
     input.onchange = function () {
-        alert(input.value)
+        alert(1)
         lrz(this.files[0], { width : 720 }, function (results) {
             // 你需要的数据都在这里，可以以字符串的形式传送base64给服务端转存为图片。
             // console.log(results);
@@ -51,20 +51,21 @@
      * @param size
      */
     function demo_report(title, src, size) {
+        alert(2)
         var img = new Image(),
             dv = document.createElement('div'),
             size = (size / 1024).toFixed(2) + 'KB';
 
         img.onload = function () {
-            var content = '<ul>' +
-                '<li>' + title + '（' + img.width + ' X ' + img.height + '）</li>' +
-                '<li class="text-cyan">' + size + '</li>' +
-                '</ul>';
+            // var content = '<ul>' +
+            //     '<li>' + title + '（' + img.width + ' X ' + img.height + '）</li>' +
+            //     '<li class="text-cyan">' + size + '</li>' +
+            //     '</ul>';
 
             // dv.className = 'item';
-            dv.innerHTML = content;
-            dv.appendChild(img);
-            document.querySelector('#destination').appendChild(dv);
+            // dv.innerHTML = content;
+            // dv.appendChild(img);
+            document.querySelector('#destination').appendChild(img);
         };
 
         img.src = src;

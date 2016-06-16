@@ -21,20 +21,19 @@
 	</div>
 
 	<div class="btm-fixed">
-		<div class="fileInputContainer" 
+		<div class="fileInputContainer"
 				style="background: url(<%=basePath%>img/protal/appPage/all_mags.png) 
 					no-repeat; background-position: center; ">
 			<!--  id="imgUpload" -->
 			<input type="file" class="fileInput" name="imgUpload" 
 					draggable="true" capture="camera" single />
-		</div
+		</div>
 	</div>
 </div>
 
 <footer>
     
 </footer>
-<script src="<%=basePath%>js/textEditor/main.css"></script>
 <script src="<%=basePath%>js/textEditor/mobileFix.mini.js?v=ad62f13"></script>
 <script src="<%=basePath%>js/textEditor/exif.js?v=dd609b9"></script>
 <script src="<%=basePath%>js/textEditor/lrz.js?v=3d33fcf"></script>
