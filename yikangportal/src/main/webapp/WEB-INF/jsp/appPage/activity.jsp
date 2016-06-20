@@ -13,7 +13,7 @@
 </head>
 	<body>
 		<div class="main">
-			<div class="bnrmag"><img src="<%=basePath%>img/protal/appPage/main.png"></div>
+			<div class="bnrmag"><img src="${responsData.recommendPicUrl }"></div>
 
 			<div class="activity">
 				<ul>
@@ -47,7 +47,8 @@
 			<!-- 支持 -->
 			<div class="dv_support">
 				<div class="sup_font">
-					获<font>3284</font>支持
+<!-- 					获<font>3284</font>支持 -->
+						参与者
 				</div>
 				<div class="sup_mags">
 					<c:forEach items="${responsData.followUsers }" var="followUser">

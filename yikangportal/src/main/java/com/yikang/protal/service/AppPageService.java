@@ -1,9 +1,7 @@
 package com.yikang.protal.service;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import org.springframework.stereotype.Component;
@@ -13,8 +11,7 @@ import com.yikang.base.SendRequest;
 public class AppPageService {
 	
 	public Map<String, Object> postList(int detailspPostId) {
-//		List<Map<String, Object>> restDataType = new ArrayList<Map<String, Object>>();
-		Map<String, Object> paramData = new HashMap<>();
+		Map<String, Object> paramData = new HashMap<String,Object>();
 		paramData.put("forumPostId", detailspPostId);
 		try {
 			return SendRequest.sendPostRetureMap("00-28-02", paramData, Map.class);	
@@ -26,7 +23,7 @@ public class AppPageService {
 	}
 	
 	public Map<String, Object> answerUserData(int answerId){
-		Map<String, Object> paramData = new HashMap<>();
+		Map<String, Object> paramData = new HashMap<String,Object>();
 		paramData.put("questionId", answerId);
 		
 		try {
@@ -43,8 +40,8 @@ public class AppPageService {
 	 * @param Id
 	 * @return
 	 */
-	public Map<String, Object> activetyList(int Id){
-		Map<String, Object> paramData = new HashMap<>();
+	public Map<String, Object> activetyList(Long Id){
+		Map<String, Object> paramData = new HashMap<String,Object>();
 		paramData.put("activetyId", Id);
 		
 		try {

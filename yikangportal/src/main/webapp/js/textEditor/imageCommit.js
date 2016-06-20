@@ -9,7 +9,7 @@
 
 	
 	var editorData = function(data){
-		alert(data.fileName)
+		alert(data)
 	}
 
 
@@ -17,7 +17,7 @@
 	$.uploadDefault = {
 		// http://192.168.1.21:8081/fileManage/fileUpload/imageFileUpload
 		// http://54.223.35.197:8088/yikangFileManage/fileUpload/imageFileUpload
-		url: "http://54.223.35.197:8088/yikangFileManage/fileUpload/imageFileUpload",
+		url: "/fileUpload/imageFileUpload",
 		fileName: "files",
 		dataType: "json",
 		params: { fileGroup: "headImage" },
@@ -58,6 +58,7 @@
 			var data = $(contents).find('body').text();
 			if ('json' == opts.dataType) {
 				data = window.eval('(' + data + ')');
+				data = window.eval('(' + data + ')');
 			}
 			opts.onComplate(data);
 			setTimeout(function() {
@@ -70,7 +71,7 @@
 		var fileInput = $('input[type=file][name=' + opts.fileName + ']', form);
 		fileInput.click();
 
-		var mags = jsonLine.indexOf('')
+		var mags = jsonLine.indexOf('');
 	};
 })(jQuery);
 

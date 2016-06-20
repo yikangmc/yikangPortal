@@ -32,11 +32,9 @@ import com.yikang.common.encryption.AES;
 public class SendRequest {
 	
 	// 在线上
-//	private static String REQUEST_URL = "http://localhost:80/youthFountain/service/";
 	
-	private static String REQUEST_URL = "http://127.0.0.1:8080/yikangservice/service/";
+	private static String REQUEST_URL = "http://127.0.0.1:8090/youthFountain/service/";
 	
-//	private static String REQUEST_URL = "http://localhost:8090/youthFountain/service/";
 	
 	private static ObjectMapper objectMapper = new ObjectMapper();
 	
@@ -47,10 +45,8 @@ public class SendRequest {
 		SimpleDateFormat sdf=new  SimpleDateFormat("yyyy-MM-dd HH:mm:ss.S");
 		
 		CloseableHttpClient httpclient = HttpClients.createDefault();
-	
 		
 		try {
-			
 			String paramDataJsonString=objectMapper.writeValueAsString(paramData);
 			
 		try {
@@ -140,7 +136,7 @@ public class SendRequest {
 			data=objectMapper.readValue(responseBody, Map.class);
 			if(data.containsKey("data") && null != data.get("data")){
 				String dataStr=data.get("data").toString();
-				System.out.println("解析出请求时间"+sdf.format(new Date()));
+				sendRequestLogger.info("解析出请求时间"+sdf.format(new Date()));
 				String returnDataStr=AES.Decrypt(dataStr, "1234567890abcDEF");
 				sendRequestLogger.debug(returnDataStr);
 				System.out.println(returnDataStr);
@@ -188,7 +184,7 @@ public class SendRequest {
 					int status = response.getStatusLine().getStatusCode();
 					if (status >= 200 && status < 300) {
 						HttpEntity entity = response.getEntity();
-						System.out.println(entity.toString() +" -----------");
+						sendRequestLogger.info(entity.toString());
 						return entity != null ? EntityUtils.toString(entity)
 								: null;
 						

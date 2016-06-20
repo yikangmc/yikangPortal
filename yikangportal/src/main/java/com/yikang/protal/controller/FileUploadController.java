@@ -11,6 +11,7 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.http.util.ByteArrayBuffer;
 import org.apache.log4j.Logger;
 import org.apache.taglibs.standard.lang.jstl.test.beans.PublicInterface2;
 import org.aspectj.util.FileUtil;
@@ -22,7 +23,8 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.multipart.MultipartRequest;
 
-import com.yikang.base.utils.FileUploadUtils;
+import com.yikang.base.utils.SystemProperties;
+
 
 /**
  * 文件上传控制器
@@ -31,33 +33,28 @@ import com.yikang.base.utils.FileUploadUtils;
  *
  */
 @Controller
-public class FileUploadConvertController {
+public class FileUploadController {
 
-	private Logger logger = Logger.getLogger(FileUploadConvertController.class);
+	private Logger logger = Logger.getLogger(FileUploadController.class);
 
 	@RequestMapping
 	@ResponseBody
-	public String fileUpload(@RequestParam(value = "files") MultipartFile[] files, HttpServletRequest request) {
+	public String imagefileUpload(@RequestParam(value = "files") MultipartFile[] files, HttpServletRequest request) {
 		logger.info("进来了");
-		// MultipartHttpServletRequest multipartRequest
-		// =(MultipartHttpServletRequest) request;
-		//
-		// MultipartFile file = multipartRequest.getFile("files");
-		//
-		// Map<String, MultipartFile> fileMap =multipartRequest.getFileMap();
 
 		if (files.length > 0) {
 			for (MultipartFile multipartFile : files) {
 				String oldFileName = multipartFile.getOriginalFilename();
-				String newFile=com.yikang.base.utils.FileUtil.getUniqueFileName(oldFileName);
-				File file1 = new File("D:\\tmp\\"+newFile);
 				try {
-					FileUtils.writeByteArrayToFile(file1, multipartFile.getBytes());
+					String url=SystemProperties.getPropertieValue("fileManageUrl");
+					byte[] file=multipartFile.getBytes();
+					String res=com.yikang.base.utils.FileUtil.uploadFile(url,file,oldFileName);
+					return res;
 				} catch (IOException e) {
+					logger.error(e.getMessage());
 					e.printStackTrace();
 				}
 			}
-
 		}
 		return "";
 	}

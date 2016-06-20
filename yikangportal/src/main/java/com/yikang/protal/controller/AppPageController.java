@@ -5,6 +5,7 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.mysql.fabric.Response;
@@ -66,10 +67,12 @@ public class AppPageController {
 	 * 
 	 * @return
 	 */
-	@RequestMapping
-	public String activity(ModelMap response) {
-		System.out.println("=============================");
-		Map<String, Object> alData = service.activetyList(1);
+	@RequestMapping(value="/appPage/activity/{activetyId}")
+	public String activity(ModelMap response,@PathVariable(value="activetyId") Long activetyId) {
+		if(null ==  activetyId){
+			activetyId=1l;
+		}
+		Map<String, Object> alData = service.activetyList(activetyId);
 		if (alData.containsKey("status") && alData.get("status").equals("000000")) {
 			response.put("responsData", alData.get("data"));
 		}
