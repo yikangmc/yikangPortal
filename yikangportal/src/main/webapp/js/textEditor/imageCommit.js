@@ -5,13 +5,16 @@
 	// 自定义数字长度
 	var frameCount = 0;
 
-	// var jsonLine ="{'data':{'fileName':'1513b10d-127c-4ba8-96ea-0bf1cc4befe1.jpg','fileUrl':'https://biophoto.s3.cn-north-1.amazonaws.com.cn/1513b10d-127c-4ba8-96ea-0bf1cc4befe1.jpg','oldFileName':'202.jpg'},'message':'操作成功！','status':'000000'}'";
-
-	
 	var editorData = function(data){
-		alert(data)
+		var magUrl = data.data.fileUrl;
+		var mag = "<img style='width: 100%;' src='" + magUrl + "' />"
+		$('#destination').append(mag);
 	}
 
+	$.datas = function(){
+		var data = $('#destination').html();
+		alert(data)
+	}
 
 	// 定义数组
 	$.uploadDefault = {
@@ -70,8 +73,6 @@
 		// 文件框
 		var fileInput = $('input[type=file][name=' + opts.fileName + ']', form);
 		fileInput.click();
-
-		var mags = jsonLine.indexOf('');
 	};
 })(jQuery);
 

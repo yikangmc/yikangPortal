@@ -20,8 +20,7 @@
 
 <body>
 <div class="main">
-	<input id="dataList" type="button" 
-			style="position:absolute; top:50px; left:120px; z-index: 1999; width: 200px; height: 60px;" onclick="editorData">
+	<input type="button" style="position: absolute; top: 15%; left: 15%; z-index: 999; width: 100px; height: 100px;" onclick="$.datas();" />
 	<div id="destination" contenteditable="true">
 
 	</div>
@@ -32,7 +31,8 @@
 				no-repeat; background-position: center; ">
 		<!--  onchange="$.upload()" -->
 			<input type="button" class="fileInput" name="files" 
-					draggable="true" capture="camera" onclick="$.upload()">
+					draggable="true" capture="camera" onclick="$.upload()"
+					style="width:50px;">
 		</div>
 	</div>
 </div>

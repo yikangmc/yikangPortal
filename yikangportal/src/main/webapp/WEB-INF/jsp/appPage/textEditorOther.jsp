@@ -4,10 +4,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" type="text/css" href="<%=basePath%>css/protal/appPage/appWholecs.css">
+<link rel="stylesheet" type="text/css" href="<%=basePath%>css/protal/publicStyle.css">
 <link rel="stylesheet" type="text/css"href="<%=basePath%>css/protal/appPage/textEditorOther.css">
 <script src="<%=basePath%>js/textEditor/main.js"></script>
-<script src="<%=basePath%>js/viewport750.js"></script>
 <title>富文本编辑器</title>
 <style type="text/css">
 #destination {

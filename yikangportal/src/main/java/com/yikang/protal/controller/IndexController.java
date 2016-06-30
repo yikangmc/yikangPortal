@@ -21,16 +21,21 @@ public class IndexController {
 	
 	
 	
+//	@RequestMapping(value="/")
+//	public String indexThree(ModelMap modelMap,HttpServletRequest request){
+//		Map<String,Object> resData=serviceItemService.listServiceItem();
+//		modelMap.put("data", resData.get("data"));
+//		
+//		if(TOOLS.JudgeIsMoblie(request)){
+//			return  "index/indexM";
+//		}else{
+//			return "index/index3";
+//		}
+//	}
+	
 	@RequestMapping(value="/")
-	public String indexThree(ModelMap modelMap,HttpServletRequest request){
-		Map<String,Object> resData=serviceItemService.listServiceItem();
-		modelMap.put("data", resData.get("data"));
-		
-		if(TOOLS.JudgeIsMoblie(request)){
-			return  "index/mindex";
-		}else{
-			return "index/index3";
-		}
+	public String indexThree(){
+		return "index/index3";
 	}
 	
 	@RequestMapping
@@ -38,6 +43,29 @@ public class IndexController {
 		Map<String,Object> resData=serviceItemService.listServiceItem();
 		modelMap.put("data", resData.get("data"));
 		return "index/declare";
+	}
+	
+	@RequestMapping
+	public String productFooter() {
+		return "index/productFooter";
+	}
+	
+	/**
+	 * 小佳说
+	 * @return
+	 */
+	@RequestMapping
+	public String social() {
+		return "index/social";
+	}
+	
+	/**
+	 * 小佳说-详情
+	 * @return
+	 */
+	@RequestMapping
+	public String socialDetails() {
+	 	return "index/socialDetails";
 	}
 	
 }
