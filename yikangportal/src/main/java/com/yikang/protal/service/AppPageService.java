@@ -52,6 +52,23 @@ public class AppPageService {
 		return null;
 	}
 	
+	/**
+	 * @author liushuaic
+	 * @date 2016-06-27 15:47
+	 * @desc 查询专业回答
+	 * **/
+	public Map<String,Object> professionalAnswer(Long id){
+		Map<String, Object> paramData = new HashMap<String,Object>();
+		paramData.put("answerId", id);
+		
+		try {
+			return SendRequest.sendPostRetureMap("00-29-04", paramData, Map.class);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
 }
 
 

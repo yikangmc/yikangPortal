@@ -8,7 +8,6 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.mysql.fabric.Response;
 import com.yikang.protal.service.AppPageService;
 
 @Controller
@@ -84,8 +83,16 @@ public class AppPageController {
 	 * 
 	 * @return
 	 */
-	@RequestMapping
-	public String majorsAnswer() {
+	@RequestMapping(value="/majorsAsnwer/${professionalAnswerId}")
+	public String majorsAnswer(ModelMap response,@PathVariable(value="professionalAnswerId")Long professionalAnswerId) {
+		
+		if(null != professionalAnswerId){
+			Map<String,Object> data=service.professionalAnswer(professionalAnswerId);
+			if(data.containsKey("status") && data.get("status").equals("000000")){
+				response.put("data", data.get("data"));
+			}
+		}
+		
 		return "appPage/majorsAnswer";
 	}
 
@@ -110,7 +117,9 @@ public class AppPageController {
 	 * @return
 	 */
 	@RequestMapping
-	public String detailsAnswer() {
+	public String detailsAnswer(ModelMap modelMap,Long questionAnswerId) {
+		
+		
 		return "appPage/detailsAnswer";
 	}
 	
