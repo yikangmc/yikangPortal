@@ -189,7 +189,7 @@ $().ready(function(){
 	 
 	 
 	 
-	   var windowsArr = [];
+	   	var windowsArr = [];
 	    var marker = [];
 	    var mapObj = new AMap.Map("mapContainer", {
 	            resizeEnable: true,
@@ -198,24 +198,24 @@ $().ready(function(){
 	            keyboardEnable: false
 	    });
 	    AMap.plugin(['AMap.Autocomplete','AMap.PlaceSearch'],function(){
-	      var autoOptions = {
+	      	var autoOptions = {
 	        city: "北京", //城市，默认全国
 	        input: "keyword"//使用联想输入的input的id
-	      };
-	      autocomplete= new AMap.Autocomplete(autoOptions);
-	      var placeSearch = new AMap.PlaceSearch({
+	   	};
+	      	autocomplete= new AMap.Autocomplete(autoOptions);
+	      	var placeSearch = new AMap.PlaceSearch({
 	            city:'北京',
 	            map:mapObj
-	      })
-	      AMap.event.addListener(autocomplete, "select", function(e){
-	         //TODO 针对选中的poi实现自己的功能
-	         placeSearch.search(e.poi.name);
+	    })
+	    AMap.event.addListener(autocomplete, "select", function(e){
+	      	//TODO 针对选中的poi实现自己的功能
+	        placeSearch.search(e.poi.name);
 	         
-	         //设置模糊搜索地址
-	         $("#mapPositionAddress").val(e.poi.name);
-	         $("#districtCode").val(e.poi.adcode);
-	         reserveInformation.getServicer(false);
+	        //设置模糊搜索地址
+	        $("#mapPositionAddress").val(e.poi.name);
+	        $("#districtCode").val(e.poi.adcode);
+	        reserveInformation.getServicer(false);
 	         
-	      });
 	    });
+	});
 });

@@ -38,10 +38,15 @@ public class IndexController {
 		return "index/index3";
 	}
 	
+//	@RequestMapping
+//	public String declare(ModelMap modelMap,HttpServletRequest request){
+//		Map<String,Object> resData=serviceItemService.listServiceItem();
+//		modelMap.put("data", resData.get("data"));
+//		return "index/declare";
+//	}
+	
 	@RequestMapping
-	public String declare(ModelMap modelMap,HttpServletRequest request){
-		Map<String,Object> resData=serviceItemService.listServiceItem();
-		modelMap.put("data", resData.get("data"));
+	public String declare(){
 		return "index/declare";
 	}
 	

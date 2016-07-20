@@ -93,23 +93,23 @@
 						<div class="Cfont">
 							<a>优质内容</a>
 							<br>
-							<a>线上线下优质体检</a>
+							<a>康复见解独树一帜</a>
 						</div>
 					</li>
 					<li>
-						<img src="<%=basePath%>img/index/main/03.jpg">
+						<img src="<%=basePath%>img/index/main/03.png">
+						<div class="Cfont">
+							<a>优质问答</a>
+							<br>
+							<a>佳佳认证人员提供专业热心答疑</a>
+						</div>
+					</li>
+					<li>
+						<img src="<%=basePath%>img/index/main/04.png">
 						<div class="Cfont">
 							<a>优质活动</a>
 							<br>
-							<a>康复师简介独数一帜</a>
-						</div>
-					</li>
-					<li>
-						<img src="<%=basePath%>img/index/main/04.jpg">
-						<div class="Cfont">
-							<a>优质培训</a>
-							<br>
-							<a>佳佳助您开阔求学晋升路</a>
+							<a>线上线下多种康复体验</a>
 						</div>
 					</li>
 				</ul>	

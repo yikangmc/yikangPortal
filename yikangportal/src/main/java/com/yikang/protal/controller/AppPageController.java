@@ -83,16 +83,8 @@ public class AppPageController {
 	 * 
 	 * @return
 	 */
-	@RequestMapping(value="/majorsAsnwer/${professionalAnswerId}")
-	public String majorsAnswer(ModelMap response,@PathVariable(value="professionalAnswerId")Long professionalAnswerId) {
-		
-		if(null != professionalAnswerId){
-			Map<String,Object> data=service.professionalAnswer(professionalAnswerId);
-			if(data.containsKey("status") && data.get("status").equals("000000")){
-				response.put("data", data.get("data"));
-			}
-		}
-		
+	@RequestMapping
+	public String majorsAnswer() {
 		return "appPage/majorsAnswer";
 	}
 
@@ -117,10 +109,18 @@ public class AppPageController {
 	 * @return
 	 */
 	@RequestMapping
-	public String detailsAnswer(ModelMap modelMap,Long questionAnswerId) {
-		
-		
+	public String detailsAnswer() {
 		return "appPage/detailsAnswer";
+	}
+	
+	/***
+	 * 编辑器Code
+	 * @return
+	 */
+	@RequestMapping
+	public String editorCode() {
+		
+		return "appPage/textEditorCode";
 	}
 	
 	/**
@@ -134,14 +134,17 @@ public class AppPageController {
 		return "appPage/textEditor";
 	}
 	
-	/**
-	 * 
-	 * @return
-	 */
 	@RequestMapping
-	public String textEditorOther() {
+	public String textEditorExpert() {
 		
-		return "appPage/textEditorOther";
+		return "appPage/textEditorExpert";
+	}
+	
+	
+	@RequestMapping
+	public String invitation() {
+		
+		return "appPage/invitation";
 	}
 	
 }
