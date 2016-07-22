@@ -77,7 +77,7 @@
 		    <p style="font-size: 14px;color: #b5b5b5;margin-left: 10px;">请补充你的正文内容</p>
 		</script>	
 		<div class="editor-list">
-			<ul>
+			<ul style="margin:0;">
 				<li style="border-right: 1px solid #dadadc;width: 449px;"><span>人数</span><input type="text" name="nump" id="nump" value="" placeholder="请填写最大数量，或填不限" /></li>
 				<li><span>费用</span><input type="text" name="" id="unit-price" value="" placeholder="元/人" /></li>
 				<div class="r-start">
@@ -96,17 +96,13 @@
 			</ul>
 			<div class="c-address">
 				<div class="address-ch">
-					 <label class="item-input"> 
 			            <span class="input-label">地址:</span>
 			            <input type="text" id="keyword" name="ykwork" placeholder="所在地关键字"
 			            onfocus='this.value=""' onblur="$.loadaddr()" />
-			        </label>
 				</div>
 		       <div class="adress-wr">
-		       	<label class="item-input">
 		            <span class="input-label">详细地址:</span>
 		            <input type="text" id="address" placeholder="详细所在地,如楼层" />
-		        </label>
 		       </div>
 		        
 			</div>			

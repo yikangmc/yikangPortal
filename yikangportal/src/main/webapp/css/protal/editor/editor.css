@@ -36,7 +36,7 @@ body {
     	}
     	.all-top{
     		width: 1200px;
-    		height: 30px;
+    		height: 42px;
     		background: #fbfbfb;
     		margin-top: 42px;
     		padding-top: 10px;
@@ -325,6 +325,9 @@ a:hover { color: #999; } a:active { color: #999; }
 	border-bottom:1px solid #dadadc ;
 	line-height: 57px;
 }
+.editor-list ul li:nth-child(2){
+	width: 449px;
+}
 .editor-list ul li span{
 	font-size: 18px;
 	color: #444;
@@ -338,7 +341,7 @@ a:hover { color: #999; } a:active { color: #999; }
 	font-size: 18px;
 }
 .r-start,.r-end,.a-start,.a-end{
-	width: 429px;
+	width: 449px;
 	height: 57px;
 	float: left;
 	line-height: 57px;
@@ -355,6 +358,9 @@ a:hover { color: #999; } a:active { color: #999; }
 	color: #444;
 	margin-left: 20px;
 }
+#start,#start2,#end,#end2{
+	height: 40px;
+}
 .c-address{
 	width: 900px;
 	height: 112px;
@@ -366,21 +372,27 @@ a:hover { color: #999; } a:active { color: #999; }
 	margin-top: 20px;
 }
 .c-address input{
-	width: 773px;
+	width: 770px;
 	height: 55px;
 	float: right;
 	border: 0;
 	font-size: 18px;
 }
+.c-address #keyword{
+	float: right;
+	/*margin-left: 57px;*/
+}
 .amap-sug-result{
 	border: 0;
 }
 .c-address div{
-	width: 900px;
+	width: 898px;
 	height: 56px;
 	line-height: 56px;
 }
+
 .address-ch{
+	width: 898px;
 	border-bottom: 1px solid #dadadc;
 }
 .r-ends,.a-ends{
