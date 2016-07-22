@@ -4,22 +4,59 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
-  <script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+  <meta http-equiv="Content-Type" content="text/html,charset=utf-8,IE=edge,chrome=1" />
   <script src="<%=basePath%>js/viewport.js"></script>
+  <script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
+  <script src="http://www.runoob.com/static/ionic/js/ionic.bundle.min.js"></script>
   <link rel="stylesheet" type="text/css" href="<%=basePath%>css/protal/publicStyle.css"/>
-  <title>初始页</title>
+  <link href="http://www.runoob.com/static/ionic/css/ionic.min.css"rel="stylesheet">
+  <title>ionicTest -- YKService</title>
 </head>
-  <body>
-    <div ng-app="" ng-init="quantity=1;price=5">
+  <body ng-app="starter" ng-controller="actionsheetCtl" >
+    <ion-pane>
+      <ion-content >
+         <h2 ng-click="show()">Action Sheet</h2>
+            </ion-content>
+        </ion-pane>
+  </body>
+  <script type="text/javascript">
+    angular.module('starter', ['ionic'])
+    .run(function($ionicPlatform) {
+      $ionicPlatform.ready(function() {
+        // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+        // for form inputs)
+        if(window.cordova && window.cordova.plugins.Keyboard) {
+          cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+        }
+        if(window.StatusBar) {
+          StatusBar.styleDefault();
+        }
+      });
+    })
 
-    <h2>价格计算器</h2>
+    .controller( 'actionsheetCtl',['$scope','$ionicActionSheet','$timeout' 
+      ,function($scope,$ionicActionSheet,$timeout){
+        $scope.show = function() {
 
-    数量： <input type="number"  ng-model="quantity">
-    价格： <input type="number" ng-model="price">
+            var hideSheet = $ionicActionSheet.show({
+                 buttons: [
+                  { text: '分享到微信' },
+                  { text: '分享到QQ' },
+                  { text: '分享到新浪' },
+                  { text: '复制分享链接' }
+                ],
+                cancelText : '取消',
+                cancel: function() {
+                     // add cancel code..
+                   },
+                buttonClicked: function(index) {
+                  return true;
+                }
+            });
 
-    <p><b>总价：</b> {{ quantity * price }}</p>
+            $timeout(function(){hideSheet()}, 60000);
 
-    </div>
+        };  
+    }])
+  </script>
 </html>

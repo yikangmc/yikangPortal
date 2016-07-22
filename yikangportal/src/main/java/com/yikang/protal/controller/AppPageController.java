@@ -123,28 +123,35 @@ public class AppPageController {
 		return "appPage/textEditorCode";
 	}
 	
+	
 	/**
 	 * 文本编辑器部分
 	 * 
 	 * @return null
 	 */
+	
+//	回答
 	@RequestMapping
-	public String textEditor() {
+	public String editorAnswer() {
 		
-		return "appPage/textEditor";
+		return "editor/editorAnswer";
 	}
-	
+//	专业内容
 	@RequestMapping
-	public String textEditorExpert() {
+	public String editorExpert() {
 		
-		return "appPage/textEditorExpert";
+		return "editor/editorExpert";
 	}
-	
-	
+//	线下
 	@RequestMapping
-	public String invitation() {
+	public String editorLine() {
 		
-		return "appPage/invitation";
+		return "editor/editorLine";
 	}
-	
+//	线上
+	@RequestMapping
+	public String editorOnline() {
+		
+		return "editor/editorOnline";
+	}
 }
