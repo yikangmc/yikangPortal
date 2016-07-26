@@ -8,8 +8,9 @@
 	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
 	<script src="<%=basePath%>js/viewport.js"></script>
 	<script src="<%=basePath%>js/jquery.qrcode.min.js"></script>
+	<script src="<%=basePath%>js/views/appPage/textEditroCode.js"></script>
 	<link rel="stylesheet" type="text/css" href="<%=basePath%>css/protal/publicStyle.css"/>
-	<link rel="stylesheet" type="text/css" href="<%=basePath%>css/protal/appPage/EditorCode.css">
+	<link rel="stylesheet" type="text/css" href="<%=basePath%>css/protal/appPage/EditorCode.css"/>
 	<title>佳佳康复-居家型术后及慢性病康复护理专家</title>
 	<style type="text/css">
 		#codeico{
@@ -31,7 +32,7 @@
 		<div class="nav">
 			<div class="nav-body">
 				<a class="Nbody-left">
-					<img src="<%=basePath%>img/index/logo.png">
+					<img src="<%=basePath%>img/index/logo.png"/>
 				</a>
 				<!-- <ul>
 					<li>首页</li>
@@ -69,7 +70,7 @@
 			$("#code").qrcode({
 			    width: 200,
 			    height:200,
-			    text: unique
+			    text: '${uniqueCode == null ?"jjkangfu.cn":uniqueCode}'
 			}); 
 
 			console.log(unique);
