@@ -12,27 +12,35 @@
     <script type="text/javascript" charset="utf-8" src="<%=basePath%>img/protal/editor/umeditor.config.js"></script>
     <script type="text/javascript" charset="utf-8" src="<%=basePath%>img/protal/editor/umeditor.min.js"></script>
     <script type="text/javascript" src="<%=basePath%>img/protal/editor/lang/zh-cn/zh-cn.js"></script>
+    <script href="<%=basePath%>css/protal/editor/panduan.js"></script>
    
 </head>
 <body>
 <div class="content">
 		<div class="header">
 			<div class="header-main">
-				<img src="<%=basePath%>img/index/logo.png">
+				<a href="###"><img src="<%=basePath%>img/index/logo.png"/></a>
 			</div>			
 		</div>	
 <div class="allImp">
 	<div class="all-top">	
 		<ul class="act-type">
-			<li class="act-type1" style="border-right: 1px solid #d6d6d6;"><span><img src="img/线上点击.png"/></span>发布线上活动</li>
-			<li><span><img src="<%=basePath%>img/protal/editor/img/线下未点击.png"/></span>发布线下活动</li>
-		</ul>			
+			<a class="a-online" href="###">
+				<li class="act-type1" style="border-right: 1px solid #d6d6d6;"><span>
+					<img src="<%=basePath%>img/protal/editor/img/onlineNow.png"/></span>发布线上活动</li></a>
+			<a class="b-online" href="###"><li class="act-type2"><span><img src="<%=basePath%>img/protal/editor/img/lineLost.png"/></span>发布线下活动</li></a>
+		</ul>
+		<ul class="act-type3">			
+			<a class="a-online" href="###"><li class="act-type1" style="border-right: 1px solid #d6d6d6;"><span><img src="<%=basePath%>img/protal/editor/img/onlineLost.png"/></span>发布线上活动</li></a>
+			<a class="b-online" href="###"><li class="act-type2"><span><img src="<%=basePath%>img/protal/editor/img/lineNow.png"/></span>发布线下活动</li></a>
+		</ul>
 	</div>
 	<div class="main-left">
 			<h2>请在这里输入标题</h2>
 			<input type="text" name="" id="bigTitle" value="" placeholder="填写活动标题（必填）" />
 			<h2>上传宣传图</h2>
-			<div class="upLoad">
+			<div class="upLoad" style="
+					background: url('<%=basePath%>img/protal/editor/img/upload.jpg') center no-repeat;">
 				<input id="file" multiple="multiple" type="file" value="上传图片" onchange="func()" />
 			</div>
 			<h2 class="tips">为活动添加标签</h2>
@@ -75,11 +83,11 @@
 		    <p style="font-size: 14px;color: #b5b5b5;margin-left: 10px;">请补充你的正文内容</p>
 		</script>	
 		<div class="editor-list">
-			<ul style="margin: 0px;">
+			<ul class="a-line">
 				<li style="border-right: 1px solid #dadadc;width: 900px;"><span>人数</span><input style="width: 773px;" type="text" name="nump" id="nump" value="" placeholder="请填写最大数量，或填不限" /></li>
 				
 				<div class="r-start">
-					<span>报名开始</span><li class="laydate-icon" id="start" style="width:282px;float: right;border: 0;padding-left:18px ;color: #444;"></li>
+					<span>报名开始</span><li class="laydate-icon" id="start" style="width:282px;height:56px;float: right;border: 0;padding-left:18px ;color: #444;"></li>
 				</div>
 				<!--<div class="r-end">
 					<span>报名结束</span><li class="laydate-icon" id="end" style="width:282px;float: right;border: 0;padding-left:18px ;color: #444;"></li>
@@ -88,7 +96,7 @@
 					<span>费用</span><input type="text" name="" id="unit-price" value="" placeholder="元/人" />
 				</div>
 				<div class="a-start">
-					<span>活动开始</span><li class="laydate-icon" id="start2" style="width:282px;float: right;border: 0;padding-left:18px ;color: #444;"></li>
+					<span>活动开始</span><li class="laydate-icon" id="start2" style="width:282px;height:56px;float: right;border: 0;padding-left:18px ;color: #444;"></li>
 				</div>
 				<!--<div class="a-end">
 					<span>活动结束</span><li class="laydate-icon" id="end2" style="width:282px;float: right;border: 0;padding-left:18px ;color: #444;"></li>
@@ -124,21 +132,47 @@
 				</div>
 				
 			</ul>
+			<ul class="b-line">
+				<li style="border-right: 1px solid #dadadc;width: 449px;"><span>人数</span><input type="text" name="nump" id="nump" value="" placeholder="请填写最大数量，或填不限" /></li>
+				<li><span>费用</span><input type="text" name="" id="unit-price" value="" placeholder="元/人" /></li>
+				<div class="r-start">
+					<span>报名开始</span><li class="laydate-icon" id="start3" style="width:282px;height:56px;float: right;border: 0;padding-left:18px ;color: #444;"></li>
+				</div>
+				<div class="r-end">
+					<span>报名结束</span><li class="laydate-icon" id="end3" style="width:282px;height:56px;float: right;border: 0;padding-left:18px ;color: #444;"></li>
+				</div>
+				<div class="a-start">
+					<span>活动开始</span><li class="laydate-icon" id="start4" style="width:282px;height:56px;float: right;border: 0;padding-left:18px ;color: #444;"></li>
+				</div>
+				<div class="a-end">
+					<span>活动结束</span><li class="laydate-icon" id="end4" style="width:282px;height:56px;float: right;border: 0;padding-left:18px ;color: #444;"></li>
+				</div>
+				
+			</ul>
 			<div class="c-address">
 				<div class="address-ch">
+					 
 			            <span class="input-label">地址:</span>
 			            <input type="text" id="keyword" name="ykwork" placeholder="所在地关键字"
 			            onfocus='this.value=""' onblur="$.loadaddr()" />
+			        
 				</div>
 		       <div class="adress-wr">
+		       
 		            <span class="input-label">详细地址:</span>
 		            <input type="text" id="address" placeholder="详细所在地,如楼层" />
+		        
 		       </div>
 		        
 			</div>			
 		</div>
+		
+			
+			
+		
 	</div>	
 </div>
+
 </div>
 <div class="footer">
 	<div class="footer-main">
@@ -151,10 +185,23 @@
 <!-- 高德地图的开发者key 这个必须引入 -->
 <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=99891508524054beccc322c75a2de45c"></script>
 <script src="<%=basePath%>img/protal/editor/laydate/laydate.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="laydate/act-line.js" type="text/javascript" charset="utf-8"></script>-->
 <script type="text/javascript">
 	$('#nump').focus(function(){
 		$('#nump').css('border','none');
 	})
+	$('.a-online').click(function(){
+		$('.act-type').css('display','block');
+		$('.act-type3').css('display','none');
+		$('.a-line').css({"display":"block"});
+		$('.b-line').css({"display":"none"});
+	});
+	$('.b-online').click(function(){
+		$('.act-type').css('display','none');
+		$('.act-type3').css('display','block');
+		$('.a-line').css({"display":"none"});
+		$('.b-line').css({"display":"block"});
+	});
     //实例化编辑器
     var um = UM.getEditor('myEditor');
     um.addListener('blur',function(){
@@ -304,14 +351,24 @@
     $('.btn-release').click(function(){
 		var oTXT= UM.getEditor('myEditor').getContentTxt();
 		var i=$('.nav-meny').children('a').length;
+		var numP=document.getElementById('nump');
+		var Start= document.getElementById('start');
+		var Start2 = document.getElementById('start2');
+		var Price = document.getElementById('unit-price');
+		var Keyword = document.getElementById('keyword');
+		var Address = document.getElementById('address');
+		if(numP.value.length<1||Start.value.length<1||Address.value.length<1||Start2.value.length<1||Price.value.length<1||Keyword.value.length<1){
+				alert('请完善活动详细信息')
+		}else{
 		if (Title.value==''||Title.value.length<1||oTXT<1) {
 
 			alert('您好像没有输入标题或者内容');
 		} else {
 		
-		if(i<1){
-			alert('请选择至少一个标签')
-		}else{
+			if(i<1){
+				alert('请选择至少一个标签')
+		}
+		else{
 		var arr = [];
 //      arr.push("使用editor.getContent()方法可以获得编辑器的内容");
 		
@@ -320,6 +377,7 @@
         arr.push(UM.getEditor('myEditor').getContent());
         alert(arr.join("\n"));
 		}
+	}
 	}
     })
 //  $('.btn-release').click(function(){
@@ -527,6 +585,130 @@ var start2 = {
 //	});
 laydate(start2);
 //laydate(end2);
+var start3 = {
+    elem: '#start3',
+    format: 'YYYY/MM/DD hh:mm:ss',
+    min: laydate.now(), //设定最小日期为当前日期
+    max: '2016-12-31 23:59:59', //最大日期
+    istime: true,
+    istoday: true,
+    choose: function(datas){
+         end3.min = datas; //开始日选好后，重置结束日的最小日期        
+         end3.start = datas //将结束日的初始值设定为开始日
+         t=$('#start3').html();
+         //console.log(t);
+         var idate=new Date(t);
+         //console.log(idate);
+         var times = Date.parse(idate);
+         //console.log(times);
+         var inum=30*24*60*60*1000;
+         inum += times;
+         //console.log(inum);
+         var date1 = new Date(inum);
+         var Y = date1.getFullYear()+'/';
+         var M = (date1.getMonth()+1<10 ? '0'+(date1.getMonth()+1):date1.getMonth()+1)+'/';
+         var D = date1.getDate();
+         //console.log(Y+M+D)
+		 var tt = Y+M+D;
+		 end3.max = tt;
+    }
+};
+
+
+//$('#laydate_box td').blur(function(){
+//	alert($('#start').html())
+//});
+
+	
+
+var end3 = {
+    elem: '#end3',
+    format: 'YYYY/MM/DD hh:mm:ss',
+    min: laydate.now(),
+    max: '2099-12-31 23:59:59',
+    istime: true,
+    istoday: true,
+    choose: function(datas){
+        start3.max = datas; //结束日选好后，重置开始日的最大日期       
+       
+    }
+};
+//var x=document.getElementById('start');
+//var starttime = Date.parse(new Date($('start').val()));
+//  laydate({
+//	    elem: '#end',
+//	    format: 'YYYY/MM/DD hh:mm:ss',
+//	//  min: laydate.now(),
+//	  max: '2099-06-16 23:59:59',
+//	  istime: true,
+//	  istoday: false,
+//	    min: laydate.now(+0), //-1代表昨天，-2代表前天，以此类推
+//	    max: laydate.now(+0), //+1代表明天，+2代表后天，以此类推
+//	});
+laydate(start3);
+laydate(end3);
+var start4 = {
+    elem: '#start4',
+    format: 'YYYY/MM/DD hh:mm:ss',
+    min: laydate.now(), //设定最小日期为当前日期
+    max: '2016-12-31 23:59:59', //最大日期
+    istime: true,
+    istoday: true,
+    choose: function(datas){
+         end4.min = datas; //开始日选好后，重置结束日的最小日期        
+         end4.start = datas //将结束日的初始值设定为开始日
+         t=$('#start4').html();
+         //console.log(t);
+         var idate=new Date(t);
+         //console.log(idate);
+         var times = Date.parse(idate);
+         //console.log(times);
+         var inum=30*24*60*60*1000;
+         inum += times;
+         //console.log(inum);
+         var date1 = new Date(inum);
+         var Y = date1.getFullYear()+'/';
+         var M = (date1.getMonth()+1<10 ? '0'+(date1.getMonth()+1):date1.getMonth()+1)+'/';
+         var D = date1.getDate();
+         //console.log(Y+M+D)
+		 var tt = Y+M+D;
+		 end4.max = tt;
+    }
+};
+
+
+//$('#laydate_box td').blur(function(){
+//	alert($('#start').html())
+//});
+
+	
+
+var end4 = {
+    elem: '#end4',
+    format: 'YYYY/MM/DD hh:mm:ss',
+    min: laydate.now(),
+    max: '2099-12-31 23:59:59',
+    istime: true,
+    istoday: true,
+    choose: function(datas){
+        start4.max = datas; //结束日选好后，重置开始日的最大日期       
+       
+    }
+};
+//var x=document.getElementById('start');
+//var starttime = Date.parse(new Date($('start').val()));
+//  laydate({
+//	    elem: '#end',
+//	    format: 'YYYY/MM/DD hh:mm:ss',
+//	//  min: laydate.now(),
+//	  max: '2099-06-16 23:59:59',
+//	  istime: true,
+//	  istoday: false,
+//	    min: laydate.now(+0), //-1代表昨天，-2代表前天，以此类推
+//	    max: laydate.now(+0), //+1代表明天，+2代表后天，以此类推
+//	});
+laydate(start4);
+laydate(end4);
     // 主要代码 代码中的console log 可以删除
     // 请注意console中的信息反馈。
     // Over ╮(╯▽╰)╭

@@ -12,6 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="<%=basePath%>css/protal/appPage/EditorCode.css">
 	<title>佳佳康复-居家型术后及慢性病康复护理专家</title>
 	<style type="text/css">
+		article,aside,dialog,footer,header,section,footer,nav,figure,menu{ display:block }
 		#codeico{
 			position: relative;
 			width:55px; 
@@ -71,7 +72,7 @@
 			    height:200,
 			    text: unique
 			}); 
-
+			
 			console.log(unique);
 		}
 	</script>

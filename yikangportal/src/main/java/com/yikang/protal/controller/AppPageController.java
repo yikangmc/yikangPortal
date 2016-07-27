@@ -122,6 +122,23 @@ public class AppPageController {
 		
 		return "appPage/textEditorCode";
 	}
+
+	/**
+	 * 实时html页面
+	 * @return
+	 */
+	@RequestMapping
+	public String invitation() {
+
+		return "appPage/invitation";
+	}
+	
+	@RequestMapping
+	public String activity() {
+
+		return "appPage/activity2";
+	}
+	
 	
 	
 	/**
