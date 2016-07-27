@@ -158,7 +158,7 @@ public class SendRequest {
 	
 	
 	@SuppressWarnings("unchecked")
-	public static ResponseMessage sendPostRetureResponseMessage(String serviceCode,Map<String,Object>  paramData ,Class<?> returnDataType) throws IOException {
+	public static ResponseMessage sendPostRetureResponseMessage(String serviceCode,Map paramData ,Class<?> returnDataType) throws IOException {
 		SimpleDateFormat sdf=new  SimpleDateFormat("yyyy-MM-dd HH:mm:ss.S");
 		
 		CloseableHttpClient httpclient = HttpClients.createDefault();

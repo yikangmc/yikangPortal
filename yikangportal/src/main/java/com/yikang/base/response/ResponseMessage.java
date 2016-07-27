@@ -1,10 +1,12 @@
 package com.yikang.base.response;
 
+import com.yikang.common.error.ExceptionConstants;
+
 public class ResponseMessage<T> {
 
-	public String status;
+	public String status=ExceptionConstants.responseSuccess.responseSuccess.code;
 	
-	public String message;
+	public String message=ExceptionConstants.responseSuccess.responseSuccess.message;
 	
 	public T data;
 
@@ -17,7 +19,7 @@ public class ResponseMessage<T> {
 		this.message = message;
 	}
 
-	public Object getData() {
+	public T getData() {
 		return data;
 	}
 
