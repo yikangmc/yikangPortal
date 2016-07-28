@@ -7,8 +7,8 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
 	<script src="<%=basePath%>js/viewport750.js"></script>
-	<link rel="stylesheet" type="text/css" href="<%=basePath%>css/protal/appPage/appWholecs.css">
-	<link rel="stylesheet" type="text/css" href="<%=basePath%>css/protal/appPage/detailsAnswer.css">
+	<link rel="stylesheet" type="text/css" href="<%=basePath%>css/protal/appPage/appWholecs.css"/>
+	<link rel="stylesheet" type="text/css" href="<%=basePath%>css/protal/appPage/detailsAnswer.css"/>
 	<title>回答详情</title>
 </head>
 	<body>
@@ -18,11 +18,11 @@
 				<div>
 					<p>我的韧带撕裂，如何康复才能....</p>
 					<p>
-						<img src="<%=basePath%>img/protal/appPage/picture.png"> 
+						<img src="<%=basePath%>img/protal/appPage/picture.png"/> 
 
 						<span class="bod-Name"> 康复师周玲 </span> 
 
-						<img src="<%=basePath%>img/protal/appPage/icon2.png">
+						<img src="<%=basePath%>img/protal/appPage/icon2.png"/>
 					</p>
 				</div>
 			</div>
@@ -31,14 +31,12 @@
 			<div class="mainactivity">
 				<div class="mBodys">
 					清晨，不知何处的鸟儿早已在树上，清晨，不知何处的鸟儿早已在树上，清晨，不知何处的鸟儿早已在树上，清晨，不知何处的鸟儿早已在树上，清晨，不知何处的鸟儿早已在树上清晨，不知何处的鸟儿早已在树上清晨，不知何处的鸟儿早已在树上清晨，不知何处的鸟儿早已在树上清晨，不知何处的鸟儿早已在树上
-				<img src="<%=basePath%>img/protal/appPage/testbanner.png">
+				<img src="<%=basePath%>img/protal/appPage/testbanner.png"/>
 				清晨，不知何处的鸟儿早已在树上清晨，不知何处的鸟儿早已在树上清晨，不知何处的鸟儿早已在树上清晨，不知何处的鸟儿早已在树上清晨，不知何处的鸟儿早已在树上
 				</div>
 				<div class="author-Infos">
 					回答于 2016-06-3
-
-					<br>
-
+					<br/>
 					作者保留权益
 				</div>
 			</div>
@@ -47,10 +45,10 @@
 				<div class="btm-Style">
 					<ul>
 						<li>
-							<img class="mag" src="<%=basePath%>img/protal/appPage/like.png">
+							<img class="mag" src="<%=basePath%>img/protal/appPage/like.png"/>
 							3288</li>
 						<li>
-							<img class="mag" src="<%=basePath%>img/protal/appPage/all.png">
+							<img class="mag" src="<%=basePath%>img/protal/appPage/all.png"/>
 							更多</li>
 					</ul>
 				</div>

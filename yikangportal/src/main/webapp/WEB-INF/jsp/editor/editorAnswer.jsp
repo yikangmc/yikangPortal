@@ -7,7 +7,7 @@
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
     <title>回答问题</title>
     
-    <link href="<%=basePath%>img/protal/editor/themes/default/css/umeditor.css" type="text/css" rel="stylesheet">
+    <link href="<%=basePath%>img/protal/editor/themes/default/css/umeditor.css" type="text/css" rel="stylesheet"/>
     <link rel="stylesheet" type="text/css" href="<%=basePath%>css/protal/editor/editor.css"/>
 	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
     <script type="text/javascript" charset="utf-8" src="<%=basePath%>img/protal/editor/umeditor.config.js"></script>
@@ -19,12 +19,12 @@
 <div class="content">
 		<div class="header">
 			<div class="header-main">
-				<img src="<%=basePath%>img/index/logo.png">
+				<img src="<%=basePath%>img/index/logo.png"/>
 			</div>			
 		</div>	
 <div class="allImp">
 	<div class="all-top">	
-		<h1><span><img src="<%=basePath%>img/protal/editor/img/tianjiahuida_16x16.png"/></span>添加回答</spna></h1>		
+		<h1><span><img src="<%=basePath%>img/protal/editor/img/tianjiahuida_16x16.png"/>添加回答</span></h1>		
 	</div>
 	<div class="main-left">
 			<h2>你正在为下面问题添加回答</h2>

@@ -7,7 +7,7 @@
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
     <title>发布专业内容</title>
     
-    <link href="<%=basePath%>img/protal/editor/themes/default/css/umeditor.css" type="text/css" rel="stylesheet">
+    <link href="<%=basePath%>img/protal/editor/themes/default/css/umeditor.css" type="text/css" rel="stylesheet"/>
     <link rel="stylesheet" type="text/css" href="<%=basePath%>css/protal/editor/editor.css"/>
 	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
     <script type="text/javascript" charset="utf-8" src="<%=basePath%>img/protal/editor/umeditor.config.js"></script>
@@ -19,12 +19,12 @@
 <div class="content">
 		<div class="header">
 			<div class="header-main">
-				<img src="<%=basePath%>img/index/logo.png">
+				<img src="<%=basePath%>img/index/logo.png"/>
 			</div>			
 		</div>	
 <div class="allImp">
 	<div class="all-top">	
-		<h1><span><img src="<%=basePath%>img/protal/editor/img/expertlogo.jpg"/></span>发布专家说</spna></h1>		
+		<h1><span><img src="<%=basePath%>img/protal/editor/img/expertlogo.jpg"/>发布专家说</span></h1>		
 	</div>
 	<div class="main-left">
 			<h2>请在这里输入标题</h2>
@@ -103,7 +103,7 @@
 
 				select[0] = "智障"
 				select[1] = "帕金森"
-				select[2] = "阴吹思婷"
+				select[2] = ""
 				select[3] = "浪里格朗儿"
 				select[4] = "桑格利亚"
 				select[5] = "智力低下且不兼"
