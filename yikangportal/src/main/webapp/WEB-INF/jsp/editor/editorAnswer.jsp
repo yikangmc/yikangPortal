@@ -24,7 +24,7 @@
 		</div>	
 <div class="allImp">
 	<div class="all-top">	
-		<h1><span><img src="<%=basePath%>img/protal/editor/img/tianjiahuida_16x16.png"/>添加回答</span></h1>		
+		<h1 style="margin:0;line-height:25px;"><span><img src="<%=basePath%>img/protal/editor/img/tianjiahuida_16x16.png"/>添加回答</span></h1>		
 	</div>
 	<div class="main-left">
 			<h2>你正在为下面问题添加回答</h2>

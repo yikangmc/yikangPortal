@@ -274,7 +274,8 @@ a:active {
 }
 
 .menu {
-	height: 320px;
+	min-height: 360px;
+	height: auto;
 	width: 100%;
 	border-left: 1px #0faadd solid;
 	margin: 0 auto;
@@ -282,7 +283,7 @@ a:active {
 
 .menu ul {
 	width: 240px;
-	height: 320px;
+	height: auto;
 	background-color: #0faadd;
 	float: left;
 	color: #fff;
@@ -311,8 +312,8 @@ a:active {
 }
 
 .Label {
-	width: 340px;
-	height: 320px;
+	width: 400px;
+	min-height: 360px;
 	padding: 20;
 	font-size: 16px;
 	background-color: #fff;
@@ -320,9 +321,10 @@ a:active {
 	display: none;
 	text-align: left;
 	position: absolute;
-	top: 499px;
+	top: 472px;
 	left: 261px;
 	z-index: 10000;
+	overflow: auto;	
 }
 
 .Lables {

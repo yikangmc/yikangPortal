@@ -3,11 +3,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
-
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
     <title>发布专业内容</title>
     
     <link href="<%=basePath%>img/protal/editor/themes/default/css/umeditor.css" type="text/css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="<%=basePath%>css/protal/publicStyle.css"/>
     <link rel="stylesheet" type="text/css" href="<%=basePath%>css/protal/editor/editor.css"/>
 	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
     <script type="text/javascript" charset="utf-8" src="<%=basePath%>img/protal/editor/umeditor.config.js"></script>
@@ -15,6 +15,12 @@
     <script type="text/javascript" src="<%=basePath%>img/protal/editor/lang/zh-cn/zh-cn.js"></script>
    
 </head>
+<style type="text/css">
+	body {
+		text-align: left;
+
+	}
+</style>
 <body>
 <div class="content">
 		<div class="header">
@@ -24,13 +30,15 @@
 		</div>	
 <div class="allImp">
 	<div class="all-top">	
-		<h1><span><img src="<%=basePath%>img/protal/editor/img/expertlogo.jpg"/>发布专家说</span></h1>		
+		<h1 style="margin:0;line-height:25px;"><span><img src="<%=basePath%>img/protal/editor/img/expertlogo.jpg"/>发布专家说</span></h1>		
 	</div>
 	<div class="main-left">
 			<h2>请在这里输入标题</h2>
-			<input type="text" name="" id="bigTitle" value="" placeholder="填写专业内容标题（必填）" />
+			<input onblur="isTitle();" onkeyup="this.value=this.value.replace(/[+*|<>{}=;,；：:/\[\]]/g,'')"
+    onafterpaste="this.value=this.value.replace(/[+*|<>{}=;,，。.；：:/\[\]]/g,'')" type="text" name="" id="bigTitle" value="" placeholder="填写活动标题（必填）" />
 			<h2>上传标题图</h2>
-			<div class="upLoad">
+			<div class="upLoad" style="
+					background: url('<%=basePath%>img/protal/editor/img/upload.jpg') center no-repeat;">
 				<input id="file" multiple="multiple" type="file" value="上传图片" onchange="func()" />
 			</div>
 			<h2 class="tips">为专家说</h2>
@@ -39,39 +47,23 @@
 		<div class="menu">
 			
 			<ul class="menuBody">
-
-				<li>运动康复</li>
-
-				<li>言语康复</li>
-
-				<li>中医</li>
-
-				<li>护理</li>
-
-				<li>老年康复</li>
-
-				<li>慢病</li>
-
-				<li>心脑血管</li>
-
-				<li>体态矫正</li>
-
+				<c:forEach items="${taglibs }" var="tag">
+					<li id="d${tag.taglibId}">${tag.tagName}</li>
+				</c:forEach>
 			</ul>
-			<div class="Label"></div>
-			<div class="Label"></div>
-			<div class="Label"></div>
-			<div class="Label"></div>
-			<div class="Label"></div>
-			<div class="Label"></div>
-			<div class="Label"></div>
-			<div class="Label"></div>
+			<c:forEach items="${taglibs }" var="tag">
+				<input type="hidden" value="${tag.tagName}" />
+				<div id="d${tag.taglibId}" class="Label">
+					<c:forEach items="${tag.childs }" var="tags">
+						<a class='Lables'>${tags.tagName}</a>
+					</c:forEach>
+				</div>
+			</c:forEach>
 		</div>
 	</div>
 	<!--style给定宽度可以影响编辑器的最终宽度-->
 	<div class="mainEditor">		
-		<script type="text/plain" id="myEditor" style="width:900px;height:900px;">
-		    <p style="font-size: 14px;color: #b5b5b5;margin-left: 10px;">请补充你的正文内容</p>
-		</script>		
+		<script type="text/plain" id="myEditor" style="width:900px;height:900px;"></script>		
 	</div>	
 </div>
 </div>
@@ -84,6 +76,7 @@
 	</div>		
 </div>
 <script type="text/javascript">
+
     //实例化编辑器
     var um = UM.getEditor('myEditor');
     um.addListener('blur',function(){
@@ -94,102 +87,70 @@
         
     });
     var mli = $('.menuBody li'), 
-				mdv = $('.Label'),
-				nCk = $('.nav-meny');
+		mdv = $('.Label'),
+		nCk = $('.nav-meny');
 
-			// 假数据
-			var info = function(n) {
-				var select = new Array()
+	var tid, did, dd, dl,nM;
+	mli.hover(function() {
+		$(this).addClass("hover");
+		$(this).each(function(){did = $(this).attr("id")});
+		dd = $("div#" + did);
+		dl = $("li#" + did);
 
-				select[0] = "智障"
-				select[1] = "帕金森"
-				select[2] = ""
-				select[3] = "浪里格朗儿"
-				select[4] = "桑格利亚"
-				select[5] = "智力低下且不兼"
-				select[6] = "破伤风"
-				select[7] = "万通筋骨贴"
+		dd.addClass("this-hover");
+		dl.addClass("hover");
 
-				return select[n];
+		dd.hover(function() {
 
-			}
+			dl.addClass("hover");
+			dd.addClass("this-hover");
 
-			// 事件委托
-			for (var i = 0; i < mli.length; i++) {
-				mli[i].id = ("d" + (i + 1));
-				mdv[i].id = ("d" + (i + 1));
-			}
+		}, function() {
 
-			var tid, did, dd, dl,nM;
-			mli.hover(function() {
-				$(this).addClass("hover");
-				$(this).each(function(){did = $(this).attr("id")});
-				dd = $("div#" + did);
-				dl = $("li#" + did);
+			dl.removeClass("hover");
+			dd.removeClass("this-hover");
 
-				dd.addClass("this-hover");
-				dl.addClass("hover");
+		});
+	}, function() {
 
-				dd.hover(function() {
+		dl.removeClass("hover");
+		dd.removeClass("this-hover");
 
-					dl.addClass("hover");
-					dd.addClass("this-hover");
+	});
+	var oIndex = "",
+		dId = "";
+	mli.mouseover(function() {
+		oIndex = $(this).attr("id");
+		dId = "#" + oIndex;
+	});
 
-				}, function() {
+	$(dId+" a").click(function() {
+		if (nCk.children('a').length < 4) {
+			nCk.append(
+				"<a class='Lables'>"
+				+ $(this).text() + 
+				"<div class='clear'>×</div></a>");
+			
+			nM = $('.nav-meny a');
+			$.dLable();
 
-					dl.removeClass("hover");
-					dd.removeClass("this-hover");
-
-				});
-			}, function() {
-
-				dl.removeClass("hover");
-				dd.removeClass("this-hover");
-
+		} 
+	})
+	
+	$.dLable = function(){
+		for (var i=0; i<nM.length; i++) {
+			$('.nav-meny a .clear').bind("click", function() {
+				$(this).parent('a').remove();
 			});
+			nM[i].onmouseover = function() {
+				$(this).children("div").css("display","block");
+			};
 
-
-			mli.mouseover(function() {
-				var oIndex = $(this).index();
-				var selects = info(oIndex);
-
-				mdv.html("").append(
-						"<a href='#' class='Lables'>" 
-						+ selects + 
-						"</a>");
-
-				$('.Label a').click(function() {
-					selects = $(this).html();
-
-					if (nCk.children('a').length < 4) {
-						nCk.append(
-							"<a href='#' class='Lables'>"
-							+ selects + 
-							"<div class='clear'>×</div></a>");
-						
-						nM = $('.nav-meny a');
-						$.dLable();
-
-					} else { alert("(。・`ω´・)最多只能选4个标签哟~") }
-
-				});
-
-			})
-
-			$.dLable = function(){
-				for (var i=0; i<nM.length; i++) {
-					$('.nav-meny a .clear').bind("click", function() {
-						$(this).parent('a').remove();
-					});
-					nM[i].onmouseover = function() {
-						$(this).children("div").css("display","block");
-					};
-
-					nM[i].onmouseout = function() {
-						$(this).children("div").css("display","none");
-					};
-				}
-			}
+			nM[i].onmouseout = function() {
+				$(this).children("div").css("display","none");
+			};
+		}
+	}
     //去除输入框内的第一个隐藏的 p
      $("#myEditor p").first().remove();
     function func() {
@@ -228,15 +189,16 @@
 //  function getAllHtml() {
 //      alert(UM.getEditor('myEditor').getAllHtml())
 //  }
-	var Title=document.getElementById('bigTitle');
-	
+var Title=document.getElementById('bigTitle');
 	
     $('.btn-release').click(function(){
 		var oTXT= UM.getEditor('myEditor').getContentTxt();
+		var regx = /^\d+$/ ;
+        var value = Title.value;
 		
-		if (Title.value==''||Title.value.length<1||oTXT<1) {
-
-			alert('您好像没有输入标题或者内容');
+		if (Title.value==''||Title.value.length<6||(regx.test(value))||oTXT<1) {
+			
+			alert('您好像没有输入标题（不能是纯数字且不少于5个字）或者内容');
 		} else {
 			var i=$('.nav-meny').children('a').length;
 			if(i<1){

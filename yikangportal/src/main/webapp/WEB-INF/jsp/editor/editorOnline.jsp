@@ -7,13 +7,17 @@
     <title>发布线上活动</title>
     
     <link href="<%=basePath%>img/protal/editor/themes/default/css/umeditor.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="<%=basePath%>css/protal/publicStyle.css"/>
     <link rel="stylesheet" type="text/css" href="<%=basePath%>css/protal/editor/editor.css"/>
 	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
+	<script type="text/javascript" charset="utf-8" src="<%=basePath%>js/portal/editor/panduan.js"></script>
     <script type="text/javascript" charset="utf-8" src="<%=basePath%>img/protal/editor/umeditor.config.js"></script>
     <script type="text/javascript" charset="utf-8" src="<%=basePath%>img/protal/editor/umeditor.min.js"></script>
     <script type="text/javascript" src="<%=basePath%>img/protal/editor/lang/zh-cn/zh-cn.js"></script>
     <script href="<%=basePath%>css/protal/editor/panduan.js"></script>
-   
+   	<style type="text/css">
+   		body {  text-align: left; }
+   	</style>
 </head>
 <body>
 <div class="content">
@@ -37,7 +41,8 @@
 	</div>
 	<div class="main-left">
 			<h2>请在这里输入标题</h2>
-			<input type="text" name="" id="bigTitle" value="" placeholder="填写活动标题（必填）" />
+			<input onblur="isTitle();" onkeyup="this.value=this.value.replace(/[+*|<>{}=;,；：:/\[\]]/g,'')"
+    onafterpaste="this.value=this.value.replace(/[+*|<>{}=;,，。.；：:/\[\]]/g,'')" type="text" name="" id="bigTitle" value="" placeholder="填写活动标题（必填）" />
 			<h2>上传宣传图</h2>
 			<div class="upLoad" style="
 					background: url('<%=basePath%>img/protal/editor/img/upload.jpg') center no-repeat;">
@@ -49,32 +54,18 @@
 		<div class="menu">
 			
 			<ul class="menuBody">
-
-				<li>运动康复</li>
-
-				<li>言语康复</li>
-
-				<li>中医</li>
-
-				<li>护理</li>
-
-				<li>老年康复</li>
-
-				<li>慢病</li>
-
-				<li>心脑血管</li>
-
-				<li>体态矫正</li>
-
+				<c:forEach items="${taglibs }" var="tag">
+					<li id="d${tag.taglibId}">${tag.tagName}</li>
+				</c:forEach>
 			</ul>
-			<div class="Label"></div>
-			<div class="Label"></div>
-			<div class="Label"></div>
-			<div class="Label"></div>
-			<div class="Label"></div>
-			<div class="Label"></div>
-			<div class="Label"></div>
-			<div class="Label"></div>
+			<c:forEach items="${taglibs }" var="tag">
+				<input type="hidden" value="${tag.tagName}" />
+				<div id="d${tag.taglibId}" class="Label">
+					<c:forEach items="${tag.childs }" var="tags">
+						<a class='Lables'>${tags.tagName}</a>
+					</c:forEach>
+				</div>
+			</c:forEach>
 		</div>
 	</div>
 	<!--style给定宽度可以影响编辑器的最终宽度-->
@@ -84,7 +75,8 @@
 		</script>	
 		<div class="editor-list">
 			<ul class="a-line">
-				<li style="border-right: 1px solid #dadadc;width: 900px;"><span>人数</span><input style="width: 773px;" type="text" name="nump" id="nump" value="" placeholder="请填写最大数量，或填不限" /></li>
+				<li style="border-right: 1px solid #dadadc;width: 900px;"><span>人数</span><input onkeyup="this.value=this.value.replace(/\D/g,'')"
+    onafterpaste="this.value=this.value.replace(/\D/g,'')" style="width: 773px;" type="text" name="nump" id="nump" value="" placeholder="请填写最大数量，或填不限(只填数字)" /></li>
 				
 				<div class="r-start">
 					<span>报名开始</span><li class="laydate-icon" id="start" style="width:282px;height:56px;float: right;border: 0;padding-left:18px ;color: #444;"></li>
@@ -93,7 +85,8 @@
 					<span>报名结束</span><li class="laydate-icon" id="end" style="width:282px;float: right;border: 0;padding-left:18px ;color: #444;"></li>
 				</div>-->
 				<div class="r-ends">
-					<span>费用</span><input type="text" name="" id="unit-price" value="" placeholder="元/人" />
+					<span>费用</span><input onkeyup="this.value=this.value.replace(/\D/g,'')"
+    onafterpaste="this.value=this.value.replace(/\D/g,'')" type="text" name="" id="unit-price" value="" placeholder="元/人(只填数字)" />
 				</div>
 				<div class="a-start">
 					<span>活动开始</span><li class="laydate-icon" id="start2" style="width:282px;height:56px;float: right;border: 0;padding-left:18px ;color: #444;"></li>
@@ -133,8 +126,10 @@
 				
 			</ul>
 			<ul class="b-line">
-				<li style="border-right: 1px solid #dadadc;width: 449px;"><span>人数</span><input type="text" name="nump" id="nump" value="" placeholder="请填写最大数量，或填不限" /></li>
-				<li><span>费用</span><input type="text" name="" id="unit-price" value="" placeholder="元/人" /></li>
+				<li style="border-right: 1px solid #dadadc;width: 449px;"><span>人数</span><input onkeyup="this.value=this.value.replace(/\D/g,'')"
+    onafterpaste="this.value=this.value.replace(/\D/g,'')"  type="text" name="nump" id="nump2" value="" placeholder="请填写最大数量，或填不限(只填数字)" /></li>
+				<li><span>费用</span><input  onkeyup="this.value=this.value.replace(/\D/g,'')"
+    onafterpaste="this.value=this.value.replace(/\D/g,'')" type="text" name="" id="unit-price2" placeholder="元/人(只填数字)" /></li>
 				<div class="r-start">
 					<span>报名开始</span><li class="laydate-icon" id="start3" style="width:282px;height:56px;float: right;border: 0;padding-left:18px ;color: #444;"></li>
 				</div>
@@ -160,7 +155,8 @@
 		       <div class="adress-wr">
 		       
 		            <span class="input-label">详细地址:</span>
-		            <input type="text" id="address" placeholder="详细所在地,如楼层" />
+		            <input onkeyup="this.value=this.value.replace(/[+*|<>{}=;,；：:/\[\]]/g,'')"
+    onafterpaste="this.value=this.value.replace(/[+*|<>{}=;,，。；：:/\[\]]/g,'')" type="text" id="address" placeholder="详细所在地,如楼层" />
 		        
 		       </div>
 		        
@@ -212,101 +208,70 @@
        
     });
     var mli = $('.menuBody li'), 
-				mdv = $('.Label'),
-				nCk = $('.nav-meny');
-			// 假数据
-			var info = function(n) {
-				var select = new Array()
+		mdv = $('.Label'),
+		nCk = $('.nav-meny');
 
-				select[0] = "智障"
-				select[1] = "帕金森"
-				select[2] = "阴吹思婷"
-				select[3] = "浪里格朗儿"
-				select[4] = "桑格利亚"
-				select[5] = "智力低下且不兼"
-				select[6] = "破伤风"
-				select[7] = "万通筋骨贴"
+	var tid, did, dd, dl,nM;
+	mli.hover(function() {
+		$(this).addClass("hover");
+		$(this).each(function(){did = $(this).attr("id")});
+		dd = $("div#" + did);
+		dl = $("li#" + did);
 
-				return select[n];
+		dd.addClass("this-hover");
+		dl.addClass("hover");
 
-			}
+		dd.hover(function() {
 
-			// 事件委托
-			for (var i = 0; i < mli.length; i++) {
-				mli[i].id = ("d" + (i + 1));
-				mdv[i].id = ("d" + (i + 1));
-			}
+			dl.addClass("hover");
+			dd.addClass("this-hover");
 
-			var tid, did, dd, dl,nM;
-			mli.hover(function() {
-				$(this).addClass("hover");
-				$(this).each(function(){did = $(this).attr("id")});
-				dd = $("div#" + did);
-				dl = $("li#" + did);
+		}, function() {
 
-				dd.addClass("this-hover");
-				dl.addClass("hover");
+			dl.removeClass("hover");
+			dd.removeClass("this-hover");
 
-				dd.hover(function() {
+		});
+	}, function() {
 
-					dl.addClass("hover");
-					dd.addClass("this-hover");
+		dl.removeClass("hover");
+		dd.removeClass("this-hover");
 
-				}, function() {
+	});
+	var oIndex = "",
+		dId = "";
+	mli.mouseover(function() {
+		oIndex = $(this).attr("id");
+		dId = "#" + oIndex;
+	});
 
-					dl.removeClass("hover");
-					dd.removeClass("this-hover");
+	$(dId+" a").click(function() {
+		if (nCk.children('a').length < 4) {
+			nCk.append(
+				"<a class='Lables'>"
+				+ $(this).text() + 
+				"<div class='clear'>×</div></a>");
+			
+			nM = $('.nav-meny a');
+			$.dLable();
 
-				});
-			}, function() {
+		} 
+	})
 
-				dl.removeClass("hover");
-				dd.removeClass("this-hover");
-
+	$.dLable = function(){
+		for (var i=0; i<nM.length; i++) {
+			$('.nav-meny a .clear').bind("click", function() {
+				$(this).parent('a').remove();
 			});
+			nM[i].onmouseover = function() {
+				$(this).children("div").css("display","block");
+			};
 
-
-			mli.mouseover(function() {
-				var oIndex = $(this).index();
-				var selects = info(oIndex);
-
-				mdv.html("").append(
-						"<a href='#' class='Lables'>" 
-						+ selects + 
-						"</a>");
-
-				$('.Label a').click(function() {
-					selects = $(this).html();
-
-					if (nCk.children('a').length < 4) {
-						nCk.append(
-							"<a href='#' class='Lables'>"
-							+ selects + 
-							"<div class='clear'>×</div></a>");
-						
-						nM = $('.nav-meny a');
-						$.dLable();
-
-					} else { alert("(。・`ω´・)最多只能选4个标签哟~") }
-
-				});
-
-			})
-
-			$.dLable = function(){
-				for (var i=0; i<nM.length; i++) {
-					$('.nav-meny a .clear').bind("click", function() {
-						$(this).parent('a').remove();
-					});
-					nM[i].onmouseover = function() {
-						$(this).children("div").css("display","block");
-					};
-
-					nM[i].onmouseout = function() {
-						$(this).children("div").css("display","none");
-					};
-				}
-			}
+			nM[i].onmouseout = function() {
+				$(this).children("div").css("display","none");
+			};
+		}
+	}
     //去除输入框内的第一个隐藏的 p
      $("#myEditor p").first().remove();
     function func() {
@@ -345,41 +310,7 @@
 //  function getAllHtml() {
 //      alert(UM.getEditor('myEditor').getAllHtml())
 //  }
-	var Title=document.getElementById('bigTitle');
-	
-	
-    $('.btn-release').click(function(){
-		var oTXT= UM.getEditor('myEditor').getContentTxt();
-		var i=$('.nav-meny').children('a').length;
-		var numP=document.getElementById('nump');
-		var Start= document.getElementById('start');
-		var Start2 = document.getElementById('start2');
-		var Price = document.getElementById('unit-price');
-		var Keyword = document.getElementById('keyword');
-		var Address = document.getElementById('address');
-		if(numP.value.length<1||Start.value.length<1||Address.value.length<1||Start2.value.length<1||Price.value.length<1||Keyword.value.length<1){
-				alert('请完善活动详细信息')
-		}else{
-		if (Title.value==''||Title.value.length<1||oTXT<1) {
 
-			alert('您好像没有输入标题或者内容');
-		} else {
-		
-			if(i<1){
-				alert('请选择至少一个标签')
-		}
-		else{
-		var arr = [];
-//      arr.push("使用editor.getContent()方法可以获得编辑器的内容");
-		
-	    arr.push("填写内容为：");		
-		arr.push($('#bigTitle').val());
-        arr.push(UM.getEditor('myEditor').getContent());
-        alert(arr.join("\n"));
-		}
-	}
-	}
-    })
 //  $('.btn-release').click(function(){
 //      var arr = [];
 ////      arr.push("使用editor.getContent()方法可以获得编辑器的内容");
