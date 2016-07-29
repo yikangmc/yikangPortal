@@ -182,14 +182,24 @@ public class AppPageController {
 
 	// 线下
 	@RequestMapping
-	public String editorLine() {
+	public String editorLine(ModelMap modelMap) {
+		
+		List<Taglib> taglibs = TaglibService.getTaglibs();
 
+		modelMap.put("taglibs", taglibs);
+
+		
 		return "editor/editorLine";
 	}
 
 	// 线上
 	@RequestMapping
-	public String editorOnline() {
+	public String editorOnline(ModelMap modelMap) {
+		
+		List<Taglib> taglibs = TaglibService.getTaglibs();
+
+		modelMap.put("taglibs", taglibs);
+
 
 		return "editor/editorOnline";
 	}
