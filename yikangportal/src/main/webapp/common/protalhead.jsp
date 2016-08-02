@@ -13,12 +13,6 @@ request.setAttribute("basePath",basePath);
 	<link rel="shortcut icon" 	href="<%=basePath%>img/common/YK.png" />
 	<link rel="Bookmark" 		href="<%=basePath%>img/common/YK.png" />
 	
-	
-	<!-- Bootsrap validator -->
-	<link rel="stylesheet" href="<%=basePath%>js/plugin/bootstrapvalidator-0.4.5/css/bootstrapValidator.min.css" />
-	<script src="<%=basePath%>js/plugin/bootstrapvalidator-0.4.5/js/bootstrapValidator.min.js"></script>
-
-	
     <script type="text/javascript">
     	var basePath='<%=basePath %>';
     </script>

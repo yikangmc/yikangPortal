@@ -7,27 +7,60 @@
   <meta http-equiv="Content-Type" content="text/html,charset=utf-8,IE=edge,chrome=1" />
   <script src="<%=basePath%>js/viewport750.js"></script>
   <script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
-  <link rel="stylesheet" type="text/css" href="<%=basePath%>css/protal/publicStyle.css"/>
   <link rel="stylesheet" type="text/css" href="<%=basePath%>js/swiper/swiper-3.3.1.min.css">
   <link rel="stylesheet" type="text/css" href="<%=basePath%>js/swiper/animate.min.css">
+  <link rel="stylesheet" type="text/css" href="<%=basePath%>css/protal/publicStyle.css"/>
   <link rel="stylesheet" type="text/css" href="<%=basePath%>css/protal/appPage/activity3.css"/>
   <title>ionicTest -- YKService</title>
+  <style type="text/css">
+    .main { width: 750px; }
+    section { height: 100%; }
+
+    section:nth-of-type(1) { 
+      background: url('<%=basePath%>img/protal/activity/Home/backgroundOfHome.png') no-repeat;
+    }
+    section:nth-of-type(2) { 
+      background: url('<%=basePath%>img/protal/activity/School/backgroundOfSchool.png') no-repeat;
+    }
+    section:nth-of-type(3) { 
+      background: url('<%=basePath%>img/protal/activity/Company/backgroundOfCompany.png') no-repeat;
+    }
+  </style>
 </head>
 <body>
-<div class="swiper-container swiper-container-vertical swiper-container-android">
+<div class="main swiper-container swiper-container-vertical swiper-container-android">
     <div class="swiper-wrapper">
-        <section class="swiper-slide swiper-slide1 swiper-slide-active" style="height: 100%; opacity: 1; transform: translate3d(0px, 0px, 0px) scaleY(1);">
-          123
+        <section  class="swiper-slide swiper-slide1 swiper-slide-active" 
+                  style="transform: translate3d(0px, 0px, 0px) scaleY(1);">
+          <img class="mag" src="<%=basePath%>img/protal/activity/Home/animat1.png">
+          <div class="tvs">
+            <img src="<%=basePath%>img/protal/activity/Home/tv1.png">
+            <img src="<%=basePath%>img/protal/activity/Home/tv2.png">
+            <img src="<%=basePath%>img/protal/activity/Home/tv3.png">
+          </div>
+
+          <div class="phone">
+            <img src="<%=basePath%>img/protal/activity/Home/phone1.png">
+            <img src="<%=basePath%>img/protal/activity/Home/phone2.png">
+          </div>
         </section> 
-        <section class="swiper-slide swiper-slide2 swiper-slide-next" style="height: 100%; opacity: 0.5;">
-          123
+        <section  class="swiper-slide swiper-slide2 swiper-slide-next">
+
         </section>
-        <section class="swiper-slide swiper-slide3" style="height: 100%; opacity: 0.5;">
-          123
+        <section  class="swiper-slide swiper-slide3">
+          <img id="airplane" class="ani" 
+               swiper-animate-effect="fadeInRight" swiper-animate-duration="3s" swiper-animate-delay="0.3s" 
+               src="<%=basePath%>img/protal/activity/Company/airplane.png">
+          <div class="books">
+            <img id="people" src="<%=basePath%>img/protal/activity/Company/people.png">
+            <img src="<%=basePath%>img/protal/activity/Company/book1.png"><img src="<%=basePath%>img/protal/activity/Company/book2.png"><img src="<%=basePath%>img/protal/activity/Company/book3.png"><img src="<%=basePath%>img/protal/activity/Company/book4.png"><img src="<%=basePath%>img/protal/activity/Company/book5.png"><img src="<%=basePath%>img/protal/activity/Company/book6.png"><img src="<%=basePath%>img/protal/activity/Company/book7.png"><img src="<%=basePath%>img/protal/activity/Company/book8.png">
+          </div>
+          <div class="fires">
+            <img src="<%=basePath%>img/protal/activity/Company/fire3.png">
+            <img src="<%=basePath%>img/protal/activity/Company/fire2.png">
+            <img src="<%=basePath%>img/protal/activity/Company/fire1.png">
+          </div>
         </section>
-        
-        
-        
     </div>
   <div class="swiper-pagination">
   </div>  
@@ -35,60 +68,6 @@
 
 <script src="<%=basePath%>js/swiper/swiper-3.3.1.jquery.min.js"></script>
 <script src="<%=basePath%>js/swiper/swiper.animate1.0.2.min.js"></script>
-<script>  
-
-scaleW=window.innerWidth/320;
-scaleH=window.innerHeight/480;
-var resizes = document.querySelectorAll('.resize');
-          for (var j=0; j<resizes.length; j++) {
-           resizes[j].style.width=parseInt(resizes[j].style.width)*scaleW+'px';
-       resizes[j].style.height=parseInt(resizes[j].style.height)*scaleH+'px';
-       resizes[j].style.top=parseInt(resizes[j].style.top)*scaleH+'px';
-       resizes[j].style.left=parseInt(resizes[j].style.left)*scaleW+'px'; 
-          }
-      
-  var mySwiper = new Swiper ('.swiper-container', {
-   direction : 'vertical',
-   pagination: '.swiper-pagination',
-  //virtualTranslate : true,
-   mousewheelControl : true,
-   onInit: function(swiper){
-   swiperAnimateCache(swiper);
-   swiperAnimate(swiper);
-    },
-   onSlideChangeEnd: function(swiper){
-  swiperAnimate(swiper);
-    },
-  onTransitionEnd: function(swiper){
-  swiperAnimate(swiper);
-    },
-  
-  
-  watchSlidesProgress: true,
-
-      onProgress: function(swiper){
-        for (var i = 0; i < swiper.slides.length; i++){
-          var slide = swiper.slides[i];
-          var progress = slide.progress;
-          var translate = progress*swiper.height/4;  
-      scale = 1 - Math.min(Math.abs(progress * 0.5), 1);
-          var opacity = 1 - Math.min(Math.abs(progress/2),0.5);
-          slide.style.opacity = opacity;
-      es = slide.style;
-      es.webkitTransform = es.MsTransform = es.msTransform = es.MozTransform = es.OTransform = es.transform = 'translate3d(0,'+translate+'px,-'+translate+'px) scaleY(' + scale + ')';
-
-        }
-      },
-  
-     onSetTransition: function(swiper, speed) {
-        for (var i = 0; i < swiper.slides.length; i++){
-          es = swiper.slides[i].style;
-      es.webkitTransitionDuration = es.MsTransitionDuration = es.msTransitionDuration = es.MozTransitionDuration = es.OTransitionDuration = es.transitionDuration = speed + 'ms';
-
-        }
-      },
-  
-     })         
-  </script>
+<script src="<%=basePath%>js/activity3.js"></script>
 </body>
 </html>
