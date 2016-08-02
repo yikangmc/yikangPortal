@@ -5,7 +5,10 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
     <title>发布线上活动</title>
-    
+    <!-- Bootstrap -->
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
     <link href="<%=basePath%>img/protal/editor/themes/default/css/umeditor.css" type="text/css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="<%=basePath%>css/protal/publicStyle.css"/>
     <link rel="stylesheet" type="text/css" href="<%=basePath%>css/protal/editor/editor.css"/>
@@ -15,6 +18,7 @@
     <script type="text/javascript" charset="utf-8" src="<%=basePath%>img/protal/editor/umeditor.min.js"></script>
     <script type="text/javascript" src="<%=basePath%>img/protal/editor/lang/zh-cn/zh-cn.js"></script>
     <script href="<%=basePath%>css/protal/editor/panduan.js"></script>
+    
    	<style type="text/css">
    		body {  text-align: left; }
    	</style>

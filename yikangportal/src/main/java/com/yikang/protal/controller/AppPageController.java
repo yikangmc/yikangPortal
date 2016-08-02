@@ -151,6 +151,12 @@ public class AppPageController {
 
 		return "appPage/activity2";
 	}
+	
+	@RequestMapping
+	public String activity3() {
+
+		return "appPage/activity3";
+	}
 
 	/**
 	 * 文本编辑器部分
