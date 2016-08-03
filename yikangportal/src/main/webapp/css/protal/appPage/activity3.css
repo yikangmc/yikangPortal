@@ -1,9 +1,9 @@
 *         { margin:0; padding:0; }
-html,body { height:100%;}
+html,body { height:100%; }
 body      { font-family:"microsoft yahei"; }
 img       { display:block; }
 
-.swiper-container {  background-color: #0faadd; width: 100%; height: 100%; }
+.swiper-container {  background-color: #000; width: 100%; height: 100%; }
 .swiper-pagination-bullet { width: 6px; height: 6px; background: #fff; opacity: .4; }
 .swiper-pagination-bullet-active { opacity: 1; }
 
@@ -82,9 +82,9 @@ img       { display:block; }
   -webkit-animation-name: fires;
   -ms-animation-name: fires;
   animation-name: fires;
-  -webkit-animation-duration: 5s;
-  -ms-animation-duration: 5s;
-  animation-duration: 5s;
+  -webkit-animation-duration: 5.2s;
+  -ms-animation-duration: 5.2s;
+  animation-duration: 5.2s;
   -webkit-animation-iteration-count: infinite;
   -ms-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
@@ -104,9 +104,9 @@ img       { display:block; }
   -webkit-animation-name: fires;
   -ms-animation-name: fires;
   animation-name: fires;
-  -webkit-animation-duration: 3.4s;
-  -ms-animation-duration: 3.4s;
-  animation-duration: 3.4s;
+  -webkit-animation-duration: 3.2s;
+  -ms-animation-duration: 3.2s;
+  animation-duration: 3.2s;
   -webkit-animation-iteration-count: infinite;
   -ms-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
@@ -125,6 +125,37 @@ img       { display:block; }
 #airplane { top: 280px; left: 65px;}
 #people   { position: absolute; top: 227px; left: 335px; 
   animation: people 1s infinite; -webkit-animation: people 1s infinite; -ms-animation: people 1s infinite; }
+
+.eye { 
+  width: 82px; height: 70px;
+  position: absolute; top: 895px; left: 399px; }
+
+.eye img:nth-of-type(1) { position: absolute;   left: 0px; 
+  animation:eye 2s linear infinite;
+  -webkit-animation:eye 2s linear infinite; 
+  -ms-animation:eye 2s linear infinite;
+}
+.eye img:nth-of-type(2) { position: absolute;   right: 0px; 
+  animation:eye 2s linear infinite;
+  -webkit-animation:eye 2s linear infinite; 
+  -ms-animation:eye 2s linear infinite;
+}
+
+.clock { width: 200px; height: 200px; position: absolute; top: 29px; left: 273px; 
+  animation: eye 1.3s linear infinite;
+  -webkit-animation:eye 1.3s linear infinite; 
+  -ms-animation:eye 1.3s linear infinite;
+}
+.clock img:nth-of-type(1) { position: absolute; top: 100px; left: 100px; }
+.clock img:nth-of-type(2) { position: absolute; top: 60px;  left: 149px; }
+
+.paper { width: 100%; height: 400px; }
+.paper img:nth-of-type(1) { position: absolute; top: 20px; left: 20px; }
+.paper img:nth-of-type(2) { position: absolute; top: 150px;  right: 49px;
+  animation: paper 6s infinite;
+  -webkit-animation: paper 6s infinite;
+  -ms-animation: paper 6s infinite;
+}
 
 /* 横幅 */
 @keyframes ss1Nav         { 0%  { top: -222px; } 67% { top: -0px; } 100% { top: -0px; } }
@@ -183,16 +214,46 @@ img       { display:block; }
                           }
 /* 人 */
 @keyframes people         {
-                            0%   { top: 227px; } 20%  { top: 230px; } 40%  { top: 233px; }
-                            60%  { top: 235px; } 80%  { top: 233px; } 100% { top: 230px; }
+                            0%  { top: 227px; } 20%  { top: 230px; } 40%  { top: 233px; }
+                            60% { top: 235px; } 80%  { top: 233px; } 100% { top: 230px; }
                           }
 @-webkit-keyframes people {
-                            0%   { top: 227px; } 20%  { top: 230px; } 40%  { top: 233px; }
-                            60%  { top: 235px; } 80%  { top: 233px; } 100% { top: 230px; }
+                            0%  { top: 227px; } 20%  { top: 230px; } 40%  { top: 233px; }
+                            60% { top: 235px; } 80%  { top: 233px; } 100% { top: 230px; }
                           }
 @-ms-keyframes people     {
-                            0%   { top: 227px; } 20%  { top: 230px; } 40%  { top: 233px; }
-                            60%  { top: 235px; } 80%  { top: 233px; } 100% { top: 230px; }
+                            0%  { top: 227px; } 20%  { top: 230px; } 40%  { top: 233px; }
+                            60% { top: 235px; } 80%  { top: 233px; } 100% { top: 230px; }
+                          }
+
+/* 眼睛懵逼 */
+@keyframes eye            {
+                            0%  { transform:rotate(0deg);   }
+                            100%{ transform:rotate(360deg); }
+                          }
+@-webkit-keyframes eye    {
+                            0%  { transform:rotate(0deg);   }
+                            100%{ transform:rotate(360deg); }
+                          }
+@-ms-keyframes eye        {
+                            0%  { transform:rotate(0deg);   }
+                            100%{ transform:rotate(360deg); }
+                          }
+/* 纸张 */
+@keyframes paper          {
+                            0%  { transform: translate(0px, 0px)     rotate(0deg); }
+                            50% { transform: translate(0px, 23px)    rotate(6deg); }
+                            100%{ transform: translate(0px, 0px)     rotate(0deg); } 
+                          }
+@-webkit-keyframes paper  {
+                            0%  { transform: translate(0px, 0px)     rotate(0deg); }
+                            50% { transform: translate(0px, 23px)    rotate(6deg); }
+                            100%{ transform: translate(0px, 0px)     rotate(0deg); } 
+                          }
+@-ms-keyframes paper      {
+                            0%  { transform: translate(0px, 0px)     rotate(0deg); }
+                            50% { transform: translate(0px, 23px)    rotate(6deg); }
+                            100%{ transform: translate(0px, 0px)     rotate(0deg); } 
                           }
 /* 电话 */
 @-ms-keyframes phone      {
@@ -247,7 +308,7 @@ img       { display:block; }
                             96% { transform: translate(-2px, 1px)   rotate(2.5deg)  }
                             98% { transform: translate(-3px, 4px)   rotate(-2.5deg) }
                           }
-@-webkit-keyframes phone      {
+@-webkit-keyframes phone  {
                             0%  { transform: translate(0px, 0px)    rotate(0deg)    }
                             2%  { transform: translate(0px, 4px)    rotate(0.5deg)  }
                             4%  { transform: translate(6px, -2px)   rotate(-3.5deg) }

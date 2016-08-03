@@ -18,12 +18,15 @@
 
     section:nth-of-type(1) { 
       background: url('<%=basePath%>img/protal/activity/Home/backgroundOfHome.png') no-repeat;
+      background-color: #157496;
     }
     section:nth-of-type(2) { 
       background: url('<%=basePath%>img/protal/activity/School/backgroundOfSchool.png') no-repeat;
+      background-color: #d69b59;
     }
     section:nth-of-type(3) { 
       background: url('<%=basePath%>img/protal/activity/Company/backgroundOfCompany.png') no-repeat;
+      background-color: #9cddff;
     }
   </style>
 </head>
@@ -45,15 +48,26 @@
           </div>
         </section> 
         <section  class="swiper-slide swiper-slide2 swiper-slide-next">
-
+          <div class="clock">
+            <img src="<%=basePath%>img/protal/activity/School/Pointer.png">
+            <img src="<%=basePath%>img/protal/activity/School/flys.png">
+          </div>
+          <div class="paper">
+            <img src="<%=basePath%>img/protal/activity/School/paper1.png">
+            <img src="<%=basePath%>img/protal/activity/School/paper2.png">
+          </div>
+          <div class="eye">
+            <img src="<%=basePath%>img/protal/activity/School/eye.png">
+            <img src="<%=basePath%>img/protal/activity/School/eye.png">
+          </div>
         </section>
         <section  class="swiper-slide swiper-slide3">
           <img id="airplane" class="ani" 
                swiper-animate-effect="fadeInRight" swiper-animate-duration="3s" swiper-animate-delay="0.3s" 
                src="<%=basePath%>img/protal/activity/Company/airplane.png">
           <div class="books">
-            <img id="people" src="<%=basePath%>img/protal/activity/Company/people.png">
             <img src="<%=basePath%>img/protal/activity/Company/book1.png"><img src="<%=basePath%>img/protal/activity/Company/book2.png"><img src="<%=basePath%>img/protal/activity/Company/book3.png"><img src="<%=basePath%>img/protal/activity/Company/book4.png"><img src="<%=basePath%>img/protal/activity/Company/book5.png"><img src="<%=basePath%>img/protal/activity/Company/book6.png"><img src="<%=basePath%>img/protal/activity/Company/book7.png"><img src="<%=basePath%>img/protal/activity/Company/book8.png">
+            <img id="people" src="<%=basePath%>img/protal/activity/Company/people.png">
           </div>
           <div class="fires">
             <img src="<%=basePath%>img/protal/activity/Company/fire3.png">
