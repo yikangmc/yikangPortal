@@ -382,4 +382,15 @@ public class FormPostManager {
 	public FormPosts selectByPrimaryKey(Long forumPostId){
 		return formPostsDao.selectByPrimaryKey(forumPostId);
 	}
+	
+	
+	/**
+	 * @author liushuaic
+	 * @date 2016-08-02 17:30
+	 * @desc 获取某一个文章，或者帖子
+	 * */
+	public  FormPosts getFormPostsByForumPostUUid(String forumPostUUid){
+		return formPostsDao.getFormPostsByForumPostUUid(forumPostUUid);
+	}
+	
 }

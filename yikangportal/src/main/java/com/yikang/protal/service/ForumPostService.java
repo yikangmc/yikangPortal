@@ -20,6 +20,7 @@ import com.yikang.protal.entity.FormPosts;
 import com.yikang.protal.manager.FormPostManager;
 import com.yikang.protal.manager.ForumPostTxtEditorManager;
 import com.yikang.protal.manager.ForumPostsAnswerManager;
+import com.yikang.protal.manager.UserManager;
 
 @Service(value="forumPostService")
 public class ForumPostService {
@@ -38,6 +39,9 @@ public class ForumPostService {
 	@Autowired
 	private ForumPostDetailDao forumPostDetailDao;
 	
+	
+	@Autowired
+	private UserManager userManager;
 	
     /**
      * @author liushuaic
@@ -113,42 +117,11 @@ public class ForumPostService {
 	 * @desc 发布文章
 	 *
 	 * */
-	public  ResponseMessage<List<FormPosts>> insertPerformencePublishForumPosts(Map<String,Object> paramData){
+	public  ResponseMessage<List<FormPosts>> insertPerformencePublishForumPosts(String title,String forumPostDetailContent,String forumPostHtmlDetailContent,
+			Long[] taglibIds,String recommendPicUrl,Long userId,String[] images){
 		ResponseMessage<List<FormPosts>> res=new ResponseMessage<List<FormPosts>>();
 
-		if(
-				paramData.containsKey("title")
-				&& (paramData.get("title").toString().length()<150)
-				&& paramData.containsKey("forumPostDetailContent")
-				&& paramData.containsKey("forumPostHtmlDetailContent")
-				&& paramData.containsKey("taglibIds")
-				&& paramData.containsKey("recommendPicUrl")
-		){
-			String forumPostDetailContent=paramData.get("forumPostDetailContent").toString();
-			String forumPostHtmlDetailContent=paramData.get("forumPostHtmlDetailContent").toString();
-			List<Integer> taglibIds=(List)paramData.get("taglibIds");
-			String title=paramData.get("title").toString();
-			String userId=paramData.get("userId").toString();
-			String recommendPicUrl=paramData.get("recommendPicUrl").toString();
-
-			String[] imgs=new String[0];
-			if(paramData.containsKey("images")){
-				List<String> images=(List)paramData.get("images");
-				imgs=new String[images.size()];
-				for(int j=0;j<images.size();j++){
-					imgs[j]=images.get(j);
-				}
-			}
-			Long[] tags=new Long[taglibIds.size()];
-			for(int i=0;i<taglibIds.size();i++){
-				tags[i]=Long.valueOf(taglibIds.get(i).toString());
-			}
-			 formPostManager.insertPerformencePublishForumPosts(title,forumPostDetailContent,forumPostHtmlDetailContent,tags,Long.valueOf(userId),imgs,recommendPicUrl);
-		}else{
-			res.setStatus(ExceptionConstants.parameterException.parameterException.errorCode);
-			res.setMessage(ExceptionConstants.parameterException.parameterException.errorMessage);
-		}
-
+		formPostManager.insertPerformencePublishForumPosts(title,forumPostDetailContent,forumPostHtmlDetailContent,taglibIds,userId,images,recommendPicUrl);
 
 		return res;
 	}
@@ -463,5 +436,15 @@ public class ForumPostService {
    	   return res;
    }
 
+   
+   /**
+    * @author liushuaic
+    * @date 2016-08-02 16:35
+    * @desc 获取文章详情，根据uuid
+    * ***/
+   public FormPosts getForumPostsByForumPostUuid(String forumPostUUid){
+	   return formPostManager.getFormPostsByForumPostUUid(forumPostUUid);
+   }
+   
 
 }
