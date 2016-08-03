@@ -12,13 +12,18 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.yikang.base.response.ResponseMessage;
 import com.yikang.common.utils.UniqueCodeGenerater;
 import com.yikang.protal.entity.ForumPostTxtEditor;
+import com.yikang.protal.entity.User;
 import com.yikang.protal.service.HomeService;
+import com.yikang.protal.service.UserService;
 
 @Controller
 public class HomeController {
 
 	@Autowired
 	private HomeService homeService;
+	
+	@Autowired
+	private UserService userService;
 
 	@RequestMapping(value = "/")
 	public String editorCode(HttpServletRequest req, ModelMap modelMap) {
@@ -54,6 +59,9 @@ public class HomeController {
 			if (null != responseMessage && responseMessage.getStatus().equals("000000")) {
 				ForumPostTxtEditor fpte = responseMessage.getData();
 				int editoryType = fpte.getEditorType();
+				Long userId=fpte.getOwnUserId();
+				User user=userService.getUserByUserId(userId);
+				req.getSession().setAttribute("user", user);
 				if (editoryType == 1) {
 					resMap.setData("appPage/editorExpert");
 				} else if (editoryType == 2) {

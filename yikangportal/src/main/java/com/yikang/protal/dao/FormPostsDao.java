@@ -84,4 +84,12 @@ public interface FormPostsDao {
     
     
     
+    /**
+     * @author liushuaic
+     * @date 2016-08-02 17:05
+     * @desc 获取文章或者帖子，根福uuid
+     * */
+    FormPosts getFormPostsByForumPostUUid(String forumPostUUid);
+    
+    
 }

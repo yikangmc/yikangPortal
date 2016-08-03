@@ -60,7 +60,13 @@ public class FormPosts {
     
     
     //文章上传的列表
-//    private List<ForumPostsImage> forumPostsImage=new ArrayList<ForumPostsImage>();
+    private List<ForumPostsImage> forumPostsImage=new ArrayList<ForumPostsImage>();
+    
+    //文章支持列表
+    private List<FormPostsStarList> formPostsStarLists=new ArrayList<FormPostsStarList>();
+    
+    //回复列表
+    private List<ForumPostsAnswer> forumPostsAnswers=new ArrayList<ForumPostsAnswer>();
     
     
     
@@ -256,6 +262,30 @@ public class FormPosts {
 
 	public void setDesignationName(String designationName) {
 		this.designationName = designationName;
+	}
+
+	public List<ForumPostsImage> getForumPostsImage() {
+		return forumPostsImage;
+	}
+
+	public void setForumPostsImage(List<ForumPostsImage> forumPostsImage) {
+		this.forumPostsImage = forumPostsImage;
+	}
+
+	public List<FormPostsStarList> getFormPostsStarLists() {
+		return formPostsStarLists;
+	}
+
+	public void setFormPostsStarLists(List<FormPostsStarList> formPostsStarLists) {
+		this.formPostsStarLists = formPostsStarLists;
+	}
+
+	public List<ForumPostsAnswer> getForumPostsAnswers() {
+		return forumPostsAnswers;
+	}
+
+	public void setForumPostsAnswers(List<ForumPostsAnswer> forumPostsAnswers) {
+		this.forumPostsAnswers = forumPostsAnswers;
 	}
 
 }

@@ -1,17 +1,19 @@
 package com.yikang.protal.service;
 
 import java.io.IOException;
-import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.yikang.base.SendRequest;
 import com.yikang.base.response.ResponseMessage;
 import com.yikang.protal.entity.User;
+import com.yikang.protal.entity.UserServiceInfo;
 import com.yikang.protal.manager.UserManager;
 
 
@@ -19,12 +21,13 @@ import com.yikang.protal.manager.UserManager;
  * 
  * @author liushuaic
  * @date 2015/01/09 15:08
- * 
- * 
  * **/
 
 @Component
 public class UserService {
+	
+	
+	private Logger logger =LoggerFactory.getLogger(getClass());
 	
 	@Autowired
 	private UserManager userManager;
@@ -103,6 +106,9 @@ public class UserService {
     			
     }
     
+    public UserServiceInfo getUserServiceInfoByUserId(Long userId){
+    	return null;
+    }
     
     
  
