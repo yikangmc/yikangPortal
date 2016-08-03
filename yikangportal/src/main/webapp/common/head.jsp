@@ -8,8 +8,6 @@ request.setAttribute("basePath",basePath);
 
 	<link rel="shortcut icon" href="<%=basePath%>img/common/YK.png" />
 	<link rel="Bookmark" href="<%=basePath%>img/common/YK.png" />
-	<!-- Bootstrap -->
-	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" />
 
 	<%@ taglib  uri="http://java.sun.com/jsp/jstl/core" 		prefix="c"%>
 	<%@ taglib  uri="http://java.sun.com/jsp/jstl/functions" 	prefix="fn"%>

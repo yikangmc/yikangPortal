@@ -10,6 +10,10 @@
 	<script src="<%=basePath%>js/viewport750.js"></script>
 	<link rel="stylesheet" type="text/css" href="<%=basePath%>css/protal/publicStyle.css"/>
 	<link rel="stylesheet" type="text/css" href="<%=basePath%>css/protal/appPage/invitation.css">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 	<title>佳佳康复</title>
 </head>
 	<body>

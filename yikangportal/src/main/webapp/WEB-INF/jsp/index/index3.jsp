@@ -15,6 +15,10 @@
 	<script type="text/javascript" src="<%=basePath%>js/views/index/index3.js"></script>
 	<link rel="stylesheet" type="text/css" href="<%=basePath%>css/protal/publicStyle.css">
 	<link rel="stylesheet" type="text/css" href="<%=basePath%>css/protal/index/main.css">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 	<title>佳佳康复-居家型术后及慢性病康复护理专家</title>
 	<script type="text/javascript">
 		var _hmt = _hmt || [];
@@ -25,6 +29,11 @@
 	  		s.parentNode.insertBefore(hm, s);
 		})();
 	</script>
+	<style type="text/css">
+		.nav-body li a {
+			color: #797979;
+		}
+	</style>
 </head>
 	<body>
 		<!-- 悬浮 -->
@@ -66,7 +75,7 @@
 						<img src="<%=basePath%>img/index/logo.png">
 					</a>
 					<ul>
-						<li>首页</li>
+						<li><a href="http://www.jjkangfu.cn">首页</a></li>
 						<li>佳佳产品</li>
 						<li>关于我们</li>
 					</ul>
