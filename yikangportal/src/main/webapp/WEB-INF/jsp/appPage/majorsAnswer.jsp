@@ -85,7 +85,7 @@
 					<div>
 						<span class="spn_name">${forumPostAnswers.createUserName }</span> 
 						<img src="<%=basePath%>img/protal/appPage/icon1.png" /> <br/> 
-						<span class="spn_time">30分钟前</span>
+  						<span class="spn_time"><fmt:formatDate value="${forumPostAnswers.createTime }" type="date"/></span>
 					</div>
 					<div>
 						${forumPostAnswers.content}

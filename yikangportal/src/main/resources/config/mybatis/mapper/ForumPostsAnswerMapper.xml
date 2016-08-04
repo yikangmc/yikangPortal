@@ -150,7 +150,7 @@
 	left join user_infos toui 		on fpa.to_user_id =toui.user_id 
 	left join user_service_infos tousi on toui.user_id=tousi.user_id 
 	left join designations udes 	on ui.designation_id=udes.designation_id 
-	where fpa.form_post_id=#{formPostId} order by  fpa.create_time desc
+	where fpa.form_post_id=#{formPostId} order by  fpa.create_time desc limit 5
   </select>
   
   
