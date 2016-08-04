@@ -1,3 +1,4 @@
+/* 全局配置 */
 *         { margin:0; padding:0; }
 html,body { height:100%; }
 body      { font-family:"microsoft yahei"; }
@@ -43,10 +44,7 @@ img       { display:block; }
   position: absolute; top: 49px; right: 30px;
   animation: tv3 1.2s infinite; -webkit-animation: tv3 1.2s infinite; -ms-animation: tv1 1.6s infinite; }
 
-.swiper-slide1 .phone {
-  width: 156px; height: 100px;
-  position: absolute; top: 1064px; right: 124px;
-}
+.swiper-slide1 .phone { width: 156px; height: 100px; position: absolute; top: 1064px; right: 124px; }
 .swiper-slide1 .phone img:nth-of-type(1) {
   position: absolute;
   -webkit-animation-name: phone;
@@ -73,10 +71,7 @@ img       { display:block; }
   animation-iteration-count: infinite;
 }
 
-.swiper-slide3 .fires {
-  width: 100%;
-  position: absolute; bottom: -100px;
-}
+.swiper-slide3 .fires { width: 100%; position: absolute; bottom: -100px;  }
 .swiper-slide3 .fires img { position: absolute; bottom: 0px; width: 100%; }
 .swiper-slide3 .fires img:nth-of-type(1) {
   -webkit-animation-name: fires;
@@ -152,9 +147,9 @@ img       { display:block; }
 .paper { width: 100%; height: 400px; }
 .paper img:nth-of-type(1) { position: absolute; top: 20px; left: 20px; }
 .paper img:nth-of-type(2) { position: absolute; top: 150px;  right: 49px;
-  animation: paper 6s infinite;
-  -webkit-animation: paper 6s infinite;
-  -ms-animation: paper 6s infinite;
+  animation: paper 4s linear infinite;
+  -webkit-animation: paper 4s linear infinite;
+  -ms-animation: paper 4s linear infinite;
 }
 
 /* 横幅 */

@@ -104,14 +104,16 @@
 }
 
 .bod_label {
+	min-width: 86px;
+	width: auto;
+	height: 36px;
+	margin: 0 10 0 10;
+	padding: 0 7 0 7;
+	background-color: #eff0f1;
+	float: left;
 	font-size: 26px;
 	color: #333;
 	text-align: center;
-	width: 86px;
-	height: 36px;
-	background-color: #eff0f1;
-	float: left;
-	margin: 0 10 0 10;
 }
 
 .bod_bottoms {
@@ -134,6 +136,7 @@
 
 .mBodys img {
 	margin: 8 0 8 0;
+	width: 100%;
 }
 
 .mag {
