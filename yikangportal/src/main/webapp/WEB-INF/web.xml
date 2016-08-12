@@ -68,6 +68,11 @@
 		<servlet-name>default</servlet-name>
 		<url-pattern>*.js</url-pattern>
 	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>default</servlet-name>
+		<url-pattern>*.apk</url-pattern>
+	</servlet-mapping>
 
 	<!-- 系统欢迎页面 -->
 	<welcome-file-list>
