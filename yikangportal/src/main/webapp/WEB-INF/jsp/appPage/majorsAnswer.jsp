@@ -22,7 +22,7 @@
 			<div>
 				<p>${formPosts.title }</p>
 				<p>
-					<img width="54" height="54" style="border-radius: 50px;" src="${formPosts.photoUrl }" /> 
+					<img width="66" height="66" style="border-radius: 50px;" src="${formPosts.photoUrl }" /> 
 					<span class="bod-Name">
 						${formPosts.userName } 
 					</span> 
@@ -39,7 +39,7 @@
 
 		<!-- 正文 -->
 		<div class="mainactivity">
-			<div class="mBodys">${formPosts.forumPostHtmlDetailContent }</div>
+			<div style="font-size: 24px;" class="mBodys">${formPosts.forumPostHtmlDetailContent }</div>
 
 			<!-- 标签 -->
 			<div class="labels">
@@ -56,8 +56,7 @@
 					<li>
 						<img class="mag" src="<%=basePath%>img/protal/appPage/commentary.png" /> ${formPosts.answersNums }
 					</li>
-					<li><img class="mag"
-						src="<%=basePath%>img/protal/appPage/all.png" /> 更多</li>
+					<li><img class="mag" src="<%=basePath%>img/protal/appPage/all.png" /> 更多</li>
 				</ul>
 			</div>
 		</div>
@@ -68,8 +67,17 @@
 			</div>
 			<div class="sup_mags">
 				<c:forEach items="${formPosts.formPostsStarLists }" var="starUser">
-					<img width="54" height="54" style="border-radius: 50px;" style="width: 50px; height: 50px;" src="${starUser.photoUrl }" />
-				</c:forEach>
+					<c:choose>
+					   <c:when test="${ empty starUser.photoUrl }">
+					   		<img 	width="54" height="54" style="border-radius: 50px;" 
+							 		src="<%=basePath%>img/protal/appPage/user.png" />
+					   </c:when>  
+					   <c:otherwise>
+							<img 	width="54" height="54" style="border-radius: 50px;" 
+									src="${starUser.photoUrl }" />
+					   </c:otherwise>  
+					</c:choose> 
+				</c:forEach> 
 			</div>
 		</div>
 
@@ -80,7 +88,17 @@
 			<c:forEach items="${formPosts.forumPostsAnswers }" var="forumPostAnswers">
 				<div class="comm_info">
 					<div>
-						<img width="54" height="54" style="border-radius: 50px;" src="${forumPostAnswers.createUserPhotoUrl }" />
+						<c:choose>
+						   <c:when test="${ empty forumPostAnswers.createUserPhotoUrl }">
+						   		<img 	width="66" height="66" style="border-radius: 50px;" 
+								 		src="<%=basePath%>img/protal/appPage/user.png" />
+						   </c:when>  
+						     
+						   <c:otherwise>
+								<img 	width="66" height="66" style="border-radius: 50px;" 
+										src="${forumPostAnswers.createUserPhotoUrl }" />
+						   </c:otherwise>  
+						</c:choose>  
 					</div>
 					<div>
 						<span class="spn_name">${forumPostAnswers.createUserName }</span> 
