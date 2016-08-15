@@ -4,14 +4,15 @@
 }
 
 .bod-Title {
-	height: 150px;
+	min-height: 150px; 
+	height: auto;
 	padding: 26 20 0 20;
 	background-color: #fff;
 }
 
 .bod-Title>div:nth-of-type(1) {
 	width: 80%;
-	height: 140px;
+	height: auto;
 	float: left;
 	padding: 6 0 0 0;
 }

@@ -147,6 +147,12 @@ public class AppPageController {
 	}
 
 	@RequestMapping
+	public String invitation2() {
+
+		return "appPage/invitation2";
+	}
+	
+	@RequestMapping
 	public String activity() {
 
 		return "appPage/activity2";

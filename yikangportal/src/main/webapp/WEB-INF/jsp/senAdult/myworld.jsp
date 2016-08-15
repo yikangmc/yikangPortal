@@ -3,147 +3,90 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
-  <meta http-equiv="Content-Type" content="text/html,charset=utf-8,IE=edge,chrome=1" />
-  <script src="<%=basePath%>js/viewport750.js"></script>
-  <script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
-  <link rel="stylesheet" type="text/css" href="<%=basePath%>css/protal/publicStyle.css"/>
-  <link rel="stylesheet" type="text/css" href="<%=basePath%>js/swiper/swiper-3.3.1.min.css">
-  <link rel="stylesheet" type="text/css" href="<%=basePath%>js/swiper/animate.min.css">
-  <title>ionicTest -- YKService</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Content-Type" content="text/html,charset=utf-8,IE=edge,chrome=1" />
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <link rel="stylesheet" type="text/css" href="<%=basePath%>css/protal/publicStyle.css">
+    <title>ionicTest -- YKService</title>
 </head>
-<style>
-*{ margin:0; padding:0; }
-html,body{ height:100%;}
-body{ font-family:"microsoft yahei"; }
-
-.swiper-container {
-  background-color: #0faadd;
-  width: 100%;
-  height: 100%;
-}
-img{
-  display:block;
-}
-.swiper-pagination-bullet {
-width: 6px;
-height: 6px;
-background: #fff;
-opacity: .4;
-}
-.swiper-pagination-bullet-active {
-opacity: 1;
-}
-@-webkit-keyframes start {
-  0%,30% {opacity: 0;-webkit-transform: translate(0,10px);}
-  60% {opacity: 1;-webkit-transform: translate(0,0);}
-  100% {opacity: 0;-webkit-transform: translate(0,-8px);}
-}
-@-moz-keyframes start {
-  0%,30% {opacity: 0;-moz-transform: translate(0,10px);}
-  60% {opacity: 1;-moz-transform: translate(0,0);}
-  100% {opacity: 0;-moz-transform: translate(0,-8px);}
-}
-@keyframes start {
-  0%,30% {opacity: 0;transform: translate(0,10px);}
-  60% {opacity: 1;transform: translate(0,0);}
-  100% {opacity: 0;transform: translate(0,-8px);}
-}
-.ani{
-  position:absolute;
-  }
-.txt{
-  position:absolute;
-}
-#array{
-  position:absolute;z-index:999;-webkit-animation: start 1.5s infinite ease-in-out;
-}
-</style>
+<style type="text/css">  
+        * {  
+            margin: 0;  
+            padding: 0;  
+        }
+        #canvasZone {  
+            width: 100%;  
+            height: 100%;  
+            text-align: center;  
+            background-color: black;  
+        }  
+ 
+        #myCanvas {  
+        width: 100%;
+        height: 100%; 
+            /*background-color:aqua;*/  
+        }  
+    </style>
+    <script type="text/javascript">  
+        var arr = [];//保存所有的XY坐标，只为验证。实际程序中可删除。  
+        var r = 4;  
+        var radian;//弧度  
+        var i;  
+        var radianDecrement;//弧度增量  
+        var time = 10;//每个点之间的时间间隔  
+        var intervalId;  
+        var num = 360;//分割为 360 个点  
+        var startRadian = Math.PI;  
+        var ctx;  
+        window.onload = function () {  
+            startAnimation();  
+        }  
+        function startAnimation() {  
+            ctx = document.getElementById("myCanvas").getContext("2d");  
+            //让画布撑满整个屏幕，-20是滚动条的位置，需留出。如滚动条出现则会挤压画布。  
+            WINDOW_HEIGHT=document.documentElement.clientHeight-20;  
+            WINDOW_WIDTH=document.documentElement.clientWidth-20;  
+            ctx.width = WINDOW_WIDTH;  
+            ctx.heigh = WINDOW_HEIGHT;  
+            drawHeart();  
+        }  
+  
+        function drawHeart() {  
+  
+            ctx.strokeStyle = "red";  
+            ctx.lineWidth = 1;//设置线的宽度  
+            radian = startRadian;//弧度设为初始弧度  
+            radianDecrement = Math.PI / num * 2;  
+            ctx.moveTo(getX(radian), getY(radian));//移动到初始点  
+            i = 0;  
+            intervalId = setInterval("printHeart()", time);  
+        }  
+        //x = 16 sin^3 t, y = (13 cos t - 5 cos 2t - 2 cos 3t - cos 4t)  
+        function printHeart() {  
+            radian += radianDecrement;  
+            ctx.lineTo(getX(radian), getY(radian));//在旧点和新点之间连线  
+            //arr.push("X:" + getX(radian) + "<br/>Y:" + getY(radian) + "<br/>");  
+            i++;  
+            ctx.stroke();//画线  
+            if (i >= num) {  
+                clearInterval(intervalId);  
+                //document.getElementById("bs").innerHTML = arr.join("");//打印所有的XY坐标点。  
+            }  
+        }  
+        function getX(t) {//由弧度得到 X 坐标  
+            return 100 + r * (16 * Math.pow(Math.sin(t), 3));  
+        }  
+  
+        function getY(t) {//由弧度得到 Y 坐标  
+            return 50 - r * (13 * Math.cos(t) - 5 * Math.cos(2 * t) - 2 * Math.cos(3 * t) - Math.cos(4 * t));  
+        }  
+    </script>   
 <body>
-<div class="swiper-container swiper-container-vertical swiper-container-android">
-    <div class="swiper-wrapper">
-        <section class="swiper-slide swiper-slide1 swiper-slide-active" style="height: 100%; opacity: 1; transform: translate3d(0px, 0px, 0px) scaleY(1);">
-          123
-        </section> 
-        <section class="swiper-slide swiper-slide2 swiper-slide-next" style="height: 100%; opacity: 0.5;">
-          123
-        </section>
-        <section class="swiper-slide swiper-slide3" style="height: 100%; opacity: 0.5;">
-          123
-        </section>
-        
-        
-        
-    </div>
-  <div class="swiper-pagination">
-  </div>  
-</div>
-
-<script src="<%=basePath%>js/swiper/swiper-3.3.1.jquery.min.js"></script>
-<script src="<%=basePath%>js/swiper/swiper.animate1.0.2.min.js"></script>
-<script>
-    scaleW = window.innerWidth / 320;
-    scaleH = window.innerHeight / 480;
-    var resizes = document.querySelectorAll('.resize');
-    for (var j = 0; j < resizes.length; j++) {
-      resizes[j].style.width = parseInt(resizes[j].style.width) * scaleW
-          + 'px';
-      resizes[j].style.height = parseInt(resizes[j].style.height)
-          * scaleH + 'px';
-      resizes[j].style.top = parseInt(resizes[j].style.top) * scaleH
-          + 'px';
-      resizes[j].style.left = parseInt(resizes[j].style.left) * scaleW
-          + 'px';
-    }
-
-    var mySwiper = new Swiper(
-        '.swiper-container',
-        {
-          direction : 'vertical',
-          pagination : '.swiper-pagination',
-          //virtualTranslate : true,
-          mousewheelControl : true,
-          onInit : function(swiper) {
-            swiperAnimateCache(swiper);
-            swiperAnimate(swiper);
-          },
-          onSlideChangeEnd : function(swiper) {
-            swiperAnimate(swiper);
-          },
-          onTransitionEnd : function(swiper) {
-            swiperAnimate(swiper);
-          },
-
-          watchSlidesProgress : true,
-
-          onProgress : function(swiper) {
-            for (var i = 0; i < swiper.slides.length; i++) {
-              var slide = swiper.slides[i];
-              var progress = slide.progress;
-              var translate = progress * swiper.height / 4;
-              scale = 1 - Math.min(Math.abs(progress * 0.5), 1);
-              var opacity = 1 - Math.min(Math.abs(progress / 2),
-                  0.5);
-              slide.style.opacity = opacity;
-              es = slide.style;
-              es.webkitTransform = es.MsTransform = es.msTransform = es.MozTransform = es.OTransform = es.transform = 'translate3d(0,'
-                  + translate
-                  + 'px,-'
-                  + translate
-                  + 'px) scaleY(' + scale + ')';
-
-            }
-          },
-
-          onSetTransition : function(swiper, speed) {
-            for (var i = 0; i < swiper.slides.length; i++) {
-              es = swiper.slides[i].style;
-              es.webkitTransitionDuration = es.MsTransitionDuration = es.msTransitionDuration = es.MozTransitionDuration = es.OTransitionDuration = es.transitionDuration = speed
-                  + 'ms';
-
-            }
-          },
-        })
-</script>
+    <div id="canvasZone">  
+        <canvas id="myCanvas"></canvas>  
+    </div>  
+    <div id="bs">  
+    </div>    
 </body>
 </html>

@@ -7,14 +7,18 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
 	<script src="<%=basePath%>js/viewport.js"></script>
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+
 	<link rel="stylesheet" type="text/css" href="<%=basePath%>css/protal/publicStyle.css"/>
 	<link rel="stylesheet" type="text/css" href="<%=basePath%>css/protal/index/productFooter.css">
-	<!-- Bootstrap -->
-	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" />
-	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-	<script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
 	<title>佳佳产品-居家型术后及慢性病康复护理专家</title>
 </head>
+	<style type="text/css">
+		.nav-body li a {
+			color: #797979;
+		}
+	</style>
 	<body>
 		<!-- 导航栏 -->
 		<div class="nav">
@@ -23,10 +27,9 @@
 					<img src="<%=basePath%>img/index/logo.png">
 				</a>
 				<ul>
-					<li>首页</li>
-					<li>佳佳产品</li>
-					<li>服务</li>
-					<li>加入我们</li>
+					<li><a href="http://www.jjkangfu.cn">首页</a></li>
+					<li><a href="http://jjkangfu.cn/index/productFooter">佳佳产品</a></li>
+					<li><a href="http://jjkangfu.cn/index/declare">关于我们</a></li>
 				</ul>
 			</div>
 		</div>
@@ -40,12 +43,14 @@
 					<h4>一个有温度的康复内容社区</h4>
 					<div class="appDownload">
 						<div class="QRCode">
-							<img src="<%=basePath%>img/index/productFooter/qrcode.jpg"/>					
+							<img id="code" src="<%=basePath%>img/common/AndroidCode.png"/>					
 						<p>扫码下载佳佳康复</p>
 						</div>					
 						<div class="downloadBtn">
-							<a href="###">Android版下载</a>
-							<a href="###">iPhone版下载</a>
+							<a id="android" target="_blank" href="http://mobile.baidu.com/item?docid=9736197&source=s1001">Android版下载</a>
+							<!-- <font style="font-size: 12px; color: #0faadd;">(移动鼠标替换Android二维码)</font> -->
+							<a id="ios"  target="_blank" href="https://itunes.apple.com/cn/app/jia-jia-kang-fu-gei-ni-jian/id1135697370?mt=8">iPhone版下载</a>
+							<!-- <font style="font-size: 12px; color: #3dc0b0;">(移动鼠标替换IOS二维码)</font> -->
 						</div>
 					</div>				
 				</div>	
@@ -54,7 +59,9 @@
 		<div class="contentTop" style="background: url(<%=basePath%>img/index/productFooter/colorTop.png) no-repeat center top;">
 			<div class="contentTop-main">
 				<div class="contentTop-main-tip">
-					<img src="<%=basePath%>img/index/productFooter/phone01.png"/>
+					<div class="magPlay">
+						<img src="<%=basePath%>img/index/productFooter/phone01.png"/>
+					</div>
 				</div>
 				<ul>
 					<li class="listTitle">标签化的内容</li>
@@ -62,7 +69,9 @@
 					<li class="fonts-left"><span><img src="<%=basePath%>img/index/productFooter/icon01.png"/></span>分享你的康复日常，在康复路上与病友温暖同行</li>
 				</ul>
 				<div class="contentTop-main-act">
-					<img src="<%=basePath%>img/index/productFooter/phone02.png"/>
+					<div class="magPlay">
+						<img src="<%=basePath%>img/index/productFooter/phone02.png"/>
+					</div>
 				</div>
 				<ul>
 					<li class="listTitle">可靠的康复科普内容</li>
@@ -74,7 +83,9 @@
 		<div class="contentBottom" style="background: url(<%=basePath%>img/index/productFooter/colorBottom.png) no-repeat center bottom;">
 			<div class="contentBottom-main">
 				<div class="contentTop-main-asw">
-					<img src="<%=basePath%>img/index/productFooter/phone03.png"/>
+					<div class="magPlay">
+						<img src="<%=basePath%>img/index/productFooter/phone03.png"/>
+					</div>
 				</div>
 				<ul>
 					<li class="listTitle">专业人士热心答疑</li>
@@ -82,7 +93,9 @@
 					
 				</ul>
 				<div class="contentTop-main-intro">
-					<img src="<%=basePath%>img/index/productFooter/phone04.png"/>
+					<div class="magPlay">
+						<img src="<%=basePath%>img/index/productFooter/phone04.png"/>
+					</div>
 				</div>
 				<ul>
 					<li class="listTitle">佳佳活动——让康复触手可及</li>
@@ -133,5 +146,15 @@
 				</div>
 			</div>
 		</div>
+		<script type="text/javascript">
+
+			$('#android').mouseover(function () {
+				$('#code').attr("src","<%=basePath%>img/common/AndroidCode.png");
+			});
+
+			$('#ios').mouseover(function () {
+				$('#code').attr("src","<%=basePath%>img/common/IOSCode.png");
+			})
+		</script>
 	</body>
 </html>

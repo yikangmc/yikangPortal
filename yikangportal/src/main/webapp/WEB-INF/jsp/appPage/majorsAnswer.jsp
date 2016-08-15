@@ -19,7 +19,7 @@
 <body>
 	<div class="main">
 		<div class="bod-Title">
-			<div>
+			<div><div id="btn-Collect" class="btn-Collect">收藏</div>
 				<p>${formPosts.title }</p>
 				<p>
 					<img width="66" height="66" style="border-radius: 50px;" src="${formPosts.photoUrl }" /> 
@@ -31,9 +31,6 @@
 						<fmt:formatDate value="${formPosts.createTime }" type="both" />
 					</span>
 				</p>
-			</div>
-			<div>
-				<div id="btn-Collect" class="btn-Collect">收藏</div>
 			</div>
 		</div>
 

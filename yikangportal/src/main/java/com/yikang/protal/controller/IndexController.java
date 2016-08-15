@@ -72,5 +72,14 @@ public class IndexController {
 	public String socialDetails() {
 	 	return "index/socialDetails";
 	}
-	
+
+	/**
+	* 404Errpr
+	* @return
+	*/
+
+	@RequestMapping
+	public String Error() {
+	 	return "index/Error";
+	}
 }

@@ -7,11 +7,10 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="<%=basePath%>css/protal/publicStyle.css">
     <link rel="stylesheet" type="text/css" href="<%=basePath%>css/protal/declare.css">
     <!-- Bootstrap -->
-	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" />
-	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-	<script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 	<title>佳佳康复-居家型术后及慢性病康复护理专家</title>
 	<style>
 	.ol
@@ -50,13 +49,11 @@
 			<div class="tit_onlys">
 				<div>
 					<ul>
-						<li><a href="http://www.gethuli.com">首页</a></li>
-						<li><a href="http://www.gethuli.com/#ser">服务</a></li>
-						<li><a href="#">加入我们</a></li>
-						<li><a href="javascript:void(0)" class="run" onclick="overlay()">
-								<button class="btn_porject">预约服务</button>
-							</a>
-						</li>
+
+						<li><a href="http://www.jjkangfu.cn">首页</a></li>
+						<li><a href="http://jjkangfu.cn/index/productFooter">佳佳产品</a></li>
+						<li><a href="http://jjkangfu.cn/index/declare">关于我们</a></li>
+						<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
 						<li>
 							<div style="text-align: center; width:150px; position: absolute; top: 14px;">
 								<p style="font-size:20px; color: #ff3c3c;">400-616-0909</p>

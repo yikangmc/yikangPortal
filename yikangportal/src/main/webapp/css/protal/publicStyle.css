@@ -25,25 +25,6 @@ html {overflow-y: scroll;}
 	height: 100%; 
 }
 
-/* 通用 头部 */
-.header { 
-	height: 30px;
-	width: 100%;
-	background-color: #c1c1c1;
-} 
-.header-body {
-	height: 30px;
-	width: 1200px;
-	margin: 0 auto;
-	line-height: 30px;
-	color: #d8d8d8;
-
-}
-.Hbody-left { font-size: 14px; float: left; }
-.Hbody-right { font-size: 14px; float: right; }
-
-
-
 /* 导航栏 */
 .nav {
 	height: 80px;

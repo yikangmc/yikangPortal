@@ -13,12 +13,9 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
 	<script type="text/javascript" src="<%=basePath%>js/views/index/index3.js"></script>
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" />
 	<link rel="stylesheet" type="text/css" href="<%=basePath%>css/protal/publicStyle.css">
 	<link rel="stylesheet" type="text/css" href="<%=basePath%>css/protal/index/main.css">
-	<!-- Bootstrap -->
-	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" />
-	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-	<script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 	<title>佳佳康复-居家型术后及慢性病康复护理专家</title>
 	<script type="text/javascript">
 		var _hmt = _hmt || [];
@@ -76,8 +73,8 @@
 					</a>
 					<ul>
 						<li><a href="http://www.jjkangfu.cn">首页</a></li>
-						<li>佳佳产品</li>
-						<li>关于我们</li>
+						<li><a href="http://jjkangfu.cn/index/productFooter">佳佳产品</a></li>
+						<li><a href="http://jjkangfu.cn/index/declare">关于我们</a></li>
 					</ul>
 				</div>
 			</div>
