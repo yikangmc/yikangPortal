@@ -31,30 +31,53 @@
 		bottom: 8%;
 		border-radius: 50%;
 	}
+
+	#models {
+		position: fixed; top: 0px;
+		width: 100%;
+		height: 100%;
+		background: #000;
+		opacity: .7;
+	}
+	#models img { margin-top: 20px; }
 	</style>
 </head>
 	<body>
 		<div class="content">
-			<a class="question-ato" href="http://jjkangfu.cn/index/productFooter">
+			<a class="question-ato">
 				
 			</a>
 		</div>
 	</body>
 
 	<script type="text/javascript">
-		var info = {};
 		if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
-	        info.os = "ios";
+
 	        $('a').attr("href","https://itunes.apple.com/cn/app/jia-jia-kang-fu-gei-ni-jian/id1135697370?mt=8");
+	        $('a').click(function (){
+	        	iosHttps()
+	        	$('#models').click(function (){$(this).remove()})
+	        })
+
 	    } else if (/(Android)/i.test(navigator.userAgent)) {
-	        info.os = "android";
+
 	        $('a').attr("href","http://mobile.baidu.com/item?docid=9736197&source=s1001");
+
 	    } else if (/(Windows)/i.test(navigator.userAgent)) {
-	        info.os = "windows";
+
 	        $('a').attr("href","http://jjkangfu.cn/index/productFooter");
+
 	    } else {
-	        info.os = "unknown";
+
 	        $('a').attr("href","http://jjkangfu.cn/index/productFooter");
+
+	    }
+
+	    function iosHttps() {
+	    	$('body').append(
+	    		"<div id='models'>"
+	    		+"<img src='<%=basePath%>img/protal/appPage/activity/windowPrompt.png'>"
+	    		+"</div>");
 	    }
 	</script>
 </html>

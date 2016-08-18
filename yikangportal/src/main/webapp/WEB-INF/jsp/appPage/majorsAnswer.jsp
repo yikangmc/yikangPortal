@@ -9,6 +9,7 @@
 <script src="<%=basePath%>js/viewport750.js"></script>
 <link rel="stylesheet" type="text/css" href="<%=basePath%>css/protal/appPage/appWholecs.css" />
 <link rel="stylesheet" type="text/css" href="<%=basePath%>css/protal/appPage/majorsAnswer.css" />
+<link rel="stylesheet" type="text/css" href="<%=basePath%>css/protal/appPage.css">
 <!-- Bootstrap -->
 <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" />
 <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
@@ -108,6 +109,12 @@
 					<hr id="hrs" />
 				</div>
 			</c:forEach>
+		</div>
+	</div>
+
+	<div class="btm-banner">
+		<img src="<%=basePath%>img/common/YK61.png"> <span> &nbsp; 点击下载佳佳康复客户端 👈</span>
+		<div>
 		</div>
 	</div>
 </body>
