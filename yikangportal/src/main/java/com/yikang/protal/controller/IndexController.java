@@ -34,8 +34,12 @@ public class IndexController {
 //	}
 	
 	@RequestMapping(value="/")
-	public String indexThree(){
-		return "index/index3";
+	public String indexThree(HttpServletRequest request){
+		if(TOOLS.JudgeIsMoblie(request)){
+			return  "index/indexM";
+		}else{
+			return "index/index3";
+		}
 	}
 	
 //	@RequestMapping

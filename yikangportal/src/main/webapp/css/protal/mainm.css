@@ -1,92 +1,25 @@
-@charset "utf-8";
-/* CSS Document */
-/*初始化*/
-html {  }
-body { margin: 0 auto; text-align: center; }
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td { word-wrap: break-word;//word-break设置强行换行;normal 亚洲语言和非亚洲语言的文本规则，允许在字内换行
-word-break: normal;  margin:0; padding:0; font-family:"Microsoft YaHei" }
-body { background:#fff; color:#fff; font-size:2.8em; font-family: Verdana, Arial, Helvetica, sans-serif; }
-td,th,caption { font-size:14px; }
-h1, h2, h3, h4, h5, h6 { font-weight:normal; font-size:100%; }
-address, caption, cite, code, dfn, em, strong, th, var { font-style:normal; font-weight:normal;}
-a { color:#fff; text-decoration:none; cursor: pointer; }
-a:hover { color: #fff; text-decoration:none; }
-img { border:none; }
-ol,ul,li { list-style:none; color: #000; }
-input, textarea, select, button { font:14px Verdana,Helvetica,Arial,sans-serif; }
-table { border-collapse:collapse; }
-html {overflow-y: scroll;}
-/* css common */
-.clearfix:after {content: "."; display: block; height:0; clear:both; visibility: hidden;}
-.clearfix { *zoom:1; }
-.mains { width: 740px; }
-
-/* 自定义样式表 */
-.dv_title { text-align: center; height: 150px; padding: 50 0 16 0; }
-.dv_funsys { padding: 0 26; margin: 50 0 68 0px; height: 160px; }
-.dv_ser { width: 100%; }
-.dv_bottom { width: 100%;margin-top: 20px; height: 240px; border-top: 2px #cacaca solid; }
-
-.dv_ser ul li { float: left; width: 50%; }
-
-.ser_body { padding: 68 22 63 22; height: 1360px;}
-.ser_info { width: 338px; height: 464px; border: 1px #e6e6e6 solid; text-align: center;
-	margin: 18 8 0 8; 
+.wrap {
+    margin: 0 auto;
+    width: 750px;
+    height: 1380px;
 }
-.ser_title { font-size: 30px; color: #059bda; margin: 16 25 8 25; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-.ser_infos { font-size: 24px; color: #777777; padding: 2 12 10 12; text-align: left; }
-
-.hrs { background: #f0f0f0; margin-top: -0px; margin: 0 15 0 15;}
-
-#ser_title { font-size: 36px; font-weight: 600; color: #505050; padding-bottom: 30px; }
-#ser_fonts { font-size: 28px; color: #656565; width: 100%; text-align: left; }
-
-.mag_banner { width: 740px; height: 360px; }
-.mag_banner2 { }
-
-.btn_porject { border-radius: 24; border: 1px #65cdf9 solid; height: 58px; width: 290px; line-height: 58px; vertical-align: middle; 
-	color: #65cdf9; text-align: left; padding: 0 0 0 0; margin: 0 15 0 15; text-align: center;
-}
-.btn_porject:hover { border: 0; background: #f5f5f5; }
-.btn_money { color: #ff6464; font-size: 22px; }
-.btn_getser { font-size: 28px; }
-.btn_getserver { height: 80px; width: 80%; text-align: center; background: #069bd9; border: 0; 
-	border-radius: 18; font-size: 40px; color: #fff; margin: 22 22 10 22; }
-
-#btm_one { font-size: 28px; color: #323232; margin-top: 38px;}
-#btm_two { font-size: 24px; color: #323232; margin-top: 14px;}
-
-.fun_info { float: left; width: 25%; text-align: center; }
-.fun_info p { font-size: 22px; color: #646464; }
-
-.clear { font-size: 62px; color: #c7c7c7; width: 100%; text-align: right;}
-.ipt_porject { border: 1px #c7c6c7 solid; border-radius: 7px; padding: 10 0 10 8; margin-bottom: 22px; font-size: 24px; color: #000; width: 410px; height: 80px; }
-.p_model_title { font-size: 18px; padding: 23 0 23 0; color: #323232;}
-.btn_onclick {  width: 410px; height: 80px; background: #ff6363; border: 0; font-size: 24px; color: #fff; border-radius: 7px; }
-#btn_bottom { position: fixed; bottom: 0px; background: #069bd9; width: 100%; height: 100px; font-size: 42px; line-height: 100px; }
-
-.modal-data{
-    position:relative;
-    top: 30%;
-    left: 0; right: 0;
-    width: 640px;
-    height: 740px;
-    z-index: 1001;
-    text-align:center;
-    margin: 100px auto;
-    background-color: #fff;
-    border-radius: 12px;
-    padding: 8 0 10 0;
+.Wnav {
+    width: 100%;
+    height: 100px;
 }
 
-#modal-overlay {
-    visibility: hidden;
-    position: fixed; /* 使用绝对定位或固定定位  */
-    left: 0px;
-    top: 0px;
-    width:100%;
-    height:100%;
-    text-align:center;
-    z-index: 1000;
-    background:rgba(0,0,0,0.5)!important;background:#000;filter:Alpha(opacity=60);
-}
+.Wnav img { float: left; margin: 20 0 0 40;}
+
+.Wnav ul { float: right; margin: 30 40 0 0; }
+.Wnav li { float: left; width: 100px; font-size: 30px; }
+
+
+.Content { width: 100%; }
+.Content .Cbox { width: 345px; height: 226px; float: left; background-color: red; margin: 15px; }
+.Content .Cbox .Nex { opacity: .4; width: 100%; height: 100px; background: #000; position: relative; top: 126px; font-size: 24px; color: #fff; text-align: left; overflow: hidden; }
+.Content .Cbox .Nex p { margin: 7 0 0 10; }
+.Content .Cbox .Nex font { font-size: 30px; line-height: 47px; }
+.Wcode { width: 100%; height: 450px; text-align: center; }
+.Wcode img { position: relative; top: 60px;}
+
+.Trademark { font-size: 16px; color: #333; margin-bottom: 30px; }
