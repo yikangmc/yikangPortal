@@ -14,7 +14,7 @@ import com.yikang.protal.service.SendAdultService;
 public class SenAdultController {
 	
 	@Autowired
-	SendAdultService sendAdultService = new SendAdultService();
+	private SendAdultService sendAdultService;
 	
 	@RequestMapping
 	public String senAdult(ModelMap modelMap,SenAdult senAdult){
