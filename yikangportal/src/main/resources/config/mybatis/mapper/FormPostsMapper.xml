@@ -409,7 +409,7 @@
   
      <!-- 查询某一个标签下的所有文章 文章需要有，缩略内容 -->
   <resultMap type="com.yikang.protal.entity.FormPosts" id="getFormPostsByForumPostUUidResultMap" extends="BaseResultMap">
-  	  		<result column="user_name" property="userName"/>
+  	  	<result column="user_name" property="userName"/>
 	  	<result column="photo_url" property="photoUrl"/>
 	  	<result column="user_position" property="userPosition"/>
 	  	<result column="designation_name" property="designationName"/>
@@ -417,14 +417,15 @@
   		<collection property="forumPostsImage" 		column="forum_post_id"  fetchType="eager" select="com.yikang.protal.dao.ForumPostsImageDao.getForumPostImagesByForumPostsId"> </collection>
   		<collection property="formPostsStarLists" 	column="forum_post_id"  fetchType="eager" select="com.yikang.protal.dao.FormPostsStarListDao.getForumPostStartListByForumPostsId"></collection>
   		<collection property="forumPostsAnswers"    column="forum_post_id"	fetchType="eager" select="com.yikang.protal.dao.ForumPostsAnswerDao.getForumPostsAnswersByFormPostId"></collection>
-  		
   </resultMap>
   <select id="getFormPostsByForumPostUUid" parameterType="String" resultMap="getFormPostsByForumPostUUidResultMap" >
 		select
 		fp.*,
 		fpd.forum_post_detail_content,
 		fpd.forum_post_html_detail_content,
-		ui.user_name,ui.photo_url,usi.user_position,
+		ui.user_name,
+		ui.photo_url,
+		usi.user_position,
 		des.designation_name
 	from forum_posts fp left join  user_infos ui on fp.create_user_id=ui.user_id
 	left join user_service_infos usi on ui.user_id=usi.user_id
