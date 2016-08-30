@@ -198,7 +198,7 @@ public class SendAdultService {
 	    	 Long afterTime = senAdult.getLocalTime();
 	    	 Long endTime = nowTime-afterTime;
 	    	 endTime=endTime/1000;
-	    	 if(endTime>7200){
+	    	 if(endTime>7100){
 	    		 senAdult.setLocalTime(nowTime);
 	    		 rst = getWxConfig(req);
 	    	 }else{

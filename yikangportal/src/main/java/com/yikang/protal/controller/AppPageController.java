@@ -3,18 +3,25 @@ package com.yikang.protal.controller;
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.yikang.protal.entity.SenAdult;
 import com.yikang.protal.entity.Taglib;
 import com.yikang.protal.service.AppPageService;
+import com.yikang.protal.service.SendAdultService;
 import com.yikang.protal.service.TaglibService;
 
 @Controller
 public class AppPageController {
+	
+	@Autowired
+	private SendAdultService sendAdultService;
 
 	@Autowired
 	private AppPageService service;
@@ -159,8 +166,12 @@ public class AppPageController {
 	}
 	
 	@RequestMapping
-	public String activity3() {
-
+	public String activity3(ModelMap modelMap,SenAdult senAdult,HttpServletRequest req) {
+		Map<String, Object> senAdultRst = sendAdultService.getConfig(req);
+		senAdult.setNonceStr(senAdultRst.get("nonceStr").toString());
+		senAdult.setSignature(senAdultRst.get("signature").toString());
+		senAdult.setTimestamp(senAdultRst.get("timestamp").toString());
+		modelMap.put("senAdult", senAdult);
 		return "appPage/activity3";
 	}
 
