@@ -21,6 +21,7 @@ import javax.sound.midi.Synthesizer;
 import org.codehaus.jackson.JsonNode;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.json.JSONObject;
+import org.junit.Test;
 import org.omg.CORBA.Request;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -97,10 +98,11 @@ public class SendAdultService {
 	     * @return 说明返回值含义 
 	     * @throws 说明发生此异常的条件 
 	      */  
-	    public static  Map<String, Object> getWxConfig(HttpServletRequest req) { 
+	    public static  Map<String, Object> getWxConfig(HttpServletRequest req) {
+	    //public static  Map<String, Object> getWxConfig(String reqUrl) {
 	    	String reqUrl = req.getRequestURL().toString();
 	        Map<String, Object> ret = new HashMap<String, Object>(); 
-	        SenAdult senAdult = new SenAdult();
+	        SenAdult senAdult = SenAdult.getInstance();
 	        String access_token = "";  
 	        String jsapi_ticket = "";  
 	        String timestamp = Long.toString(System.currentTimeMillis() / 1000); // 必填，生成签名的时间戳  
@@ -191,8 +193,9 @@ public class SendAdultService {
 	    }  
 	     
 	     public Map<String, Object> getConfig(HttpServletRequest req){
+	   // public static Map<String, Object> getConfig(String url){
 	    	 Map<String, Object> rst = new HashMap<String, Object>();
-	    	 SenAdult senAdult = new SenAdult();
+	    	 SenAdult senAdult = SenAdult.getInstance();
 	    	 Date date  = new Date();
 	    	 Long nowTime=date.getTime();
 	    	 Long afterTime = senAdult.getLocalTime();
@@ -201,12 +204,25 @@ public class SendAdultService {
 	    	 if(endTime>7100){
 	    		 senAdult.setLocalTime(nowTime);
 	    		 rst = getWxConfig(req);
+	    		 //rst = getWxConfig(url);
 	    	 }else{
 	 	       rst.put("nonceStr",senAdult.getNonceStr() );
+	 	       System.out.println("nonceStr:"+senAdult.getNonceStr());
 	 	       rst.put("signature", senAdult.getSignature());
+	 	       System.out.println("signature"+senAdult.getSignature());
 	 	       rst.put("timestamp", senAdult.getTimestamp());
+	 	       System.out.println("timestamp"+senAdult.getTimestamp());
+	 	       System.err.println("---------------------------------------------------------------");
 	    	 }
 	    	 return rst;
 	     }
-	
+	   /* 
+	    @Test
+	    public void test1(){
+	    	getConfig("http:www.baidu.com");
+	    	getConfig("http:www.baidu.com");
+	    	getConfig("http:www.baidu.com");
+	    	getConfig("http:www.baidu.com");
+	    	getConfig("http:www.baidu.com");
+	    }*/
 }

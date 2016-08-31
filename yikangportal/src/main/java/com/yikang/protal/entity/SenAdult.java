@@ -7,6 +7,17 @@ import com.yikang.protal.service.SendAdultService;
 
 public class SenAdult {
 	
+	
+	private static SenAdult senAdult;  
+    private SenAdult (){}  
+  
+    public static SenAdult getInstance() {  
+    	if (senAdult == null) {  
+    		senAdult = new SenAdult();  
+    	}  
+    	return senAdult;  
+    }  
+	
 	/**
 	 * 生成签名时间戳
 	 */
@@ -120,9 +131,5 @@ public class SenAdult {
 
 		public void setLocalTime(Long localTime) {
 			SenAdult.localTime = localTime;
-		}
-		
-		public static void main(String[] args) {
-			SendAdultService.getWxConfig();
 		}
 }
