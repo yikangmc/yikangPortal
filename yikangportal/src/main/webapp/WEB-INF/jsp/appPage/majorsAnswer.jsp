@@ -16,6 +16,13 @@
 <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 <!-- 专业文章 -->
 <title>佳佳康复-${formPosts.title }</title>
+<style type="text/css">
+	body { background-color: #f5f6f7; }
+	#right-all {
+		float: right;
+		margin: 30 20 0 0;
+	}
+</style>
 </head>
 <body>
 	<div class="main">
@@ -113,9 +120,9 @@
 	</div>
 
 	<div class="btm-banner">
-		<img src="<%=basePath%>img/common/YK61.png"> <span> &nbsp; 点击下载佳佳康复客户端 👈</span>
-		<div>
-		</div>
+		<img src="http://jjkangfu.cn:80/img/common/YK61.png"> 
+		<span> &nbsp; 下载佳佳康复，查看更多内容 </span>
+		<img id="right-all" src="http://jjkangfu.cn:80/img/common/all.png">
 	</div>
 </body>
 <!-- js区 -->
