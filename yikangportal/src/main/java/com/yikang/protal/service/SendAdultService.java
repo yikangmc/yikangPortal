@@ -16,19 +16,14 @@ import java.util.UUID;
 
 import javax.net.ssl.HttpsURLConnection;
 import javax.servlet.http.HttpServletRequest;
-import javax.sound.midi.Synthesizer;
 
 import org.codehaus.jackson.JsonNode;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.json.JSONObject;
-import org.junit.Test;
-import org.omg.CORBA.Request;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
-import com.yikang.common.error.ExceptionConstants.systemException;
 import com.yikang.protal.entity.SenAdult;
 
 

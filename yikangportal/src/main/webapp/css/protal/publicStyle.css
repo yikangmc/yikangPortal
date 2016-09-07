@@ -41,7 +41,7 @@ html {overflow-y: scroll;}
 
 .nav-body ul { float: right; line-height: 80px;  }
 .nav-body li { float: left; margin: 0 16; font-size: 18px; cursor: pointer; }
-.nav-body li:hover { color: #0faadd; }
+.nav-body li a:hover { color: #0faadd; }
 
 
 

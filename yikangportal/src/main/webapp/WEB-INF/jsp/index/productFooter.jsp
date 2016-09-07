@@ -21,6 +21,7 @@
 	</style>
 	<body>
 		<!-- 导航栏 -->
+		<a name="tit-top"></a>
 		<div class="nav">
 			<div class="nav-body">
 				<a class="Nbody-left">
@@ -102,7 +103,7 @@
 					<li class="fonts-left"><span><img src="<%=basePath%>img/index/productFooter/icon01.png"/></span>康复医学的最新理念和技术在各活动中得以传播，让更多人<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在康复治疗中得到全身心功能和能力的恢复</li>
 					<li class="fonts-left"><span><img src="<%=basePath%>img/index/productFooter/icon01.png"/></span>活动均通过佳佳康复审核后发布，保证活动的可执行性，<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;让康复变得轻松有趣</li>
 				</ul>
-				<a href="###">即刻开始康复之旅</a>
+				<a href="#tit-top">即刻开始康复之旅</a>
 			</div>
 		</div>
 		<!-- 底部导航栏 -->
@@ -148,13 +149,35 @@
 		</div>
 		<script type="text/javascript">
 
-			$('#android').mouseover(function () {
-				$('#code').attr("src","<%=basePath%>img/common/AndroidCode.png");
-			});
+			// $('#android').mouseover(function () {
+			// 	$('#code').attr("src","<%=basePath%>img/common/AndroidCode.png");
+			// });
 
-			$('#ios').mouseover(function () {
-				$('#code').attr("src","<%=basePath%>img/common/IOSCode.png");
-			})
+			// $('#ios').mouseover(function () {
+			// 	$('#code').attr("src","<%=basePath%>img/common/IOSCode.png");
+			// })
+
+			if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+
+				$('#download').attr("href","https://itunes.apple.com/cn/app/jia-jia-kang-fu-gei-ni-jian/id1135697370?mt=8");
+				$('#download').click(function (){
+					iosHttps()
+					$('#models').click(function (){$(this).remove()})
+				})
+
+			} else if (/(Android)/i.test(navigator.userAgent)) {
+
+				$('#download').attr("href","http://mobile.baidu.com/item?docid=9736197&source=s1001");
+
+			} else if (/(Windows)/i.test(navigator.userAgent)) {
+
+				$('#download').attr("href","http://jjkangfu.cn/index/productFooter");
+
+			} else {
+
+				$('#download').attr("href","http://jjkangfu.cn/index/productFooter");
+
+			}
 		</script>
 	</body>
 </html>

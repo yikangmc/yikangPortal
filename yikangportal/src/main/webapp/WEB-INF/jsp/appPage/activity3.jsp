@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
   <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <meta name="viewport" content="target-densitydpi=device-dpi, user-scalable=no">
   <meta http-equiv="Content-Type" content="text/html,charset=utf-8,IE=edge,chrome=1" />
   <meta charset="UTF-8"/>
   <script src="<%=basePath%>js/viewport750.js"></script>
@@ -14,14 +15,23 @@
   <link rel="stylesheet" type="text/css" href="<%=basePath%>css/protal/publicStyle.css"/>
   <link rel="stylesheet" type="text/css" href="<%=basePath%>css/protal/appPage/activity3.css"/>
   <link rel="stylesheet" type="text/css" href="<%=basePath%>css/protal/appPage/launch.css"/>
-  <title>ionicTest -- YKService</title>
+  <title>朋友，你压力大吗?</title>
+
+  <script>
+        if (window.location.href == "http://jjkangfu.cn/appPage/activity3") {
+        
+        } else {
+                window.location.href = "http://jjkangfu.cn/appPage/activity3";
+        }
+  </script>
+
   <style type="text/css">
   	html * { outline: 0; -webkit-text-size-adjust: none; -webkit-tap-highlight-color: rgba(0,0,0,0);}  
     .main { width: 750px; }
     section { height: 100%; }
 
     section:nth-of-type(1) { 
-      background: url('<%=basePath%>img/protal/activity/Home/backgroundOfHome.png') no-repeat;
+      background: url('<%=basePath%>img/protal/activity/Home/backgroundOfHome1.gif') no-repeat;
       background-color: #157496;
     }
     section:nth-of-type(2) { 
@@ -32,6 +42,40 @@
       background: url('<%=basePath%>img/protal/activity/Company/backgroundOfCompany.png') no-repeat;
       background-color: #9cddff;
     }
+    
+    .ask-btn{
+		display: block;
+		width: 60%;
+		height: 10%;
+		position: absolute;
+		left: 50%;
+		bottom: 2%;
+		margin-left: -30%;
+	}
+	.ask-btn img{
+		width: 100%;
+	}
+	.lqrcode{
+		width: 65%;
+		position: absolute;
+		left: 50%;
+		bottom: 15%;
+		margin-left: -32.5%;
+	}
+	.lqrcode img{
+		width: 61%;
+		margin: 0 auto ;
+	}
+	.lqrcode img:nth-child(1){
+		margin-top: 15px;
+		z-index: 999;
+	}
+
+	#codes {
+		position: absolute;
+		top: 880px;
+		left: 270px;
+	}
   </style>
 </head>
 <body>
@@ -40,16 +84,16 @@
         <section  class="swiper-slide swiper-slide1 swiper-slide-active" 
                   style="transform: translate3d(0px, 0px, 0px) scaleY(1);">
           <img class="mag" src="<%=basePath%>img/protal/activity/Home/animat1.png">
-          <div class="tvs">
+          <!-- <div class="tvs">
             <img src="<%=basePath%>img/protal/activity/Home/tv1.png">
             <img src="<%=basePath%>img/protal/activity/Home/tv2.png">
             <img src="<%=basePath%>img/protal/activity/Home/tv3.png">
-          </div>
+          </div> -->
 
-          <div class="phone">
+          <!-- <div class="phone">
             <img src="<%=basePath%>img/protal/activity/Home/phone1.png">
             <img src="<%=basePath%>img/protal/activity/Home/phone2.png">
-          </div>
+          </div> -->
         </section> 
         <section  class="swiper-slide swiper-slide2 swiper-slide-next">
           <div class="clock">
@@ -325,7 +369,7 @@
         	<img src="<%=basePath%>img/protal/activity/Point/img/share-2x.png"/>
         </div>
         <div class="swiper-slide main-res swiper-no-swiping" style="background: url('<%=basePath%>img/protal/activity/Point/img/background.png') no-repeat; background-color: #225a77;">		
-					<img class="airship ani" swiper-animate-effect="slideInDown" swiper-animate-duration="1s" swiper-animate-delay="0s"  src="<%=basePath%>img/protal/activity/Point/img/airship.png"/>
+					<img class="airship ani" swiper-animate-effect="slideInDown" swiper-animate-duration="1s" swiper-animate-delay="0s"  src="<%=basePath%>img/protal/activity/Point/img/airship-3x.png"/>
 					<div class="main-result ani" swiper-animate-effect="lightSpeedIn" swiper-animate-duration="0.8s" swiper-animate-delay="1s">
 						<div class="result-1">
 							<img src="<%=basePath%>img/protal/activity/Point/img/result1.png" alt="" />
@@ -340,10 +384,11 @@
 							<img src="<%=basePath%>img/protal/activity/Point/img/result4.png" alt="" />
 						</div>
 					</div>
-					<a class="ask-btn ani"  swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="2s" href="###"><img src="<%=basePath%>img/protal/activity/Point/img/ask-2x.png"/></a>
-					<div class="lqrcode ani" swiper-animate-effect="slideInUp" swiper-animate-duration="0.5s" swiper-animate-delay="3s">
-						<img src="<%=basePath%>img/protal/activity/Point/img/qrcode-2x.png"/>
+					<div class="lqrcode ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="2s">						
+						<img src="<%=basePath%>img/protal/activity/Point/img/qrcode.png"/>
+						<img src="<%=basePath%>img/protal/activity/Point/img/Bitmap.png"/>
 					</div>
+					<a class="ask-btn ani"  swiper-animate-effect="bounceIn" swiper-animate-duration="0.5s" swiper-animate-delay="3s" href="###"><img src="<%=basePath%>img/protal/activity/Point/img/ask-2x.png"/></a>
 			
 		</div>	
 				
@@ -359,8 +404,36 @@
 <script src="<%=basePath%>js/views/appPage/main.js" type="text/javascript" charset="utf-8"></script>
 
 <script type="text/javascript">
+if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+
+	$('#download').attr("href","https://itunes.apple.com/cn/app/jia-jia-kang-fu-gei-ni-jian/id1135697370?mt=8");
+	$('#download').click(function (){
+		iosHttps()
+		$('#models').click(function (){$(this).remove()})
+	})
+
+} else if (/(Android)/i.test(navigator.userAgent)) {
+
+	$('#download').attr("href","http://mobile.baidu.com/item?docid=9736197&source=s1001");
+
+} else if (/(Windows)/i.test(navigator.userAgent)) {
+
+	$('#download').attr("href","http://jjkangfu.cn/index/productFooter");
+
+} else {
+
+	$('#download').attr("href","http://jjkangfu.cn/index/productFooter");
+
+}
+
+function iosHttps() {
+$('body').append(
+	"<div id='models'>"
+	+"<img src='<%=basePath%>img/protal/appPage/activity/windowPrompt.png'>"
+	+"</div>");
+}
 wx.config({
-  debug: true,
+  debug: false,
   appId: 'wxc43b17327cf5b165',
   timestamp: '${senAdult.timestamp}',
   nonceStr: '${senAdult.nonceStr}',
@@ -370,7 +443,6 @@ wx.config({
     'onMenuShareTimeline',
     'onMenuShareAppMessage'
   ]
-
 });
 //alert(location.href)
 wx.ready(function () {
@@ -391,10 +463,10 @@ wx.ready(function () {
   
  	$('.last-que').click(function() {
 	    wx.onMenuShareAppMessage({
-	    	title: '佳佳康复-给您的康复+满分',
+	    	title: '朋友，你压力大吗',
 	      	desc: '',
-	      	link: 'http://jjkangfu.cn/appPage/activity3',
-	      	imgUrl: 'http://img3.douban.com/view/movie_poster_cover/spst/public/p2166127561.jpg',
+	      	link: 'http://jjkangfu.cn/appPage/activity3',                
+	      	imgUrl: '<%=basePath%>img/protal/appPage/Minute.png',
 	      	trigger: function (res) {
 	 		
 	      	},
@@ -402,17 +474,16 @@ wx.ready(function () {
 	      		mySwiper.slideTo(6, 1000, true);
 				if(Num <50){
 	                $('.result-1').show();
-	                $('.result-1').siblings().hide();            
+	                $('.result-1').siblings().hide();
 	        	}else if(50<= Num && Num<=59){
 	                $('.result-2').show();
-	                $('.result-2').siblings().hide();               
+	                $('.result-2').siblings().hide();
 	        	}else if(60<= Num && Num <=69){
 	                $('.result-3').show();
-	                $('.result-3').siblings().hide();                    
+	                $('.result-3').siblings().hide();
 	        	}else if(Num>69){
 	                $('.result-4').show()
-	                $('.result-4').siblings().hide();                    
-	        	}
+	                $('.result-4').siblings().hide();	        	}
 	      	},
 	      	cancel: function (res) {
 	        	alert('已取消');
@@ -425,9 +496,9 @@ wx.ready(function () {
   	// 2.2 监听“分享到朋友圈”按钮点击、自定义分享内容及分享结果接口
 	$('.last-que').click(function () {   
    		wx.onMenuShareTimeline({
-	      	title: '佳佳康复-给您的康复+满分',
+	      	title: '朋友，你压力大吗',
 	      	link: 'http://jjkangfu.cn/appPage/activity3',
-	      	imgUrl: 'http://img3.douban.com/view/movie_poster_cover/spst/public/p2166127561.jpg',
+	      	imgUrl: '<%=basePath%>img/protal/appPage/Minute.png',
 	      	trigger: function (res) {
 	               
 	      	},
@@ -459,6 +530,7 @@ wx.ready(function () {
    	var number = 0; //总分
     var Num=0;
     function Dictionary(){
+
       	this.data = new Array();
 
       	this.put    =   function(key, val){
@@ -576,15 +648,19 @@ wx.ready(function () {
         $('.last-que').click(function(){
 			//mySwiper.slideTo(5, 1000, true);
             var N = $(this).parent('div').index();
-            $.answerUpdate(N,Index);
-            $.Score();      
-            mySwiper.slideTo(5, 1000, true);
+            if($(this).parent('div').find('li').hasClass('imgChange')){
+                mySwiper.slideTo(5, 1000, true);
+                $.answerUpdate(N,Index);
+                $.Score();      
+            }else{
+               	alert('您还没有选择答案');		
+            }
         });
         $('.back').click(function(){                            
                 $(this).parent('div').find('li').removeClass();
                 $(this).parent('div').find('li').find('img').attr("src",'<%=basePath%>img/protal/activity/Point/img/select.png');
                 var M = $('question div').index();
-                $.deleteData(M);        
+                $.deleteData(M);
                 $(this).parent('div').hide();
                 $(this).parent('div').prev('div').show();                       
         });

@@ -219,4 +219,11 @@ public class AppPageController {
 		
 		return "editor/editorOnline";
 	}
+	
+	@RequestMapping
+	public String integralRule() {
+		
+		return "appPage/integralRule";
+	}
+	
 }
