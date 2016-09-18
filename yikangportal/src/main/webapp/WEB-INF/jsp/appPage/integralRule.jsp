@@ -45,37 +45,37 @@
 						</tr>
 						<tr width="100%">
 							<td style="font-size: 24px; color: #646464;">发个帖子</td>
-							<td style="font-size: 24px; color: #646464;">+5&nbsp;&nbsp;&nbsp;</td>
+							<td style="font-size: 24px; color: #646464;">+10&nbsp;&nbsp;&nbsp;</td>
 							<td style="font-size: 24px; color: #646464;">完成任务系统里的发帖任务可获得</td>
 						</tr>
 						<tr width="100%">
 							<td style="font-size: 24px; color: #646464;">评论帖子</td>
-							<td style="font-size: 24px; color: #646464;">+2&nbsp;&nbsp;&nbsp;</td>
+							<td style="font-size: 24px; color: #646464;">+5&nbsp;&nbsp;&nbsp;</td>
 							<td style="font-size: 24px; color: #646464;">评论任意帖子后可获得</td>
 						</tr>
 						<tr width="100%">
 							<td style="font-size: 24px; color: #646464;">天天分享</td>
-							<td style="font-size: 24px; color: #646464;">+10&nbsp;&nbsp;</td>
+							<td style="font-size: 24px; color: #646464;">+20&nbsp;&nbsp;</td>
 							<td style="font-size: 24px; color: #646464;">分享任意专家解答和专家说可获得</td>
 						</tr>
 						<tr width="100%">
 							<td style="font-size: 24px; color: #646464;">提个问题</td>
-							<td style="font-size: 24px; color: #646464;">+5&nbsp;&nbsp;&nbsp;</td>
+							<td style="font-size: 24px; color: #646464;">+10&nbsp;&nbsp;&nbsp;</td>
 							<td style="font-size: 24px; color: #646464;">在“提问题”模块发布问题后可获得</td>
 						</tr>
 						<tr width="100%">
 							<td style="font-size: 24px; color: #646464;">成为最热帖子</td>
-							<td style="font-size: 24px; color: #646464;">+100</td>
+							<td style="font-size: 24px; color: #646464;">+200</td>
 							<td style="font-size: 24px; color: #646464;">有一个帖子被顶入最热帖子列表即可获得，每日每用户仅限一次</td>
 						</tr>
 						<tr width="100%">
 							<td style="font-size: 24px; color: #646464;">邀请好友</td>
-							<td style="font-size: 24px; color: #646464;">+50&nbsp;&nbsp;</td>
+							<td style="font-size: 24px; color: #646464;">+100&nbsp;&nbsp;</td>
 							<td style="font-size: 24px; color: #646464;">邀请亲友通过你发出的邀请链接注册成为平台用户，即可获得</td>
 						</tr>
 						<tr width="100%">
 							<td style="font-size: 24px; color: #646464;">参与活动</td>
-							<td style="font-size: 24px; color: #646464;">+50&nbsp;&nbsp;</td>
+							<td style="font-size: 24px; color: #646464;">+100&nbsp;&nbsp;</td>
 							<td style="font-size: 24px; color: #646464;">报名成功任意活动后可获得</td>
 						</tr>
 					</table>
@@ -92,12 +92,12 @@
 						</tr>
 						<tr width="100%">
 							<td style="font-size: 24px; color: #646464;">发布专家说</td>
-							<td style="font-size: 24px; color: #646464;">+30&nbsp;&nbsp;</td>
+							<td style="font-size: 24px; color: #646464;">+50&nbsp;&nbsp;</td>
 							<td style="font-size: 24px; color: #646464;">发布一篇专家说后即可获得</td>
 						</tr>
 						<tr width="100%">
 							<td style="font-size: 24px; color: #646464;">添加问题解答</td>
-							<td style="font-size: 24px; color: #646464;">+50&nbsp;&nbsp;</td>
+							<td style="font-size: 24px; color: #646464;">+100&nbsp;&nbsp;</td>
 							<td style="font-size: 24px; color: #646464;">为任意用户所提问题添加回答后可获得</td>
 						</tr>
 						<tr width="100%">
@@ -107,7 +107,7 @@
 						</tr>
 						<tr width="100%">
 							<td style="font-size: 24px; color: #646464;">认证成功</td>
-							<td style="font-size: 24px; color: #646464;">+100</td>
+							<td style="font-size: 24px; color: #646464;">+200</td>
 							<td style="font-size: 24px; color: #646464;">提交的身份认证资料经平台审核通过后可获得，认证通过前的积分保持不变</td>
 						</tr>
 						<tr width="100%">

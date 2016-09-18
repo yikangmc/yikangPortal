@@ -1,0 +1,8 @@
+.Wrap { width: 690px; height: auto; background: #f5f6f7; padding: 20 30 0 30; text-align: left; }
+.Main { width: 100%; height: auto; }
+
+.Content { padding: 20 0 20 0; height: auto; }
+.Content p { font-size: 30px; height: 60px; line-height: 30px; color: #0faadd; letter-spacing: 1px; word-spacing: 1px; }
+.content font {  font-size: 24px; color: #707071; letter-spacing: 2px; word-spacing: 2px; }
+.content table { text-align: center; }
+.content tr { height: 82px; }

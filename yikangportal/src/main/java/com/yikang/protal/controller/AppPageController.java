@@ -44,6 +44,7 @@ public class AppPageController {
 	 * 
 	 * @return
 	 */
+	
 	@RequestMapping
 	public String personal() {
 		return "appPage/personalQualification";

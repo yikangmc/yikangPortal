@@ -18,11 +18,11 @@
   <title>朋友，你压力大吗?</title>
 
   <script>
-        if (window.location.href == "http://jjkangfu.cn/appPage/activity3") {
+        // if (window.location.href == "http://jjkangfu.cn/appPage/activity3") {
         
-        } else {
-                window.location.href = "http://jjkangfu.cn/appPage/activity3";
-        }
+        // } else {
+        //         window.location.href = "http://jjkangfu.cn/appPage/activity3";
+        // }
   </script>
 
   <style type="text/css">
@@ -43,42 +43,121 @@
       background-color: #9cddff;
     }
     
+	.jiantou-img{
+            position: absolute;
+            left: 45%;
+            bottom: 10%;
+    }       
+    .blw-img{
+            position: absolute;
+            left: 36%;
+            bottom: 6%;
+    }
     .ask-btn{
-		display: block;
-		width: 60%;
-		height: 10%;
-		position: absolute;
-		left: 50%;
-		bottom: 2%;
-		margin-left: -30%;
-	}
-	.ask-btn img{
-		width: 100%;
-	}
-	.lqrcode{
-		width: 65%;
-		position: absolute;
-		left: 50%;
-		bottom: 15%;
-		margin-left: -32.5%;
-	}
-	.lqrcode img{
-		width: 61%;
-		margin: 0 auto ;
-	}
-	.lqrcode img:nth-child(1){
-		margin-top: 15px;
-		z-index: 999;
-	}
+            display: block;
+            width: 30%;
+            height: 10%;
+            position: absolute;
+            left: 15%;      
+            bottom: 27%;
+    
+    }       
+    .ask-btn img,.again-btn img{
+            width: 100%;
+    }
+    .again-btn{
+            display: block;
+            width: 30%;
+            height: 10%;
+            position: absolute;
+            right: 15%;
+            bottom: 27%;
+
+    }
+    .lqrcode{
+            width: 50%;
+            position: absolute;
+            left: 50%;
+            top: 15%;
+            margin-left: -25%;
+    }
+    .lqrcode img{
+            width: 100%;
+    }
 
 	#codes {
 		position: absolute;
 		top: 880px;
 		left: 270px;
 	}
+	.music {
+		z-index: 9999;
+		width: 40px; height: 40px;
+		position: absolute;
+		top: 60px; right: 48px;
+		animation: musicLoad 7s infinite;
+		-webkit-animation: musicLoad 7s linear infinite;
+	}
+
+	@keyframes musicLoad {
+		from 	{ transform:rotate(0deg) }
+		to 		{ transform:rotate(360deg) }
+	}
+	@-webkit-keyframes musicLoad {
+		from 	{ transform:rotate(0deg) }
+		to 		{ transform:rotate(360deg) }
+	}
+
+	#abs-test {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 52%;
+		opacity: .0;
+	}
+
+	#models {
+		position: absolute; top: 0px; left: 0px;
+		z-index: 999;
+		width: 100%; height: 100%;
+		background-color: #000; opacity: .8;
+	}
+	#models img {
+		margin: 20 auto;
+		margin-top: 40px;
+	}
   </style>
+  <script>
+	function playFn(obj){
+		var audio = document.getElementById('audio');
+    	if (document.getElementById('btnPlay').value == "播放") {
+    		audio.play();
+    		audio.loop = true;
+    		document.getElementById('btnPlay').value = "暂停"
+        	document.getElementById('musicPlay').src = "<%=basePath%>img/protal/appPage/activity/music/musicClose.png"
+
+    　　	}else{
+        　　 audio.pause();
+        　　 document.getElementById('btnPlay').value = "播放"
+        	document.getElementById('musicPlay').src = "<%=basePath%>img/protal/appPage/activity/music/musicOpen.png"
+    　　	}
+
+    	if (obj == 1) {
+    		audio.play();
+    		audio.loop = true;
+    	}
+　　}
+   	</script>
 </head>
 <body>
+<div class="music">
+	<audio id="audio">
+	　　<source src="http://sc.111ttt.com/up/mp3/73262/46444AE0C73A8C8B4DCE6B2A1CE33302.mp3" type="audio/mpeg">
+	</audio>
+	<input id="btnPlay" type="hidden" value="播放" />
+	<img id="musicPlay" src="<%=basePath%>img/protal/appPage/activity/music/musicClose.png" onclick="playFn(1)">
+</div>
 <div class="main swiper-container swiper-container-vertical swiper-container-android">
     <div class="swiper-wrapper">
         <section  class="swiper-slide swiper-slide1 swiper-slide-active" 
@@ -128,7 +207,7 @@
         		<img class="rockets ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1.5s" swiper-animate-delay="0.3s" src="<%=basePath%>img/protal/activity/Point/img/rocket.png"/>
         		<img class="air ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1.5s" swiper-animate-delay="0.3s" src="<%=basePath%>img/protal/activity/Point/img/air-2x.png"/>       		
         </div>		        
-        <div class="swiper-slide question swiper-no-swiping" style="background: url('<%=basePath%>img/protal/activity/Point/img/bg-2x.png') no-repeat; background-color: #225a77;">	        	        	      				        	
+        <div class="swiper-slide question" style="background: url('<%=basePath%>img/protal/activity/Point/img/bg-2x.png') no-repeat; background-color: #225a77;">	        	        	      				        	
 	        	<div class="question-1">
 	        		<p class="fback"><</p>
 	        		<h2>1、觉得比平常容易紧张和着急</h2>
@@ -365,10 +444,10 @@
 		        	<!--<p class="next-que"><img src="img/click.png"/></p>-->
 		        	
         </div>
-        <div class="swiper-slide share swiper-no-swiping" style=" background: url('<%=basePath%>img/protal/activity/Point/img/background.png') no-repeat 100%; background-color: #225a77;" >	 
+        <div class="swiper-slide share" style=" background: url('<%=basePath%>img/protal/activity/Point/img/background.png') no-repeat 100%; background-color: #225a77;" >	 
         	<img src="<%=basePath%>img/protal/activity/Point/img/share-2x.png"/>
         </div>
-        <div class="swiper-slide main-res swiper-no-swiping" style="background: url('<%=basePath%>img/protal/activity/Point/img/background.png') no-repeat; background-color: #225a77;">		
+        <div class="swiper-slide main-res" style="background: url('<%=basePath%>img/protal/activity/Point/img/background.png') no-repeat; background-color: #225a77;">		
 					<img class="airship ani" swiper-animate-effect="slideInDown" swiper-animate-duration="1s" swiper-animate-delay="0s"  src="<%=basePath%>img/protal/activity/Point/img/airship-3x.png"/>
 					<div class="main-result ani" swiper-animate-effect="lightSpeedIn" swiper-animate-duration="0.8s" swiper-animate-delay="1s">
 						<div class="result-1">
@@ -384,13 +463,24 @@
 							<img src="<%=basePath%>img/protal/activity/Point/img/result4.png" alt="" />
 						</div>
 					</div>
-					<div class="lqrcode ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="2s">						
-						<img src="<%=basePath%>img/protal/activity/Point/img/qrcode.png"/>
+					<img class="jiantou-img  ani" swiper-animate-effect="bounceInUp" swiper-animate-duration="1.3s" swiper-animate-delay="1s" src="<%=basePath%>img/protal/activity/Point/img/jiantou.png"/>
+					<img class="blw-img  ani" swiper-animate-effect="bounceInUp" swiper-animate-duration="1.3" swiper-animate-delay="1.3s" src="<%=basePath%>img/protal/activity/Point/img/blw.png"/>
+					<!-- <div class="lqrcode ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="2s">
+						<img style="z-index: 99999;bottom: 300px;left:100px; position: absolute;" src="<%=basePath%>img/qrcode.png"/>
 						<img src="<%=basePath%>img/protal/activity/Point/img/Bitmap.png"/>
 					</div>
-					<a class="ask-btn ani"  swiper-animate-effect="bounceIn" swiper-animate-duration="0.5s" swiper-animate-delay="3s" href="###"><img src="<%=basePath%>img/protal/activity/Point/img/ask-2x.png"/></a>
+					<a class="ask-btn ani" id="download" swiper-animate-effect="bounceIn" swiper-animate-duration="0.5s" swiper-animate-delay="3s" href="http://jjkangfu.cn/index/productFooter"><img src="<%=basePath%>img/protal/activity/Point/img/ask-2x.png"/></a> -->
 			
 		</div>	
+		<div class="swiper-slide qrcode-app" style="background:url(<%=basePath%>img/protal/activity/Point/img/background.png) no-repeat; background-color: #225a77;">
+			<img id="abs-test" src="<%=basePath%>img/protal/activity/Point/img/qrcode.png">
+			<div class="lqrcode ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s">
+				<img src="<%=basePath%>img/protal/activity/Point/img/Bitmap.png"/>
+				<img style="width: 90%;margin-top: 20px;" src="<%=basePath%>img/protal/activity/Point/img/qrcode.png"/>
+			</div>
+			<a class="ask-btn ani" id="download" href="https://itunes.apple.com/cn/app/jia-jia-kang-fu-gei-ni-jian/id1135697370?mt=8" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1s" swiper-animate-delay="1s" href="###"><img src="<%=basePath%>img/protal/activity/Point/img/askbtn.png"/></a>
+			<a class="again-btn ani"  swiper-animate-effect="bounceInRight" swiper-animate-duration="1s" swiper-animate-delay="1s" href="###"><img src="<%=basePath%>img/protal/activity/Point/img/againbtn.png"/></a>
+		</div>
 				
 		   
     </div>
@@ -404,6 +494,12 @@
 <script src="<%=basePath%>js/views/appPage/main.js" type="text/javascript" charset="utf-8"></script>
 
 <script type="text/javascript">
+/*
+ *	初始化
+ */
+playFn(1);
+
+
 if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
 
 	$('#download').attr("href","https://itunes.apple.com/cn/app/jia-jia-kang-fu-gei-ni-jian/id1135697370?mt=8");
@@ -413,8 +509,7 @@ if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
 	})
 
 } else if (/(Android)/i.test(navigator.userAgent)) {
-
-	$('#download').attr("href","http://mobile.baidu.com/item?docid=9736197&source=s1001");
+	$('#download').attr("href","http://www.wandoujia.com/apps/com.yikang.app.yikangserver?utm_source=wechat-session&utm_medium=share&utm_campaign=routine");
 
 } else if (/(Windows)/i.test(navigator.userAgent)) {
 
@@ -427,10 +522,8 @@ if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
 }
 
 function iosHttps() {
-$('body').append(
-	"<div id='models'>"
-	+"<img src='<%=basePath%>img/protal/appPage/activity/windowPrompt.png'>"
-	+"</div>");
+	alert('ios')
+	$("body").append("<div id='models'><img src='<%=basePath%>img/protal/appPage/activity/windowPrompt.png'></div>");
 }
 wx.config({
   debug: false,
@@ -472,6 +565,7 @@ wx.ready(function () {
 	      	},
 	      	success: function (res) {
 	      		mySwiper.slideTo(6, 1000, true);
+	      		setCookie('Num',Num,7);
 				if(Num <50){
 	                $('.result-1').show();
 	                $('.result-1').siblings().hide();
@@ -504,13 +598,14 @@ wx.ready(function () {
 	      	},
 	      	success: function (res) {
 	         	mySwiper.slideTo(6, 1000, true);
+	         	setCookie('Num',Num,7);
 	        	if(Num <50){
 	                $('.result-1').show();
 	                $('.result-1').siblings().hide();                   
-	        	}else if(50<= Num && Num<=59){
+	        	}else if(50>= Num && Num<=59){
 	                $('.result-2').show();
 	                $('.result-2').siblings().hide();                  
-	        	}else if(60<= Num && Num <=69){
+	        	}else if(60>= Num && Num <=69){
 	                $('.result-3').show();
 	                $('.result-3').siblings().hide();        
 	        	}else if(Num>69){
@@ -606,7 +701,7 @@ wx.ready(function () {
           	else if (_d.get(num) == "D"){_d.score(4)}
       	}
     }
-    $('.result-1').siblings('div').hide();
+    	$('.result-1').siblings('div').hide();
         
    		$('.btn1').click(function(){
          	mySwiper.slideTo(4, 1000, true);
@@ -695,7 +790,61 @@ wx.ready(function () {
 		//      	swiperAnimate(swiper);
 		//      },
         });   
+        $('.again-btn').click(function(){
+			 window.location.reload();
+			 removeCookie('Num');
+		})
+		//设置cookie
+	function setCookie(name,value,iDay){
+		var oDate = new Date();
+		oDate.setDate(oDate.getDate()+iDay);
+		document.cookie = name+"="+value+";expires="+oDate;
+	}
+	
+	//使用cookie
+	function getCookie(name){
+		var arr = document.cookie.split("; ");
+		for(var i=0;i<arr.length;i++){
+			var arr2 =  arr[i].split("=");
+			if(arr2[0]==name){
+				return arr2[1];
+			}
+		}
+		return "";
+		
+	}
+	//删除cook
+	function removeCookie(name){
+		setCookie(name,"",-1);
+	}
+	getCookie('Num');
+	function checkCookie(){
+		if(getCookie('Num') != ''){
+			mySwiper.slideTo(6, 1000, true);
+			if(getCookie('Num') <50){
+			$('.result-1').show();
+			$('.result-1').siblings().hide();			
+//			alert(Num) 			
+		}else if(50>= getCookie('Num') && getCookie('Num')<=59){
+			$('.result-2').show();
+			$('-.result-2').siblings().hide();			
+//			alert(Num)			
+		}else if(60>= getCookie('Num') && getCookie('Num') <=69){
+			$('.result-3').show();
+			$('.result-3').siblings().hide();			
+//			alert(Num)			
+		}else if(getCookie('Num')>69){
+			$('.result-4').show()
+			$('.result-4').siblings().hide();		
+//			alert(Num)			
+		}	
+		}else{
+			return''
+		}
+		console.log(getCookie('Num'))
+	}
 
+checkCookie(); 
 </script>
 </body>
 </html>
