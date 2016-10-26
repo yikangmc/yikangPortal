@@ -22,6 +22,16 @@
 		float: right;
 		margin: 30 20 0 0;
 	}
+	#models {
+		position: absolute; top: 0px; left: 0px;
+		z-index: 999;
+		width: 100%; height: 100%;
+		background-color: #000; opacity: .8;
+	}
+	#models img {
+		margin: 20 auto;
+		margin-top: 40px;
+	}
 </style>
 </head>
 <body>
@@ -118,13 +128,41 @@
 			</c:forEach>
 		</div>
 	</div>
-
+	<a id="download">
 	<div class="btm-banner">
 		<img src="http://jjkangfu.cn:80/img/common/YK61.png"> 
 		<span> &nbsp; 下载佳佳康复，查看更多内容 </span>
 		<img id="right-all" src="http://jjkangfu.cn:80/img/common/all.png">
 	</div>
+	</a>
 </body>
 <!-- js区 -->
 <script type="text/javascript" src="<%=basePath%>js/majorAnswer.js"></script>
+<script type="text/javascript">
+if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+
+	$('#download').attr("href","https://itunes.apple.com/cn/app/jia-jia-kang-fu-gei-ni-jian/id1135697370?mt=8");
+	$('#download').click(function (){
+		iosHttps()
+		$('#models').click(function (){$(this).remove()})
+	})
+
+} else if (/(Android)/i.test(navigator.userAgent)) {
+	$('#download').attr("href","http://www.wandoujia.com/apps/com.yikang.app.yikangserver?utm_source=wechat-session&utm_medium=share&utm_campaign=routine");
+
+} else if (/(Windows)/i.test(navigator.userAgent)) {
+
+	$('#download').attr("href","http://jjkangfu.cn/index/productFooter");
+
+} else {
+
+	$('#download').attr("href","http://jjkangfu.cn/index/productFooter");
+
+}
+
+function iosHttps() {
+	alert('ios')
+	$("body").append("<div id='models'><img src='<%=basePath%>img/protal/appPage/activity/windowPrompt.png'></div>");
+}
+</script>
 </html>

@@ -226,5 +226,11 @@ public class AppPageController {
 		
 		return "appPage/integralRule";
 	}
+
+	@RequestMapping
+	public String invitation3() {
+	
+		return "appPage/invitation3";
+	}
 	
 }
