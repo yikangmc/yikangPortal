@@ -21,7 +21,7 @@ public class HomeController {
 
 	@Autowired
 	private HomeService homeService;
-	
+
 	@Autowired
 	private UserService userService;
 
@@ -36,7 +36,7 @@ public class HomeController {
 		if (rowCount == 1) {
 			req.getSession().setAttribute("uniqueCode", uniqueCode);
 		} else {
-			return "redirct:/home/";
+			return "redirect:/home/";
 		}
 
 		return "appPage/textEditorCode";
@@ -50,31 +50,46 @@ public class HomeController {
 	@RequestMapping
 	@ResponseBody
 	public ResponseMessage<String> getRedirctUrl(HttpServletRequest req) {
-		
-		ResponseMessage<String> resMap=new ResponseMessage<String>();
+
+		ResponseMessage<String> resMap = new ResponseMessage<String>();
 		HttpSession session = req.getSession();
-		String uniqueCode = session.getAttribute("uniqueCode").toString();
-		if (null != uniqueCode) {
-			ResponseMessage<ForumPostTxtEditor> responseMessage = homeService.getForumPostTxtByUniqueCode(uniqueCode);
-			if (null != responseMessage && responseMessage.getStatus().equals("000000")) {
-				ForumPostTxtEditor fpte = responseMessage.getData();
-				int editoryType = fpte.getEditorType();
-				Long userId=fpte.getOwnUserId();
-				User user=userService.getUserByUserId(userId);
-				req.getSession().setAttribute("user", user);
-				if (editoryType == 1) {
-					resMap.setData("appPage/editorExpert");
-				} else if (editoryType == 2) {
-					resMap.setData("");
-				} else if (editoryType == 3) {
-					resMap.setData("appPage/editorAnswer");
-				}else{
-					resMap.setStatus("000001");
-					resMap.setData("");
+		if (null != session.getAttribute("uniqueCode")) {
+			String uniqueCode = session.getAttribute("uniqueCode").toString();
+			if (null != uniqueCode) {
+				ResponseMessage<ForumPostTxtEditor> responseMessage = homeService
+						.getForumPostTxtByUniqueCode(uniqueCode);
+				if (null != responseMessage && responseMessage.getStatus().equals("000000")) {
+					ForumPostTxtEditor fpte = responseMessage.getData();
+					int editoryType = fpte.getEditorType();
+					Long userId = fpte.getOwnUserId();
+					Long dataId=fpte.getDataId();
+					if(null != dataId && (!dataId.equals(-2l))){
+						User user = userService.getUserByUserId(userId);
+						req.getSession().setAttribute("user", user);
+						if (editoryType == 1) {
+							resMap.setData("appPage/editorExpert");
+							session.setAttribute("forumPostId", dataId);
+						} else if (editoryType == 2) {
+							resMap.setData("");
+						} else if (editoryType == 3) {
+							session.setAttribute("questionId",dataId);
+							resMap.setData("appPage/editorAnswer");
+						} else {
+							resMap.setStatus("000001");
+							resMap.setData("");
+						}
+					}else{
+						//等待
+						resMap.setStatus("000001");
+					}
+				} else {
+					resMap.setStatus("999999");
 				}
+			} else {
+				resMap.setStatus("999999");
 			}
-		}else{
-			resMap.setStatus("home/");
+		} else {
+			resMap.setStatus("999999");
 		}
 
 		return resMap;

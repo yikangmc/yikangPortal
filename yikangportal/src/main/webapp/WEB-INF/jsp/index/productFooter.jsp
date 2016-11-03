@@ -48,7 +48,7 @@
 						<p>扫码下载佳佳康复</p>
 						</div>					
 						<div class="downloadBtn">
-							<a id="android" target="_blank" href="http://mobile.baidu.com/item?docid=9736197&source=s1001">Android版下载</a>
+							<a id="android" target="_blank" href="http://mobile.baidu.com/item?type=soft&docid=10118016">Android版下载</a>
 							<!-- <font style="font-size: 12px; color: #0faadd;">(移动鼠标替换Android二维码)</font> -->
 							<a id="ios"  target="_blank" href="https://itunes.apple.com/cn/app/jia-jia-kang-fu-gei-ni-jian/id1135697370?mt=8">iPhone版下载</a>
 							<!-- <font style="font-size: 12px; color: #3dc0b0;">(移动鼠标替换IOS二维码)</font> -->

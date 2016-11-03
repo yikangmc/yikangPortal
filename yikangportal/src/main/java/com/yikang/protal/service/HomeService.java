@@ -30,7 +30,10 @@ public class HomeService {
 		ResponseMessage<String> resMessage=new ResponseMessage<String>();
 		try {
 			resMessage=SendRequest.sendPostRetureResponseMessage("00-43-02", paramMap, Map.class);
-			return 1;
+			if(null != resMessage && resMessage.status.equals("000000")){
+				return 1;
+			}
+			return 0;
 		} catch (IOException e) {
 			e.printStackTrace();
 			log.error(e.getMessage());

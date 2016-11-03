@@ -100,4 +100,15 @@ public class User {
     public void setPushAlias(String pushAlias) {
         this.pushAlias = pushAlias == null ? null : pushAlias.trim();
     }
+    
+    /**
+     * 
+     * @author liushuaic
+     * @date 2106-11-02 11:40
+     * @desc 帐号是否锁定
+     * 
+     * */
+    public boolean isLocked(){
+    	return false;
+    }
 }
